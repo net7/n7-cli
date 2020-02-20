@@ -7,21 +7,30 @@
 // ------------------------------------ //
 // #LAYOUT
 // ------------------------------------ //
-// $page-max-width: 1350px;
-
-
-// ------------------------------------ //
-// #SCHEDA-LAYOUT
-// ------------------------------------ //
-// $aw-scheda-tree-width: 400px;
+// $page-max-width: 1240px;
 
 
 // ------------------------------------ //
 // #GRIDS
 // ------------------------------------ //
-$grid-gutter-h: 1px;
-$grid-gutter-v: 1px;
+// $grid-gutter-h: $space*3;
+// $grid-gutter-v: $space*2;
 
+
+// //////////////////////////////////// //
+//            ATTENTION PLEASE          //
+// //////////////////////////////////// //
+// All commented variables are here for reference
+// just to see which ones are available to be
+// overwritten and must be removed if not used
+
+
+
+// ------------------------------------ //
+// #Z-INDEX
+// ------------------------------------ //
+// $z-index-base: 1000;
+// $z-index-modal:         $z-index-base + 10;
 
 // ------------------------------------ //
 // #SPACING-UNIT
@@ -32,36 +41,34 @@ $grid-gutter-v: 1px;
 // ------------------------------------ //
 // #FONTS
 // ------------------------------------ //
-// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900');
+// @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i&display=swap');
 
 
 // ------------------------------------ //
 // TYPOGRAPHY
 // ------------------------------------ //
-// $font-family-main: 'Montserrat', sans-serif;
-$font-family-main: 'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$font-family-headings: $font-family-main;
+// $font-family-main: 'Nunito Sans', sans-serif;
+// $font-family-headings: 'Nunito Sans', sans-serif;
 
-$font-size-xxxl: 36px;
+// $font-size-xxxl: 38px;
 // $font-size-xxl: 30px;
 // $font-size-xl: 26px;
 // $font-size-l: 18px;
 // $font-size-m: 16px;
-$font-size-sm: 15px;
 // $font-size-s: 14px;
 // $font-size-xs: 12px;
 
 // Font weight
 // $font-weight-normal: 400;
-$font-weight-medium: 500;
 // $font-weight-bold: 700;
-$font-weight-black: 900;
+
 
 // ------------------------------------ //
 // COLORS
 // ------------------------------------ //
 // Text Colors
-// $color-text: $color-gray-06;
+// $color-text: $color-gray-05;
 // $color-text-inverse: $color-gray-00;
 // $color-text-light: $color-gray-04;
 // $color-text-link: $color-main;
@@ -94,8 +101,7 @@ $font-weight-black: 900;
 // ------------------------------------ //
 // #BORDER-RADIUS
 // ------------------------------------ //
-$border-radius: 5px;
-$section-border-radius: 1px;
+// $border-radius: 3px;
 // $border-radius-hard: 8px;
 
 
@@ -106,14 +112,14 @@ $section-border-radius: 1px;
 // $button-border-radius: $border-radius;
 // $button-small-height: 24px;
 // $button-normal-height: 32px;
-// $button-large-height: 56px;
+// $button-large-height: 50px;
 
 // Normal button
 // $color-button-text: $color-text-link;
 // $color-button-text-hover: $color-text-link-hover;
 // $color-button-text-disabled: rgba($color-text-link, .4);
 
-// $color-button-bg: #2EBBC7;
+// $color-button-bg: #E0E7FF;
 // $color-button-bg-hover: #E0E7FF;
 // $color-button-bg-disabled: #E0E7FF;
 
@@ -125,17 +131,15 @@ $section-border-radius: 1px;
 // $color-button-cta-text-hover: $color-text-inverse;
 // $color-button-cta-text-disabled: rgba($color-text-inverse, .4);
 
-$color-button-cta-bg: $color-main;
-$color-button-cta-border: $color-main;
-$color-button-cta-bg-hover: darken($color-button-cta-bg, 5%);
-$color-button-cta-border-hover: darken($color-button-cta-bg, 5%);
-$color-button-cta-bg-active: #3fe3f1;
-$color-button-cta-bg-disabled: rgba($color-button-cta-bg, .4);
+// $color-button-cta-bg: $color-main;
+// $color-button-cta-bg-hover: $color-text-hover;
+// $color-button-cta-bg-active: $color-text-hover;
+// $color-button-cta-bg-disabled: rgba($color-main, .4);
 
 // $color-button-cta-border: darken($color-main, 5); // $color-text-hover;
 
 // Light button (no background or border, only text)
-$color-button-light-text: $color-second;
+// $color-button-light-text: $color-text-link;
 // $color-button-light-text-hover: $color-text-link-hover;
 // $color-button-light-text-disabled: $color-text-light;
 // $color-button-light-text-active: $color-text-link-hover;
@@ -158,10 +162,9 @@ $color-button-light-text: $color-second;
 // ------------------------------------ //
 // #HEADER
 // ------------------------------------ //
-// $header-height: 100px;
+// $header-height: 80px;
 // $header-height-mobile: 60px;
 // $header-bg-color: $color-background-base;
-// $header-active-item-color: #F7FAFA;
 // $header-logo-height: $header-height - ($space*2);
 // $header-logo-height-mobile: $header-height-mobile - ($space*2);
 // $header-user-thumb-size: 40px;
@@ -199,57 +202,3 @@ $color-button-light-text: $color-second;
 // $table-footer-font-size: $font-size-s;
 // $table-footer-text-color: $color-text-light;
 // $table-footer-bg: $color-background-medium;
-
-
-// ------------------------------------ //
-// #TOP-HERO-HOMEPAGE
-// ------------------------------------ //
-$top-hero-title-font-weight: $font-weight-black;
-
-
-// ------------------------------------ //
-// #BOTTTOM-HERO-HOMEPAGE
-// ------------------------------------ //
-$bottom-hero-title-font-weight: $font-weight-black;
-
-
-// ------------------------------------ //
-// #BUBBLE-CHART
-// ------------------------------------ //
-$bubble-popover-title-font-weight: $font-weight-black;
-$bubble-results-count-font-weight: $font-weight-black;
-
-
-// ------------------------------------ //
-// #SCHEDA-LAYOUT
-// ------------------------------------ //
-$scheda-title-font-weight: $font-weight-black;
-
-
-// ------------------------------------ //
-// #DATA-WIDGET
-// ------------------------------------ //
-$color-status-on: $color-fourth;
-$color-status-standby: $color-third;
-$color-status-off: $color-gray-04;
-$color-minimum: $color-second;
-$color-maximum: $color-main;
-$color-average: $color-gray-04;
-$color-median: $color-third;
-$color-running: $color-second;
-$color-stop: $color-gray-04;
-$color-status-error: $color-main;
-$data-widget-gradient-background: linear-gradient(137deg, #89DD8F 0%, #38AD40 100%);
-
-// ------------------------------------ //
-// #BOX-SHADOW
-// ------------------------------------ //
-$main-box-shadow: 0 10px 20px 0 rgba(151,151,151,0.07);
-
-
-// ------------------------------------ //
-// #DATA-WIDGET-WRAPPER
-// ------------------------------------ //
-$data-widget-wrapper-height: 190px;
-// $data-widget-wrapper-header-height: 44px;
-// $data-widget-wrapper-width: auto;

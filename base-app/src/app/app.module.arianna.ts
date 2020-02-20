@@ -3,6 +3,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
   N7BoilerplateCommonModule,
+  N7BoilerplateAriannaWebModule,
   JsonConfigService
 } from '@n7-frontend/boilerplate';
 import globalConfig from './config/global';
@@ -25,6 +26,7 @@ const JSON_PATH = '/assets/app-config.json';
       APP_ROUTES
     ),
     N7BoilerplateCommonModule.forRoot({}),
+    N7BoilerplateAriannaWebModule,
     DvComponentsLibModule
   ],
   providers: [{

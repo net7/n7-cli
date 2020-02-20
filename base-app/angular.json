@@ -27,15 +27,93 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "fileReplacements": [
+              {
+                "replace": "src/assets/app-config.json",
+                "with": "src/assets/app-config.empty.json"
+              }, 
+              {
+                "replace": "src/app/app.module.ts",
+                "with": "src/app/app.module.empty.ts"
+              }, 
+              {
+                "replace": "src/app/app.routes.ts",
+                "with": "src/app/app.routes.empty.ts"
+              }, 
+              {
+                "replace": "src/styles/styles.scss",
+                "with": "src/styles/styles.empty.scss"
+              }
+            ],
             "styles": [
               "./node_modules/flatpickr/dist/flatpickr.min.css",
               "./node_modules/tippy.js/themes/light-border.css",
               "./node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css",
-              "./src/styles.scss"
+              "./src/styles/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
+            "arianna": {
+              "fileReplacements": [
+                {
+                  "replace": "src/assets/app-config.json",
+                  "with": "src/assets/app-config.arianna.json"
+                }, 
+                {
+                  "replace": "src/app/app.routes.ts",
+                  "with": "src/app/app.routes.arianna.ts"
+                }, 
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.arianna.ts"
+                }, 
+                {
+                  "replace": "src/styles/styles.scss",
+                  "with": "src/styles/styles.arianna.scss"
+                }
+              ]
+            },
+            "dataviz": {
+              "fileReplacements": [
+                {
+                  "replace": "src/assets/app-config.json",
+                  "with": "src/assets/app-config.dataviz.json"
+                }, 
+                {
+                  "replace": "src/app/app.routes.ts",
+                  "with": "src/app/app.routes.dataviz.ts"
+                }, 
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.dataviz.ts"
+                }, 
+                {
+                  "replace": "src/styles/styles.scss",
+                  "with": "src/styles/styles.dataviz.scss"
+                }
+              ]
+            },
+            "empty": {
+              "fileReplacements": [
+                {
+                  "replace": "src/assets/app-config.json",
+                  "with": "src/assets/app-config.empty.json"
+                }, 
+                {
+                  "replace": "src/app/app.routes.ts",
+                  "with": "src/app/app.routes.empty.ts"
+                }, 
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.empty.ts"
+                }, 
+                {
+                  "replace": "src/styles/styles.scss",
+                  "with": "src/styles/styles.empty.scss"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -75,6 +153,15 @@
           "configurations": {
             "production": {
               "browserTarget": "base-app:build:production"
+            },
+            "empty": {
+              "browserTarget": "base-app:build:empty"
+            },
+            "arianna": {
+              "browserTarget": "base-app:build:arianna"
+            },
+            "dataviz": {
+              "browserTarget": "base-app:build:dataviz"
             }
           }
         },

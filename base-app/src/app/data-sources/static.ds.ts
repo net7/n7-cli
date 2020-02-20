@@ -1,6 +1,6 @@
 import { DataSource } from '@n7-frontend/core';
 
-export class StaticDS extends DataSource {
+export class BaStaticDS extends DataSource {
   protected transform() {
     return {
       items: [

@@ -1,10 +1,10 @@
 import { EventHandler } from '@n7-frontend/core';
 
-export class HomeLayoutEH extends EventHandler {
+export class BaHomeLayoutEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'home-layout.init':
+        case 'ba-home-layout.init':
           this.dataSource.onInit(payload);
           break;
         default:
@@ -14,8 +14,8 @@ export class HomeLayoutEH extends EventHandler {
 
     this.outerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'static.click':
-          console.log('HomeLayoutEH', type, payload);
+        case 'ba-static.click':
+          console.log('BaHomeLayoutEH', type, payload);
           break;
 
         default:

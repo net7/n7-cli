@@ -1,0 +1,410 @@
+{
+  "communication": {
+    "defaultProvider": "apollo",
+    "providers": {
+      "apollo": {
+        "baseUrl": "https://aw-unifi-graphql.netseven.it/"
+      },
+      "rest": {
+        "baseUrl": "https://jsonplaceholder.typicode.com/",
+        "defaultMethod": "GET"
+      }
+    }
+  },
+  "header": {
+    "logo": {
+      "image": "https://i.imgur.com/kTND3Do.png",
+      "anchor": {
+        "href": "home"
+      }
+    },
+    "nav": {
+      "items": [
+        {
+          "text": "Home",
+          "icon": "n7-icon-home",
+          "anchor": { "href": "home" },
+          "_meta": {
+            "id": "home"
+          }
+        },
+        {
+          "text": "Patrimonio",
+          "anchor" : { "href": "patrimonio" },
+          "icon": "n7-icon-tree-icon",
+          "_meta": {
+            "id": "patrimonio"
+          }
+        },
+        {
+          "text": "Galleria",
+          "anchor" : { "href": "galleria" },
+          "icon": "n7-icon-th",
+          "_meta": {
+            "id": "galleria"
+          }
+        },
+        {
+          "text": "Ricerca",
+          "anchor" : { "href": "ricerca" },
+          "icon": "n7-icon-search",
+          "_meta": {
+            "id": "ricerca"
+          }
+        },
+        {
+          "text": "Utenti",
+          "anchor" : { "href": "utenti" },
+          "icon": "n7-icon-facebook",
+          "_meta": {
+            "id": "utenti"
+          }
+        }
+      ]
+    },
+    "menuToggle": {
+      "open": {
+        "payload": "mobile-open"
+      },
+      "close": {
+        "payload": "mobile-close"
+      }
+    }
+  },
+  "footer": {
+    "columns": [
+      {
+        "classes": "col-class",
+        "title": "Arianna Web, archivio digitale online",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit elit nunc, at porta ex accumsan id. Fusce quis lobortis sem, non ornare tellus.",
+        "images": [
+          {
+            "url": "https://via.placeholder.com/80",
+            "alttext": "Logo 1",
+            "anchor": {
+              "href": "https://www.google.it"
+            }
+          },
+          {
+            "url": "https://via.placeholder.com/80",
+            "alttext": "Logo 2",
+            "anchor": {
+              "href": "https://www.google.it"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Privacy e info",
+        "links": [
+          {
+            "text": "Info su Arianna Web",
+            "classes": "link-class",
+            "anchor": {
+              "href": "https://www.google.it"
+            }
+          },
+          {
+            "text": "Privacy policy",
+            "classes": "link-class",
+            "anchor": {
+              "href": "https://www.google.it"
+            }
+          },
+          {
+            "text": "Cooklie policy",
+            "anchor": {
+              "href": "https://www.google.it"
+            }
+          },
+          {
+            "text": "Termini e condizioni",
+            "anchor": {
+              "href": "https://www.google.it"
+            }
+          }
+        ]
+      },
+      {
+        "text": "Arianna Web is powered by Hyperborea.<br><a href='#' target='_blank'>www.hyperborea.com</a>"
+      }
+    ]
+  },
+  "bubble-chart": {
+    "fontRendering": {
+      "label": {
+        "family": "'Source Sans Pro', sans-serif",
+        "weight": "bold"
+      },
+      "counter": {
+        "family": "'Source Sans Pro', sans-serif",
+        "weight": "normal"
+      }
+    },
+    "bubbleLimit": 50,
+    "transition": 750,
+    "shuffle": true
+  },
+  "item-preview": {
+    "image": "image",
+    "title": {
+      "data": "item.label",
+      "maxLength": "80"
+    },
+    "text": {
+      "data": "item.label",
+      "maxLength": "50"
+    },
+    "metadata": {
+      "info": {
+        "selection": [
+          {
+            "key": "fase"
+          },
+          {
+            "key": "intitolazione"
+          }
+        ],
+        "data": "item.fields",
+        "value": "value",
+        "label": "key",
+        "customLabel": ""
+      },
+      "toe": {
+        "data": "relatedTypesOfEntity",
+        "value": "count",
+        "icon": "type"
+      },
+      "breadcrumbs": {
+        "data": "breadcrumbs",
+        "label": "label",
+        "payload": "link"
+      }
+    },
+    "payload": "item.id",
+    "paginationLimit": "5"
+  },
+  "home-layout": {
+    "top-hero": {
+      "title": "Arte, architettura e fotografia nel XXI secolo",
+      "text": "Consulta il patrimonio completo del polo nazionale per l'arte e l'architettura contemporanee.",
+      "button": {
+        "text": "CERCA"
+      },
+      "backgroundImage": "https://i.imgur.com/FgsxSYR.png",
+      "input": {
+        "placeholder": "Cerca in MAXXI"
+      },
+      "fallback": "Nessun risultato, prova a <br> cambiare la ricerca."
+    },
+    "bottom-hero": {
+      "title": "IL MAXXI",
+      "image": "https://i.imgur.com/8BgHOBi.png",
+      "text": "La storia del MAXXI inizia nell'autunno del 1997 quando l'allora Ministero per i beni culturali ottiene dal Ministero della Difesa la cessione di un'ampia area nel quartiene Flaminio di Roma, occupata da officine e padiglioni della ex Caserma Montello, in disuso da tempo, con il fine di creare un nuovo polo mseale nazionale dedicato alle arti contemporanee per la cui progettazione, nel 1998, viene bandito un concorso internazionale di idee in due fasi. Il bando di concorso prevedeva un piano funzionale complesso, con la presenza di vari poli museali: un museo per l'architettura e uno per le arti del XXI secolo, uno spazio per le produzioni sperimentali, la biblioteca, l'auditorium, spazi per eventi dal vivo e infine spazi didattici.",
+      "button": {
+        "text": "NAVIGA IL PATRIMONIO",
+        "anchor": {
+          "href": "/patrimonio"
+        }
+      }
+    },
+    "outer-links": {
+      "title": "Sezioni dell'archivio",
+      "test": [
+        {
+          "image": "https://picsum.photos/200",
+          "title": "Accedi all'archivio della Direzione dei lavori pubblici",
+          "text": "Il complesso di fondi è costituito dalla documentazione prodotta dalle strutture burocratiche afferenti alla Direzione generale dei lavori pubblici",
+          "classes": "is-vertical",
+          "anchor": {
+            "href": "http://www.google.it"
+          }
+        },
+        {
+          "title": "Direzione generale delle politiche sociali",
+          "image": "https://picsum.photos/200",
+          "text": "Strutture burocratiche afferenti alla Direzione generale dei lavori pubblici",
+          "classes": "is-vertical",
+          "anchor": {
+            "href": "http://www.google.it"
+          }
+        },
+        {
+          "title": "Direzione generale dell'organizzazione e del personale",
+          "image": "https://picsum.photos/200",
+          "text": "Il complesso di fondi è costituito dalla documentazione prodotta dalle strutture burocratiche afferenti alla Direzione generale",
+          "classes": "is-vertical",
+          "anchor": {
+            "href": "http://www.google.it"
+          }
+        }
+      ]
+    },
+    "results-limit": 10,
+    "max-item-length": 50,
+    "autocomplete-fallback": "Nessun risultato, prova a\ncambiare la ricerca.",
+    "linked-objects-fallback": "Non sono stati trovati oggetti culturali collegati alle entità selezionate. Prova a cambiare le entità selezionate o resetta la ricerca."
+  },
+  "scheda-layout": {
+    "empty-label": "<h2>Benvenuto nel patrimonio archivistico dell'Università di Firenze</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Subtitle</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+    "bubble-chart": {
+      "title": "Entità collegate"
+    },
+    "related-items": {
+      "title": "Oggetti culturali simili",
+      "max-related-items": 6
+    },
+    "metadata": {
+      "title": "Metadati"
+    },
+    "tree": {
+      "icon-expand": "n7-icon-angle-right",
+      "icon-collapse": "n7-icon-angle-down",
+      "icon-image": "n7-icon-image",
+      "icon-map": [
+        {
+          "oc-type-foo": "n7-icon-building"
+        },
+        {
+          "oc-type-bar": "n7-icon-biography"
+        }
+      ]
+    }
+  },
+  "search-layout": {
+    "title": "Cerca nel patrimonio",
+    "results": ["Nessun risultato", "Risultato", "Risultati"],
+    "enabledEntities": [
+      "oggetto-culturale",
+      "aggregazione",
+      "persona",
+      "luogo",
+      "cosa-notevole",
+      "organizzazione"
+    ],
+    "fallback": "La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante."
+  },
+  "entita-layout": {
+    "overview": {
+      "campi": ["data_istituzione", "denominazione_autorita"],
+      "smallChartSize": 3
+    },
+    "entitiesQuerySize": 30
+  },
+  "config-keys": {
+    "persona": {
+      "color": {
+        "hex": "#4D8FF2",
+        "rgb": [77, 143, 242]
+      },
+      "icon": "n7-icon-biography",
+      "label": "Persone",
+      "singular-label": "Persona",
+      "input-placeholder": "Cerca una persona",
+      "main-metadata": "data_nascita",
+      "class-name": "persona"
+    },
+    "luogo": {
+      "color": {
+        "hex": "#EBC738",
+        "rgb": [235, 199, 56]
+      },
+      "icon": "n7-icon-map1",
+      "label": "Luoghi",
+      "singular-label": "Luogo",
+      "input-placeholder": "Cerca un luogo",
+      "class-name": "luogo"
+    },
+    "concetto": {
+      "color": {
+        "hex": "#33BDCC",
+        "rgb": [51, 189, 204]
+      },
+      "icon": "n7-icon-lightbulb",
+      "label": "Concetti",
+      "input-placeholder": "Cerca un concetto",
+      "class-name": "concetto"
+    },
+    "cosa notevole": {
+      "color": {
+        "hex": "#5BA878",
+        "rgb": [91, 186, 120]
+      },
+      "icon": "n7-icon-circle-full",
+      "label": "Cose notevoli",
+      "singular-label": "Cosa notevole",
+      "input-placeholder": "Cerca un concetto",
+      "class-name": "cosa-notevole"
+    },
+    "organizzazione": {
+      "color": {
+        "hex": "#BD883E",
+        "rgb": [189, 136, 62]
+      },
+      "icon": "n7-icon-building",
+      "label": "Organizzazioni",
+      "singular-label": "Organizzazione",
+      "input-placeholder": "Cerca un'organizzazione",
+      "class-name": "organizzazione"
+    },
+    "oggetto-culturale": {
+      "color": {
+        "hex": "#9A84C2",
+        "rgb": [154, 132, 194]
+      },
+      "icon": "n7-icon-file3",
+      "label": "Oggetti Culturali",
+      "singular-label": "Oggetto Culturale",
+      "input-placeholder": "",
+      "class-name": "oggetto-culturale"
+    },
+    "aggregazione-logica": {
+      "color": {
+        "hex": "#A6A5A8",
+        "rgb": [166, 165, 168]
+      },
+      "icon": "n7-icon-archive",
+      "label": "Fondi",
+      "singular-label": "Fondo",
+      "input-placeholder": "",
+      "class-name": "aggregazione-logica"
+    },
+    "famiglia": {
+      "color": {
+        "hex": "#CC6F5C",
+        "rgb": [204, 111, 92]
+      },
+      "icon": "n7-icon-users",
+      "label": "Famiglia",
+      "singular-label": "Famiglia",
+      "input-placeholder": "Cerca una famiglia",
+      "class-name": "famiglia"
+    },
+    "evento": {
+      "color": {
+        "hex": "#E89827;",
+        "rgb": [232, 152, 39]
+      },
+      "icon": "n7-icon-calendar-alt",
+      "label": "Evento",
+      "singular-label": "Evento",
+      "input-placeholder": "Cerca un evento",
+      "class-name": "evento"
+    }
+  },
+  "paths": {
+    "schedaBasePath": "/patrimonio/",
+    "entitaBasePath": "/entita/",
+    "searchBasePath": "/ricerca/"
+  },
+  "features-enabled": {
+    "bubblechart": true
+  },
+  "labels": {
+    "struttura_funzioni": "Funzioni principali",
+    "fase": "Fase",
+    "intitolazione": "Intitolaz.",
+    "aggregazione-logica": "Fondo",
+    "oggetto-culturale": "Oggetto culturale"
+  }
+}

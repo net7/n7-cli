@@ -1,6 +1,6 @@
 import { LayoutDataSource } from '@n7-frontend/core';
 
-export class HomeLayoutDS extends LayoutDataSource {
+export class BaHomeLayoutDS extends LayoutDataSource {
   private communication: any;
 
   onInit(payload) {

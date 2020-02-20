@@ -9,10 +9,11 @@ src/assets/app-config.json {{ appName  }}
 ___________________________________________
 
 [] per tipologia (arianna, dataviz, muruca, empty)
-    - [] routes
-    - [] styles
-    - [] app-config
-    - [] app.module
+    - [x] routes
+    - [x] styles
+    - [x] app-config
+    - [x] app.module
+    - [] config in angular.json
     - [] aggiungere command option
 
 [] app-prefix

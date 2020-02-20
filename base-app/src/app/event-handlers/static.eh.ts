@@ -1,11 +1,11 @@
 import { EventHandler } from '@n7-frontend/core';
 
-export class StaticEH extends EventHandler {
+export class BaStaticEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'static.click':
-          console.log('StaticEH', type, payload);
+        case 'ba-static.click':
+          console.log('BaStaticEH', type, payload);
           this.emitOuter('click', payload);
           break;
 

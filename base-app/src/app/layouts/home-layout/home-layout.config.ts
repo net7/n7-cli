@@ -1,16 +1,16 @@
-import { HomeLayoutDS } from './home-layout.ds';
-import { HomeLayoutEH } from './home-layout.eh';
+import { BaHomeLayoutDS } from './home-layout.ds';
+import { BaHomeLayoutEH } from './home-layout.eh';
 import * as DS from '../../data-sources';
 import * as EH from '../../event-handlers';
 
-export const HomeLayoutConfig = {
-  layoutId: 'home-layout',
+export const BaHomeLayoutConfig = {
+  layoutId: 'ba-home-layout',
   widgets: [
-    { id: 'static', hasStaticData: true },
-    { id: 'dynamic' },
+    { id: 'ba-static', hasStaticData: true },
+    { id: 'ba-dynamic' },
   ],
-  layoutDS: HomeLayoutDS,
-  layoutEH: HomeLayoutEH,
+  layoutDS: BaHomeLayoutDS,
+  layoutEH: BaHomeLayoutEH,
   widgetsDataSources: DS,
   widgetsEventHandlers: EH,
   layoutOptions: {}
