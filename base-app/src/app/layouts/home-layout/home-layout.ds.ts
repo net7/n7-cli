@@ -12,7 +12,7 @@ export class BaHomeLayoutDS extends LayoutDataSource {
   _dummyRequest() {
     this.communication.request$('getRepos')
       .subscribe(response => {
-        this.one('dynamic').update(response);
+        this.one('ba-dynamic').update(response);
       });
   }
 }
