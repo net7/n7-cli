@@ -17,7 +17,8 @@ program
   .alias('n')
   .description('creates a new n7-cli app')
   .option('-t, --type <type>', 'app type < arianna | muruca | dataviz | empty >', 'empty')
-  .action((name, { type }) => new CommandNew(name, type));
+  .option('-p, --prefix <prefix>', 'app prefix', 'app')
+  .action((name, { type, prefix }) => new CommandNew(name, type, prefix));
 
 // LAYOUT
 // ---------------------------------------------------------->

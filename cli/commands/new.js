@@ -1,7 +1,8 @@
 class CommandNew {
-  constructor(name, type) {
+  constructor(name, type, prefix) {
     this.name = name;
     this.type = type;
+    this.prefix = prefix;
 
     // run
     this._run();
@@ -10,7 +11,8 @@ class CommandNew {
   _run() {
     console.log('new run', {
       name: this.name,
-      type: this.type
+      type: this.type,
+      prefix: this.prefix
     });
   }
 }
