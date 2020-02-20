@@ -18,7 +18,8 @@ program
   .description('creates a new n7-cli app')
   .option('-t, --type <type>', 'app type < arianna | muruca | dataviz | empty >', 'empty')
   .option('-p, --prefix <prefix>', 'app prefix', 'app')
-  .action((name, { type, prefix }) => new CommandNew(name, type, prefix));
+  .option('-e, --embedded', 'is an embedded app')
+  .action((name, { type, prefix, embedded }) => new CommandNew(name, type, prefix, !!embedded));
 
 // LAYOUT
 // ---------------------------------------------------------->
