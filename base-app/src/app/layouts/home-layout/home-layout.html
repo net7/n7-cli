@@ -1,0 +1,13 @@
+<div>
+    <h2>Widget n7-nav (static)</h2>
+    <n7-nav 
+    [data]="lb.widgets['static'].ds.out$ | async"
+    [emit]="lb.widgets['static'].emit"></n7-nav>
+</div>
+
+<div>
+    <h2>Widget item-preview (dynamic)</h2>
+    <ng-container *ngFor="let itemData of lb.widgets['dynamic'].ds.out$ | async">
+        <n7-item-preview [data]="itemData"></n7-item-preview>
+    </ng-container>
+</div>

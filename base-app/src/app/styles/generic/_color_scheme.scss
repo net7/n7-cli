@@ -1,0 +1,45 @@
+//
+// COLOR SCHEME
+//
+// Here we define all colors used in components and project
+//
+
+// ------------------------------------ //
+// #COLOR-SCHEME
+// ------------------------------------ //
+// Grayscale (background, borders, text)
+$color-gray-00: #ffffff;
+$color-gray-01: #fafbfc;
+$color-gray-02: #f5f5f5;
+$color-gray-03: #eaeaea;
+$color-gray-04: #bbbbbb;
+$color-gray-05: #292d2e;
+$color-gray-06: #292d2e;
+
+// Brand colors
+$color-main: #d8031a; // #2ebbc7;
+$color-second: #00b4ff;
+$color-third: #e7af3e;
+$color-fourth: #38ad40;
+$color-text-hover: #486964; //$color-main; /* Used for text link in hover state */
+
+// Status colors
+$color-error: #d12c47;
+$color-warning: #f5a623;
+$color-success: #3f7600;
+
+// Categories color variables
+$color-people: #3a81f2; // Fallback
+$color-people: var(--color-persona);
+
+$color-places: #f2cd3a; // Fallback
+$color-places: var(--color-luogo);
+
+$color-concepts: #5eab7b; // Fallback
+$color-concepts: var(--color-concetto);
+
+$color-organizations: #c48731; // Fallback
+$color-organizations: var(--color-organizzazione);
+
+$color-things: #c43631; // Fallback
+$color-things: var(--color-cosa-notevole);

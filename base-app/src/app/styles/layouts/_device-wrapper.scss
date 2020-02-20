@@ -1,0 +1,31 @@
+/**
+ * DEVICE WRAPPER
+ *
+ * Box that wraps elements that are related to the entire device or a card.
+ */
+
+/* ------------------------------------ *\
+    DEVICE-WRAPPER
+\* ------------------------------------ */
+.pd-device-wrapper {
+    padding: $space;
+    background: $color-background-medium;
+    border: 1px solid $color-border-normal;
+    border-radius: $border-radius;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 $space 0;
+
+        &[hidden] {
+            display: none;
+        }
+    }
+
+    &__content {
+        background: $color-background-base;
+        border: 1px solid $color-border-normal;
+    }
+}

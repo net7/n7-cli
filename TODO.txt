@@ -1,0 +1,22 @@
+.files da modificare
+
+e2e/src/app.e2e-spec.ts {{ appName }}
+package.json {{ appName  }} > mettere le parentesi!
+src/index.html {{ appName  }}
+src/assets/app-config.json {{ appName  }}
+
+
+___________________________________________
+
+[] per tipologia (arianna, dataviz, muruca, empty)
+    - [] routes
+    - [] styles
+    - [] app-config
+    - [] app.module
+    - [] aggiungere command option
+
+[] app-prefix
+
+[] embedded
+
+[] apollo | rest

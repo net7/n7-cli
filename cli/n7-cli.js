@@ -14,18 +14,19 @@ program
 // ---------------------------------------------------------->
 program
   .command('new <name>')
-  .alias('c')
-  .description('Creates a new n7-cli app')
-  .action(name => new CommandNew(name));
+  .alias('n')
+  .description('creates a new n7-cli app')
+  .option('-t, --type <type>', 'app type < arianna | muruca | dataviz | empty >', 'empty')
+  .action((name, { type }) => new CommandNew(name, type));
 
 // LAYOUT
 // ---------------------------------------------------------->
 program
   .command('layout <name>')
   .alias('l')
-  .description('Adds a new layout')
-  .option('-D, --no-datasource', 'Without layout datasource')
-  .option('-E, --no-eventhandler', 'Without layout eventhandler')
+  .description('adds a new layout')
+  .option('-D, --no-datasource', 'without layout datasource')
+  .option('-E, --no-eventhandler', 'without layout eventhandler')
   .action((name, { datasource, eventhandler }) => new CommandLayout(name, datasource, eventhandler));
 
 program.parse(process.argv);

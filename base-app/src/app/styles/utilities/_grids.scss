@@ -1,0 +1,86 @@
+/**
+ * GRIDS
+ *
+ * Helper class to display items feed in grids.
+ * Apply the class to the container of the griddable elements (like cards). Direct
+ * descendants will be gridded.
+ */
+
+/* ------------------------------------ *\
+   #GRIDS
+\* ------------------------------------ */
+/* General grid setting */
+[class*="n7-grid-"],
+[class^="n7-grid-"] {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    > * {
+        // margin-bottom: $grid-gutter-v;
+        // box-sizing: border-box;
+    }
+}
+
+/* 4 */
+.n7-grid-4 {
+    > * {
+        // width: calc( ( (100% - 4px) - ( #{$grid-gutter-h} * 3) ) / 4 );
+        // margin-right: $grid-gutter-h;
+        border-right: 1px solid $color-border-normal;
+        
+        &:nth-of-type(4n+4) {
+            // margin-right: 0;
+            border-right: 0;
+        }
+    }
+}
+
+/* 3 */
+.n7-grid-3 {
+    > * {
+        // width: calc( ( (100% - 3px) - ( #{$grid-gutter-h} * 2) ) / 3 );
+        // margin-right: $grid-gutter-h;
+        border-right: 1px solid $color-border-normal;
+
+        &:nth-of-type(3n+3) {
+            // margin-right: 0;
+            border-right: 0
+        }
+    }
+}
+
+/* 2 */
+.n7-grid-2 {
+    > * {
+        // width: calc( ( (100% - 2px) - ( #{$grid-gutter-h} * 1) ) / 2 );
+        // margin-right: $grid-gutter-h;
+        border-right: 1px solid $color-border-normal;
+
+        &:nth-of-type(2n+2) {
+            // margin-right: 0;
+            border-right: 0
+        }
+    }
+}
+
+
+/* ------------------------------------ *\
+   #MEDIA-QUERIES
+\* ------------------------------------ */
+@media all and (max-width: $breakpoint-laptop) {
+}
+
+@media all and (max-width: $breakpoint-ipad-portrait) {
+}
+
+@media all and (max-width: $breakpoint-smartphone-landscape) {
+}
+
+@media all and (max-width: $breakpoint-smartphone-portrait) {
+
+}
+
+/* Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+}
+
