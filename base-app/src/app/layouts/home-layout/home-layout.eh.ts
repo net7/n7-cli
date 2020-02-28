@@ -1,6 +1,6 @@
 import { EventHandler } from '@n7-frontend/core';
 
-export class BaHomeLayoutEH extends EventHandler {
+export class HomeLayoutEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
@@ -15,7 +15,7 @@ export class BaHomeLayoutEH extends EventHandler {
     this.outerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
         case 'ba-static.click':
-          console.log('BaHomeLayoutEH', type, payload);
+          console.log('HomeLayoutEH', type, payload);
           break;
 
         default:

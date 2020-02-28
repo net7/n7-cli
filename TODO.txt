@@ -1,13 +1,3 @@
-.files da modificare
-
-e2e/src/app.e2e-spec.ts {{ BASEAPPNAME }}
-package.json {{ BASEAPPNAME  }} > mettere le parentesi!
-src/index.html {{ BASEAPPNAME  }}
-src/assets/app-config.json {{ BASEAPPNAME  }}
-
-
-___________________________________________
-
 [x] per tipologia (arianna, dataviz, muruca, empty)
     - [x] routes
     - [x] styles
@@ -22,5 +12,9 @@ ___________________________________________
 
 da modificare:
 
+- baseappname (package.json)
 - BASEAPPNAME
+- BASEAPPCLASSPREFIX
 - baseappprefix
+
+mettere angular.src.json invece di angular.json

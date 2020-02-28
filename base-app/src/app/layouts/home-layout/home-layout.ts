@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AbstractLayout, CommunicationService } from '@n7-frontend/boilerplate';
-import { BaHomeLayoutConfig as config } from './home-layout.config';
+import { HomeLayoutConfig as config } from './home-layout.config';
 
 @Component({
   selector: 'baseappprefix-home-layout',
   templateUrl: './home-layout.html'
 })
-export class BaHomeLayoutComponent extends AbstractLayout implements OnInit, OnDestroy {
+export class HomeLayoutComponent extends AbstractLayout implements OnInit, OnDestroy {
   constructor(
     private communication: CommunicationService
   ) {

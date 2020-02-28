@@ -1,10 +1,10 @@
 
 import { Routes } from '@angular/router';
 import { Page404LayoutComponent } from '@n7-frontend/boilerplate';
-import { BaHomeLayoutComponent } from './layouts/home-layout/home-layout';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 
 export const APP_ROUTES: Routes = [
-  { path: 'home', component: BaHomeLayoutComponent },
+  { path: 'home', component: HomeLayoutComponent },
   {
     path: '',
     redirectTo: '/home',

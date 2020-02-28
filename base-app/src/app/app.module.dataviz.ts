@@ -10,7 +10,7 @@ import globalConfig from './config/global';
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { BaHomeLayoutComponent } from './layouts/home-layout/home-layout';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 import { DvComponentsLibModule } from '@n7-frontend/components';
 
 const JSON_PATH = '/assets/app-config.json';
@@ -18,7 +18,7 @@ const JSON_PATH = '/assets/app-config.json';
 @NgModule({
   declarations: [
     AppComponent,
-    BaHomeLayoutComponent
+    HomeLayoutComponent
   ],
   imports: [
     BrowserModule,
