@@ -1,9 +1,9 @@
 .files da modificare
 
-e2e/src/app.e2e-spec.ts {{ appName }}
-package.json {{ appName  }} > mettere le parentesi!
-src/index.html {{ appName  }}
-src/assets/app-config.json {{ appName  }}
+e2e/src/app.e2e-spec.ts {{ BASEAPPNAME }}
+package.json {{ BASEAPPNAME  }} > mettere le parentesi!
+src/index.html {{ BASEAPPNAME  }}
+src/assets/app-config.json {{ BASEAPPNAME  }}
 
 
 ___________________________________________
@@ -18,4 +18,9 @@ ___________________________________________
 
 [x] app-prefix
 
-[] embedded
+___________________________________________
+
+da modificare:
+
+- BASEAPPNAME
+- baseappprefix
