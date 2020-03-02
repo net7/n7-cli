@@ -4,7 +4,7 @@ export class HomeLayoutEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'ba-home-layout.init':
+        case 'home-layout.init':
           this.dataSource.onInit(payload);
           break;
         default:
@@ -14,7 +14,7 @@ export class HomeLayoutEH extends EventHandler {
 
     this.outerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'ba-static.click':
+        case 'static.click':
           console.log('HomeLayoutEH', type, payload);
           break;
 

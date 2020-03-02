@@ -4,10 +4,10 @@ import * as DS from '../../data-sources';
 import * as EH from '../../event-handlers';
 
 export const HomeLayoutConfig = {
-  layoutId: 'ba-home-layout',
+  layoutId: 'baseappprefix-home-layout',
   widgets: [
-    { id: 'ba-static', hasStaticData: true },
-    { id: 'ba-dynamic' },
+    { id: 'static', hasStaticData: true },
+    { id: 'dynamic' },
   ],
   layoutDS: HomeLayoutDS,
   layoutEH: HomeLayoutEH,
