@@ -1,8 +1,9 @@
 class CommandLayout {
-  constructor(name, datasource, eventhandler) {
+  constructor(name, datasource, eventhandler, verbose) {
     this.name = name;
     this.datasource = datasource;
     this.eventhandler = eventhandler;
+    this.verbose = verbose;
 
     // run
     this._run();
@@ -12,7 +13,8 @@ class CommandLayout {
     console.log('layout run', { 
       name: this.name, 
       datasource: this.datasource, 
-      eventhandler: this.eventhandler
+      eventhandler: this.eventhandler,
+      verbose: this.verbose,
     });
   }
 }
