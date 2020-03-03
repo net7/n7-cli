@@ -4,7 +4,7 @@ export class HomeLayoutEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'home-layout.init':
+        case 'baseappprefix-home-layout.init':
           this.dataSource.onInit(payload);
           break;
         default:

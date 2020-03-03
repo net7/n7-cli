@@ -1,6 +1,6 @@
 import { DataSource } from '@n7-frontend/core';
 
-export class BaDynamicDS extends DataSource {
+export class DynamicDS extends DataSource {
   protected transform(data) {
     return data.map(({ name, description, html_url, stargazers_count, watchers_count}) => ({
       title: name,
