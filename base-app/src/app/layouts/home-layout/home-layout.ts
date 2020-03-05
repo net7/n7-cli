@@ -26,5 +26,4 @@ export class HomeLayoutComponent extends AbstractLayout implements OnInit, OnDes
   ngOnDestroy() {
     this.onDestroy();
   }
-
 }

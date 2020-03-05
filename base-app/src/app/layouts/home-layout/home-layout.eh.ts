@@ -11,16 +11,5 @@ export class HomeLayoutEH extends EventHandler {
           break;
       }
     });
-
-    this.outerEvents$.subscribe(({ type, payload }) => {
-      switch (type) {
-        case 'static.click':
-          console.log('HomeLayoutEH', type, payload);
-          break;
-
-        default:
-          break;
-      }
-    });
   }
 }

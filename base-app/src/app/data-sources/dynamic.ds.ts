@@ -3,7 +3,12 @@ import { DataSource } from '@n7-frontend/core';
 export class DynamicDS extends DataSource {
   protected transform(data) {
     const randomItem = data[Math.floor(Math.random() * data.length)];
-    const { name, description, stargazers_count, watchers_count} = randomItem;
+    const {
+      name,
+      description,
+      stargazers_count: stargazersCount,
+      watchers_count: watchersCount
+    } = randomItem;
     return {
       title: name,
       text: description,
@@ -13,12 +18,12 @@ export class DynamicDS extends DataSource {
           {
             icon: 'n7-icon-check-circle',
             label: 'stargazers',
-            value: stargazers_count
+            value: stargazersCount
           },
           {
             icon: 'n7-icon-eye',
             label: 'watchers',
-            value: watchers_count
+            value: watchersCount
           },
         ]
       }],

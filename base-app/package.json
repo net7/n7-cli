@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "eslint \"src/**/*.ts\"",
     "e2e": "ng e2e",
     "stylelint": "stylelint \"src/app/styles/**/*.scss\"; exit 0",
     "stylelint:watch": "onchange \"src/app/styles/**/*.scss\" -- npm run stylelint ",
@@ -43,10 +43,16 @@
     "@angular/cli": "~8.3.3",
     "@angular/compiler-cli": "~8.2.4",
     "@angular/language-service": "~8.2.4",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "codelyzer": "^5.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -54,6 +60,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "lint-staged": "^10.0.8",
     "onchange": "^6.1.0",
     "protractor": "~5.4.0",
     "stylelint": "^11.1.1",
@@ -61,5 +68,18 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ],
+    "*.scss": [
+      "stylelint --syntax scss --fix"
+    ]
   }
 }

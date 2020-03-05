@@ -5,7 +5,6 @@ export class DynamicEH extends EventHandler {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
         case 'dynamic.click':
-          console.log('DynamicEH', type, payload);
           this.emitOuter('click', payload);
           break;
 
