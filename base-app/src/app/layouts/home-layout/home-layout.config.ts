@@ -6,7 +6,7 @@ import * as EH from '../../event-handlers';
 export const HomeLayoutConfig = {
   layoutId: 'baseappprefix-home-layout',
   widgets: [
-    { id: 'static', hasStaticData: true },
+    { id: 'mock', hasStaticData: true },
     { id: 'dynamic' },
   ],
   layoutDS: HomeLayoutDS,
