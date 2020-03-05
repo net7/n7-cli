@@ -6,6 +6,7 @@ const helpers = require('./helpers');
 
 const nameRegexPattern = /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/;
 const prefixRegexPattern = /[a-z]/;
+const reservedPrefixes = ['n7', 'aw', 'dv', 'mr'];
 const prefixMinLimit = 2;
 const prefixMaxLimit = 4;
 const enabledTypes = ['empty', 'arianna', 'dataviz'];
@@ -96,6 +97,11 @@ class CommandNew {
     // validate prefix characters
     if(!prefixRegexPattern.test(this.prefix)){
       helpers.error(`prefix ${this.prefix} format error - allowed chars [a-z]`);
+    }
+
+    // validate reserved prefix
+    if(reservedPrefixes.indexOf(this.prefix) !== -1){
+      helpers.error(`prefix ${this.prefix} is reserved - not allowed prefixes ${reservedPrefixes.join(' | ')}`);
     }
     
     // validate prefix length
