@@ -33,3 +33,8 @@ program
   .action((name, { verbose, datasource, eventhandler }) => new CommandLayout(name, datasource, eventhandler, !!verbose));
 
 program.parse(process.argv);
+
+// if no arguments show help 
+if (!program.args.length) {
+  program.help();
+}
