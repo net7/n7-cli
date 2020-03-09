@@ -23,6 +23,6 @@
     "replace-in-file": "^5.0.2"
   },
   "bin": {
-    "n7-cli": "./n7-cli.js"
+    "n7-cli": "./cli/n7-cli.js"
   }
 }
