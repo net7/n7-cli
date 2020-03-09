@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "eslint \"src/**/*.ts\"",
     "e2e": "ng e2e",
-    "stylelint": "stylelint \"src/app/styles/**/*.scss\"; exit 0",
-    "stylelint:watch": "onchange \"src/app/styles/**/*.scss\" -- npm run stylelint ",
+    "stylelint": "stylelint \"src/styles/**/*.scss\"; exit 0",
+    "stylelint:watch": "onchange \"src/styles/**/*.scss\" -- npm run stylelint",
     "update:framework": "npm update @n7-frontend/components @n7-frontend/boilerplate @n7-frontend/core @n7-frontend/icon-font"
   },
   "private": true,
