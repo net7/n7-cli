@@ -1,10 +1,8 @@
-const process = require('process');
 const fs = require('fs-extra');
 const path = require('path');
 const replace = require('replace-in-file');
 const helpers = require('./helpers');
 
-const nameRegexPattern = /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/;
 const prefixRegexPattern = /[a-z]/;
 const reservedPrefixes = ['n7', 'aw', 'dv', 'mr'];
 const prefixMinLimit = 2;
@@ -85,7 +83,7 @@ class CommandNew {
 
   validate(){
     // validate name
-    if(!nameRegexPattern.test(this.name)){
+    if(!helpers.isKebabCase(this.name)){
       helpers.error(`name ${this.name} should be kebab-case and lowercase`);
     }
     
@@ -116,7 +114,7 @@ class CommandNew {
     
     return fs.pathExists(this.targetPath).catch((err) => {
       console.log('directory exists fail', err);
-      Promise.reject('directory exists fail');
+      throw new Error('directory exists fail');
     });
   }
 
@@ -126,7 +124,7 @@ class CommandNew {
     
     return fs.copy(this.srcPath, this.targetPath).catch((err) => {
       console.log('copy fail', err);
-      Promise.reject('copy fail');
+      throw new Error('copy fail');
     });
   }
 
@@ -154,7 +152,7 @@ class CommandNew {
       files.map(({ src, dest }) => fs.copy(`${this.targetPath}/${src}`, `${this.targetPath}/${dest}`))
     ).catch((err) => {
       console.log('replace files fail', err);
-      Promise.reject('replace files fail');
+      throw new Error('replace files fail');
     });
   }
 
@@ -182,7 +180,7 @@ class CommandNew {
       files.map(file => fs.remove(`${this.targetPath}/${file}`))
     ).catch((err) => {
       console.log('clean up fail', err);
-      Promise.reject('clean up fail');
+      throw new Error('clean up fail');
     });
   }
 
@@ -201,7 +199,7 @@ class CommandNew {
       files: files.map(file => `${this.targetPath}/${file}`),
     }).catch((err) => {
       console.log('replace placeholders fail', err);
-      Promise.reject('replace placeholders fail');
+      throw new Error('replace placeholders fail');
     });
   }
 

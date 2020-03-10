@@ -28,9 +28,8 @@ program
   .alias('l')
   .description('adds a new layout')
   .option('-v, --verbose', 'output extra info')
-  .option('-D, --no-datasource', 'without layout datasource')
-  .option('-E, --no-eventhandler', 'without layout eventhandler')
-  .action((name, { verbose, datasource, eventhandler }) => new CommandLayout(name, datasource, eventhandler, !!verbose));
+  .option('-p, --path <path>', 'layouts directory path', 'src/app/layouts')
+  .action((name, options) => new CommandLayout(name, options));
 
 program.parse(process.argv);
 
