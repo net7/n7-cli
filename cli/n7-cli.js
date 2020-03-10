@@ -29,8 +29,6 @@ program
   .description('adds a new layout')
   .option('-v, --verbose', 'output extra info')
   .option('-p, --path <path>', 'layouts directory path', 'src/app/layouts')
-  .option('-D, --no-datasource', 'without layout datasource')
-  .option('-E, --no-eventhandler', 'without layout eventhandler')
   .action((name, options) => new CommandLayout(name, options));
 
 program.parse(process.argv);
