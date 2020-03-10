@@ -20,11 +20,9 @@ const placeholdersToReplace = {
 
 class CommandLayout {
   constructor(name, options) {
-    const { path: optionsPath, datasource, eventhandler, verbose } = options;
+    const { path: optionsPath, verbose } = options;
     this.name = name;
     this.path = optionsPath;
-    this.datasource = datasource;
-    this.eventhandler = eventhandler;
     this.verbose = !!verbose;
     this.cwd = process.cwd();
     this.layoutsPath = `${this.cwd}/${this.path}`;
