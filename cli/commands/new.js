@@ -140,8 +140,8 @@ class CommandNew {
     this.printInfo(`copying gitignore from ${src} to ${target}`);
     
     return fs.copy(src, target).catch((err) => {
-      console.log('copy fail', err);
-      throw new Error('copy fail');
+      console.log('copy .gitignore fail', err);
+      throw new Error('copy .gitignore fail');
     });
   }
 
