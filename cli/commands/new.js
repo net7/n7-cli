@@ -133,7 +133,7 @@ class CommandNew {
   }
 
   copyGitignore() {
-    const src = this.srcPath + '/.gitignore';
+    const src = this.srcPath + '/gitignore.tpl.txt';
     const target = this.targetPath + '/.gitignore';
 
     // info...
@@ -186,6 +186,10 @@ class CommandNew {
     // angular config
     const angularJsonSrc = 'angular.src.json';
     files.push(angularJsonSrc);
+
+    // gitignore tpl
+    const gitignoreTpl = 'gitignore.tpl.txt';
+    files.push(gitignoreTpl);
 
     // info...
     this.printInfo([
