@@ -62,6 +62,10 @@ class CommandNew {
         return this.copy();
       })
       .then(() => {
+        helpers.log(`loading .gitignore...`);
+        return this.copyGitignore();
+      })
+      .then(() => {
         helpers.log(`setup ${this.type} environment...`);
         return this.replaceFiles();
       })
@@ -123,6 +127,19 @@ class CommandNew {
     this.printInfo(`copying files from ${this.srcPath} to ${this.targetPath}`);
     
     return fs.copy(this.srcPath, this.targetPath).catch((err) => {
+      console.log('copy fail', err);
+      throw new Error('copy fail');
+    });
+  }
+
+  copyGitignore() {
+    const src = this.srcPath + '/.gitignore';
+    const target = this.targetPath + '/.gitignore';
+
+    // info...
+    this.printInfo(`copying gitignore from ${src} to ${target}`);
+    
+    return fs.copy(src, target).catch((err) => {
       console.log('copy fail', err);
       throw new Error('copy fail');
     });
