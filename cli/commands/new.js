@@ -38,6 +38,11 @@ const placeholdersToReplace = {
     'src/app/layouts/home-layout/home-layout.eh.ts',
   ]
 };
+const additionalFilesToRemove = [
+  'angular.src.json',
+  'gitignore.tpl.txt',
+  'src/app/layouts/base-layout',
+];
 
 
 class CommandNew {
@@ -183,13 +188,10 @@ class CommandNew {
       });
     })
 
-    // angular config
-    const angularJsonSrc = 'angular.src.json';
-    files.push(angularJsonSrc);
-
-    // gitignore tpl
-    const gitignoreTpl = 'gitignore.tpl.txt';
-    files.push(gitignoreTpl);
+    // additional files to remove
+    additionalFilesToRemove.forEach(file => {
+      files.push(file);
+    });
 
     // info...
     this.printInfo([
