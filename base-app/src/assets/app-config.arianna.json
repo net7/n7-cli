@@ -1,11 +1,13 @@
 {
   "communication": {
-    "defaultProvider": "apollo",
+    "defaultProvider": "provider-apollo",
     "providers": {
-      "apollo": {
+      "provider-apollo": {
+        "type": "apollo",
         "baseUrl": "https://aw-unifi-graphql.netseven.it/"
       },
-      "rest": {
+      "provider-rest": {
+        "type": "rest",
         "baseUrl": "https://jsonplaceholder.typicode.com/",
         "defaultMethod": "GET"
       }
