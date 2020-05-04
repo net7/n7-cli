@@ -7,6 +7,7 @@ import {
   AwSchedaLayoutComponent,
   AwEntitaLayoutComponent,
   AwSearchLayoutComponent,
+  AwGalleryLayoutComponent,
 } from '@n7-frontend/boilerplate';
 
 export const APP_ROUTES: Routes = [
@@ -17,6 +18,7 @@ export const APP_ROUTES: Routes = [
   { path: 'entita/:id/:slug/:tab', component: AwEntitaLayoutComponent },
   { path: 'entita/:id/:slug', redirectTo: 'entita/:id/:slug/overview' },
   { path: 'ricerca', component: AwSearchLayoutComponent },
+  { path: 'galleria', component: AwGalleryLayoutComponent },
   {
     path: '',
     redirectTo: '/home',
