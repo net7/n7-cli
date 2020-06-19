@@ -75,15 +75,6 @@
           "configurations": {
             "production": {
               "browserTarget": "baseappprefix:build:production"
-            },
-            "empty": {
-              "browserTarget": "baseappprefix:build:empty"
-            },
-            "arianna": {
-              "browserTarget": "baseappprefix:build:arianna"
-            },
-            "dataviz": {
-              "browserTarget": "baseappprefix:build:dataviz"
             }
           }
         },
