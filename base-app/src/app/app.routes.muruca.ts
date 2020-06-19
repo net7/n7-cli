@@ -6,8 +6,7 @@ import {
   // MURUCA
   MrHomeLayoutComponent,
   MrSearchLayoutComponent,
-  MrStaticLayoutComponent,
-  MrResourceLayoutComponent
+  MrStaticLayoutComponent
 } from '@n7-frontend/boilerplate';
 
 export const APP_ROUTES: Routes = [
@@ -20,8 +19,6 @@ export const APP_ROUTES: Routes = [
   { path: 'home-pro', component: MrHomeLayoutComponent, data: { configId: 'home-pro' } },
   { path: 'opere', component: MrSearchLayoutComponent, data: { configId: 'search-works' } },
   { path: 'mappe', component: MrSearchLayoutComponent, data: { configId: 'search-maps' } },
-  { path: 'mappa/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-map' } },
-  { path: 'opera/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-work' } },
   { path: 'static/:slug', component: MrStaticLayoutComponent },
   { path: '**', component: Page404LayoutComponent }
 ];
