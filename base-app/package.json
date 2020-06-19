@@ -35,6 +35,7 @@
     "latte-carousel": "^1.6.1",
     "vis-data": "^6.5.3",
     "vis-timeline": "^7.3.6",
+    "vis-util": "^4.3.2",
     "rxjs": "6.5.5",
     "slugify": "^1.4.0",
     "tippy.js": "^5.1.2",

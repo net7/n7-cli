@@ -1,0 +1,75 @@
+//
+// N7 Boilerplate
+//
+// All SASS and CSS Import for the N7 Boilerplate example project
+//
+
+// ------------------------------------ //
+// #TIPPY
+// ------------------------------------ //
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import '../../node_modules/tippy.js/themes/light-border.css';
+
+
+// ------------------------------------ //
+// #N7-ICON-FONT
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css";
+
+
+// ------------------------------------ //
+// #MR COLOR SCHEME
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/generic/color_scheme";
+
+
+// ------------------------------------ //
+// #N7 COMPONENTS VARIABLES
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/components/styles/generic/variables";
+
+
+// ------------------------------------ //
+// #MR VARIABLES
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/generic/variables";
+
+
+// ------------------------------------ //
+// #N7 COMPONENTS STYLES
+// ------------------------------------ //
+@import '../../node_modules/@n7-frontend/components/styles/imports';
+
+
+// ------------------------------------ //
+// #COMMON COMPONENTS
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/common/components/facets-wrapper";
+
+
+// ------------------------------------ //
+// #MR COMPONENTS
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/components/footer";
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/components/header";
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/components/inner-title";
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/components/items-preview";
+
+
+// ------------------------------------ //
+// #COMMON LAYOUTS
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/common/layouts/main-layout";
+
+
+// ------------------------------------ //
+// #MR LAYOUTS
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/layouts/home";
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/layouts/layout";
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/muruca/layouts/search-layout";
+
+// ------------------------------------ //
+// #COMMON UTILITIES
+// ------------------------------------ //
+@import "../../projects/n7-boilerplate-lib/src/lib/styles/common/utilities/_utilities";
