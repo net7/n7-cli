@@ -9,7 +9,7 @@ import {
   MrMenuService,
   MainStateService,
 } from '@n7-frontend/boilerplate';
-import { APP_ROUTES } from './app.routes.muruca';
+import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 

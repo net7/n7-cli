@@ -8,7 +8,7 @@ import {
 } from '@n7-frontend/boilerplate';
 import { DvComponentsLibModule } from '@n7-frontend/components';
 import globalConfig from './config/global';
-import { APP_ROUTES } from './app.routes.dataviz';
+import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
