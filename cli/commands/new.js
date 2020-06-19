@@ -7,7 +7,7 @@ const prefixRegexPattern = /[a-z]/;
 const reservedPrefixes = ['n7', 'aw', 'dv', 'mr'];
 const prefixMinLimit = 2;
 const prefixMaxLimit = 4;
-const enabledTypes = ['empty', 'arianna', 'dataviz'];
+const enabledTypes = ['empty', 'arianna', 'dataviz', 'muruca'];
 const filesToReplace = [{
   path: 'src/styles/styles',
   ext: 'scss'
