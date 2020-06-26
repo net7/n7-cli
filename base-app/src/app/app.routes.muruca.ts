@@ -6,8 +6,13 @@ import {
   // MURUCA
   MrHomeLayoutComponent,
   MrSearchLayoutComponent,
-  MrStaticLayoutComponent
+  MrStaticLayoutComponent,
+  // OTHER
+  DynamicPathGuard
+
 } from '@n7-frontend/boilerplate';
+
+const NOT_FOUND_PATH = 'page-404';
 
 export const APP_ROUTES: Routes = [
   {
@@ -19,6 +24,13 @@ export const APP_ROUTES: Routes = [
   { path: 'home-pro', component: MrHomeLayoutComponent, data: { configId: 'home-pro' } },
   { path: 'opere', component: MrSearchLayoutComponent, data: { configId: 'search-works' } },
   { path: 'mappe', component: MrSearchLayoutComponent, data: { configId: 'search-maps' } },
-  { path: 'static/:slug', component: MrStaticLayoutComponent },
-  { path: '**', component: Page404LayoutComponent }
+  { path: NOT_FOUND_PATH, component: Page404LayoutComponent },
+  {
+    path: '**',
+    component: MrStaticLayoutComponent,
+    canActivate: [DynamicPathGuard],
+    data: {
+      notFoundPath: NOT_FOUND_PATH
+    }
+  }
 ];
