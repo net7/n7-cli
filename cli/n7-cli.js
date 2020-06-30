@@ -7,7 +7,7 @@ const CommandLayout = require('./commands/layout');
 // DESCRIPTION
 // ---------------------------------------------------------->
 program
-  .version('0.0.1')
+  .version('2.2.0')
   .description('A command line interface for n7-framework');
 
 // NEW
