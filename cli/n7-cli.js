@@ -3,6 +3,7 @@
 const program = require('commander');
 const CommandNew = require('./commands/new');
 const CommandLayout = require('./commands/layout');
+const CommandTranslationsExtract = require('./commands/translations-extract');
 
 // DESCRIPTION
 // ---------------------------------------------------------->
@@ -30,6 +31,15 @@ program
   .option('-v, --verbose', 'output extra info')
   .option('-p, --path <path>', 'layouts directory path', 'src/app/layouts')
   .action((name, options) => new CommandLayout(name, options));
+
+// TRANSLATIONS EXTRACT
+// ---------------------------------------------------------->
+program
+  .command('translation-extract <defaultCode> <targetCode>')
+  .alias('xi18n')
+  .description('extract translations from source files')
+  .option('-v, --verbose', 'output extra info')
+  .action((defaultCode, targetCode, options) => new CommandTranslationsExtract(defaultCode, targetCode, options));
 
 program.parse(process.argv);
 
