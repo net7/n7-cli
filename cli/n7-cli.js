@@ -4,6 +4,7 @@ const program = require('commander');
 const CommandNew = require('./commands/new');
 const CommandLayout = require('./commands/layout');
 const CommandTranslationsExtract = require('./commands/translations-extract');
+const CommandTranslationsLoad = require('./commands/translations-load');
 
 // DESCRIPTION
 // ---------------------------------------------------------->
@@ -32,14 +33,23 @@ program
   .option('-p, --path <path>', 'layouts directory path', 'src/app/layouts')
   .action((name, options) => new CommandLayout(name, options));
 
-// TRANSLATIONS EXTRACT
+// TRANSLATION EXTRACT
 // ---------------------------------------------------------->
 program
   .command('translation-extract <defaultCode> <targetCode>')
   .alias('xi18n')
-  .description('extract translations from source files')
+  .description('extract lang translations from source files')
   .option('-v, --verbose', 'output extra info')
   .action((defaultCode, targetCode, options) => new CommandTranslationsExtract(defaultCode, targetCode, options));
+
+// TRANSLATION LOAD
+// ---------------------------------------------------------->
+program
+  .command('translation-load <langCode>')
+  .alias('li18n')
+  .description('load lang translations from source files')
+  .option('-v, --verbose', 'output extra info')
+  .action((langCode, options) => new CommandTranslationsLoad(langCode, options));
 
 program.parse(process.argv);
 
