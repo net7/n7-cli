@@ -40,6 +40,10 @@ class CommandTranslationsSearch {
       .then(files => {
         return this.getFilesWithTranslations(files);
       })
+      .then(filesWithTranslations => {
+        console.log(JSON.stringify(filesWithTranslations, null, 2));
+        return this.getTranslationsKeys();
+      })
       .then(() => {
         helpers.log(`translation report ${this.outputFile} created!`);
       })
@@ -112,7 +116,31 @@ class CommandTranslationsSearch {
   }
   
   getFilesWithTranslations(files) {
-    console.log(JSON.stringify(files, null, 2));
+    const msg = `searching files with translations`;
+    // info...
+    this.printInfo(msg);
+
+    const filesWithTranslations = [];
+    const stringSearch$ = files.map(file => {
+      return fs.readFile(file)
+        .then(fileContent => {
+          if(/\b_t\(|\btranslate.getTranslation\(/g.test(fileContent)) {
+            filesWithTranslations.push(file);
+          };
+          return Promise.resolve(null);
+        })
+    });
+
+    return Promise.all(stringSearch$).then(() => {
+      return Promise.resolve(filesWithTranslations);
+    }).catch((err) => {
+      console.log(`${msg} fail`, err);
+      throw new Error(`${msg} fail`);
+    });
+  }
+
+  getTranslationsKeys() {
+    // TODO: keys
     return Promise.resolve(null);
   }
   
