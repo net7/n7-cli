@@ -39,7 +39,7 @@ class CommandTranslationsExtract {
         return this.getLangConfig('default');
       })
       .then((module) => {
-        const { default: config } = module.default;
+        const { default: config } = (module || {}).default || {};
         this.defaultConfig = config;
         if (!this.defaultConfig) {
           helpers.error(`${this.defaultFile} wrong translation file format`);
@@ -54,7 +54,7 @@ class CommandTranslationsExtract {
         return this.getLangConfig('target');
       })
       .then((module) => {
-        const { default: config } = module.default;
+        const { default: config } = (module || {}).default || {};
         this.targetConfig = config;
         if (!this.targetConfig) {
           helpers.error(`${this.targetFile} wrong translation file format`);

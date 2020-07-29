@@ -5,6 +5,7 @@ const CommandNew = require('./commands/new');
 const CommandLayout = require('./commands/layout');
 const CommandTranslationsExtract = require('./commands/translations-extract');
 const CommandTranslationsLoad = require('./commands/translations-load');
+const CommandTranslationsSearch = require('./commands/translations-search');
 
 // DESCRIPTION
 // ---------------------------------------------------------->
@@ -50,6 +51,15 @@ program
   .description('load lang translations from source files')
   .option('-v, --verbose', 'output extra info')
   .action((langCode, options) => new CommandTranslationsLoad(langCode, options));
+
+// TRANSLATIONS SEARCH
+// ---------------------------------------------------------->
+program
+  .command('translations-search <folder> <targetFile>')
+  .alias('si18n')
+  .description('search for translations in project files')
+  .option('-v, --verbose', 'output extra info')
+  .action((folder, targetFile, options) => new CommandTranslationsSearch(folder, targetFile, options));
 
 program.parse(process.argv);
 
