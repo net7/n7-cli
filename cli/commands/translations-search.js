@@ -27,10 +27,7 @@ class CommandTranslationsSearch {
         return this.createJsFile(transpiledModule);
       })
       .then(() => {
-        return this.getLangConfig();
-      })
-      .then(module => {
-        const { default: config } = (module || {}).default || {};
+        const { default: config } = this.getLangConfig();
         this.targetConfig = config;
         if (!this.targetConfig) {
           helpers.error(`${this.targetFile} wrong translation file format`);
@@ -93,10 +90,12 @@ class CommandTranslationsSearch {
     // info...
     this.printInfo(msg);
 
-    return import(`${this.cwd}/${this.targetJsFile}`).catch((err) => {
+    try {
+      return require(`${this.cwd}/${this.targetJsFile}`);
+    } catch(err) {
       console.log(`${msg} fail`, err);
       throw new Error(`${msg} fail`);
-    });
+    }
   }
 
   getAllTypescriptFiles() {
