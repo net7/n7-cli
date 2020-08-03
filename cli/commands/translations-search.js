@@ -41,11 +41,10 @@ class CommandTranslationsSearch {
         return this.getFilesWithTranslations(files);
       })
       .then(filesWithTranslations => {
-        console.log(JSON.stringify(filesWithTranslations, null, 2));
-        return this.getTranslationsKeys();
+        return this.getTranslationsKeys(filesWithTranslations);
       })
-      .then(() => {
-        helpers.log(`translation report ${this.outputFile} created!`);
+      .then((diagnostic) => {
+        this.outputDiagnostics(diagnostic);
       })
       .catch(reason => {
         helpers.error(reason);
@@ -122,7 +121,7 @@ class CommandTranslationsSearch {
 
     const filesWithTranslations = [];
     const stringSearch$ = files.map(file => {
-      return fs.readFile(file)
+      return fs.readFile(file, 'utf-8')
         .then(fileContent => {
           if(/\b_t\(|\btranslate.getTranslation\(/g.test(fileContent)) {
             filesWithTranslations.push(file);
@@ -139,19 +138,45 @@ class CommandTranslationsSearch {
     });
   }
 
-  getTranslationsKeys() {
-    // TODO: keys
-    return Promise.resolve(null);
+  getTranslationsKeys(filesWithTranslations) {
+    const filesReadKeys$ = filesWithTranslations.map(file => {
+      return fs.readFile(file, 'utf-8')
+        .then(fileContent => {
+          const result = ts.transpileModule(fileContent, { 
+            compilerOptions: { 
+              module: ts.ModuleKind.CommonJS 
+            }
+          });
+          const keys = result.outputText.match(
+            /(?<=\.(_t|translate.getTranslation)\(\')\w+(?=\')/g
+          );
+          return Promise.resolve({ file, keys });
+        })
+    });
+    return Promise.all(filesReadKeys$);
   }
-  
-  cleanUp() {
-    const msg = `clean up tmp js file`;
-    // info...
-    this.printInfo(msg);
 
-    return fs.remove(this.targetJsFile).catch((err) => {
-      console.log(`${msg} fail`, err);
-      throw new Error(`${msg} fail`);
+  outputDiagnostics(diagnostic) {
+    const outputLine = [];
+    const keysUnique = [];
+    diagnostic.forEach(({ file, keys }) => {
+      keys
+        .filter(key => !this.targetConfig[key])
+        .forEach(key => {
+          outputLine.push(`${file}:${key}`);
+          if (!keysUnique.includes(key)) {
+            keysUnique.push(key);
+          }
+        });
+    });
+
+    let headerText = `There are ${keysUnique.length} keys with no translation on ${this.targetFile}`;
+    if (keysUnique.length === 1) {
+      headerText = `There is ${keysUnique.length} key with no translation on ${this.targetFile}`;
+    }
+    helpers[keysUnique.length === 0 ? 'info' : 'warn'](headerText);
+    outputLine.forEach(line => {
+      helpers.warn(line);
     });
   }
 
