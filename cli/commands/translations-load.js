@@ -85,7 +85,7 @@ class CommandTranslationsLoad {
     const fileContent = [
       'export default {',
       ...translations,
-      '}\n',
+      '};\n',
     ];
 
     return fs.writeFile(this.targetFile, fileContent.join('\n')).catch((err) => {
