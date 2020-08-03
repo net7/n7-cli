@@ -78,3 +78,20 @@ to load a translation file:
     - `--verbose (-v)` optional (default false)
 
 3) you can check the updated `<lang-code>.ts` file for changes
+
+
+## Command `translation-search`
+
+for help `n7-cli translation-search (si18n) --help`
+
+to search for keys with no translation:
+
+1) `cd <project-root>`
+
+2) `n7-cli translation-search (si18n) <folder> <translation-file> --verbose`
+
+    - `<folder>` mandatory, search folder (e.g. src)
+    - `<translation-file>` mandatory, translation file to check (e.g. src/app/config/translations/en.ts)
+    - `--verbose (-v)` optional (default false)
+
+3) you can check a diagnostic output on shell
