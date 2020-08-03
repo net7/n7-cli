@@ -36,10 +36,7 @@ class CommandTranslationsExtract {
         return this.createJsFile('default', transpiledModule);
       })
       .then(() => {
-        return this.getLangConfig('default');
-      })
-      .then((module) => {
-        const { default: config } = (module || {}).default || {};
+        const { default: config } = this.getLangConfig('default');
         this.defaultConfig = config;
         if (!this.defaultConfig) {
           helpers.error(`${this.defaultFile} wrong translation file format`);
@@ -51,10 +48,7 @@ class CommandTranslationsExtract {
         return this.createJsFile('target', transpiledModule);
       })
       .then(() => {
-        return this.getLangConfig('target');
-      })
-      .then((module) => {
-        const { default: config } = (module || {}).default || {};
+        const { default: config } = this.getLangConfig('target');
         this.targetConfig = config;
         if (!this.targetConfig) {
           helpers.error(`${this.targetFile} wrong translation file format`);
@@ -121,10 +115,12 @@ class CommandTranslationsExtract {
     // info...
     this.printInfo(msg);
 
-    return import(`${this.cwd}/${this[`${context}JsFile`]}`).catch((err) => {
+    try {
+      return require(`${this.cwd}/${this[`${context}JsFile`]}`);
+    } catch(err) {
       console.log(`${msg} fail`, err);
       throw new Error(`${msg} fail`);
-    });
+    }
   }
 
   createOutputFile() {
