@@ -44,7 +44,11 @@ class CommandTranslationsSearch {
         return this.getTranslationsKeys(filesWithTranslations);
       })
       .then((diagnostic) => {
-        this.outputDiagnostics(diagnostic);
+        this.diagnostic = diagnostic;
+        return this.cleanUp();
+      })
+      .then(() => {
+        this.outputDiagnostics();
       })
       .catch(reason => {
         helpers.error(reason);
@@ -139,6 +143,10 @@ class CommandTranslationsSearch {
   }
 
   getTranslationsKeys(filesWithTranslations) {
+    const msg = `get translations keys in files`;
+    // info...
+    this.printInfo(msg);
+
     const filesReadKeys$ = filesWithTranslations.map(file => {
       return fs.readFile(file, 'utf-8')
         .then(fileContent => {
@@ -156,10 +164,10 @@ class CommandTranslationsSearch {
     return Promise.all(filesReadKeys$);
   }
 
-  outputDiagnostics(diagnostic) {
+  outputDiagnostics() {
     const outputLine = [];
     const keysUnique = [];
-    diagnostic.forEach(({ file, keys }) => {
+    this.diagnostic.forEach(({ file, keys }) => {
       keys
         .filter(key => !this.targetConfig[key])
         .forEach(key => {
@@ -177,6 +185,17 @@ class CommandTranslationsSearch {
     helpers[keysUnique.length === 0 ? 'info' : 'warn'](headerText);
     outputLine.forEach(line => {
       helpers.warn(line);
+    });
+  }
+
+  cleanUp() {
+    const msg = `clean up tmp files`;
+    // info...
+    this.printInfo(msg);
+
+    return fs.remove(this.targetJsFile).catch((err) => {
+      console.log(`${msg} fail`, err);
+      throw new Error(`${msg} fail`);
     });
   }
 
