@@ -39,10 +39,16 @@
               {
                 "replace": "src/app/app.routes.ts",
                 "with": "src/app/app.routes.empty.ts"
-              }, 
+              },
               {
                 "replace": "src/styles/styles.scss",
                 "with": "src/styles/styles.empty.scss"
+              }
+            ],
+            "budgets": [
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "6kb"
               }
             ],
             "styles": [
@@ -55,12 +61,6 @@
           },
           "configurations": {
             "arianna": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/assets/app-config.json",
@@ -69,7 +69,7 @@
                 {
                   "replace": "src/app/app.routes.ts",
                   "with": "src/app/app.routes.arianna.ts"
-                }, 
+                },
                 {
                   "replace": "src/app/app.module.ts",
                   "with": "src/app/app.module.arianna.ts"
@@ -81,12 +81,6 @@
               ]
             },
             "dataviz": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/assets/app-config.json",
@@ -95,7 +89,7 @@
                 {
                   "replace": "src/app/app.routes.ts",
                   "with": "src/app/app.routes.dataviz.ts"
-                }, 
+                },
                 {
                   "replace": "src/app/app.module.ts",
                   "with": "src/app/app.module.dataviz.ts"
@@ -106,22 +100,32 @@
                 }
               ]
             },
-            "empty": {
-              "budgets": [
+            "muruca": {
+              "fileReplacements": [
                 {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
+                  "replace": "src/assets/app-config.json",
+                  "with": "src/assets/app-config.muruca.json"
+                }, 
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.muruca.ts"
+                }, 
+                {
+                  "replace": "src/app/app.routes.ts",
+                  "with": "src/app/app.routes.muruca.ts"
+                },
+                {
+                  "replace": "src/styles/styles.scss",
+                  "with": "src/styles/styles.muruca.scss"
                 }
-              ],
+              ]
+            },
+            "empty": {
               "fileReplacements": [
                 {
                   "replace": "src/assets/app-config.json",
                   "with": "src/assets/app-config.empty.json"
-                }, 
-                {
-                  "replace": "src/app/app.routes.ts",
-                  "with": "src/app/app.routes.empty.ts"
-                }, 
+                },
                 {
                   "replace": "src/app/app.module.ts",
                   "with": "src/app/app.module.empty.ts"
@@ -129,34 +133,6 @@
                 {
                   "replace": "src/styles/styles.scss",
                   "with": "src/styles/styles.empty.scss"
-                }
-              ]
-            },
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
                 }
               ]
             }
@@ -168,9 +144,6 @@
             "browserTarget": "baseappprefix:build"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "baseappprefix:build:production"
-            },
             "empty": {
               "browserTarget": "baseappprefix:build:empty"
             },
@@ -179,6 +152,9 @@
             },
             "dataviz": {
               "browserTarget": "baseappprefix:build:dataviz"
+            },
+            "muruca": {
+              "browserTarget": "baseappprefix:build:muruca"
             }
           }
         },

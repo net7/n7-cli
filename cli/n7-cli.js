@@ -3,11 +3,15 @@
 const program = require('commander');
 const CommandNew = require('./commands/new');
 const CommandLayout = require('./commands/layout');
+const CommandTranslationsExtract = require('./commands/translations-extract');
+const CommandTranslationsLoad = require('./commands/translations-load');
+const CommandTranslationsSearch = require('./commands/translations-search');
+const CommandSls = require('./commands/sls');
 
 // DESCRIPTION
 // ---------------------------------------------------------->
 program
-  .version('0.0.1')
+  .version('2.2.0')
   .description('A command line interface for n7-framework');
 
 // NEW
@@ -30,6 +34,41 @@ program
   .option('-v, --verbose', 'output extra info')
   .option('-p, --path <path>', 'layouts directory path', 'src/app/layouts')
   .action((name, options) => new CommandLayout(name, options));
+
+// TRANSLATION EXTRACT
+// ---------------------------------------------------------->
+program
+  .command('translation-extract <defaultCode> <targetCode>')
+  .alias('xi18n')
+  .description('extract lang translations from source files')
+  .option('-v, --verbose', 'output extra info')
+  .action((defaultCode, targetCode, options) => new CommandTranslationsExtract(defaultCode, targetCode, options));
+
+// TRANSLATION LOAD
+// ---------------------------------------------------------->
+program
+  .command('translation-load <langCode>')
+  .alias('li18n')
+  .description('load lang translations from source files')
+  .option('-v, --verbose', 'output extra info')
+  .action((langCode, options) => new CommandTranslationsLoad(langCode, options));
+
+// TRANSLATIONS SEARCH
+// ---------------------------------------------------------->
+program
+  .command('translations-search <folder> <targetFile>')
+  .alias('si18n')
+  .description('search for translations in project files')
+  .option('-v, --verbose', 'output extra info')
+  .action((folder, targetFile, options) => new CommandTranslationsSearch(folder, targetFile, options));
+
+// SLS
+// ---------------------------------------------------------->
+program
+  .command('sls <name>')
+  .description('creates a new muruca serverless project')
+  .option('-v, --verbose', 'output extra info')
+  .action((name, { verbose }) => new CommandSls(name, !!verbose));
 
 program.parse(process.argv);
 

@@ -6,34 +6,34 @@ $color-background-layout: #ffffff;
 // ------------------------------------ //
 // #N7 COLOR SCHEME
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/components/styles/generic/color_scheme";
+@import "../../node_modules/@n7-frontend/components/src/lib/styles/generic/color_scheme";
 
 
 // ------------------------------------ //
 // #N7 COMPONENTS VARIABLES
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/components/styles/generic/variables";
+@import "../../node_modules/@n7-frontend/components/src/lib/styles/generic/variables";
 
 
 // ------------------------------------ //
 // #N7 COMPONENTS STYLES
 // ------------------------------------ //
-@import '../../node_modules/@n7-frontend/components/styles/imports';
+@import '../../node_modules/@n7-frontend/components/src/lib/styles/imports';
 
 
 // ------------------------------------ //
 // #COMMON COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/boilerplate/styles/common/components/facets-wrapper";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/common/components/facets-wrapper";
 
 
 // ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/boilerplate/styles/common/layouts/main-layout";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/common/layouts/main-layout";
 
 
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/boilerplate/styles/common/utilities/_utilities";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/common/utilities/_utilities";

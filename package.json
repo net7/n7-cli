@@ -1,6 +1,6 @@
 {
   "name": "n7-cli",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "description": "Un'interfaccia da riga di comando per n7-framework",
   "main": "n7cli.js",
   "scripts": {
@@ -20,7 +20,9 @@
     "chalk": "^3.0.0",
     "commander": "^4.1.1",
     "fs-extra": "^8.1.0",
-    "replace-in-file": "^5.0.2"
+    "glob": "^7.1.6",
+    "replace-in-file": "^5.0.2",
+    "typescript": "^3.9.7"
   },
   "bin": {
     "n7-cli": "./cli/n7-cli.js"

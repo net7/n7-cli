@@ -1,13 +1,20 @@
-// ------------------------------------ //
-// #N7 COLOR SCHEME
-// ------------------------------------ //
-@import "../../node_modules/@n7-frontend/components/src/lib/styles/generic/color_scheme";
+//
+// N7 Boilerplate
+//
+// All SASS and CSS Import for the N7 Boilerplate example project
+//
 
 
 // ------------------------------------ //
-// #DV COLOR SCHEME
+// #N7-ICON-FONT
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/data-viz/generic/color_scheme";
+@import "../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css";
+
+
+// ------------------------------------ //
+// #MR COLOR SCHEME
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/generic/color_scheme";
 
 
 // ------------------------------------ //
@@ -17,9 +24,9 @@
 
 
 // ------------------------------------ //
-// #DV VARIABLES
+// #MR VARIABLES
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/data-viz/generic/variables";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/generic/variables";
 
 
 // ------------------------------------ //
@@ -35,17 +42,26 @@
 
 
 // ------------------------------------ //
+// #MR COMPONENTS
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/footer";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/header";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/inner-title";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/items-preview";
+
+
+// ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/common/layouts/main-layout";
 
 
 // ------------------------------------ //
-// #DATAVIZ COMPONENTS
+// #MR LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/data-viz/components/data-widget-wrapper";
-@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/data-viz/components/datepicker-wrapper";
-
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/home";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/layout";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/search-layout";
 
 // ------------------------------------ //
 // #COMMON UTILITIES
