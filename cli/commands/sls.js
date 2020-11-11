@@ -12,7 +12,7 @@ const filesToReplace = [
   'src/parsers/baseslsname-search.ts',
 ];
 const placeholdersToReplace = {
-  pointer: ['name', 'name', 'prefix'],
+  pointer: ['name', 'nameUppercase', 'nameCamelcase'],
   from: [/baseslsname/g, /BASESLSNAME/g, /Baseslsname/g],
   files: [
     'package.json',
@@ -34,6 +34,10 @@ class CommandSls {
     this.verbose = verbose;
     this.targetPath = `${process.cwd()}/${this.name}-sls`;
     this.srcPath = path.join(path.dirname(fs.realpathSync(__filename)), '../../base-sls');
+
+    // placeholder vars
+    this.nameUppercase = this.name.toUpperCase();
+    this.nameCamelcase = helpers.ucFirst(this.name);
 
     // validation
     this.validate();
@@ -141,6 +145,9 @@ class CommandSls {
 
   cleanUpFiles() {
     const files = [];
+    filesToReplace.forEach((file) => {
+      files.push(file)
+    });
 
     // additional files to remove
     additionalFilesToRemove.forEach(file => {
@@ -162,7 +169,9 @@ class CommandSls {
   }
 
   replacePlaceholders() {
-    const { pointer, from, files } = placeholdersToReplace;
+    const { pointer, from } = placeholdersToReplace;
+    let { files } = placeholdersToReplace;
+    files = files.map((file) => file.replace('baseslsname', this.name));
 
     // info...
     this.printInfo([
