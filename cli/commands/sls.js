@@ -3,7 +3,7 @@ const path = require('path');
 const replace = require('replace-in-file');
 const helpers = require('./helpers');
 
-const nameRegexPattern = /[a-z]/;
+const nameRegexPattern = /^[a-z]*$/g;
 const nameMinLimit = 3;
 const nameMaxLimit = 20;
 const filesToReplace = [
@@ -28,7 +28,7 @@ const additionalFilesToRemove = [
 ];
 
 
-class CommandNew {
+class CommandSls {
   constructor(name, verbose) {
     this.name = name;
     this.verbose = verbose;
@@ -52,7 +52,7 @@ class CommandNew {
         return this.copyGitignore();
       })
       .then(() => {
-        helpers.log(`setup ${this.type} environment...`);
+        helpers.log(`setup ${this.name} files...`);
         return this.replaceFiles();
       })
       .then(() => {
@@ -60,11 +60,11 @@ class CommandNew {
         return this.cleanUpFiles();
       })
       .then(() => {
-        helpers.log(`setting app name and prefix...`);
+        helpers.log(`setting project name...`);
         return this.replacePlaceholders();
       })
       .then(() => {
-        helpers.log(`new n7 app created! path: ${this.targetPath}`);
+        helpers.log(`new muruca sls project created! path: ${this.targetPath}`);
       })
       .catch(reason => {
         helpers.error(reason);
@@ -127,7 +127,7 @@ class CommandNew {
 
     // info...
     this.printInfo([
-      'replacing environment files',
+      'replacing files',
       ...files.map(({ src, dest }) => `- ${this.name}-sls/${src} => ${this.name}-sls/${dest}`)
     ].join('\n'));
     
@@ -187,4 +187,4 @@ class CommandNew {
   }
 }
 
-module.exports = CommandNew;
+module.exports = CommandSls;
