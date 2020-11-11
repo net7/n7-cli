@@ -112,4 +112,6 @@ to create a new muruca serverless project:
 
 3) `npm i`
 
-4) `npm start`
+4) `npm run sls-conf`
+
+5) `npm start`
