@@ -21,14 +21,14 @@
           "wp-page": "data/api/",
           "search": "search/results",
           "facets": "search/facets",
-          "resource": "get_resource/work/9"
+          "resource": "get_resource"
         }
       }
     }
   },
   "header": {
     "logo": {
-      "image": "https://i.imgur.com/kTND3Do.png",
+      "image": "/assets/logo-muruca.png",
       "anchor": {
         "href": "/"
       }
@@ -99,16 +99,16 @@
     "title": "Home",
     "sections": [
       {
-        "id": "hero-1",
+        "id": "hero-main",
         "type": "hero",
         "grid": null,
         "options": {
-          "classes": "n7-hero-1",
+          "classes": "n7-hero-main",
           "background": true
         }
       },
       {
-        "id": "collection-1",
+        "id": "collection-continents",
         "type": "collection",
         "grid": 4,
         "options": {
@@ -116,16 +116,16 @@
         }
       },
       {
-        "id": "hero-2",
+        "id": "hero-works",
         "type": "hero",
         "grid": null,
         "options": {
-          "classes": "n7-hero-2",
+          "classes": "n7-hero-works",
           "background": false
         }
       },
       {
-        "id": "collection-2",
+        "id": "collection-works",
         "type": "collection",
         "grid": 4,
         "options": {
@@ -143,17 +143,17 @@
         "grid": null
       },
       {
-        "id": "collection-1",
+        "id": "collection-continents",
         "type": "collection",
         "grid": 4
       },
       {
-        "id": "hero-1",
+        "id": "hero-main",
         "type": "hero",
         "grid": null
       },
       {
-        "id": "collection-2",
+        "id": "",
         "type": "collection",
         "grid": 4
       }
@@ -173,17 +173,18 @@
       "label": "Ordine",
       "options": [
         {
-          "value": "_score_DESC",
+          "value": "_score",
           "label": "Ordine per pertinenza",
+          "selected": false,
+          "disabled": true
+        },
+        {
+          "value": "sort_ASC",
+          "label": "Ordine alfabetico (A→Z)",
           "selected": true
         },
         {
-          "value": "label_sort_ASC",
-          "label": "Ordine alfabetico (A→Z)",
-          "selected": false
-        },
-        {
-          "value": "label_sort_DESC",
+          "value": "sort_DESC",
           "label": "Ordine alfabetico (Z→A)",
           "selected": false
         }
@@ -192,10 +193,13 @@
     "pagination": {
       "limit": 5,
       "options": [
-        10,
-        25,
-        50
+        12,
+        24,
+        48
       ]
+    },
+    "itemPreview": {
+      "classes": "is-vertical"
     },
     "fallback": {
       "text": "La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante.",
@@ -220,17 +224,18 @@
       "label": "Ordine",
       "options": [
         {
-          "value": "_score_DESC",
+          "value": "_score",
           "label": "Ordine per pertinenza",
+          "selected": false,
+          "disabled": true
+        },
+        {
+          "value": "sort_ASC",
+          "label": "Ordine alfabetico (A→Z)",
           "selected": true
         },
         {
-          "value": "label_sort_ASC",
-          "label": "Ordine alfabetico (A→Z)",
-          "selected": false
-        },
-        {
-          "value": "label_sort_DESC",
+          "value": "sort_DESC",
           "label": "Ordine alfabetico (Z→A)",
           "selected": false
         }
@@ -239,10 +244,13 @@
     "pagination": {
       "limit": 5,
       "options": [
-        10,
-        25,
-        50
+        12,
+        24,
+        48
       ]
+    },
+    "itemPreview": {
+      "classes": "is-vertical"
     },
     "fallback": {
       "text": "La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante.",
@@ -253,76 +261,343 @@
       "button": "Resetta la ricerca"
     }
   },
+  "tabs": {
+    "work": [
+      {
+        "id": "facsimile",
+        "label": "Facsimile"
+      },
+      {
+        "id": "metadati",
+        "label": "Metadati"
+      },
+      {
+        "id": "trascrizione",
+        "label": "Trascrizione"
+      },
+      {
+        "id": "bibliografia",
+        "label": "Bibliografia"
+      },
+      {
+        "id": "sandbox",
+        "label": "Sandbox"
+      }
+    ]
+  },
+  "resource-work-facsimile": {
+    "title": "Opera > Facsimile",
+    "tabs": "work",
+    "type": "work",
+    "sections": {
+      "top": [
+        {
+          "id": "breadcrumbs",
+          "type": "breadcrumbs"
+        },
+        {
+          "id": "header",
+          "type": "title"
+        },
+        {
+          "id": "tab-bar",
+          "type": "tabs"
+        }
+      ],
+      "content": [
+        {
+          "id": "image-viewer",
+          "type": "viewer"
+        },
+        {
+          "id": "metadata",
+          "type": "metadata"
+        }
+      ]
+    }
+  },
+  "resource-work-metadati": {
+    "title": "Opera > Metadati",
+    "tabs": "work",
+    "type": "work",
+    "sections": {
+      "top": [],
+      "content": [
+        {
+          "id": "breadcrumbs",
+          "type": "breadcrumbs"
+        },
+        {
+          "id": "header",
+          "type": "title"
+        },
+        {
+          "id": "tab-bar",
+          "type": "tabs"
+        },
+        {
+          "id": "metadata",
+          "type": "metadata"
+        },
+        {
+          "id": "metadata-size",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "collection-continents",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
+  },
+  "resource-work-trascrizione": {
+    "title": "Opera > Trascrizione",
+    "tabs": "work",
+    "type": "work",
+    "sections": {
+      "top": [
+        {
+          "id": "breadcrumbs",
+          "type": "breadcrumbs"
+        },
+        {
+          "id": "header",
+          "type": "title"
+        }
+      ],
+      "content": [
+        {
+          "id": "tab-bar",
+          "type": "tabs"
+        },
+        {
+          "id": "header",
+          "type": "text"
+        },
+        {
+          "id": "metadata",
+          "type": "metadata"
+        }
+      ]
+    }
+  },
+  "resource-work-bibliografia": {
+    "title": "Opera > Bibliografia",
+    "tabs": "work",
+    "type": "work",
+    "sections": {
+      "top": [],
+      "content": [
+        {
+          "id": "tab-bar",
+          "type": "tabs"
+        },
+        {
+          "id": "header",
+          "type": "title"
+        },
+        {
+          "id": "metadata",
+          "type": "metadata"
+        },
+        {
+          "id": "metadata-size",
+          "type": "metadata"
+        },
+        {
+          "id": "collection-continents",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
+  },
+  "resource-work-sandbox": {
+    "title": "Opera > Sandbox",
+    "tabs": "work",
+    "type": "work",
+    "sections": {
+      "top": [],
+      "content": [
+        {
+          "id": "header",
+          "type": "title"
+        },
+        {
+          "id": "breadcrumbs",
+          "type": "breadcrumbs"
+        },
+        {
+          "id": "tab-bar",
+          "type": "tabs"
+        },
+        {
+          "id": "header",
+          "type": "text"
+        },
+        {
+          "id": "metadata",
+          "type": "metadata"
+        },
+        {
+          "id": "metadata-size",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "collection-continents",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
+  },
   "resource-work": {
     "title": "Opera",
     "type": "work",
-    "sections": [
-      {
-        "id": "title-1",
-        "type": "title",
-        "grid": null
-      },
-      {
-        "id": "viewer-1",
-        "type": "viewer",
-        "grid": null
-      },
-      {
-        "id": "metadata-1",
-        "type": "metadata",
-        "grid": null
-      },
-      {
-        "id": "metadata-2",
-        "type": "metadata",
-        "grid": null
-      },
-      {
-        "id": "collection-1",
-        "type": "collection",
-        "grid": 3
-      },
-      {
-        "id": "preview-2",
-        "type": "preview",
-        "grid": null
-      }
-    ]
+    "sections": {
+      "top": [
+        {
+          "id": "header",
+          "type": "title",
+          "grid": null
+        }
+      ],
+      "content": [
+        {
+          "id": "image-viewer",
+          "type": "viewer",
+          "grid": null
+        },
+        {
+          "id": "metadata",
+          "type": "metadata"
+        },
+        {
+          "id": "metadata-size",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "collection-continents",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
   },
   "resource-map": {
     "title": "Mappa",
     "type": "map",
-    "sections": [
-      {
-        "id": "title-1",
-        "type": "title",
-        "grid": null
-      },
-      {
-        "id": "viewer-1",
-        "type": "viewer",
-        "grid": null
-      },
-      {
-        "id": "metadata-1",
-        "type": "metadata",
-        "grid": null
-      },
-      {
-        "id": "metadata-2",
-        "type": "metadata",
-        "grid": null
-      },
-      {
-        "id": "collection-1",
-        "type": "collection",
-        "grid": 3
-      },
-      {
-        "id": "preview-2",
-        "type": "preview",
-        "grid": null
-      }
-    ]
+    "sections": {
+      "top": [
+        {
+          "id": "breadcrumbs",
+          "type": "breadcrumbs"
+        },
+        {
+          "id": "header",
+          "type": "title"
+        }
+      ],
+      "content": [
+        {
+          "id": "image-viewer",
+          "type": "viewer",
+          "grid": null
+        },
+        {
+          "id": "metadata-description",
+          "type": "metadata",
+          "grid": null,
+          "options": {
+            "hideLabels": true
+          }
+        },
+        {
+          "id": "metadata",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "metadata-size",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "collection-keyterm",
+          "type": "collection",
+          "grid": 3
+        },
+        {
+          "id": "collection-toponym",
+          "type": "collection",
+          "grid": 3
+        },
+        {
+          "id": "collection-works",
+          "type": "collection",
+          "grid": 3
+        },
+        {
+          "id": "collection-continents",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
+  },
+  "toponym": {
+    "title": "Toponimi",
+    "type": "toponym",
+    "sections": {
+      "top": [],
+      "content": [
+        {
+          "id": "header",
+          "type": "title",
+          "grid": null
+        },
+        {
+          "id": "metadata",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "collection-toponyms",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
+  },
+  "keywords": {
+    "title": "Termini",
+    "type": "keywords",
+    "sections": {
+      "top": [],
+      "content": [
+        {
+          "id": "header",
+          "type": "title",
+          "grid": null
+        },
+        {
+          "id": "metadata",
+          "type": "metadata",
+          "grid": null
+        },
+        {
+          "id": "collection-keywords",
+          "type": "collection",
+          "grid": 3
+        }
+      ]
+    }
+  },
+  "labels": {
+    "descrizione": ""
   }
 }
