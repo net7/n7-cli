@@ -1,0 +1,45 @@
+{
+  "name": "baseslsname-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls offline --config=dev",
+    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --config=dev",
+    "serve:dev": "sls offline --config=dev",
+    "debug:dev": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --config=dev",
+    "serve:prod": "sls offline --config=prod",
+    "debug:prod": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --config=prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.6.1",
+    "@n7-frontend/serverless": "git+https://a4f0b27eaa6b475ba82ae239bc14e50562c93573:x-oauth-basic@github.com/net7/n7-serverless.git#master",
+    "array-map": "0.0.0",
+    "casual": "^1.6.2",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "get-json": "^1.0.1",
+    "json2yaml": "^1.1.0",
+    "lodash": "^4.17.19",
+    "merge-yaml": "^1.1.0",
+    "request": "^2.88.2",
+    "rxjs": "^6.5.4",
+    "serverless-basic-authentication": "^0.14.1",
+    "serverless-http": "^2.3.1",
+    "serverless-offline": "^5.12.1",
+    "sort-object": "^3.0.3",
+    "util": "^0.12.3",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/elasticsearch": "^5.0.36",
+    "serverless": "^2.1.0",
+    "serverless-import-config-plugin": "^0.1.3",
+    "serverless-plugin-typescript": "^1.1.9",
+    "typescript": "~3.9.7"
+  }
+}
