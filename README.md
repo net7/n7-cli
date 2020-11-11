@@ -95,3 +95,23 @@ to search for keys with no translation:
     - `--verbose (-v)` optional (default false)
 
 3) you can check a diagnostic output on shell
+
+
+## Command `sls`
+
+for help `n7-cli sls (n) --help`
+
+to create a new muruca serverless project:  
+
+1) `n7-cli sls (n) <project-name> --verbose`
+
+    - `<project-name>` mandatory, name in lowercase
+    - `--verbose (-v)` optional (default false)
+
+2) `cd <project-name>`
+
+3) `npm i`
+
+4) `npm run sls-conf`
+
+5) `npm start`

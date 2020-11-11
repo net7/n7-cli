@@ -21,7 +21,10 @@ module.exports = {
   },
   snakeCaseToPascalCase(str) {
     return str.split('-').map(word => {
-      return word.slice(0,1).toUpperCase() + word.slice(1, word.length);
+      return this.ucFirst(word);
     }).join('');
+  },
+  ucFirst(str) {
+    return str.slice(0,1).toUpperCase() + str.slice(1, str.length);
   }
 }

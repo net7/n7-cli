@@ -3,56 +3,41 @@ const path = require('path');
 const replace = require('replace-in-file');
 const helpers = require('./helpers');
 
-const prefixRegexPattern = /^[a-z]*$/g;
-const reservedPrefixes = ['n7', 'aw', 'dv', 'mr'];
-const prefixMinLimit = 2;
-const prefixMaxLimit = 4;
-const enabledTypes = ['empty', 'arianna', 'dataviz', 'muruca'];
-const filesToReplace = [{
-  path: 'src/styles/styles',
-  ext: 'scss'
-}, {
-  path: 'src/app/app.routes',
-  ext: 'ts'
-}, {
-  path: 'src/app/app.module',
-  ext: 'ts'
-}, {
-  path: 'src/assets/app-config',
-  ext: 'json'
-}];
+const nameRegexPattern = /^[a-z]*$/g;
+const nameMinLimit = 3;
+const nameMaxLimit = 20;
+const filesToReplace = [
+  'src/parsers/baseslsname-home.ts',
+  'src/parsers/baseslsname-resources.ts',
+  'src/parsers/baseslsname-search.ts',
+];
 const placeholdersToReplace = {
-  pointer: ['name', 'name', 'prefix'],
-  from: [/baseappname/g, /BASEAPPNAME/g, /baseappprefix/g],
+  pointer: ['name', 'nameUppercase', 'nameCamelcase'],
+  from: [/baseslsname/g, /BASESLSNAME/g, /Baseslsname/g],
   files: [
     'package.json',
-    'angular.json',
-    'e2e/src/app.e2e-spec.ts',
-    'karma.conf.js',
-    'tslint.json',
-    'src/index.html',
-    'src/assets/app-config.json',
-    'src/app/app.component.ts',
-    'src/app/layouts/home-layout/home-layout.config.ts',
-    'src/app/layouts/home-layout/home-layout.ts',
-    'src/app/layouts/home-layout/home-layout.eh.ts',
+    'README.md',
+    'src/parsers/baseslsname-home.ts',
+    'src/parsers/baseslsname-resources.ts',
+    'src/parsers/baseslsname-search.ts',
+    'src/parsers/index.ts',
   ]
 };
 const additionalFilesToRemove = [
-  'angular.src.json',
   'gitignore.tpl.txt',
-  'src/app/layouts/base-layout',
 ];
 
 
-class CommandNew {
-  constructor(name, type, prefix, verbose) {
+class CommandSls {
+  constructor(name, verbose) {
     this.name = name;
-    this.type = type;
-    this.prefix = prefix;
     this.verbose = verbose;
-    this.targetPath = `${process.cwd()}/${this.name}`;
-    this.srcPath = path.join(path.dirname(fs.realpathSync(__filename)), '../../base-app');
+    this.targetPath = `${process.cwd()}/${this.name}-sls`;
+    this.srcPath = path.join(path.dirname(fs.realpathSync(__filename)), '../../base-sls');
+
+    // placeholder vars
+    this.nameUppercase = this.name.toUpperCase();
+    this.nameCamelcase = helpers.ucFirst(this.name);
 
     // validation
     this.validate();
@@ -71,7 +56,7 @@ class CommandNew {
         return this.copyGitignore();
       })
       .then(() => {
-        helpers.log(`setup ${this.type} environment...`);
+        helpers.log(`setup ${this.name} files...`);
         return this.replaceFiles();
       })
       .then(() => {
@@ -79,11 +64,11 @@ class CommandNew {
         return this.cleanUpFiles();
       })
       .then(() => {
-        helpers.log(`setting app name and prefix...`);
+        helpers.log(`setting project name...`);
         return this.replacePlaceholders();
       })
       .then(() => {
-        helpers.log(`new n7 app created! path: ${this.targetPath}`);
+        helpers.log(`new muruca sls project created! path: ${this.targetPath}`);
       })
       .catch(reason => {
         helpers.error(reason);
@@ -91,29 +76,14 @@ class CommandNew {
   }
 
   validate(){
-    // validate name
-    if(!helpers.isKebabCase(this.name)){
-      helpers.error(`name ${this.name} should be kebab-case and lowercase`);
+    // validate name characters
+    if(!nameRegexPattern.test(this.name)){
+      helpers.error(`name ${this.name} format error - allowed chars [a-z]`);
     }
     
-    // validate type
-    if(enabledTypes.indexOf(this.type) === -1){
-      helpers.error(`type ${this.type} does not exists - allowed types ${enabledTypes.join(' | ')}`);
-    }
-    
-    // validate prefix characters
-    if(!prefixRegexPattern.test(this.prefix)){
-      helpers.error(`prefix ${this.prefix} format error - allowed chars [a-z]`);
-    }
-
-    // validate reserved prefix
-    if(reservedPrefixes.indexOf(this.prefix) !== -1){
-      helpers.error(`prefix ${this.prefix} is reserved - not allowed prefixes ${reservedPrefixes.join(' | ')}`);
-    }
-    
-    // validate prefix length
-    if((this.prefix.length > prefixMaxLimit) || (this.prefix.length < prefixMinLimit)){
-      helpers.error(`prefix ${this.prefix} length error - must be 2 to 4 chars`);
+    // validate name length
+    if((this.name.length > nameMaxLimit) || (this.name.length < nameMinLimit)){
+      helpers.error(`name ${this.name} length error - must be ${nameMinLimit} to ${nameMaxLimit} chars`);
     }
   }
 
@@ -153,21 +123,16 @@ class CommandNew {
   replaceFiles() {
     // type files
     const files = [];
-    filesToReplace.forEach(({ path, ext}) => {
-      const src = `${path}.${this.type}.${ext}`;
-      const dest = `${path}.${ext}`;
+    filesToReplace.forEach((file) => {
+      const src = file;
+      const dest = file.replace('baseslsname', this.name);
       files.push({ src, dest })
     });
 
-    // angular config
-    const angularJsonSrc = 'angular.src.json';
-    const angularJsonDest = 'angular.json';
-    files.push({ src: angularJsonSrc, dest: angularJsonDest });
-
     // info...
     this.printInfo([
-      'replacing environment files',
-      ...files.map(({ src, dest }) => `- ${this.name}/${src} => ${this.name}/${dest}`)
+      'replacing files',
+      ...files.map(({ src, dest }) => `- ${this.name}-sls/${src} => ${this.name}-sls/${dest}`)
     ].join('\n'));
     
     return Promise.all(
@@ -179,14 +144,10 @@ class CommandNew {
   }
 
   cleanUpFiles() {
-    // type files
     const files = [];
-    enabledTypes.forEach(type => {
-      filesToReplace.forEach(({ path, ext }) => {
-        const src = `${path}.${type}.${ext}`;
-        files.push(src);
-      });
-    })
+    filesToReplace.forEach((file) => {
+      files.push(file)
+    });
 
     // additional files to remove
     additionalFilesToRemove.forEach(file => {
@@ -196,7 +157,7 @@ class CommandNew {
     // info...
     this.printInfo([
       'removing unused files',
-      ...files.map((file) => `- ${this.name}/${file}`)
+      ...files.map((file) => `- ${this.name}-sls/${file}`)
     ].join('\n'));
 
     return Promise.all(
@@ -208,12 +169,14 @@ class CommandNew {
   }
 
   replacePlaceholders() {
-    const { pointer, from, files } = placeholdersToReplace;
+    const { pointer, from } = placeholdersToReplace;
+    let { files } = placeholdersToReplace;
+    files = files.map((file) => file.replace('baseslsname', this.name));
 
     // info...
     this.printInfo([
-      'replacing project placeholders (name, prefix) in: ',
-      ...files.map((file) => `- ${this.name}/${file}`)
+      'replacing project placeholders (name) in: ',
+      ...files.map((file) => `- ${this.name}-sls/${file}`)
     ].join('\n'));
 
     return replace({
@@ -233,4 +196,4 @@ class CommandNew {
   }
 }
 
-module.exports = CommandNew;
+module.exports = CommandSls;

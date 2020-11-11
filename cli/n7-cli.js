@@ -6,6 +6,7 @@ const CommandLayout = require('./commands/layout');
 const CommandTranslationsExtract = require('./commands/translations-extract');
 const CommandTranslationsLoad = require('./commands/translations-load');
 const CommandTranslationsSearch = require('./commands/translations-search');
+const CommandSls = require('./commands/sls');
 
 // DESCRIPTION
 // ---------------------------------------------------------->
@@ -60,6 +61,14 @@ program
   .description('search for translations in project files')
   .option('-v, --verbose', 'output extra info')
   .action((folder, targetFile, options) => new CommandTranslationsSearch(folder, targetFile, options));
+
+// SLS
+// ---------------------------------------------------------->
+program
+  .command('sls <name>')
+  .description('creates a new muruca serverless project')
+  .option('-v, --verbose', 'output extra info')
+  .action((name, { verbose }) => new CommandSls(name, !!verbose));
 
 program.parse(process.argv);
 

@@ -1,0 +1,9 @@
+service: my-express-application
+package:
+  excludeDevDependencies: false
+custom:
+  serverless-offline:
+    port: ${file(${opt:stage, 'prod'}.yml):PORT}
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
