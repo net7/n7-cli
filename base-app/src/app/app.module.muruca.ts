@@ -14,7 +14,7 @@ import {
 } from '@n7-frontend/boilerplate';
 import globalConfig from './config/global';
 import layoutsConfig from './config/layouts';
-import { APP_ROUTES } from './app.routes.muruca';
+import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import configMuruca from './config-muruca';
