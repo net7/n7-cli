@@ -4,7 +4,11 @@ export default {
 		"base_query": {
 			"field": "record-type",
 			"value": "work"
-		},
+    },
+    "sort": [
+      "sort_title.keyword",
+      "slug.keyword"
+    ],
 		"lang": {
 			"query": {
 				"type": "selection",
