@@ -3,7 +3,7 @@ const path = require('path');
 const replace = require('replace-in-file');
 const helpers = require('./helpers');
 
-const prefixRegexPattern = /[a-z]/;
+const prefixRegexPattern = /^[a-z]*$/g;
 const reservedPrefixes = ['n7', 'aw', 'dv', 'mr'];
 const prefixMinLimit = 2;
 const prefixMaxLimit = 4;
