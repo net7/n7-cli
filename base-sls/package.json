@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sls offline --config=dev",
-    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --config=dev",
-    "serve:dev": "sls offline --config=dev",
-    "debug:dev": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --config=dev",
-    "serve:prod": "sls offline --config=prod",
-    "debug:prod": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --config=prod",
+    "start": "sls offline --stage=dev",
+    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --stage=dev",
+    "serve:dev": "sls offline --stage=dev",
+    "debug:dev": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --stage=dev",
+    "serve:prod": "sls offline --stage=prod",
+    "debug:prod": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline --stage=prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
