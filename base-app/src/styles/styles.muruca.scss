@@ -4,6 +4,12 @@
 // All SASS and CSS Import for the N7 Boilerplate example project
 //
 
+// ------------------------------------ //
+// #TIPPY
+// ------------------------------------ //
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import '../../node_modules/tippy.js/themes/light-border.css';
+
 
 // ------------------------------------ //
 // #N7-ICON-FONT
@@ -42,12 +48,26 @@
 
 
 // ------------------------------------ //
+// #MR ATOMS
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/atoms/button";
+
+
+// ------------------------------------ //
 // #MR COMPONENTS
 // ------------------------------------ //
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/breadcrumbs";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/facet-header";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/facets";
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/footer";
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/header";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/hero";
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/inner-title";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/item-preview";
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/items-preview";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/read-more";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/tag";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/components/wp-content";
 
 
 // ------------------------------------ //
@@ -61,9 +81,17 @@
 // ------------------------------------ //
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/home";
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/layout";
-@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/search-layout";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/resource";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/static";
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/layouts/search";
 
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
 @import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/common/utilities/_utilities";
+
+
+// ------------------------------------ //
+// #MR UTILITIES
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/boilerplate/src/lib/styles/muruca/utilities/_utilities";

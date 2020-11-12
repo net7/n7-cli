@@ -4,35 +4,34 @@ import { RouterModule } from '@angular/router';
 import {
   N7BoilerplateCommonModule,
   N7BoilerplateAriannaWebModule,
-  JsonConfigService
+  JsonConfigService,
 } from '@n7-frontend/boilerplate';
-import { DvComponentsLibModule } from '@n7-frontend/components';
 import globalConfig from './config/global';
+import layoutsConfig from './config/layouts';
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 
-const JSON_PATH = '/assets/app-config.json';
+const JSON_PATH = './assets/app-config.json';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeLayoutComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       APP_ROUTES
     ),
-    N7BoilerplateCommonModule.forRoot({}),
-    N7BoilerplateAriannaWebModule,
-    DvComponentsLibModule
+    N7BoilerplateCommonModule.forRoot({
+      global: globalConfig,
+      layouts: layoutsConfig
+    }),
+    N7BoilerplateAriannaWebModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
-    useFactory: (jsonConfigService: JsonConfigService) => () => jsonConfigService
-      .load(JSON_PATH, globalConfig),
+    useFactory: (jsonConfigService: JsonConfigService) => () => jsonConfigService.load(JSON_PATH),
     deps: [JsonConfigService],
     multi: true
   }],

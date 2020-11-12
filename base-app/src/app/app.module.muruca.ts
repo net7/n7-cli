@@ -2,19 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { RouterModule, Router, NavigationStart } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { translate } from '@n7-frontend/core';
 import {
   N7BoilerplateCommonModule,
   N7BoilerplateMurucaModule,
-  JsonConfigService,
+  LocalConfigService,
   MrMenuService,
+  MrFooterService,
   MainStateService,
+  MrTranslationsLoaderService,
 } from '@n7-frontend/boilerplate';
+import globalConfig from './config/global';
+import layoutsConfig from './config/layouts';
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
+import configMuruca from './config-muruca';
+import i18n from './config-muruca/i18n';
 
-const JSON_PATH = './assets/app-config.json';
-const MENU_PATH = 'http://unus-sls.netseven.it/get_menu';
+const LANG_CODE = 'it_IT';
+
+// load translations
+translate.init({
+  defaultLang: LANG_CODE,
+  translations: i18n
+});
 
 @NgModule({
   declarations: [
@@ -25,18 +37,35 @@ const MENU_PATH = 'http://unus-sls.netseven.it/get_menu';
     RouterModule.forRoot(
       APP_ROUTES
     ),
-    N7BoilerplateCommonModule.forRoot({}),
+    N7BoilerplateCommonModule.forRoot({
+      global: globalConfig,
+      layouts: layoutsConfig
+    }),
     N7BoilerplateMurucaModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
-    useFactory: (jsonConfigService: JsonConfigService) => () => jsonConfigService.load(JSON_PATH),
-    deps: [JsonConfigService],
+    useFactory: (
+      localConfigService: LocalConfigService
+    ) => () => localConfigService.load(configMuruca),
+    deps: [LocalConfigService],
     multi: true
   }, {
     provide: APP_INITIALIZER,
-    useFactory: (menuService: MrMenuService) => () => menuService.load(MENU_PATH),
+    useFactory: (menuService: MrMenuService) => () => menuService.load(),
     deps: [MrMenuService],
+    multi: true
+  }, {
+    provide: APP_INITIALIZER,
+    useFactory: (footerService: MrFooterService) => () => footerService.load(),
+    deps: [MrFooterService],
+    multi: true
+  }, {
+    provide: APP_INITIALIZER,
+    useFactory: (
+      translationsLoader: MrTranslationsLoaderService
+    ) => () => translationsLoader.load(LANG_CODE),
+    deps: [MrTranslationsLoaderService],
     multi: true
   }],
   bootstrap: [AppComponent]

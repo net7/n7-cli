@@ -1,13 +1,11 @@
 {
   "communication": {
-    "defaultProvider": "provider-apollo",
+    "defaultProvider": "apollo",
     "providers": {
-      "provider-apollo": {
-        "type": "apollo",
+      "apollo": {
         "baseUrl": "https://aw-unifi-graphql.netseven.it/"
       },
-      "provider-rest": {
-        "type": "rest",
+      "rest": {
         "baseUrl": "https://jsonplaceholder.typicode.com/",
         "defaultMethod": "GET"
       }
@@ -25,14 +23,18 @@
         {
           "text": "Home",
           "icon": "n7-icon-home",
-          "anchor": { "href": "home" },
+          "anchor": {
+            "href": "home"
+          },
           "_meta": {
             "id": "home"
           }
         },
         {
           "text": "Patrimonio",
-          "anchor" : { "href": "patrimonio" },
+          "anchor": {
+            "href": "patrimonio"
+          },
           "icon": "n7-icon-tree-icon",
           "_meta": {
             "id": "patrimonio"
@@ -40,7 +42,9 @@
         },
         {
           "text": "Galleria",
-          "anchor" : { "href": "galleria" },
+          "anchor": {
+            "href": "galleria"
+          },
           "icon": "n7-icon-th",
           "_meta": {
             "id": "galleria"
@@ -48,18 +52,32 @@
         },
         {
           "text": "Ricerca",
-          "anchor" : { "href": "ricerca" },
+          "anchor": {
+            "href": "ricerca"
+          },
           "icon": "n7-icon-search",
           "_meta": {
             "id": "ricerca"
           }
         },
         {
-          "text": "Utenti",
-          "anchor" : { "href": "utenti" },
-          "icon": "n7-icon-facebook",
+          "text": "Mappa",
+          "anchor": {
+            "href": "mappa"
+          },
+          "icon": "n7-icon-map1",
           "_meta": {
-            "id": "utenti"
+            "id": "mappa"
+          }
+        },
+        {
+          "text": "Timeline",
+          "anchor": {
+            "href": "timeline"
+          },
+          "icon": "n7-icon-calendar-alt",
+          "_meta": {
+            "id": "timeline"
           }
         }
       ]
@@ -77,7 +95,7 @@
     "columns": [
       {
         "classes": "col-class",
-        "title": "Arianna Web, archivio digitale online",
+        "title": "Arianna4View, archivio digitale online",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit elit nunc, at porta ex accumsan id. Fusce quis lobortis sem, non ornare tellus.",
         "images": [
           {
@@ -100,7 +118,7 @@
         "title": "Privacy e info",
         "links": [
           {
-            "text": "Info su Arianna Web",
+            "text": "Info su Arianna4View",
             "classes": "link-class",
             "anchor": {
               "href": "https://www.google.it"
@@ -128,7 +146,7 @@
         ]
       },
       {
-        "text": "Arianna Web is powered by Hyperborea.<br><a href='#' target='_blank'>www.hyperborea.com</a>"
+        "text": "Arianna4View is powered by Hyperborea.<br><a href='#' target='_blank'>www.hyperborea.com</a>"
       }
     ]
   },
@@ -195,9 +213,9 @@
       },
       "backgroundImage": "https://i.imgur.com/FgsxSYR.png",
       "input": {
-        "placeholder": "Cerca in MAXXI"
+        "placeholder": "Cerca nei titoli delle schede"
       },
-      "fallback": "Nessun risultato, prova a <br> cambiare la ricerca."
+      "fallback": "La ricerca nel titolo non ha dato nessun risultato,<br>prova a cercare in tutti i campi."
     },
     "bottom-hero": {
       "title": "IL MAXXI",
@@ -248,8 +266,9 @@
     "linked-objects-fallback": "Non sono stati trovati oggetti culturali collegati alle entità selezionate. Prova a cambiare le entità selezionate o resetta la ricerca."
   },
   "scheda-layout": {
+    "empty-html": "<span>Non sono disponibili informazioni.<span>",
     "empty-label": "<h2>Benvenuto nel patrimonio archivistico dell'Università di Firenze</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Subtitle</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "bubble-chart": {
+    "related-entities": {
       "title": "Entità collegate"
     },
     "related-items": {
@@ -257,7 +276,7 @@
       "max-related-items": 6
     },
     "metadata": {
-      "title": "Metadati"
+      "title": "Informazioni"
     },
     "tree": {
       "icon-expand": "n7-icon-angle-right",
@@ -271,11 +290,88 @@
           "oc-type-bar": "n7-icon-biography"
         }
       ]
+    },
+    "metadata-to-show": {
+      "aggregazione-logica": [
+        "estremo_remoto",
+        "estremo_recente",
+        "tipologia",
+        "numerazione_index",
+        "altre_denominazioni.denominazione",
+        "altre_denominazioni.tipologia",
+        "consistenza.quantita",
+        "consistenza.unitaMisura",
+        "produzione",
+        "produzione.soggettoConservatoreAttuale",
+        "produzione.soggettoConservatore",
+        "produzione.tipoResponsabilita",
+        "produzione.parteConservata",
+        "produzione.causeAcquisizione",
+        "descrizione_interna",
+        "storia_ordinamenti",
+        "statoAttualeConservazione.statoConservazione",
+        "altra_documentazione",
+        "descrizione_esterna",
+        "storiaUbicazioni.storiaUbicazioni",
+        "corredoRicerca.tipologia",
+        "corredoRicerca.riferimento",
+        "corredoRicerca.descrizione"
+      ],
+      "oggetto-culturale": [
+        "estremo_remoto",
+        "estremo_recente",
+        "numerazione_index",
+        "altraSegnatura.numerazione",
+        "altraSegnatura.tipologia",
+        "altra_intitolazione.intitolazione",
+        "altra_intitolazione.tipologia",
+        "definizione_tipologia",
+        "supporto",
+        "consistenza.quantita",
+        "consistenza.unitaMisura",
+        "descrizione_interna",
+        "altezza",
+        "larghezza",
+        "spessore",
+        "stato_conservazione",
+        "legatura.tipologia",
+        "legatura.epoca",
+        "legatura.datazione",
+        "condizionamento.tipologia",
+        "condizionamento.materia",
+        "condizionamento.epoca",
+        "condizionamento.datazione",
+        "numerazione.numerazione",
+        "numerazione.tipoNumerazione",
+        "numerazione.epoca",
+        "numerazione.datazione",
+        "descrizioneEsterna.tipologia",
+        "descrizioneEsterna.posizione",
+        "descrizioneEsterna.trascrizione",
+        "descrizione_interna_tipologia",
+        "descrizione_interna_trascrizione",
+        "documentazioneTestuale.tipologia",
+        "documentazioneTestuale.lingua",
+        "documentazioneGrafica.tipologia",
+        "documentazioneGrafica.tecnicaEsecutiva",
+        "documentazioneCopia.tipologia",
+        "documentazioneCopia.epoca",
+        "strumentoCorredoInterno.tipologia",
+        "strumentoCorredoInterno.oggetto",
+        "strumentoCorredoInterno.epoca",
+        "corredoRicerca.tipologia",
+        "corredoRicerca.riferimento",
+        "corredoRicerca.descrizione"
+      ]
     }
   },
   "search-layout": {
     "title": "Cerca nel patrimonio",
-    "results": ["Nessun risultato", "Risultato", "Risultati"],
+    "results": [
+      "Nessun risultato",
+      "Risultato",
+      "Risultati"
+    ],
     "enabledEntities": [
       "oggetto-culturale",
       "aggregazione",
@@ -305,16 +401,74 @@
   },
   "entita-layout": {
     "overview": {
-      "campi": ["data_istituzione", "denominazione_autorita"],
+      "informazioni": [
+        "data_istituzione",
+        "denominazione_autorita"
+      ],
       "smallChartSize": 3
     },
-    "entitiesQuerySize": 30
+    "fallback": "Non sono disponibili informazioni per questa entità.",
+    "entitiesQuerySize": 30,
+    "metadata-to-show": [
+      "TIPOLOGIA",
+      "tipologia",
+      "ENTITA-PERSONA-1",
+      "luogo_nascita",
+      "data_nascita",
+      "luogo_morte",
+      "data_morte",
+      "genere",
+      "ENTITA-FAMIGLIA-1",
+      "data_fondazione",
+      "data_estinzione",
+      "ENTITA-ORGANIZZAZIONE-1",
+      "natura_giuridica",
+      "data_istituzione",
+      "data_soppressione",
+      "ENTITA-LUOGO-1",
+      "ENTITA-EVENTO-1",
+      "ENTITA-COSE-NOTEVOLI-1",
+      "descrizione",
+      "ALTRA-DENOMINAZIONE",
+      "altraDenominazione.altraDenominazione",
+      "altraDenominazione.tipologiaDenominazione",
+      "ENTITA-PERSONA-2",
+      "altro_luogo",
+      "biografia",
+      "qualifica.qualifica",
+      "qualifica.tipologia",
+      "ENTITA-FAMIGLIA-2",
+      "luogo",
+      "note_storiche",
+      "ENTITA-ORGANIZZAZIONE-2",
+      "sede",
+      "note_storiche",
+      "struttura_funzioni",
+      "ENTITA-LUOGO-2",
+      "stato",
+      "regione",
+      "provincia",
+      "comune",
+      "note_storiche",
+      "ENTITA-EVENTO-2",
+      "data_inizio",
+      "data_fine",
+      "ricorrenza",
+      "descrizione"
+    ]
   },
+  "map-layout": {
+
+  }, 
   "config-keys": {
     "persona": {
       "color": {
         "hex": "#4D8FF2",
-        "rgb": [77, 143, 242]
+        "rgb": [
+          77,
+          143,
+          242
+        ]
       },
       "icon": "n7-icon-biography",
       "label": "Persone",
@@ -326,7 +480,11 @@
     "luogo": {
       "color": {
         "hex": "#EBC738",
-        "rgb": [235, 199, 56]
+        "rgb": [
+          235,
+          199,
+          56
+        ]
       },
       "icon": "n7-icon-map1",
       "label": "Luoghi",
@@ -337,7 +495,11 @@
     "concetto": {
       "color": {
         "hex": "#33BDCC",
-        "rgb": [51, 189, 204]
+        "rgb": [
+          51,
+          189,
+          204
+        ]
       },
       "icon": "n7-icon-lightbulb",
       "label": "Concetti",
@@ -347,7 +509,11 @@
     "cosa notevole": {
       "color": {
         "hex": "#5BA878",
-        "rgb": [91, 186, 120]
+        "rgb": [
+          91,
+          186,
+          120
+        ]
       },
       "icon": "n7-icon-circle-full",
       "label": "Cose notevoli",
@@ -358,7 +524,11 @@
     "organizzazione": {
       "color": {
         "hex": "#BD883E",
-        "rgb": [189, 136, 62]
+        "rgb": [
+          189,
+          136,
+          62
+        ]
       },
       "icon": "n7-icon-building",
       "label": "Organizzazioni",
@@ -369,18 +539,40 @@
     "oggetto-culturale": {
       "color": {
         "hex": "#9A84C2",
-        "rgb": [154, 132, 194]
+        "rgb": [
+          154,
+          132,
+          194
+        ]
       },
       "icon": "n7-icon-file3",
       "label": "Oggetti Culturali",
       "singular-label": "Oggetto Culturale",
       "input-placeholder": "",
-      "class-name": "oggetto-culturale"
+      "class-name": "oggetto-culturale",
+      "classifications": {
+        "UA": {
+          "icon": "n7-icon-file3"
+        },
+        "F400": {
+          "icon": "n7-icon-camera-retro"
+        },
+        "UASC": {
+          "icon": "n7-icon-map1"
+        },
+        "OAC300": {
+          "icon": "n7-icon-illustration"
+        }
+      }
     },
     "aggregazione-logica": {
       "color": {
         "hex": "#A6A5A8",
-        "rgb": [166, 165, 168]
+        "rgb": [
+          166,
+          165,
+          168
+        ]
       },
       "icon": "n7-icon-archive",
       "label": "Fondi",
@@ -391,7 +583,11 @@
     "famiglia": {
       "color": {
         "hex": "#CC6F5C",
-        "rgb": [204, 111, 92]
+        "rgb": [
+          204,
+          111,
+          92
+        ]
       },
       "icon": "n7-icon-users",
       "label": "Famiglia",
@@ -401,8 +597,12 @@
     },
     "evento": {
       "color": {
-        "hex": "#E89827;",
-        "rgb": [232, 152, 39]
+        "hex": "#E89827",
+        "rgb": [
+          232,
+          152,
+          39
+        ]
       },
       "icon": "n7-icon-calendar-alt",
       "label": "Evento",
@@ -421,10 +621,230 @@
     "bubblechart": true
   },
   "labels": {
+    "altre_denominazioni.tipologia": "Altra denominazione - tipologia",
+    "altre_denominazioni.denominazione": "Altra denominazione",
+    "estremo_remoto": "Estremo remoto",
+    "estremo_recente": "Estremo recente",
+    "consistenza.quantita": "Consistenza",
+    "consistenza.unitaMisura": "Consistenza - unità di misura",
+    "produzione": "Soggetto produttore",
+    "conservazione.soggettoConservatore": "Soggetto conservatore",
+    "conservazione.soggettoConservatoreAttuale": "Soggetto conservatore",
+    "conservazione.tipoResponsabilita": "Soggetto conservatore - tipo responsabilità",
+    "conservazione.parteConservata": "Parte conservata",
+    "conservazione.causeAcquisizione": "Storia della custodia",
+    "descrizione_interna": "Descrizione",
+    "altra_documentazione": "Materiali correlati",
+    "storia_ordinamenti": "Storia degli ordinamenti",
+    "descrizione_esterna": "Descrizione esterna",
+    "stato_conservazione": "Stato di conservazione",
+    "statoConservazione": "Stato di conservazione",
+    "storia_ubicazioni": "Storia delle ubicazioni",
+    "storiaUbicazioni": "Storia delle ubicazioni",
+    "corredoRicerca.tipologia": "Strumento di corredo e ricerca",
+    "corredoRicerca.riferimento": "Strumento di corredo e ricerca - riferimento",
+    "corredoRicerca.descrizione": "Strumento di corredo e ricerca - descrizione",
+    "altra_segnatura.tipologia": "Altra segnatura - tipologia",
+    "altra_segnatura.numerazione": "Altra segnatura",
+    "intitolazione": "",
+    "altra_intitolazione.tipologia": "Altra intitolazione - tipologia",
+    "altra_intitolazione.intitolazione": "Altra intitolazione",
+    "definizione_tipologia": "Tipologia",
+    "supporto": "Supporto",
+    "legatura.tipologia": "Legatura",
+    "legatura.epoca": "Legatura - epoca ",
+    "legatura.datazione": "Legatura - datazione",
+    "condizionamento.tipologia": "Condizionamento",
+    "condizionamento.materia": "Condizionamento - materia",
+    "condizionamento.epoca": "Condizionamento - epoca",
+    "condizionamento.datazione": "Condizionamento - datazione",
+    "altezza": "Altezza (mm.)",
+    "larghezza": "Larghezza (mm.)",
+    "spessore": "Spessore (mm.)",
+    "consistenza.quantita": "Consistenza",
+    "consistenza.unitaMisura": "Consistenza - unità di misura",
+    "numerazione.tipoNumerazione": "Numerazione - tipo",
+    "numerazione.numerazione": "Numerazione ",
+    "numerazione.epoca": "Numerazione - epoca ",
+    "numerazione.datazione": "Numerazione - datazione",
+    "descrizioneEsterna.tipologia": "Descrizione esterna",
+    "descrizioneEsterna.posizione": "Descrizione esterna - posizione",
+    "descrizioneEsterna.trascrizione": "Descrizione esterna - trascrizione",
+    "statoConservazione.statoConservazione": "Stato di conservazione",
+    "descrizioneInterna.tipologiaDocumentaria": "Tipologia documentaria",
+    "descrizioneInterna.descrizione": "Descrizione",
+    "descrizioneInterna.trascrizione": "Trascrizione",
+    "documentazioneTestuale.tipologia": "Presenza di documentazione testuale",
+    "documentazioneTestuale.lingua": "Presenza di documentazione testuale - lingua",
+    "documentazioneGrafica.tipologia": "Presenza di documentazione grafica",
+    "documentazioneGrafica.tecnicaEsecutiva": "Presenza di documentazione grafica - tecnica esecutiva",
+    "documentazioneCopia.tipologia": "Presenza di documentazione in copia",
+    "documentazioneCopia.epoca": "Presenza di documentazione in copia - epoca",
+    "strumentoCorredoInterno.tipologia": "Strumenti di corredo interni",
+    "strumentoCorredoInterno.oggetto": "Strumenti di corredo interni - oggetto",
+    "strumentoCorredoInterno.epoca": "Strumenti di corredo interni - epoca",
+    "corredoRicerca.tipologia": "Strumento di corredo e ricerca",
+    "corredoRicerca.riferimento": "Strumento di corredo e ricerca - riferimento",
+    "corredoRicerca.descrizione": "Strumento di corredo e ricerca - descrizione",
+    "aggregazione-logica.typology": "",
     "struttura_funzioni": "Funzioni principali",
-    "fase": "Fase",
-    "intitolazione": "Intitolaz.",
-    "aggregazione-logica": "Fondo",
-    "oggetto-culturale": "Oggetto culturale"
+    "aggregazione-logica": "Aggregazione logica",
+    "oggetto-culturale": "Oggetto culturale",
+    "tipologia": "",
+    "descrizione": "Descrizione",
+    "data_inizio": "Data di inizio",
+    "data_fine": "Data di fine",
+    "ricorrenza": "Ricorrenza",
+    "altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "altraDenominazione.altraDenominazione": "Altra denominazione",
+    "data_fondazione": "Data di fondazione",
+    "data_estinzione": "Data di estinzione",
+    "note_storiche": "Storia",
+    "stato": "Stato",
+    "regione": "Regione",
+    "provincia": "Provincia",
+    "comune": "Comune",
+    "note_storiche": "Descrizione ",
+    "natura_giuridica": "Natura giuridica",
+    "sede": "Sedi",
+    "data_istituzione": "Data di istituzione",
+    "data_soppressione  ": "Data di soppressione",
+    "note_storiche": "Storia",
+    "struttura_funzioni": "Struttura organizzativa",
+    "genere": "Genere",
+    "altro_luogo": "Luoghi significativi",
+    "luogo_nascita": "Luogo di nascita",
+    "luogo_morte": "Luogo di morte",
+    "data_nascita": "Data di nascita",
+    "data_morte": "Data di morte",
+    "biografia": "Biografia",
+    "tipologia": "Qualifica - tipologia",
+    "qualifica": "Qualifica",
+    "aggregazione-logica.estremo_remoto": "Estremo remoto",
+    "aggregazione-logica.estremo_recente": "Estremo recente",
+    "aggregazione-logica.tipologia": "Tipologia",
+    "aggregazione-logica.numerazione_index": "Indice di classificazione",
+    "aggregazione-logica.altre_denominazioni.denominazione": "Altra denominazione",
+    "aggregazione-logica.altre_denominazioni.tipologia": "Altra denominazione - tipologia",
+    "aggregazione-logica.consistenza.quantita": "Consistenza",
+    "aggregazione-logica.consistenza.unitaMisura": "Consistenza - unità di misura",
+    "aggregazione-logica.produzione": "Soggetto produttore",
+    "aggregazione-logica.produzione.soggettoConservatoreAttuale": "Soggetto conservatore",
+    "aggregazione-logica.produzione.soggettoConservatore": "Soggetto conservatore",
+    "aggregazione-logica.produzione.tipoResponsabilita": "Soggetto conservatore - tipo responsabilità",
+    "aggregazione-logica.produzione.parteConservata": "Parte conservata",
+    "aggregazione-logica.produzione.causeAcquisizione": "Storia della custodia",
+    "aggregazione-logica.descrizione_interna": "Descrizione",
+    "aggregazione-logica.storia_ordinamenti": "Storia degli ordinamenti",
+    "aggregazione-logica.statoAttualeConservazione.statoConservazione": "Stato di conservazione",
+    "aggregazione-logica.altra_documentazione": "Materiali correlati",
+    "aggregazione-logica.descrizione_esterna": "Descrizione esterna",
+    "aggregazione-logica.storiaUbicazioni.storiaUbicazioni": "Storia delle ubicazioni",
+    "aggregazione-logica.corredoRicerca.tipologia": "Strumento di corredo e ricerca",
+    "aggregazione-logica.corredoRicerca.riferimento": "Strumento di corredo e ricerca - riferimento",
+    "aggregazione-logica.corredoRicerca.descrizione": "Strumento di corredo e ricerca - descrizione",
+    "oggetto-culturale.estremo_remoto": "Estremo remoto",
+    "oggetto-culturale.estremo_recente": "Estremo recente",
+    "oggetto-culturale.numerazione_index": "Segnatura principale",
+    "oggetto-culturale.altraSegnatura.numerazione": "Altra segnatura",
+    "oggetto-culturale.altraSegnatura.tipologia": "Altra segnatura - tipologia",
+    "oggetto-culturale.altra_intitolazione.intitolazione": "Altra intitolazione",
+    "oggetto-culturale.altra_intitolazione.tipologia": "Altra intitolazione - tipologia",
+    "oggetto-culturale.definizione_tipologia": "Tipologia",
+    "oggetto-culturale.supporto": "Supporto",
+    "oggetto-culturale.consistenza.quantita": "Consistenza",
+    "oggetto-culturale.consistenza.unitaMisura": "Consistenza - unità di misura",
+    "oggetto-culturale.descrizioneInterna.descrizione": "Descrizione",
+    "oggetto-culturale.altezza": "Altezza (mm.)",
+    "oggetto-culturale.larghezza": "Larghezza (mm.)",
+    "oggetto-culturale.spessore": "Spessore (mm.)",
+    "oggetto-culturale.stato_conservazione": "Stato di conservazione",
+    "oggetto-culturale.legatura.tipologia": "Legatura",
+    "oggetto-culturale.legatura.epoca": "Legatura - epoca",
+    "oggetto-culturale.legatura.datazione": "Legatura - datazione",
+    "oggetto-culturale.condizionamento.tipologia": "Condizionamento",
+    "oggetto-culturale.condizionamento.materia": "Condizionamento - materia",
+    "oggetto-culturale.condizionamento.epoca": "Condizionamento - epoca",
+    "oggetto-culturale.condizionamento.datazione": "Condizionamento - datazione",
+    "oggetto-culturale.numerazione.numerazione": "Numerazione",
+    "oggetto-culturale.numerazione.tipoNumerazione": "Numerazione - tipo",
+    "oggetto-culturale.numerazione.epoca": "Numerazione - epoca",
+    "oggetto-culturale.numerazione.datazione": "Numerazione - datazione",
+    "oggetto-culturale.descrizioneEsterna.tipologia": "Descrizione esterna",
+    "oggetto-culturale.descrizioneEsterna.posizione": "Descrizione esterna - posizione",
+    "oggetto-culturale.descrizioneEsterna.trascrizione": "Descrizione esterna - trascrizione",
+    "oggetto-culturale.descrizione_interna_tipologia": "Tipologia documentaria",
+    "oggetto-culturale.descrizione_interna_trascrizione": "Trascrizione",
+    "oggetto-culturale.documentazioneTestuale.tipologia": "Presenza di documentazione testuale",
+    "oggetto-culturale.documentazioneTestuale.lingua": "Presenza di documentazione testuale - lingua",
+    "oggetto-culturale.documentazioneGrafica.tipologia": "Presenza di documentazione grafica",
+    "oggetto-culturale.documentazioneGrafica.tecnicaEsecutiva": "Presenza di documentazione grafica - tecnica esecutiva",
+    "oggetto-culturale.documentazioneCopia.tipologia": "Presenza di documentazione in copia",
+    "oggetto-culturale.documentazioneCopia.epoca": "Presenza di documentazione in copia - epoca",
+    "oggetto-culturale.strumentoCorredoInterno.tipologia": "Strumenti di corredo interni",
+    "oggetto-culturale.strumentoCorredoInterno.oggetto": "Strumenti di corredo interni - oggetto",
+    "oggetto-culturale.strumentoCorredoInterno.epoca": "Strumenti di corredo interni - epoca",
+    "oggetto-culturale.corredoRicerca.tipologia": "Strumento di corredo e ricerca",
+    "oggetto-culturale.corredoRicerca.riferimento": "Strumento di corredo e ricerca - riferimento",
+    "oggetto-culturale.corredoRicerca.descrizione": "Strumento di corredo e ricerca - descrizione",
+    "ENTITA-TIPOLOGIA": "---",
+    "organizzazione.tipologia": "Tipologia",
+    "luogo.tipologia": "Tipologia",
+    "evento.tipologia": "Tipologia",
+    "cosa notevole.tipologia": "Tipologia",
+    "ENTITA-PERSONA-1": "---",
+    "persona.luogo_nascita": "Luogo di nascita",
+    "persona.data_nascita": "Data di nascita",
+    "persona.luogo_morte": "Luogo di morte",
+    "persona.data_morte": "Data di morte",
+    "persona.genere": "Genere",
+    "ENTITA-FAMIGLIA-1": "---",
+    "famiglia.data_fondazione": "Data di fondazione",
+    "famiglia.data_estinzione": "Data di estinzione",
+    "ENTITA-ORGANIZZAZIONE-1": "---",
+    "organizzazione.natura_giuridica": "Natura giuridica",
+    "organizzazione.data_istituzione": "Data di istituzione",
+    "organizzazione.data_soppressione": "Data di soppressione",
+    "ENTITA-LUOGO-1": "---",
+    "ENTITA-EVENTO-1": "---",
+    "ENTITA-COSE-NOTEVOLI-1": "---",
+    "cosa notevole.descrizione": "Descrizione",
+    "ALTRA-DENOMINAZIONE": "---",
+    "persona.altraDenominazione.altraDenominazione": "Altra denominazione",
+    "persona.altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "famiglia.altraDenominazione.altraDenominazione": "Altra denominazione",
+    "famiglia.altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "organizzazione.altraDenominazione.altraDenominazione": "Altra denominazione",
+    "organizzazione.altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "luogo.altraDenominazione.altraDenominazione": "Altra denominazione",
+    "luogo.altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "evento.altraDenominazione.altraDenominazione": "Altra denominazione",
+    "evento.altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "altraDenominazione.altraDenominazione": "Altra denominazione",
+    "altraDenominazione.tipologiaDenominazione": "Altra denominazione - tipologia",
+    "ENTITA-PERSONA-2": "---",
+    "persona.altro_luogo": "Luoghi significativi",
+    "persona.biografia": "Biografia",
+    "persona.qualifica.qualifica": "Qualifica",
+    "persona.qualifica.tipologia": "Qualifica - tipologia",
+    "ENTITA-FAMIGLIA-2": "---",
+    "famiglia.luogo": "Contesto spaziale",
+    "famiglia.note_storiche": "Storia",
+    "ENTITA-ORGANIZZAZIONE-2": "---",
+    "organizzazione.sede": "Sedi",
+    "organizzazione.note_storiche": "Storia",
+    "organizzazione.struttura_funzioni": "Struttura organizzativa",
+    "ENTITA-LUOGO-2": "---",
+    "luogo.stato": "Stato",
+    "luogo.regione": "Regione",
+    "luogo.provincia": "Provincia",
+    "luogo.comune": "Comune",
+    "luogo.note_storiche": "Descrizione ",
+    "ENTITA-EVENTO-2": "---",
+    "evento.data_inizio": "Data di inizio",
+    "evento.data_fine": "Data di fine",
+    "evento.ricorrenza": "Ricorrenza",
+    "evento.descrizione": "Descrizione",
+    "aggregazioni-logiche-collegate": "Fondi collegati"
   }
 }
