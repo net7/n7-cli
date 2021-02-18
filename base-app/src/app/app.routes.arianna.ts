@@ -13,7 +13,7 @@ import {
 
 export const APP_ROUTES: Routes = [
   // arianna web routes
-  { path: 'home', component: AwHomeLayoutComponent },
+  { path: '', component: AwHomeLayoutComponent },
   { path: 'patrimonio/:id/:slug', component: AwSchedaLayoutComponent },
   { path: 'patrimonio/:id', component: AwSchedaLayoutComponent },
   { path: 'patrimonio', redirectTo: 'patrimonio/' },
@@ -25,7 +25,7 @@ export const APP_ROUTES: Routes = [
   { path: 'timeline', component: AwTimelineLayoutComponent },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   },
 
