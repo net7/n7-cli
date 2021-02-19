@@ -1,6 +1,6 @@
 ELASTIC_URI: ''
 SEARCH_INDEX: ''
-PAGES: ''
+STATIC_URL: ''
 BASE_URL: ''
 PORT: 3124
 CONTROLLER_PATH: './src/controller'
