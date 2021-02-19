@@ -6,7 +6,6 @@ import {
   JsonConfigService
 } from '@n7-frontend/boilerplate';
 import { DvComponentsLibModule } from '@n7-frontend/components';
-import globalConfig from './config/global';
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -30,7 +29,7 @@ const JSON_PATH = '/assets/app-config.json';
   providers: [{
     provide: APP_INITIALIZER,
     useFactory: (jsonConfigService: JsonConfigService) => () => jsonConfigService
-      .load(JSON_PATH, globalConfig),
+      .load(JSON_PATH),
     deps: [JsonConfigService],
     multi: true
   }],

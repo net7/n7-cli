@@ -6,8 +6,6 @@ import {
   N7BoilerplateAriannaWebModule,
   LocalConfigService,
 } from '@n7-frontend/boilerplate';
-import globalConfig from './config/global';
-import layoutsConfig from './config/layouts';
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -23,10 +21,7 @@ import configArianna from './config-arianna';
     RouterModule.forRoot(
       APP_ROUTES
     ),
-    N7BoilerplateCommonModule.forRoot({
-      global: globalConfig,
-      layouts: layoutsConfig
-    }),
+    N7BoilerplateCommonModule.forRoot({}),
     N7BoilerplateAriannaWebModule
   ],
   providers: [{
