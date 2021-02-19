@@ -10,28 +10,26 @@ import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 
-import configArianna from './config-arianna';
+import configArianna from './config';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      APP_ROUTES
-    ),
+    RouterModule.forRoot(APP_ROUTES),
     N7BoilerplateCommonModule.forRoot({}),
-    N7BoilerplateAriannaWebModule
+    N7BoilerplateAriannaWebModule,
   ],
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: (
-      localConfigService: LocalConfigService
-    ) => () => localConfigService.load(configArianna),
-    deps: [LocalConfigService],
-    multi: true
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (
+        localConfigService: LocalConfigService
+      ) => () => localConfigService.load(configArianna),
+      deps: [LocalConfigService],
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

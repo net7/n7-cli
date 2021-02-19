@@ -24,7 +24,7 @@ export default {
       title: 'Privacy e info',
       links: [
         {
-          text: 'Info su Arianna4View',
+          text: 'Info su BASEAPPNAME',
           classes: 'link-class',
           anchor: {
             href: 'https://www.google.it'
