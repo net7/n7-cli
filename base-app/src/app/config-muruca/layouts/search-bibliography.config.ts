@@ -1,14 +1,14 @@
-import searchMapsFacetsConfig from './search-maps-facets.config';
+import searchBibliographyFacetsConfig from './search-bibliography-facets.config';
 
 export default {
-  title: 'Mappe',
-  searchId: 'map',
-  searchConfig: searchMapsFacetsConfig,
+  title: 'search#title_bibliographies',
+  searchId: 'bibliography',
+  searchConfig: searchBibliographyFacetsConfig,
+  resourcePath: '/bibliografia',
   facetsTitle: 'search#facets_title',
-  resourcePath: '/map',
-  totalResultsText: 'search#maps_total',
+  totalResultsText: 'search#bibliographies_total',
   filtersTitle: 'search#filters_title',
-  grid: 3,
+  grid: 1,
   sort: {
     label: 'search#sort_title',
     options: [
@@ -39,9 +39,9 @@ export default {
     ]
   },
   itemPreview: {
-    classes: 'is-vertical',
-    limit: 200,
-    striptags: true,
+    classes: 'mr-item-preview-bibliography',
+    limit: 9999,
+    striptags: false
   },
   fallback: {
     text: 'search#fallback_text',

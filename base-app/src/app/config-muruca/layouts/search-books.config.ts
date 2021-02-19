@@ -1,13 +1,19 @@
-import searchWorksFacetsConfig from './search-works-facets.config';
+import searchBooksFacetsConfig from './search-books-facets.config';
 
 export default {
-  title: 'Opere',
-  searchId: 'work',
-  searchConfig: searchWorksFacetsConfig,
-  resourcePath: '/work',
+  title: 'Biblioteca',
+  searchId: 'book',
+  searchConfig: searchBooksFacetsConfig,
   facetsTitle: 'search#facets_title',
-  totalResultsText: 'search#works_total',
+  resourcePath: '/book',
+  totalResultsText: 'search#books_total',
   filtersTitle: 'search#filters_title',
+  grid: 1,
+  description: {
+    id: 'library',
+    buttonText: 'search#description_button',
+    linkText: 'search#description_link',
+  },
   sort: {
     label: 'search#sort_title',
     options: [

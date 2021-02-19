@@ -1,13 +1,14 @@
-import searchWorksFacetsConfig from './search-works-facets.config';
+import searchBiographiesFacetsConfig from './search-biographies-facets.config';
 
 export default {
-  title: 'Opere',
-  searchId: 'work',
-  searchConfig: searchWorksFacetsConfig,
-  resourcePath: '/work',
+  title: 'Vite Antiche',
+  searchId: 'biography',
+  searchConfig: searchBiographiesFacetsConfig,
   facetsTitle: 'search#facets_title',
-  totalResultsText: 'search#works_total',
+  resourcePath: '/vite-antiche',
+  totalResultsText: 'search#biographies_total',
   filtersTitle: 'search#filters_title',
+  grid: 1,
   sort: {
     label: 'search#sort_title',
     options: [

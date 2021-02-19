@@ -1,6 +1,6 @@
 export default {
   logo: {
-    image: '/assets/logo-muruca.png',
+    title: 'Petrarca Online',
     anchor: {
       href: '/'
     }

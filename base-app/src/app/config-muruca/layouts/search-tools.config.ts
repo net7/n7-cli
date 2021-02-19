@@ -1,13 +1,14 @@
-import searchWorksFacetsConfig from './search-works-facets.config';
+import searchToolsFacetsConfig from './search-tools-facets.config';
 
 export default {
-  title: 'Opere',
-  searchId: 'work',
-  searchConfig: searchWorksFacetsConfig,
-  resourcePath: '/work',
+  title: 'Materiali e Strumenti',
+  searchId: 'tools',
+  searchConfig: searchToolsFacetsConfig,
   facetsTitle: 'search#facets_title',
-  totalResultsText: 'search#works_total',
+  resourcePath: '/tools',
+  totalResultsText: 'search#tools_total',
   filtersTitle: 'search#filters_title',
+  grid: 1,
   sort: {
     label: 'search#sort_title',
     options: [

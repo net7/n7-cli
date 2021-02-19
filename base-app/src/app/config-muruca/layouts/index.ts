@@ -1,33 +1,38 @@
-import tabsConfig from './tabs.config';
-import homeBaseConfig from './home-base.config';
-import homeProConfig from './home-pro.config';
+/* eslint-disable @typescript-eslint/camelcase */
+import homeConfig from './home.config';
 import searchWorksConfig from './search-works.config';
-import searchMapsConfig from './search-maps.config';
-import resourceWorkFacsimileConfig from './resource-work-facsimile.config';
-import resourceWorkMetadatiConfig from './resource-work-metadati.config';
-import resourceWorkTrascrizioneConfig from './resource-work-trascrizione.config';
-import resourceWorkBibliografiaConfig from './resource-work-bibliografia.config';
-import resourceWorkSandboxConfig from './resource-work-sandbox.config';
-import resourceMapConfig from './resource-map.config';
+import searchBooksConfig from './search-books.config';
+import searchWitnessesConfig from './search-witnesses.config';
+import searchBibliografia from './search-bibliography.config';
+import searchIconographiesConfig from './search-iconographies.config';
+import searchToolsConfig from './search-tools.config';
+import searchBiographiesConfig from './search-biographies.config';
+import resourceBookConfig from './resource-book.config';
 import resourceToponymConfig from './resource-toponym.config';
+import resourceIconographyConfig from './resource-iconography.config';
 import resourceKeywordConfig from './resource-keyword.config';
 import resourceWorkConfig from './resource-work.config';
-import advancedSearchConfig from './advanced-search.config';
+import resourceWitnessConfig from './resource-witness.config';
+import resourceBiographyConfig from './resource-biography.config';
+import resourceModalBibliography_witConfig from './resource-modal-bibliography_wit.config';
+import resourceToolConfig from './resource-tool.config';
 
 export default {
-  tabs: tabsConfig,
-  'home-base': homeBaseConfig,
-  'home-pro': homeProConfig,
+  home: homeConfig,
   'search-works': searchWorksConfig,
-  'search-maps': searchMapsConfig,
+  'search-books': searchBooksConfig,
+  'search-witnesses': searchWitnessesConfig,
+  'resource-biography': resourceBiographyConfig,
+  'resource-tool': resourceToolConfig,
+  'search-tools': searchToolsConfig,
+  'search-biographies': searchBiographiesConfig,
+  'resource-iconography': resourceIconographyConfig,
+  'search-iconographies': searchIconographiesConfig,
+  'resource-witness': resourceWitnessConfig,
   'resource-work': resourceWorkConfig,
-  'resource-work-facsimile': resourceWorkFacsimileConfig,
-  'resource-work-metadati': resourceWorkMetadatiConfig,
-  'resource-work-trascrizione': resourceWorkTrascrizioneConfig,
-  'resource-work-bibliografia': resourceWorkBibliografiaConfig,
-  'resource-work-sandbox': resourceWorkSandboxConfig,
-  'resource-map': resourceMapConfig,
+  'resource-book': resourceBookConfig,
   'resource-toponym': resourceToponymConfig,
   'resource-keyword': resourceKeywordConfig,
-  'advanced-search': advancedSearchConfig,
+  'search-bibliografia': searchBibliografia,
+  'resource-modal-bibliography_wit': resourceModalBibliography_witConfig
 };

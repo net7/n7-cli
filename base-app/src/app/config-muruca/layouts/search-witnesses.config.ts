@@ -1,13 +1,14 @@
-import searchWorksFacetsConfig from './search-works-facets.config';
+import searchWitnessesFacetsConfig from './search-witnesses-facets.config';
 
 export default {
-  title: 'Opere',
-  searchId: 'work',
-  searchConfig: searchWorksFacetsConfig,
-  resourcePath: '/work',
+  title: 'Testimoni',
+  searchId: 'witness',
+  searchConfig: searchWitnessesFacetsConfig,
   facetsTitle: 'search#facets_title',
-  totalResultsText: 'search#works_total',
+  resourcePath: '/witness',
+  totalResultsText: 'search#witnesses_total',
   filtersTitle: 'search#filters_title',
+  grid: '1',
   sort: {
     label: 'search#sort_title',
     options: [

@@ -1,13 +1,14 @@
-import searchWorksFacetsConfig from './search-works-facets.config';
+import searchIconographiesFacetsConfig from './search-iconographies-facets.config';
 
 export default {
-  title: 'Opere',
-  searchId: 'work',
-  searchConfig: searchWorksFacetsConfig,
-  resourcePath: '/work',
+  title: 'Iconografie',
+  searchId: 'iconography',
+  searchConfig: searchIconographiesFacetsConfig,
   facetsTitle: 'search#facets_title',
-  totalResultsText: 'search#works_total',
+  resourcePath: '/iconography',
+  totalResultsText: 'search#iconographies_total',
   filtersTitle: 'search#filters_title',
+  grid: 3,
   sort: {
     label: 'search#sort_title',
     options: [

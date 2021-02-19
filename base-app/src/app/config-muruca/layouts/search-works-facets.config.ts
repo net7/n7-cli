@@ -20,55 +20,170 @@ const facets = {
         iconPayload: 'search-icon'
       }
     }]
-  }, {
-    id: 'section-toponyms',
+  },
+  // {
+  //   id: 'section-toponyms',
+  //   header: {
+  //     id: 'header-toponyms',
+  //     data: {
+  //       text: 'search#header_toponyms',
+  //       additionalText: null,
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'toponyms-filter',
+  //     type: 'text',
+  //     delay: 500,
+  //     target: 'toponyms',
+  //     schema: {
+  //       valueType: 'string'
+  //     },
+  //     data: {
+  //       id: 'toponyms-filter',
+  //       placeholder: 'search#placeholder_toponyms',
+  //       icon: 'n7-icon-search',
+  //       inputPayload: 'search-input',
+  //       enterPayload: 'search-enter',
+  //       iconPayload: 'search-icon',
+  //     }
+  //   }, {
+  //     id: 'toponyms',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }]
+  // }, {
+  //   id: 'section-continents',
+  //   header: {
+  //     id: 'header-continents',
+  //     data: {
+  //       text: 'search#header_continents',
+  //       additionalText: null
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'continents',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }]
+  // }, {
+  //   id: 'section-authors',
+  //   header: {
+  //     id: 'header-authors',
+  //     data: {
+  //       text: 'search#header_authors',
+  //       additionalText: null
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'authors',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }]
+  // }, {
+  //   id: 'section-keywords',
+  //   header: {
+  //     id: 'header-keywords',
+  //     data: {
+  //       text: 'search#header_keywords',
+  //       additionalText: null,
+  //       iconRight: 'n7-icon-angle-down'
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'keywords',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }],
+  // }, {
+  //   id: 'section-date',
+  //   header: {
+  //     id: 'header-date',
+  //     data: {
+  //       text: 'search#header_date',
+  //       additionalText: null,
+  //       iconRight: 'n7-icon-angle-down'
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'date',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }],
+  // }, {
+  //   id: 'section-place',
+  //   header: {
+  //     id: 'header-place',
+  //     data: {
+  //       text: 'search#header_place',
+  //       additionalText: null,
+  //       iconRight: 'n7-icon-angle-down'
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'place',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }],
+  // },
+  {
+    id: 'section-genres',
     header: {
-      id: 'header-toponyms',
+      id: 'header-genres',
       data: {
-        text: 'search#header_toponyms',
-        additionalText: null,
-      }
-    },
-    inputs: [{
-      id: 'toponyms-filter',
-      type: 'text',
-      delay: 500,
-      target: 'toponyms',
-      schema: {
-        valueType: 'string'
-      },
-      data: {
-        id: 'toponyms-filter',
-        placeholder: 'search#placeholder_toponyms',
-        icon: 'n7-icon-search',
-        inputPayload: 'search-input',
-        enterPayload: 'search-enter',
-        iconPayload: 'search-icon',
-      }
-    }, {
-      id: 'toponyms',
-      type: 'link',
-      limit: 50,
-      queryParam: true,
-      schema: {
-        valueType: 'string',
-        multiple: true
-      },
-      data: {
-        links: []
-      }
-    }]
-  }, {
-    id: 'section-continents',
-    header: {
-      id: 'header-continents',
-      data: {
-        text: 'search#header_continents',
+        text: 'search#header_genres',
         additionalText: null
       }
     },
     inputs: [{
-      id: 'continents',
+      id: 'genres',
       type: 'link',
       limit: 50,
       queryParam: true,
@@ -79,41 +194,19 @@ const facets = {
       data: {
         links: []
       }
-    }]
-  }, {
-    id: 'section-authors',
+    }],
+  },
+  {
+    id: 'section-languages',
     header: {
-      id: 'header-authors',
+      id: 'header-languages',
       data: {
-        text: 'search#header_authors',
+        text: 'search#header_language',
         additionalText: null
       }
     },
     inputs: [{
-      id: 'authors',
-      type: 'link',
-      limit: 50,
-      queryParam: true,
-      schema: {
-        valueType: 'string',
-        multiple: true
-      },
-      data: {
-        links: []
-      }
-    }]
-  }, {
-    id: 'section-keywords',
-    header: {
-      id: 'header-keywords',
-      data: {
-        text: 'search#header_keywords',
-        additionalText: null,
-        iconRight: 'n7-icon-angle-down'
-      }
-    },
-    inputs: [{
-      id: 'keywords',
+      id: 'languages',
       type: 'link',
       limit: 50,
       queryParam: true,
@@ -125,53 +218,31 @@ const facets = {
         links: []
       }
     }],
-  }/* , {
-    id: 'section-date',
-    header: {
-      id: 'header-date',
-      data: {
-        text: 'search#header_date',
-        additionalText: null,
-        iconRight: 'n7-icon-angle-down'
-      }
-    },
-    inputs: [{
-      id: 'date',
-      type: 'link',
-      limit: 50,
-      queryParam: true,
-      schema: {
-        valueType: 'string',
-        multiple: true
-      },
-      data: {
-        links: []
-      }
-    }],
-  }, {
-    id: 'section-place',
-    header: {
-      id: 'header-place',
-      data: {
-        text: 'search#header_place',
-        additionalText: null,
-        iconRight: 'n7-icon-angle-down'
-      }
-    },
-    inputs: [{
-      id: 'place',
-      type: 'link',
-      limit: 50,
-      queryParam: true,
-      schema: {
-        valueType: 'string',
-        multiple: true
-      },
-      data: {
-        links: []
-      }
-    }],
-  } */],
+  },
+  // {
+  //   id: 'section-witnesses',
+  //   header: {
+  //     id: 'header-witnesses',
+  //     data: {
+  //       text: 'search#header_witnesses',
+  //       additionalText: null
+  //     }
+  //   },
+  //   inputs: [{
+  //     id: 'witnesses',
+  //     type: 'link',
+  //     limit: 50,
+  //     queryParam: true,
+  //     schema: {
+  //       valueType: 'string',
+  //       multiple: true
+  //     },
+  //     data: {
+  //       links: []
+  //     }
+  //   }],
+  // }
+  ],
   classes: 'facets-wrapper'
 };
 
