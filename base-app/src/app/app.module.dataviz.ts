@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import {
   N7BoilerplateCommonModule,
   N7BoilerplateDataVizModule,
+  JsonConfigService,
   LocalConfigService,
 } from '@n7-frontend/boilerplate';
 import { DvComponentsLibModule } from '@n7-frontend/components';
@@ -12,7 +13,9 @@ import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 
-import configDataViz from './config';
+import configDataviz from './config';
+
+const JSON_PATH = './assets/app-config.local.json';
 
 @NgModule({
   declarations: [AppComponent, HomeLayoutComponent],
@@ -23,16 +26,18 @@ import configDataViz from './config';
     N7BoilerplateDataVizModule,
     DvComponentsLibModule,
   ],
-  providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (
-        localConfigService: LocalConfigService
-      ) => () => localConfigService.load(configDataViz),
-      deps: [LocalConfigService],
-      multi: true,
-    },
-  ],
+  providers: [{
+    provide: APP_INITIALIZER,
+    useFactory: (
+      localConfigService: LocalConfigService,
+      jsonConfigService: JsonConfigService
+    ) => () => (
+      localConfigService.load(configDataviz)
+        .then(() => jsonConfigService.load(JSON_PATH))
+    ),
+    deps: [LocalConfigService, JsonConfigService],
+    multi: true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

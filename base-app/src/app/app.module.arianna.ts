@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import {
   N7BoilerplateCommonModule,
   N7BoilerplateAriannaWebModule,
+  JsonConfigService,
   LocalConfigService,
 } from '@n7-frontend/boilerplate';
 import { APP_ROUTES } from './app.routes';
@@ -11,6 +12,8 @@ import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 
 import configArianna from './config';
+
+const JSON_PATH = './assets/app-config.local.json';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,16 +23,18 @@ import configArianna from './config';
     N7BoilerplateCommonModule.forRoot({}),
     N7BoilerplateAriannaWebModule,
   ],
-  providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (
-        localConfigService: LocalConfigService
-      ) => () => localConfigService.load(configArianna),
-      deps: [LocalConfigService],
-      multi: true,
-    },
-  ],
+  providers: [{
+    provide: APP_INITIALIZER,
+    useFactory: (
+      localConfigService: LocalConfigService,
+      jsonConfigService: JsonConfigService
+    ) => () => (
+      localConfigService.load(configArianna)
+        .then(() => jsonConfigService.load(JSON_PATH))
+    ),
+    deps: [LocalConfigService, JsonConfigService],
+    multi: true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

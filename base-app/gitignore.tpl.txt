@@ -47,3 +47,6 @@ Thumbs.db
 
 # custom
 /package-lock.json
+
+# local
+src/assets/app-config.local.json
