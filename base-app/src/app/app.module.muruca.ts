@@ -1,56 +1,103 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { RouterModule, Router, NavigationStart } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import {
+  RouterModule,
+  Router,
+  NavigationStart,
+  RoutesRecognized,
+} from '@angular/router';
+import { filter, map } from 'rxjs/operators';
+import { translate } from '@n7-frontend/core';
 import {
   N7BoilerplateCommonModule,
   N7BoilerplateMurucaModule,
-  JsonConfigService,
+  LocalConfigService,
   MrMenuService,
+  MrFooterService,
   MainStateService,
+  ConfigurationService,
+  JsonConfigService,
+  MrTranslationsLoaderService,
 } from '@n7-frontend/boilerplate';
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
+import configMuruca from './config';
+import i18n from './config/i18n';
 
-const JSON_PATH = './assets/app-config.json';
-const MENU_PATH = 'http://unus-sls.netseven.it/get_menu';
+const LANG_CODE = 'it_IT';
+
+const JSON_PATH = './assets/app-config.local.json';
+
+// load translations
+translate.init({
+  defaultLang: LANG_CODE,
+  translations: i18n,
+});
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      APP_ROUTES
-    ),
+    RouterModule.forRoot(APP_ROUTES),
     N7BoilerplateCommonModule.forRoot({}),
-    N7BoilerplateMurucaModule
+    N7BoilerplateMurucaModule,
   ],
   providers: [{
     provide: APP_INITIALIZER,
-    useFactory: (jsonConfigService: JsonConfigService) => () => jsonConfigService.load(JSON_PATH),
-    deps: [JsonConfigService],
-    multi: true
-  }, {
-    provide: APP_INITIALIZER,
-    useFactory: (menuService: MrMenuService) => () => menuService.load(MENU_PATH),
-    deps: [MrMenuService],
+    useFactory: (
+      localConfigService: LocalConfigService,
+      jsonConfigService: JsonConfigService,
+      menuService: MrMenuService,
+      footerService: MrFooterService,
+      translationsLoader: MrTranslationsLoaderService
+    ) => () => (
+      localConfigService.load(configMuruca)
+        .then(() => jsonConfigService.load(JSON_PATH))
+        .then(() => Promise.all([
+          menuService.load(),
+          footerService.load(),
+          translationsLoader.load(LANG_CODE)
+        ]))
+    ),
+    deps: [
+      LocalConfigService,
+      JsonConfigService,
+      MrMenuService,
+      MrFooterService,
+      MrTranslationsLoaderService
+    ],
     multi: true
   }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(
     private router: Router,
-    private mainState: MainStateService
+    private mainState: MainStateService,
+    private config: ConfigurationService
   ) {
-    this.router.events.pipe(
-      filter((event) => event instanceof NavigationStart),
-    ).subscribe((event: any) => {
-      const { url } = event;
-      this.mainState.updateCustom('currentNav', url);
-    });
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationStart))
+      .subscribe((event: any) => {
+        const { url } = event;
+        this.mainState.updateCustom('currentNav', url);
+      });
+
+    // body classes
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof RoutesRecognized),
+        map((event: RoutesRecognized) => event.state.root.firstChild.data)
+      )
+      .subscribe((routeData: any) => {
+        const { configId } = routeData || {};
+        let bodyClasses = '';
+        if (configId) {
+          const pageConfig = this.config.get(configId) || {};
+          bodyClasses = pageConfig.bodyClasses || '';
+        }
+        document.body.className = bodyClasses;
+      });
   }
 }

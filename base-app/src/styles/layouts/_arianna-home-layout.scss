@@ -1,0 +1,59 @@
+/**
+ * HOMEPAGE
+ *
+ * Layout for homepage
+ */
+
+/* ------------------------------------ *\
+    HERO
+\* ------------------------------------ */
+.aw-home__bottom-hero {
+    .n7-hero {
+        height: auto;
+        padding: $space * 5 0;
+        // background-color: #eae8e6; // $color-gray-03;
+    }
+
+    .n7-hero__text-wrapper {
+        height: auto;
+    }
+
+    .n7-hero__title {
+        font-size: $font-size-xl;
+        // color: $color-text;
+    }
+
+    .n7-hero__text {
+        font-size: $font-size-m;
+        // color: $color-text;
+
+        p {
+            margin-bottom: $space;
+            font-size: $font-size-m;
+            // color: $color-text;
+
+            a {
+                color: $color-text-inverse;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .n7-hero.has-image .n7-hero__image-wrapper {
+        align-items: flex-start;
+    }
+
+    .n7-hero.has-image .n7-hero__btn {
+        background-color: rgba($color-background-base, 0.1);
+        border: 2px solid $color-background-base;
+        color: $color-text-inverse;
+
+        &:hover {
+            background-color: $color-main;
+        }
+    }
+
+    .n7-hero.has-background-image:after {
+        // display:none;
+    }
+}
