@@ -7,11 +7,13 @@ const CommandTranslationsExtract = require("./commands/translations-extract");
 const CommandTranslationsLoad = require("./commands/translations-load");
 const CommandTranslationsSearch = require("./commands/translations-search");
 const CommandSls = require("./commands/sls");
+const { version } = require("../package.json");
+const updateCheck = require("./update-check");
 
 // DESCRIPTION
 // ---------------------------------------------------------->
 program
-  .version("2.2.0")
+  .version(version)
   .description("A command line interface for n7-framework");
 
 // NEW
@@ -85,9 +87,13 @@ program
   .option("-v, --verbose", "output extra info")
   .action((name, { verbose }) => new CommandSls(name, !!verbose));
 
-program.parse(process.argv);
 
-// if no arguments show help
-if (!program.args.length) {
-  program.help();
-}
+// check version
+updateCheck.run().then(() => {
+  // load commander
+  program.parse(process.argv);
+  // if no arguments show help
+  if (!program.args.length) {
+    program.help();
+  }
+})
