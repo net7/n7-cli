@@ -2,9 +2,7 @@ const { Octokit } = require('@octokit/rest');
 const helpers = require("./commands/helpers");
 const { version } = require('../package.json');
 
-const octokit = new Octokit({
-  auth: 'a4f0b27eaa6b475ba82ae239bc14e50562c93573'
-});
+const octokit = new Octokit();
 const owner = 'net7';
 const repo = 'n7-cli';
 const path = 'package.json';
