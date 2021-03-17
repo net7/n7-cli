@@ -3,7 +3,7 @@ A command line interface for n7-framework
 
 ## Install
 
-`npm i git+ssh://git@github.com:net7/n7-cli.git#develop -g`
+`npm i git+ssh://git@github.com:net7/n7-cli.git#master -g`
 
 for help: `n7-cli --help`
 
