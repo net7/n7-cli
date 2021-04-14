@@ -47,6 +47,7 @@ const placeholdersToReplace = {
 };
 const additionalFilesToRemove = [
   "angular.src.json",
+  "src/assets/app-config.local.src.json",
   "gitignore.tpl.txt",
   "src/app/layouts/base-layout",
 ];
@@ -189,6 +190,11 @@ class CommandNew {
     const angularJsonSrc = "angular.src.json";
     const angularJsonDest = "angular.json";
     files.push({ src: angularJsonSrc, dest: angularJsonDest });
+
+    // local json config
+    const localJsonSrc = "src/assets/app-config.local.src.json";
+    const localJsonDest = "src/assets/app-config.local.json";
+    files.push({ src: localJsonSrc, dest: localJsonDest });
 
     // info...
     this.printInfo(
