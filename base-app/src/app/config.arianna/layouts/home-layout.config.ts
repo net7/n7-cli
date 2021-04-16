@@ -9,7 +9,8 @@ export default {
     input: {
       placeholder: 'Cerca in Archivio Flamigni'
     },
-    fallback: 'Nessun risultato, prova a <br> cambiare la ricerca.'
+    fallback: 'Nessun risultato, prova a <br> cambiare la ricerca.',
+    classes: '_has-carousel',
   },
   'bottom-hero': {
     title: 'L’Archivio Flamigni',

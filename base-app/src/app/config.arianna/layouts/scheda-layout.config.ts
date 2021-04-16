@@ -13,6 +13,7 @@ export default {
     title: 'Informazioni'
   },
   tree: {
+    lite: false,
     'icon-expand': 'n7-icon-angle-right',
     'icon-collapse': 'n7-icon-angle-down',
     'icon-image': 'n7-icon-image',
@@ -24,6 +25,29 @@ export default {
         'oc-type-bar': 'n7-icon-biography'
       }
     ]
+  },
+  'image-viewer': {
+    'context-menu': false
+  },
+  'pdf-viewer': {
+    libOptions: {
+      // showToolbar: true,
+      // showSidebarButton: true,
+      // showFindButton: true,
+      // showPagingButtons: true,
+      // showZoomButtons: true,
+      // showPresentationModeButton: true,
+      // showOpenFileButton: false,
+      showPrintButton: true,
+      showDownloadButton: true,
+      // showBookmarkButton: false,
+      // showSecondaryToolbarButton: true,
+      // showRotateButton: false,
+      // showHandToolButton: true,
+      // showScrollingButton: false,
+      // showSpreadButton: false,
+      // showPropertiesButton: false
+    }
   },
   'metadata-to-show': {
     'aggregazione-logica': [

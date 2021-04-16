@@ -58,6 +58,16 @@ export default {
         }
       },
       {
+        text: 'Collezione',
+        anchor: {
+          href: 'collection/44'
+        },
+        icon: 'n7-icon-th',
+        _meta: {
+          id: 'collection'
+        }
+      },
+      {
         text: 'Ricerca',
         anchor: {
           href: 'ricerca'
