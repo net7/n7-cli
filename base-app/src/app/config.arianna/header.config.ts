@@ -1,6 +1,6 @@
 export default {
   logo: {
-    image: '/assets/archivioflamigni_logo.png',
+    image: '/assets/a4v-header-logo.png',
     anchor: {
       href: '/'
     }

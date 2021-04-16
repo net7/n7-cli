@@ -4,34 +4,24 @@ export default {
       classes: 'col-class',
       title: 'Centro documentazione Archivio Flamigni',
       text: 'P.zza Bartolomeo Romano, 6 – 00154 Roma<br>E-mail: info@archivioflamigni.org<br>Posta certificata: archivioflamigni@pec.itCod.Fis. 90076250563',
-      /*
       images: [
         {
-          url: '/assets/logo-footer-dga.jpg',
-          alttext: 'Direzione generale per gli archivi',
+          url: '/assets/a4v-footer-logo-1.png',
+          alttext: 'Logo 1',
           anchor: {
-            href: 'http://www.archivi.beniculturali.it/',
+            href: 'http://www.google.it/',
             target: '_blank'
           }
         },
         {
-          url: '/assets/logo-footer-san.jpg',
-          alttext: 'Sistema Archivistico Nazionale',
+          url: '/assets/a4v-footer-logo-2.png',
+          alttext: 'Logo 2',
           anchor: {
-            href: 'http://san.beniculturali.it/',
-            target: '_blank'
-          }
-        },
-        {
-          url: '/assets/logo-footer-mibact.jpg',
-          alttext: 'Ministero per i Beni e le Attività Culturali e per il Turismo',
-          anchor: {
-            href: 'https://www.beniculturali.it/',
+            href: 'http://www.google.it/',
             target: '_blank'
           }
         }
       ]
-      */
     },
     {
       title: 'Privacy e info',
