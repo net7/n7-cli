@@ -30,19 +30,22 @@ export default {
           text: 'Privacy policy',
           classes: 'link-class',
           anchor: {
-            href: 'https://www.google.it'
+            href: 'https://www.google.it',
+            target: '_blank'
           }
         },
         {
           text: 'Cooklie policy',
           anchor: {
-            href: 'https://www.google.it'
+            href: 'https://www.google.it',
+            target: '_blank'
           }
         },
         {
           text: 'Termini e condizioni',
           anchor: {
-            href: 'https://www.google.it'
+            href: 'https://www.google.it',
+            target: '_blank'
           }
         }
       ]
