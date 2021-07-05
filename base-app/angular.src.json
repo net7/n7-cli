@@ -59,6 +59,7 @@
               "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
               "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
               "./node_modules/vis-timeline/dist/vis-timeline-graph2d.css",
+              "./node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css",
               "src/styles/styles.scss"
             ],
             "scripts": []

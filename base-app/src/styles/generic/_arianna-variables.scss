@@ -7,35 +7,10 @@
 // ------------------------------------ //
 // TYPOGRAPHY
 // ------------------------------------ //
-@font-face {
-    font-family: Museo;
-    src: url("/assets/fonts/museo_1_0.ttf") format("truetype");
-    font-style: italic;
-    font-weight: normal;
-}
-@font-face {
-    font-family: Museo;
-    src: url("/assets/fonts/museo_0_1.otf");
-    font-style: normal;
-    font-weight: bold;
-}
-@font-face {
-    font-family: Museo;
-    src: url("/assets/fonts/museo_0_0.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-* {
-    font-family: Museo, sans-serif;
-    text-align: left;
-}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
 
-$font-family-main: "Museo", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-"Segoe UI Symbol";
-$font-family-headings: "Museo", apple-system, BlinkMacSystemFont, "Segoe UI",
-Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-"Segoe UI Symbol";
+$font-family-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-headings: 'EB Garamond', serif;
 
 // ------------------------------------ //
 // #FOOTER
