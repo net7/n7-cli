@@ -1,3 +1,5 @@
+import { ConfigCommonHeader } from '@n7-frontend/boilerplate';
+
 export default {
   logo: {
     title: 'Petrarca Online',
@@ -8,4 +10,4 @@ export default {
   nav: {
     items: []
   }
-};
+} as ConfigCommonHeader;

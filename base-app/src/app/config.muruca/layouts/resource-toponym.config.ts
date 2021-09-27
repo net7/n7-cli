@@ -1,3 +1,5 @@
+import { ConfigMurucaResourceLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Toponimi',
   type: 'toponym',
@@ -21,4 +23,4 @@ export default {
       }
     ]
   }
-};
+} as ConfigMurucaResourceLayout;

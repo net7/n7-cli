@@ -1,3 +1,5 @@
+import { ConfigCommonHeader } from '@n7-frontend/boilerplate';
+
 export default {
   logo: {
     image: '/assets/a4v-header-logo.png',
@@ -87,4 +89,4 @@ export default {
       payload: 'mobile-close'
     }
   }
-};
+} as ConfigCommonHeader;

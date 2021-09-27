@@ -1,3 +1,5 @@
+import { ConfigCommonCommunication } from '@n7-frontend/boilerplate';
+
 export default {
   defaultProvider: 'apollo',
   providers: {
@@ -5,4 +7,4 @@ export default {
       baseUrl: 'https://aw-unifi-graphql.netseven.it/'
     }
   }
-};
+} as ConfigCommonCommunication;

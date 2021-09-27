@@ -1,4 +1,4 @@
-import { MrSearchConfig } from '@n7-frontend/boilerplate';
+import { MrSearchConfig, MrSearchFacetsConfig, MrSearchLayoutInput } from '@n7-frontend/boilerplate';
 
 const facets = {
   sections: [
@@ -27,7 +27,6 @@ const facets = {
     },
     {
       id: 'author-query',
-      header: '',
       inputs: [
         {
           id: 'auth_query',
@@ -50,7 +49,7 @@ const facets = {
     },
   ],
   classes: 'facets-wrapper',
-};
+} as MrSearchFacetsConfig;
 
 const layoutInputs = ['page', 'limit', 'sort'].map((id) => ({
   id,
@@ -58,7 +57,7 @@ const layoutInputs = ['page', 'limit', 'sort'].map((id) => ({
   schema: {
     valueType: id === 'sort' ? 'string' : 'number',
   },
-}));
+})) as MrSearchLayoutInput[];
 
 const request = {
   results: {
@@ -72,4 +71,4 @@ const request = {
   delay: 500,
 };
 
-export default ({ request, facets, layoutInputs } as unknown) as MrSearchConfig;
+export default { request, facets, layoutInputs } as MrSearchConfig;

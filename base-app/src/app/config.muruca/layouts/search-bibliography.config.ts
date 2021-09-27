@@ -1,3 +1,4 @@
+import { ConfigMurucaSearchLayout } from '@n7-frontend/boilerplate';
 import searchBibliographyFacetsConfig from './search-bibliography-facets.config';
 
 export default {
@@ -51,4 +52,4 @@ export default {
     text: 'search#ko_text',
     button: 'search#ko_button'
   }
-};
+} as ConfigMurucaSearchLayout;

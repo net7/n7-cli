@@ -1,3 +1,5 @@
+import { ConfigAriannaSearchLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Cerca nel patrimonio',
   results: [
@@ -14,4 +16,4 @@ export default {
     'organizzazione'
   ],
   fallback: 'La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante.'
-};
+} as ConfigAriannaSearchLayout;

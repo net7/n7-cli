@@ -1,3 +1,5 @@
+import { ConfigAriannaKeys } from '@n7-frontend/boilerplate';
+
 export default {
   persona: {
     color: {
@@ -148,4 +150,4 @@ export default {
     'input-placeholder': 'Cerca un evento',
     'class-name': 'evento'
   }
-};
+} as ConfigAriannaKeys;

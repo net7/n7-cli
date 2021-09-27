@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
+
+import { ConfigCommonLabels } from '@n7-frontend/boilerplate';
+
 /* eslint-disable max-len */
 export default {
   'aggregazioni-logiche-collegate': 'Fondi collegati',
@@ -298,4 +301,4 @@ export default {
   'persona.qualifica.tipologia': 'Tipologia',
 
   FINE: '---'
-};
+} as ConfigCommonLabels;

@@ -1,3 +1,5 @@
+import { ConfigMurucaResourceLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Materiali e Strumenti',
   type: 'tools',
@@ -69,4 +71,4 @@ export default {
       },
     ],
   },
-};
+} as ConfigMurucaResourceLayout;

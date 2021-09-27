@@ -1,3 +1,5 @@
+import { ConfigAriannaEntitaLayout } from '@n7-frontend/boilerplate';
+
 export default {
   overview: {
     informazioni: [
@@ -56,4 +58,4 @@ export default {
     'ENTITA-ORGANIZZAZIONE-3',
     'struttura_funzioni'
   ]
-};
+} as ConfigAriannaEntitaLayout;

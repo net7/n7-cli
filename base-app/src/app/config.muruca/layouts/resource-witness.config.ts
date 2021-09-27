@@ -1,3 +1,5 @@
+import { ConfigMurucaResourceLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Testimoni',
   type: 'witness',
@@ -66,4 +68,4 @@ export default {
       }
     ]
   }
-};
+} as ConfigMurucaResourceLayout;

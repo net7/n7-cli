@@ -1,3 +1,5 @@
+import { ConfigMurucaResourceLayout } from '@n7-frontend/boilerplate';
+
 export default {
   type: 'bibliography_wit',
   sections: {
@@ -16,4 +18,4 @@ export default {
       },
     ]
   }
-};
+} as ConfigMurucaResourceLayout;

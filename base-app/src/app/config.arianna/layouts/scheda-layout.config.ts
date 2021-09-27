@@ -1,3 +1,5 @@
+import { ConfigAriannaSchedaLayout } from '@n7-frontend/boilerplate';
+
 export default {
   'empty-html': '<span>Non sono disponibili informazioni.<span>',
   'empty-label': "<h2>Benvenuto nel patrimonio dell’Archivio Flamigni</h2><p>Il Centro documentazione conserva l’archivio di Sergio Flamigni e i fondi archivistici di Emilia Lotti, dirigente nazionale dell'Unione donne in Italia e del Pci; di Piera Amendola, responsabile dell’archivio della Commissione P2; di Aldo Moro, il cui versamento completa e arricchisce il patrimonio archivistico del politico conservato presso l’Archivio centrale dello Stato; di Angelo La Bella, partigiano, dirigente del Pci, studioso della strage di Portella della Ginestra. Nel 2017 il Centro ha acquisito il fondo dello storico Giuseppe De Lutiis, specializzato nella storia del terrorismo e dei servizi segreti. L’Archivio Flamigni cura anche il fondo archivistico di Giuseppe Zupo, difensore di parte civile nel processo per gli omicidi Reina, Mattarella, La Torre-Di Salvo e del giornalista RAI Alberto Mentasti, di proprietà dell’Istituto di studi giuridici Arturo Carlo Jemolo.</p><p>L’Istituto inoltre conserva il proprio patrimonio documentario prodotto nel corso dei progetti di tutela e di ricerca relativi alla documentazione su fatti di terrorismo, mafia, criminalità organizzata.</p>",
@@ -197,4 +199,4 @@ export default {
       'corredoRicerca.descrizione'
     ]
   }
-};
+} as ConfigAriannaSchedaLayout;

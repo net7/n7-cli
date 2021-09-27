@@ -1,3 +1,5 @@
+import { ConfigAriannaHomeLayout } from '@n7-frontend/boilerplate';
+
 export default {
   'top-hero': {
     title: 'Storia dell’Italia repubblicana',
@@ -28,4 +30,4 @@ export default {
   'max-item-length': 50,
   'autocomplete-fallback': 'Nessun risultato, prova a\ncambiare la ricerca.',
   'linked-objects-fallback': 'Non sono stati trovati oggetti culturali collegati alle entità selezionate. Prova a cambiare le entità selezionate o resetta la ricerca.'
-};
+} as ConfigAriannaHomeLayout;

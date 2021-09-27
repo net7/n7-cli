@@ -1,3 +1,5 @@
+import { ConfigCommonFooter } from '@n7-frontend/boilerplate';
+
 export default {
   columns: [
     {
@@ -72,4 +74,4 @@ export default {
       ]
     }
   ]
-};
+} as ConfigCommonFooter;

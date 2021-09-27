@@ -1,3 +1,4 @@
+import { ConfigMurucaSearchLayout } from '@n7-frontend/boilerplate';
 import searchWitnessesFacetsConfig from './search-witnesses-facets.config';
 
 export default {
@@ -8,7 +9,7 @@ export default {
   resourcePath: '/witness',
   totalResultsText: 'search#witnesses_total',
   filtersTitle: 'search#filters_title',
-  grid: '1',
+  grid: 1,
   sort: {
     label: 'search#sort_title',
     options: [
@@ -49,4 +50,4 @@ export default {
     text: 'search#ko_text',
     button: 'search#ko_button'
   }
-};
+} as ConfigMurucaSearchLayout;

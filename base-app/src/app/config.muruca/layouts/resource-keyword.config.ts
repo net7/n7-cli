@@ -1,3 +1,5 @@
+import { ConfigMurucaResourceLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Termini',
   type: 'keywords',
@@ -21,4 +23,4 @@ export default {
       }
     ]
   }
-};
+} as ConfigMurucaResourceLayout;

@@ -1,3 +1,5 @@
+import { ConfigAriannaBubbleChart } from '@n7-frontend/boilerplate';
+
 export default {
   fontRendering: {
     label: {
@@ -12,4 +14,4 @@ export default {
   bubbleLimit: 50,
   transition: 750,
   shuffle: true
-};
+} as ConfigAriannaBubbleChart;

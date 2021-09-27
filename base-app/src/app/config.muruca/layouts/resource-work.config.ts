@@ -1,3 +1,5 @@
+import { ConfigMurucaResourceLayout } from '@n7-frontend/boilerplate';
+
 export default {
   maxHeight: 100, // Threshold where the "read-more" button appears
   title: 'Opera',
@@ -34,4 +36,4 @@ export default {
       }
     ]
   }
-};
+} as ConfigMurucaResourceLayout;

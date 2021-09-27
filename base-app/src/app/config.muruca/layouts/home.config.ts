@@ -1,3 +1,5 @@
+import { ConfigMurucaHomeLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Home',
   bodyClasses: 'has-transparent-header',
@@ -59,4 +61,4 @@ export default {
       }
     },
   ]
-};
+} as ConfigMurucaHomeLayout;

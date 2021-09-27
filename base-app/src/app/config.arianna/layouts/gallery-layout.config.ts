@@ -1,3 +1,5 @@
+import { ConfigAriannaGalleryLayout } from '@n7-frontend/boilerplate';
+
 export default {
   title: 'Cerca nella galleria',
   results: [
@@ -14,4 +16,4 @@ export default {
     'organizzazione'
   ],
   fallback: 'La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante.'
-};
+} as ConfigAriannaGalleryLayout;

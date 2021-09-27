@@ -1,3 +1,5 @@
+import { ConfigCommonFooter } from '@n7-frontend/boilerplate';
+
 export default {
   columns: [
     {
@@ -54,4 +56,4 @@ export default {
       text: "Arianna4View is powered by Hyperborea.<br><a href='https://www.hyperborea.com/' target='_blank'>www.hyperborea.com</a>"
     }
   ]
-};
+} as ConfigCommonFooter;

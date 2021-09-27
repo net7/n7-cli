@@ -1,8 +1,10 @@
+import { ConfigAriannaItemPreview } from '@n7-frontend/boilerplate';
+
 export default {
   image: 'image',
   title: {
     data: 'item.label',
-    maxLength: '80'
+    maxLength: 80
   },
   metadata: {
     info: {
@@ -34,5 +36,5 @@ export default {
     }
   },
   payload: 'item.id',
-  paginationLimit: '5'
-};
+  paginationLimit: 5
+} as ConfigAriannaItemPreview;
