@@ -35,7 +35,8 @@ async function run() {
           await exec(updateCommand);
           helpers.info(`n7-cli updated!`);
         } catch(err) {
-          helpers.warn('There was an error updating n7-cli', err);
+          helpers.warn('There was an error updating n7-cli');
+          helpers.warn(`Please try running this command manually: ${updateCommand}`);
         }
       } else {
         helpers.info(`Ok, you can update it manually running this command: ${updateCommand}`);
