@@ -1,3 +1,5 @@
+import { ConfigCommonFooter } from '@n7-frontend/boilerplate';
+
 export default {
   columns: [
     {
@@ -57,4 +59,4 @@ export default {
       text: 'BASEAPPNAME is powered by n7-framework',
     },
   ],
-};
+} as ConfigCommonFooter;
