@@ -7,11 +7,11 @@ import {
   JsonConfigService,
   LocalConfigService,
 } from '@n7-frontend/boilerplate';
-import { APP_ROUTES } from './app.routes';
+import { APP_ROUTES } from './app.routes.arianna';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component-arianna';
 
-import configArianna from './config';
+import configArianna from './config-arianna';
 
 const JSON_PATH = './assets/app-config.local.json';
 
