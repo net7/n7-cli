@@ -104,6 +104,10 @@ class CommandNew {
         return this.replacePlaceholders();
       })
       .then(() => {
+        helpers.log(`updating package.json...`);
+        return this.updatePackageJson();
+      })
+      .then(() => {
         helpers.log(`new n7 app created! path: ${this.targetPath}`);
       })
       .catch((reason) => {
@@ -263,7 +267,7 @@ class CommandNew {
     this.printInfo(`removing ".${this.type}" from app.module imports`);
 
     return replace({
-      from: new RegExp(`.${this.type}`, 'g'),
+      from: new RegExp(`\\.${this.type}`, 'g'),
       to: '',
       files: `${this.targetPath}/${targetFile}`,
     }).catch((err) => {
@@ -291,6 +295,26 @@ class CommandNew {
       console.log("replace placeholders fail", err);
       throw new Error("replace placeholders fail");
     });
+  }
+
+  updatePackageJson() {
+    const packageJsonFile = `${this.targetPath}/package.json`;
+    const unusedPackages = enabledTypes
+      .filter((type) => type !== this.type)
+      .map((type) => `@net7/boilerplate-${type}`);
+
+    return fs.readJson(packageJsonFile)
+      .then((json) => {
+        unusedPackages.forEach((packageName) => {
+          delete json.dependencies[packageName];
+        })
+        return fs.writeJson(packageJsonFile, json, { spaces: 2 });
+      })
+      .catch((err) => {
+        console.log("update package.json fail", err);
+        throw new Error("update package.json fail");
+      });
+
   }
 
   printInfo(msg) {
