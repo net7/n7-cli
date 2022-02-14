@@ -26,7 +26,7 @@
 // ------------------------------------ //
 // #DV COLOR SCHEME
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/data-viz/generic/color_scheme";
+@import "../../node_modules/@net7/boilerplate-dataviz/src/lib/styles/dataviz/generic/color_scheme";
 
 
 // ------------------------------------ //
@@ -38,7 +38,7 @@
 // ------------------------------------ //
 // #DV VARIABLES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/data-viz/generic/variables";
+@import "../../node_modules/@net7/boilerplate-dataviz/src/lib/styles/dataviz/generic/variables";
 
 
 // ------------------------------------ //
@@ -50,23 +50,24 @@
 // ------------------------------------ //
 // #COMMON COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/common/components/facets-wrapper";
+@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/components/facets-wrapper";
 
 
 // ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/common/layouts/main-layout";
+@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/layouts/main-layout";
 
 
 // ------------------------------------ //
 // #DATAVIZ COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/data-viz/components/data-widget-wrapper";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/data-viz/components/datepicker-wrapper";
+@import "../../node_modules/@net7/boilerplate-dataviz/src/lib/styles/dataviz/components/data-widget-wrapper";
+@import "../../node_modules/@net7/boilerplate-dataviz/src/lib/styles/dataviz/components/datepicker-wrapper";
+@import "../../node_modules/@net7/boilerplate-dataviz/src/lib/styles/dataviz/components/card";
 
 
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/common/utilities/_utilities";
+@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/utilities/_utilities";

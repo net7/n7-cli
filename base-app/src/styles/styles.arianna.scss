@@ -3,70 +3,119 @@
 // ------------------------------------ //
 @import "src/styles/generic/arianna-color-scheme";
 
+
+// ------------------------------------ //
+// #TIPPY
+// ------------------------------------ //
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import '../../node_modules/tippy.js/themes/light-border.css';
+
+
+// ------------------------------------ //
+// #N7-ICON-FONT
+// ------------------------------------ //
+@import "../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css";
+
+
+// ------------------------------------ //
+// #N7 COLOR SCHEME
+// ------------------------------------ //
+@import "../../node_modules/@net7/components/src/lib/styles/generic/color_scheme";
+
+
+// ------------------------------------ //
+// #AW COLOR SCHEME
+// ------------------------------------ //
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/generic/color_scheme";
+
+
 // ------------------------------------ //
 // #N7 COMPONENTS VARIABLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/generic/variables";
 
+
 // ------------------------------------ //
 // #AW VARIABLES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/generic/variables";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/generic/variables";
+
 
 // ------------------------------------ //
 // #PROJECT VARIABLES
 // ------------------------------------ //
 @import "src/styles/generic/arianna-variables";
 
+
+// ------------------------------------ //
+// #AW MIXINS
+// ------------------------------------ //
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/generic/mixins";
+
+
 // ------------------------------------ //
 // #N7 COMPONENTS STYLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/imports";
 
+
 // ------------------------------------ //
 // #COMMON COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/common/components/facets-wrapper";
+@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/components/facets-wrapper";
+
 
 // ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/common/layouts/main-layout";
+@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/layouts/main-layout";
+
 
 // ------------------------------------ //
 // #ARIANNA COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/advanced-autocomplete";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/breadcrumbs";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/bubble-popup-menu";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/facet";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/facet-header";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/footer";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/header";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/item-preview";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/map";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/metadata-viewer";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/simple-autocomplete";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/timeline";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/tippy-tooltip";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/tree";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/components/pdf-viewer";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/advanced-autocomplete";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/breadcrumbs";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/bubble-popup-menu";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/carousel";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/facet-header";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/facet";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/footer";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/header";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/item-preview";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/map";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/metadata-viewer";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/pdf-viewer";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/simple-autocomplete";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/timeline";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/tippy-tooltip";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/tree";
+
 
 // ------------------------------------ //
 // #ARIANNA WEB LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/layouts/home-layout";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/layouts/scheda-layout";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/layouts/multimedia-layout";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/layouts/entita-layout";
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/arianna-web/layouts/search-layout";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/collection-layout";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/entita-layout";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/home-layout";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/multimedia-layout";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/scheda-layout";
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/search-layout";
+
 
 // ------------------------------------ //
 // #PROJECT LAYOUTS
 // ------------------------------------ //
 @import "src/styles/layouts/arianna-home-layout";
 
+
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate/src/lib/styles/common/utilities/_utilities";
+@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/utilities/_utilities";
+
+
+// ------------------------------------ //
+// #ARIANNA UTILITIES
+// ------------------------------------ //
+@import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/utilities/item-preview-list";

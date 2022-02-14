@@ -1,13 +1,18 @@
 import { Routes } from '@angular/router';
 
-import { Page404LayoutComponent, } from '@net7/boilerplate-common';
+import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import {
-  // MURUCA
   MrHomeLayoutComponent,
   MrSearchLayoutComponent,
   MrStaticLayoutComponent,
   MrResourceLayoutComponent,
+  MrAdvancedSearchLayoutComponent,
+  MrAdvancedResultsLayoutComponent,
+  MrItineraryLayoutComponent,
+  MrPostsLayoutComponent,
   MrTimelineLayoutComponent,
+  MrMapLayoutComponent,
+  // DynamicPathGuard,
 } from '@net7/boilerplate-muruca';
 
 const NOT_FOUND_PATH = 'page-404';
@@ -20,28 +25,28 @@ export const APP_ROUTES: Routes = [
   },
   { path: '', component: MrHomeLayoutComponent, data: { configId: 'home' } },
   { path: 'opere', component: MrSearchLayoutComponent, data: { configId: 'search-works' } },
-  { path: 'vite-antiche', component: MrSearchLayoutComponent, data: { configId: 'search-biographies' } },
-  { path: 'materiali_strumenti', component: MrSearchLayoutComponent, data: { configId: 'search-tools' } },
+  { path: 'atti', component: MrSearchLayoutComponent, data: { configId: 'search-acts' } },
   { path: 'biblioteca', component: MrSearchLayoutComponent, data: { configId: 'search-books' } },
-  { path: 'testimoni', component: MrSearchLayoutComponent, data: { configId: 'search-witnesses' } },
-  { path: 'iconografia', component: MrSearchLayoutComponent, data: { configId: 'search-iconographies' } },
+  { path: 'work/:id/:slug', redirectTo: 'opera/:id/:slug' },
   { path: 'libro/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-book' } },
-  { path: 'biografia/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-biography' } },
   { path: 'opera/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-work' } },
-  { path: 'testimone/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-witness' } },
   { path: 'toponym/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-toponym' } },
   { path: 'keyword/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-keyword' } },
-  { path: 'iconografia/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-iconography' } },
-  { path: 'timeline', component: MrTimelineLayoutComponent, data: { configId: 'timeline' } },
-  { path: 'timeline/:id/:slug', component: MrTimelineLayoutComponent },
+  { path: 'testimone/:id/:slug', component: MrResourceLayoutComponent, data: { configId: 'resource-witness' } },
+  { path: 'testimoni', component: MrSearchLayoutComponent, data: { configId: 'search-witnesses' } },
+  { path: 'timeline/:id/:slug', component: MrTimelineLayoutComponent, data: { configId: 'timeline' } },
+  { path: 'timeline/:id', component: MrTimelineLayoutComponent, data: { configId: 'timeline' } },
+  { path: 'timeline', redirectTo: 'timeline/' },
+  { path: 'map/:id/:slug', component: MrMapLayoutComponent, data: { configId: 'map' } },
+  { path: 'map/:id', component: MrMapLayoutComponent, data: { configId: 'map' } },
+  { path: 'map', redirectTo: 'map/' },
+  { path: 'posts', component: MrPostsLayoutComponent, data: { configId: 'posts' } },
   { path: 'post/:slug', component: MrStaticLayoutComponent },
-  { path: ':slug', component: MrStaticLayoutComponent },
-  {
-    path: 'bibliografia',
-    component: MrSearchLayoutComponent,
-    data: { configId: 'search-bibliografia' }
-  },
-  { path: NOT_FOUND_PATH, component: Page404LayoutComponent },
+  { path: 'advanced-search', component: MrAdvancedSearchLayoutComponent, data: { configId: 'advanced-search' } },
+  { path: 'advanced-search-full', component: MrAdvancedSearchLayoutComponent, data: { configId: 'advanced-search-full' } },
+  { path: 'advanced-results', component: MrAdvancedResultsLayoutComponent, data: { configId: 'advanced-results' } },
+  { path: 'itinerary/:id/:slug', component: MrItineraryLayoutComponent, data: { configId: 'itinerary' } },
+  { path: NOT_FOUND_PATH, component: Page404LayoutComponent, data: { id: 'page-404' } },
   {
     path: '**',
     component: MrStaticLayoutComponent,
