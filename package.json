@@ -4,8 +4,7 @@
   "description": "Un'interfaccia da riga di comando per n7-framework",
   "main": "n7-cli.js",
   "scripts": {
-    "start": "node n7-cli",
-    "version": "node cli/version.js"
+    "start": "node n7-cli"
   },
   "repository": {
     "type": "git",
