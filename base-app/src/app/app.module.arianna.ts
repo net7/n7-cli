@@ -3,15 +3,17 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
   N7BoilerplateCommonModule,
-  N7BoilerplateAriannaWebModule,
   JsonConfigService,
   LocalConfigService,
-} from '@n7-frontend/boilerplate';
-import { APP_ROUTES } from './app.routes';
+} from '@net7/boilerplate-common';
+import {
+  N7BoilerplateAriannaModule,
+} from '@net7/boilerplate-arianna';
+import { APP_ROUTES } from './app.routes.arianna';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component.arianna';
 
-import configArianna from './config';
+import configArianna from './config.arianna';
 
 const JSON_PATH = './assets/app-config.local.json';
 
@@ -21,7 +23,7 @@ const JSON_PATH = './assets/app-config.local.json';
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES),
     N7BoilerplateCommonModule.forRoot({}),
-    N7BoilerplateAriannaWebModule,
+    N7BoilerplateAriannaModule,
   ],
   providers: [{
     provide: APP_INITIALIZER,

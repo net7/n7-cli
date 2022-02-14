@@ -1,19 +1,20 @@
 import { Routes } from '@angular/router';
 
+import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import {
-  Page404LayoutComponent,
-  AwHomeLayoutComponent,
-  AwSchedaLayoutComponent,
+  AwCollectionLayoutComponent,
   AwEntitaLayoutComponent,
-  AwSearchLayoutComponent,
   AwGalleryLayoutComponent,
+  AwHomeLayoutComponent,
+  AwMapLayoutComponent,
+  AwSchedaLayoutComponent,
+  AwSearchLayoutComponent,
   AwTimelineLayoutComponent,
-  AwMapLayoutComponent
-} from '@n7-frontend/boilerplate';
+} from '@net7/boilerplate-arianna';
 
 export const APP_ROUTES: Routes = [
   // arianna web routes
-  { path: '', component: AwHomeLayoutComponent },
+  { path: 'home', component: AwHomeLayoutComponent },
   { path: 'patrimonio/:id/:slug', component: AwSchedaLayoutComponent },
   { path: 'patrimonio/:id', component: AwSchedaLayoutComponent },
   { path: 'patrimonio', redirectTo: 'patrimonio/' },
@@ -23,9 +24,10 @@ export const APP_ROUTES: Routes = [
   { path: 'galleria', component: AwGalleryLayoutComponent },
   { path: 'mappa', component: AwMapLayoutComponent },
   { path: 'timeline', component: AwTimelineLayoutComponent },
+  { path: 'collection/:id', component: AwCollectionLayoutComponent },
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
 

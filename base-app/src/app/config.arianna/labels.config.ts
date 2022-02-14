@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
-import { ConfigCommonLabels } from '@n7-frontend/boilerplate';
+import { ConfigCommonLabels } from '@net7/boilerplate-common';
 
 /* eslint-disable max-len */
 export default {

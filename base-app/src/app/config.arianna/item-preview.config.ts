@@ -1,4 +1,4 @@
-import { ConfigAriannaItemPreview } from '@n7-frontend/boilerplate';
+import { ConfigAriannaItemPreview } from '@net7/boilerplate-arianna';
 
 export default {
   image: 'image',

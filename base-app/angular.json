@@ -17,73 +17,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "preserveSymlinks": true,
-            "fileReplacements": [
-              {
-                "replace": "src/app/config",
-                "with": "src/app/config.dataviz"
-              },
-              {
-                "replace": "src/app/app.module.ts",
-                "with": "src/app/app.module.dataviz.ts"
-              },
-              {
-                "replace": "src/app/app.routes.ts",
-                "with": "src/app/app.routes.dataviz.ts"
-              },
-              {
-                "replace": "src/styles/styles.scss",
-                "with": "src/styles/styles.dataviz.scss"
-              }
-            ],
             "outputPath": "dist/baseappprefix",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@teipublisher/pb-components/dist",
-                "output": "/assets/pb-components/dist"
-              },
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@teipublisher/pb-components/lib",
-                "output": "/assets/pb-components/lib"
-              },
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@teipublisher/pb-components/images",
-                "output": "/assets/pb-components/images"
-              },
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@teipublisher/pb-components/i18n",
-                "output": "/assets/pb-components/i18n"
-              },
-              {
-                "glob": "**/*",
-                "input": "./node_modules/ngx-extended-pdf-viewer/assets/",
-                "output": "/assets/"
-              }
-            ],
-            "styles": [
-              "./node_modules/flatpickr/dist/flatpickr.min.css",
-              "./node_modules/tippy.js/dist/tippy.css",
-              "./node_modules/tippy.js/themes/light-border.css",
-              "./node_modules/latte-carousel/dist/latte-carousel.min.css",
-              "./node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css",
-              "./src/styles/styles.scss",
-              "./node_modules/leaflet/dist/leaflet.css",
-              "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
-              "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
-              "./node_modules/vis-timeline/dist/vis-timeline-graph2d.css"
-            ],
-            "scripts": []
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -102,9 +47,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
@@ -118,21 +61,20 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/app/config",
-                  "with": "src/app/config.dataviz"
-                },
-                {
                   "replace": "src/app/app.module.ts",
                   "with": "src/app/app.module.dataviz.ts"
-                },
-                {
-                  "replace": "src/app/app.routes.ts",
-                  "with": "src/app/app.routes.dataviz.ts"
-                },
-                {
-                  "replace": "src/styles/styles.scss",
-                  "with": "src/styles/styles.dataviz.scss"
                 }
+              ],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "./node_modules/flatpickr/dist/flatpickr.min.css",
+                "./node_modules/leaflet/dist/leaflet.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
+                "src/styles/styles.dataviz.scss"
               ]
             },
             "arianna": {
@@ -144,21 +86,26 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/app/config",
-                  "with": "src/app/config.arianna"
-                },
-                {
                   "replace": "src/app/app.module.ts",
                   "with": "src/app/app.module.arianna.ts"
-                },
-                {
-                  "replace": "src/app/app.routes.ts",
-                  "with": "src/app/app.routes.arianna.ts"
-                },
-                {
-                  "replace": "src/styles/styles.scss",
-                  "with": "src/styles/styles.arianna.scss"
                 }
+              ],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "./node_modules/ngx-extended-pdf-viewer/assets/",
+                  "output": "/assets/"
+                }
+              ],
+              "styles": [
+                "./node_modules/latte-carousel/dist/latte-carousel.min.css",
+                "./node_modules/leaflet/dist/leaflet.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
+                "./node_modules/vis-timeline/dist/vis-timeline-graph2d.css",
+                "src/styles/styles.arianna.scss"
               ]
             },
             "muruca": {
@@ -170,24 +117,45 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/app/config",
-                  "with": "src/app/config.muruca"
-                },
-                {
                   "replace": "src/app/app.module.ts",
                   "with": "src/app/app.module.muruca.ts"
-                },
-                {
-                  "replace": "src/app/app.routes.ts",
-                  "with": "src/app/app.routes.muruca.ts"
-                },
-                {
-                  "replace": "src/styles/styles.scss",
-                  "with": "src/styles/styles.muruca.scss"
                 }
+              ],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "./node_modules/@teipublisher/pb-components/dist",
+                  "output": "/assets/pb-components/dist"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "./node_modules/@teipublisher/pb-components/lib",
+                  "output": "/assets/pb-components/lib"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "./node_modules/@teipublisher/pb-components/images",
+                  "output": "/assets/pb-components/images"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "./node_modules/@teipublisher/pb-components/i18n",
+                  "output": "/assets/pb-components/i18n"
+                }
+              ],
+              "styles": [
+                "./node_modules/latte-carousel/dist/latte-carousel.min.css",
+                "./node_modules/leaflet/dist/leaflet.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
+                "./node_modules/vis-timeline/dist/vis-timeline-graph2d.css",
+                "src/styles/styles.muruca.scss"
               ]
             }
-          }
+          },
+          "defaultConfiguration": "dataviz"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -222,17 +190,6 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

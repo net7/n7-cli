@@ -1,4 +1,4 @@
-import { ConfigAriannaGalleryLayout } from '@n7-frontend/boilerplate';
+import { ConfigAriannaGalleryLayout } from '@net7/boilerplate-arianna';
 
 export default {
   title: 'Cerca nella galleria',

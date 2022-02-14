@@ -7,23 +7,25 @@ import {
   RoutesRecognized,
 } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
-import { translate } from '@n7-frontend/core';
+import { translate } from '@net7/core';
 import {
   N7BoilerplateCommonModule,
-  N7BoilerplateMurucaModule,
   LocalConfigService,
-  MrMenuService,
-  MrFooterService,
   MainStateService,
   ConfigurationService,
   JsonConfigService,
+} from '@net7/boilerplate-common';
+import {
+  N7BoilerplateMurucaModule,
+  MrMenuService,
+  MrFooterService,
   MrTranslationsLoaderService,
-} from '@n7-frontend/boilerplate';
-import { APP_ROUTES } from './app.routes';
+} from '@net7/boilerplate-muruca';
+import { APP_ROUTES } from './app.routes.muruca';
 
-import { AppComponent } from './app.component';
-import configMuruca from './config';
-import i18n from './config/i18n';
+import { AppComponent } from './app.component.muruca';
+import configMuruca from './config.muruca';
+import i18n from './config.muruca/i18n';
 
 const LANG_CODE = 'it_IT';
 

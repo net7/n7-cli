@@ -22,6 +22,14 @@ const filesToReplace = [
     ext: "ts",
   },
   {
+    path: "src/app/app.component",
+    ext: "ts",
+  },
+  {
+    path: "angular",
+    ext: "json",
+  },
+  {
     path: "src/app/config",
     ext: null,
   },
@@ -46,7 +54,6 @@ const placeholdersToReplace = {
   ],
 };
 const additionalFilesToRemove = [
-  "angular.src.json",
   "src/assets/app-config.local.src.json",
   "gitignore.tpl.txt",
   "src/app/layouts/base-layout",
@@ -89,8 +96,16 @@ class CommandNew {
         return this.cleanUpFiles();
       })
       .then(() => {
+        helpers.log(`updating app module imports...`);
+        return this.updateAppModuleImports();
+      })
+      .then(() => {
         helpers.log(`setting app name and prefix...`);
         return this.replacePlaceholders();
+      })
+      .then(() => {
+        helpers.log(`updating package.json...`);
+        return this.updatePackageJson();
       })
       .then(() => {
         helpers.log(`new n7 app created! path: ${this.targetPath}`);
@@ -186,11 +201,6 @@ class CommandNew {
       files.push({ src, dest });
     });
 
-    // angular config
-    const angularJsonSrc = "angular.src.json";
-    const angularJsonDest = "angular.json";
-    files.push({ src: angularJsonSrc, dest: angularJsonDest });
-
     // local json config
     const localJsonSrc = "src/assets/app-config.local.src.json";
     const localJsonDest = "src/assets/app-config.local.json";
@@ -250,6 +260,22 @@ class CommandNew {
     });
   }
 
+  updateAppModuleImports() {
+    const targetFile = "src/app/app.module.ts";
+
+    // info...
+    this.printInfo(`removing ".${this.type}" from app.module imports`);
+
+    return replace({
+      from: new RegExp(`\\.${this.type}`, 'g'),
+      to: '',
+      files: `${this.targetPath}/${targetFile}`,
+    }).catch((err) => {
+      console.log(`removing ".${this.type}" from app.module imports fail`, err);
+      throw new Error(`removing ".${this.type}" from app.module imports fail`);
+    });
+  }
+
   replacePlaceholders() {
     const { pointer, from, files } = placeholdersToReplace;
 
@@ -269,6 +295,26 @@ class CommandNew {
       console.log("replace placeholders fail", err);
       throw new Error("replace placeholders fail");
     });
+  }
+
+  updatePackageJson() {
+    const packageJsonFile = `${this.targetPath}/package.json`;
+    const unusedPackages = enabledTypes
+      .filter((type) => type !== this.type)
+      .map((type) => `@net7/boilerplate-${type}`);
+
+    return fs.readJson(packageJsonFile)
+      .then((json) => {
+        unusedPackages.forEach((packageName) => {
+          delete json.dependencies[packageName];
+        })
+        return fs.writeJson(packageJsonFile, json, { spaces: 2 });
+      })
+      .catch((err) => {
+        console.log("update package.json fail", err);
+        throw new Error("update package.json fail");
+      });
+
   }
 
   printInfo(msg) {

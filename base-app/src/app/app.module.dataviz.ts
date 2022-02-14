@@ -3,17 +3,17 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
   N7BoilerplateCommonModule,
-  N7BoilerplateDataVizModule,
   JsonConfigService,
   LocalConfigService,
-} from '@n7-frontend/boilerplate';
-import { DvComponentsLibModule } from '@n7-frontend/components';
-import { APP_ROUTES } from './app.routes';
+} from '@net7/boilerplate-common';
+import { N7BoilerplateDatavizModule } from '@net7/boilerplate-dataviz';
+import { DvComponentsLibModule } from '@net7/components';
+import { APP_ROUTES } from './app.routes.dataviz';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component.dataviz';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 
-import configDataviz from './config';
+import configDataviz from './config.dataviz';
 
 const JSON_PATH = './assets/app-config.local.json';
 
@@ -23,7 +23,7 @@ const JSON_PATH = './assets/app-config.local.json';
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES),
     N7BoilerplateCommonModule.forRoot({}),
-    N7BoilerplateDataVizModule,
+    N7BoilerplateDatavizModule,
     DvComponentsLibModule,
   ],
   providers: [{
