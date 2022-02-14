@@ -21,9 +21,9 @@ import {
 } from '@n7-frontend/boilerplate';
 import { APP_ROUTES } from './app.routes.muruca';
 
-import { AppComponent } from './app.component-muruca';
-import configMuruca from './config-muruca';
-import i18n from './config-muruca/i18n';
+import { AppComponent } from './app.component.muruca';
+import configMuruca from './config.muruca';
+import i18n from './config.muruca/i18n';
 
 const LANG_CODE = 'it_IT';
 

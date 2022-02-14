@@ -10,10 +10,10 @@ import {
 import { DvComponentsLibModule } from '@n7-frontend/components';
 import { APP_ROUTES } from './app.routes.dataviz';
 
-import { AppComponent } from './app.component-dataviz';
+import { AppComponent } from './app.component.dataviz';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 
-import configDataviz from './config-dataviz';
+import configDataviz from './config.dataviz';
 
 const JSON_PATH = './assets/app-config.local.json';
 

@@ -9,9 +9,9 @@ import {
 } from '@n7-frontend/boilerplate';
 import { APP_ROUTES } from './app.routes.arianna';
 
-import { AppComponent } from './app.component-arianna';
+import { AppComponent } from './app.component.arianna';
 
-import configArianna from './config-arianna';
+import configArianna from './config.arianna';
 
 const JSON_PATH = './assets/app-config.local.json';
 
