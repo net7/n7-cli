@@ -22,6 +22,14 @@ const filesToReplace = [
     ext: "ts",
   },
   {
+    path: "src/app/app.component",
+    ext: "ts",
+  },
+  {
+    path: "angular",
+    ext: "json",
+  },
+  {
     path: "src/app/config",
     ext: null,
   },
@@ -46,7 +54,6 @@ const placeholdersToReplace = {
   ],
 };
 const additionalFilesToRemove = [
-  "angular.src.json",
   "src/assets/app-config.local.src.json",
   "gitignore.tpl.txt",
   "src/app/layouts/base-layout",
@@ -87,6 +94,10 @@ class CommandNew {
       .then(() => {
         helpers.log(`cleaning up unused files...`);
         return this.cleanUpFiles();
+      })
+      .then(() => {
+        helpers.log(`updating app module imports...`);
+        return this.updateAppModuleImports();
       })
       .then(() => {
         helpers.log(`setting app name and prefix...`);
@@ -186,11 +197,6 @@ class CommandNew {
       files.push({ src, dest });
     });
 
-    // angular config
-    const angularJsonSrc = "angular.src.json";
-    const angularJsonDest = "angular.json";
-    files.push({ src: angularJsonSrc, dest: angularJsonDest });
-
     // local json config
     const localJsonSrc = "src/assets/app-config.local.src.json";
     const localJsonDest = "src/assets/app-config.local.json";
@@ -247,6 +253,22 @@ class CommandNew {
     ).catch((err) => {
       console.log("clean up fail", err);
       throw new Error("clean up fail");
+    });
+  }
+
+  updateAppModuleImports() {
+    const targetFile = "src/app/app.module.ts";
+
+    // info...
+    this.printInfo(`removing ".${this.type}" from app.module imports`);
+
+    return replace({
+      from: new RegExp(`.${this.type}`, 'g'),
+      to: '',
+      files: `${this.targetPath}/${targetFile}`,
+    }).catch((err) => {
+      console.log(`removing ".${this.type}" from app.module imports fail`, err);
+      throw new Error(`removing ".${this.type}" from app.module imports fail`);
     });
   }
 
