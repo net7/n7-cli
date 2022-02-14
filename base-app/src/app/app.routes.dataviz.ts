@@ -1,6 +1,5 @@
-
 import { Routes } from '@angular/router';
-import { Page404LayoutComponent } from '@n7-frontend/boilerplate';
+import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout';
 
 export const APP_ROUTES: Routes = [

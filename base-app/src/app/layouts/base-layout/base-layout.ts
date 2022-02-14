@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AbstractLayout, CommunicationService } from '@n7-frontend/boilerplate';
+import { AbstractLayout, CommunicationService } from '@net7/boilerplate-common';
 import { BaseLayoutConfig as config } from './base-layout.config';
 
 @Component({

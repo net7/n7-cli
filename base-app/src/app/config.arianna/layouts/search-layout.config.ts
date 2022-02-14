@@ -1,4 +1,4 @@
-import { ConfigAriannaSearchLayout } from '@n7-frontend/boilerplate';
+import { ConfigAriannaSearchLayout } from '@net7/boilerplate-arianna';
 
 export default {
   title: 'Cerca nel patrimonio',

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
+import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import {
-  Page404LayoutComponent,
   AwHomeLayoutComponent,
   AwSchedaLayoutComponent,
   AwEntitaLayoutComponent,
@@ -9,7 +9,7 @@ import {
   AwGalleryLayoutComponent,
   AwTimelineLayoutComponent,
   AwMapLayoutComponent
-} from '@n7-frontend/boilerplate';
+} from '@net7/boilerplate-arianna';
 
 export const APP_ROUTES: Routes = [
   // arianna web routes

@@ -1,17 +1,14 @@
 import { Routes } from '@angular/router';
 
+import { Page404LayoutComponent, } from '@net7/boilerplate-common';
 import {
-  // COMMON
-  Page404LayoutComponent,
   // MURUCA
   MrHomeLayoutComponent,
   MrSearchLayoutComponent,
   MrStaticLayoutComponent,
   MrResourceLayoutComponent,
   MrTimelineLayoutComponent,
-  // OTHER
-  DynamicPathGuard
-} from '@n7-frontend/boilerplate';
+} from '@net7/boilerplate-muruca';
 
 const NOT_FOUND_PATH = 'page-404';
 
@@ -48,7 +45,7 @@ export const APP_ROUTES: Routes = [
   {
     path: '**',
     component: MrStaticLayoutComponent,
-    canActivate: [DynamicPathGuard],
+    canActivate: [],
     data: {
       notFoundPath: NOT_FOUND_PATH
     }
