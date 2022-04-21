@@ -52,6 +52,31 @@
               "vendorChunk": false,
               "buildOptimizer": true
             },
+            "base": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.base.ts"
+                }
+              ],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "./node_modules/flatpickr/dist/flatpickr.min.css",
+                "./node_modules/leaflet/dist/leaflet.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
+                "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
+                "src/styles/styles.base.scss"
+              ]
+            },
             "dataviz": {
               "budgets": [
                 {
@@ -155,7 +180,7 @@
               ]
             }
           },
-          "defaultConfiguration": "dataviz"
+          "defaultConfiguration": "base"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

@@ -25,8 +25,8 @@ program
   .option("-v, --verbose", "output extra info")
   .option(
     "-t, --type <type>",
-    "app type < dataviz | arianna | muruca >",
-    "dataviz"
+    "app type < base | dataviz | arianna | muruca >",
+    "base"
   )
   .option("-p, --prefix <prefix>", "app prefix", "app")
   .action(
