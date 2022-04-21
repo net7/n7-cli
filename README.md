@@ -17,7 +17,7 @@ to create a new n7 app:
 1) `n7-cli new (n) <app-name> --type <app-type> --prefix <app-prefix> --verbose`
 
     - `<app-name>` mandatory, app name in kebab-case
-    - `--type (-t) <app-type>` optional, allowed types are arianna | dataviz | empty (default "empty")
+    - `--type (-t) <app-type>` optional, allowed types are base | dataviz | arianna | muruca (default "base")
     - `--prefix (-p) <app-prefix>` optional, selectors prefix, including root selector (default "app")
     - `--verbose (-v)` optional (default false)
 

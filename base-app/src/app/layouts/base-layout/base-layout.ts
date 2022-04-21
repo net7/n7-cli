@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AbstractLayout, CommunicationService } from '@net7/boilerplate-common';
+import { AbstractLayout, CommunicationService, ConfigurationService } from '@net7/boilerplate-common';
 import { BaseLayoutConfig as config } from './base-layout.config';
 
 @Component({
@@ -8,14 +8,16 @@ import { BaseLayoutConfig as config } from './base-layout.config';
 })
 export class BaseLayoutComponent extends AbstractLayout implements OnInit, OnDestroy {
   constructor(
-    private communication: CommunicationService
+    private communication: CommunicationService,
+    private configuration: ConfigurationService
   ) {
     super(config);
   }
 
   protected initPayload() {
     return {
-      communication: this.communication
+      communication: this.communication,
+      configuration: this.configuration
     };
   }
 
