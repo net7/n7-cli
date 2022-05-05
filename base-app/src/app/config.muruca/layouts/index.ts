@@ -16,9 +16,11 @@ import resourceWitnessConfig from './resource-witness.config';
 import resourceBiographyConfig from './resource-biography.config';
 import resourceModalBibliography_witConfig from './resource-modal-bibliography_wit.config';
 import resourceToolConfig from './resource-tool.config';
+import itineraryConfig from './itinerary.config';
 
 export default {
   home: homeConfig,
+  itinerary: itineraryConfig,
   'search-works': searchWorksConfig,
   'search-books': searchBooksConfig,
   'search-witnesses': searchWitnessesConfig,
@@ -34,5 +36,5 @@ export default {
   'resource-toponym': resourceToponymConfig,
   'resource-keyword': resourceKeywordConfig,
   'search-bibliografia': searchBibliografia,
-  'resource-modal-bibliography_wit': resourceModalBibliography_witConfig
+  'resource-modal-bibliography_wit': resourceModalBibliography_witConfig,
 };

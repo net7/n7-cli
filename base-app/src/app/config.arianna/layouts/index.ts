@@ -5,6 +5,7 @@ import mapLayoutConfig from './map-layout.config';
 import schedaLayoutConfig from './scheda-layout.config';
 import searchLayoutConfig from './search-layout.config';
 import collectionLayoutConfig from './collection-layout.config';
+import timelineLayoutConfig from './timeline-layout.config';
 
 export default {
   'home-layout': homeLayoutConfig,
@@ -14,4 +15,5 @@ export default {
   'entita-layout': entitaLayoutConfig,
   'map-layout': mapLayoutConfig,
   'collection-layout': collectionLayoutConfig,
+  'timeline-layout': timelineLayoutConfig
 };
