@@ -28,6 +28,7 @@ export default {
         footer: 'get_footer',
         timeline: 'get_timeline/time-events',
         timelineDescription: 'get_search_description/timeline',
+        itinerary: 'get_itinerary/'
       }
     }
   }
