@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-const kebabCaseRegexPattern = /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/;
+const kebabCaseRegexPattern = /^([a-z][a-z0-9]*)(-[a-z0-9]+)*$/;
 
 module.exports = {
   error(msg) {
