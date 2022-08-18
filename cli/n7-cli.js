@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const program = require("commander");
+const inquirer = require('inquirer');
 const CommandNew = require("./commands/new");
 const CommandLayout = require("./commands/layout");
 const CommandTranslationsExtract = require("./commands/translations-extract");
@@ -30,8 +31,36 @@ program
   )
   .option("-p, --prefix <prefix>", "app prefix", "app")
   .action(
-    (name, { verbose, type, prefix }) =>
-      new CommandNew(name, type, prefix, !!verbose)
+    (name, options) => {
+      inquirer.prompt([{
+        type: 'list',
+        name: 'type',
+        message: `Which type of project would you like to create?`,
+        choices: ["base", "dataviz", "arianna", "muruca"],
+        default: options.type
+      }, {
+        type: 'input',
+        name: 'prefix',
+        message: 'What prefix would you like to use for project components and layouts?',
+        default: options.prefix
+      }]).then((answers) => {
+        if (answers.type) {
+          options.type = answers.type;
+        }
+        if (answers.prefix) {
+          options.prefix = answers.prefix;
+        }
+
+        new CommandNew(name, options.type, options.prefix, !!options.verbose);
+      })
+      .catch((error) => {
+        if (error.isTtyError) {
+          new CommandNew(name, options.type, options.prefix, !!options.verbose);
+        } else {
+          helpers.error('Command "new" prompt error', error);
+        }
+      });
+    }
   );
 
 // LAYOUT
@@ -42,7 +71,27 @@ program
   .description("adds a new layout")
   .option("-v, --verbose", "output extra info")
   .option("-p, --path <path>", "layouts directory path", "src/app/layouts")
-  .action((name, options) => new CommandLayout(name, options));
+  .action((name, options) => {
+    inquirer.prompt([{
+      type: 'input',
+      name: 'path',
+      message: 'What directory path would you like this layout to be created',
+      default: 'src/app/layouts'
+    }]).then((answers) => {
+      if (answers.path) {
+        options.path = answers.path;
+      }
+
+      new CommandLayout(name, options);
+    })
+    .catch((error) => {
+      if (error.isTtyError) {
+        new CommandLayout(name, options);
+      } else {
+        helpers.error('Command "layout" prompt error', error);
+      }
+    });
+  });
 
 // TRANSLATION EXTRACT
 // ---------------------------------------------------------->
