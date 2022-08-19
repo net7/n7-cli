@@ -155,7 +155,7 @@ class CommandTranslationsSearch {
             }
           });
           const keys = result.outputText.match(
-            /(?<=\.(_t|translate.getTranslation)\(\')\w+(?=\')/g
+            /(?<=\.(_t|translate.getTranslation)\(\').+(?=\')/g
           );
           return Promise.resolve({ file, keys });
         })
