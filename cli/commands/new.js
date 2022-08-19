@@ -117,6 +117,10 @@ class CommandNew {
 
   validate() {
     // validate name
+    if (typeof this.name !== 'string' || !this.name.trim()) {
+      helpers.error(`name ${this.name} is not valid`);
+    }
+
     if (!helpers.isKebabCase(this.name)) {
       helpers.error(`name ${this.name} should be kebab-case and lowercase`);
     }
