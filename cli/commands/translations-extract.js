@@ -4,24 +4,24 @@ const ts = require('typescript');
 const helpers = require('./helpers');
 
 class CommandTranslationsExtract {
-  constructor(defaultCode, targetCode, options) {
+  constructor(sourceCode, targetCode, options) {
     const { verbose } = options;
-    this.defaultCode = defaultCode;
+    this.sourceCode = sourceCode;
     this.targetCode = targetCode;
     this.verbose = !!verbose;
     this.cwd = process.cwd();
 
-    this.defaultFile = `./${this.defaultCode}.ts`;
-    this.defaultJsFile = `./${this.defaultCode}-tmp.js`;
+    this.sourceFile = `./${this.sourceCode}.ts`;
+    this.sourceJsFile = `./${this.sourceCode}-tmp.js`;
     this.targetFile = `./${this.targetCode}.ts`;
     this.targetJsFile = `./${this.targetCode}-tmp.js`;
     this.outputFile = `./${this.targetCode}.txt`;
 
     helpers.log('extracting translations...');
-    this.defaultFileExists()
+    this.sourceFileExists()
       .then(exists => {
         if(!exists){
-          helpers.error(`${this.defaultFile} file does not exists in ${this.cwd}`);
+          helpers.error(`${this.sourceFile} file does not exists in ${this.cwd}`);
         }
         return this.targetFileExists();
       })
@@ -29,17 +29,17 @@ class CommandTranslationsExtract {
         if(!exists){
           helpers.error(`${this.targetFile} file does not exists in ${this.cwd}`);
         }
-        return this.loadFile('default');
+        return this.loadFile('source');
       })
-      .then((defaultContents) => {
-        const transpiledModule = this._transpile(defaultContents);
-        return this.createJsFile('default', transpiledModule);
+      .then((sourceContents) => {
+        const transpiledModule = this._transpile(sourceContents);
+        return this.createJsFile('source', transpiledModule);
       })
       .then(() => {
-        const { default: config } = this.getLangConfig('default');
-        this.defaultConfig = config;
-        if (!this.defaultConfig) {
-          helpers.error(`${this.defaultFile} wrong translation file format`);
+        const { default: config } = this.getLangConfig('source');
+        this.sourceConfig = config;
+        if (!this.sourceConfig) {
+          helpers.error(`${this.sourceFile} wrong translation file format`);
         }
         return this.loadFile('target');
       })
@@ -66,12 +66,12 @@ class CommandTranslationsExtract {
       });
   }
 
-  defaultFileExists() {
+  sourceFileExists() {
     const msg = 'default language file exists control';
     // info...
     this.printInfo(msg);
     
-    return fs.pathExists(this.defaultFile).catch((err) => {
+    return fs.pathExists(this.sourceFile).catch((err) => {
       console.log(`${msg} fail`, err);
       throw new Error(`${msg} fail`);
     });
@@ -129,8 +129,8 @@ class CommandTranslationsExtract {
     this.printInfo(msg);
 
     const fileContent = [];
-    Object.keys(this.defaultConfig).forEach(key => {
-      fileContent.push(`[${this.defaultCode}][${key}]=${this.defaultConfig[key]}`);
+    Object.keys(this.sourceConfig).forEach(key => {
+      fileContent.push(`[${this.sourceCode}][${key}]=${this.sourceConfig[key]}`);
       fileContent.push(`[${this.targetCode}][${key}]=${this.targetConfig[key] || ''}`);
     });
 
@@ -146,7 +146,7 @@ class CommandTranslationsExtract {
     this.printInfo(msg);
 
     const remove$ = [];
-    remove$.push(fs.remove(this.defaultJsFile));
+    remove$.push(fs.remove(this.sourceJsFile));
     remove$.push(fs.remove(this.targetJsFile));
 
     return Promise.all(remove$).catch((err) => {
