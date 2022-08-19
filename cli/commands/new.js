@@ -118,7 +118,7 @@ class CommandNew {
   validate() {
     // validate name
     if (typeof this.name !== 'string' || !this.name.trim()) {
-      helpers.error(`name ${this.name} is not valid`);
+      helpers.error('"name" option is mandatory');
     }
 
     if (!helpers.isKebabCase(this.name)) {
