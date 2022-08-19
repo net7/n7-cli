@@ -34,13 +34,13 @@ class CommandSls {
     this.verbose = verbose;
     this.targetPath = `${process.cwd()}/${this.name}-sls`;
     this.srcPath = path.join(path.dirname(fs.realpathSync(__filename)), '../../base-sls');
+    
+    // validation
+    this.validate();
 
     // placeholder vars
     this.nameUppercase = this.name.toUpperCase();
     this.nameCamelcase = helpers.ucFirst(this.name);
-
-    // validation
-    this.validate();
 
     // init
     helpers.log('loading files...');
@@ -76,7 +76,11 @@ class CommandSls {
   }
 
   validate(){
-    // validate name characters
+    // validate name
+    if (typeof this.name !== 'string' || !this.name.trim()) {
+      helpers.error('"name" option is mandatory');
+    }
+
     if(!nameRegexPattern.test(this.name)){
       helpers.error(`name ${this.name} format error - allowed chars [a-z]`);
     }
