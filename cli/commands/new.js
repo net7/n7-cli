@@ -56,7 +56,7 @@ const placeholdersToReplace = {
 const additionalFilesToRemove = [
   "src/assets/app-config.local.src.json",
   "gitignore.tpl.txt",
-  "src/app/layouts/base-layout",
+  "src/app/templates",
 ];
 
 class CommandNew {

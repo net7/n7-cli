@@ -29,7 +29,7 @@ class CommandLayout {
     this.targetPath = `${this.layoutsPath}/${this.name}-layout`;
     this.srcPath = path.join(
       path.dirname(fs.realpathSync(__filename)), 
-      '../../base-app/src/app/layouts/base-layout'
+      '../../base-app/src/app/templates/layouts/base-layout'
     );
     this.appPrefix = null;
     this.prettyName = helpers.snakeCaseToPascalCase(this.name);
