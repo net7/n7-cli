@@ -5,6 +5,7 @@ const inquirer = require('inquirer');
 const helpers = require('./commands/helpers');
 const CommandNew = require("./commands/new");
 const CommandLayout = require("./commands/layout");
+const CommandComponent = require("./commands/component");
 const CommandTranslationsExtract = require("./commands/translations-extract");
 const CommandTranslationsLoad = require("./commands/translations-load");
 const CommandTranslationsSearch = require("./commands/translations-search");
@@ -117,6 +118,53 @@ program
       } else {
         console.error(error);
         helpers.error('Command "layout" prompt error');
+      }
+    });
+  });
+
+// COMPONENT
+// ---------------------------------------------------------->
+program
+  .command("component")
+  .description("adds a new component")
+  .option("-n, --name <name>", "component name")
+  .option("-p, --path <path>", "components directory path", "src/app/components")
+  .option("-v, --verbose", "output extra info")
+  .option("-y, --silent", "disable interactive input prompts")
+  .action((options) => {
+    let prompt$;
+
+    if (!!options.silent) {
+      prompt$ = Promise.resolve({});
+    } else {
+      prompt$ = inquirer.prompt([{
+        type: 'input',
+        name: 'name',
+        message: 'What name would you like to use for the new component?',
+        default: typeof options.name === 'string' ? options.name : null
+      }, {
+        type: 'input',
+        name: 'path',
+        message: 'What directory path would you like this component to be created?',
+        default: options.path
+      }]);
+    }
+
+    prompt$.then((answers) => {
+      Object.keys(answers).forEach((key) => {
+        if (answers[key]) {
+          options[key] = answers[key];
+        }
+      });
+
+      new CommandComponent(options.name, options);
+    })
+    .catch((error) => {
+      if (error.isTtyError) {
+        new CommandComponent(options.name, options);
+      } else {
+        console.error(error);
+        helpers.error('Command "component" prompt error');
       }
     });
   });
