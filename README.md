@@ -44,9 +44,63 @@ to create a new layout:
     - `--verbose (-v)` optional (default false)
     - `--silent (-y)` optional, no interactive prompt (default false)
 
-3) add new layout to `app.routes.ts` config
+3) add new layout to `app.module.ts` config
 
-4) add new layout to `app.module.ts` config
+4) add new layout to `app.routes.ts` config
+
+
+## Command `component`
+
+for help `n7-cli component --help`
+
+to create a new component:
+
+1) `cd <project-root-folder>`
+
+2) `n7-cli component` <br /> *(with full options)* `n7-cli component --name <component-name> --path <components-directory> --verbose --silent`
+
+    - `--name (-n) <component-name>`, component name in kebab-case
+    - `--path (-t) <components-directory>` optional, components directory path (default "src/app/components")
+    - `--verbose (-v)` optional (default false)
+    - `--silent (-y)` optional, no interactive prompt (default false)
+
+3) add new component to `app.module.ts` config
+
+
+## Command `datasource`
+
+for help `n7-cli datasource --help`
+
+to create a new datasource:
+
+1) `cd <project-root-folder>`
+
+2) `n7-cli datasource` <br /> *(with full options)* `n7-cli datasource --name <datasource-name> --path <datasources-directory> --verbose --silent`
+
+    - `--name (-n) <datasource-name>`, datasource name in kebab-case
+    - `--path (-t) <datasources-directory>` optional, datasources directory path (default "src/app/data-sources")
+    - `--verbose (-v)` optional (default false)
+    - `--silent (-y)` optional, no interactive prompt (default false)
+
+3) add new datasource to datasources export file (e.g. "src/app/data-sources/index.ts")
+
+
+## Command `eventhandler`
+
+for help `n7-cli eventhandler --help`
+
+to create a new eventhandler:
+
+1) `cd <project-root-folder>`
+
+2) `n7-cli eventhandler` <br /> *(with full options)* `n7-cli eventhandler --name <eventhandler-name> --path <eventhandlers-directory> --verbose --silent`
+
+    - `--name (-n) <eventhandler-name>`, eventhandler name in kebab-case
+    - `--path (-t) <eventhandlers-directory>` optional, eventhandlers directory path (default "src/app/event-handlers")
+    - `--verbose (-v)` optional (default false)
+    - `--silent (-y)` optional, no interactive prompt (default false)
+
+3) add new eventhandler to eventhandlers export file (e.g. "src/app/event-handlers/index.ts")
 
 
 ## Command `translation-extract`
