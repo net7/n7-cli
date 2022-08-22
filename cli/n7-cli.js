@@ -6,6 +6,8 @@ const helpers = require('./commands/helpers');
 const CommandNew = require("./commands/new");
 const CommandLayout = require("./commands/layout");
 const CommandComponent = require("./commands/component");
+const CommandDatasource = require("./commands/datasource");
+const CommandEventhandler = require("./commands/eventhandler");
 const CommandTranslationsExtract = require("./commands/translations-extract");
 const CommandTranslationsLoad = require("./commands/translations-load");
 const CommandTranslationsSearch = require("./commands/translations-search");
@@ -75,99 +77,59 @@ program
     }
   );
 
-// LAYOUT
+// LAYOUT / COMPONENT / DATASOURCE / EVENTHANDLER
 // ---------------------------------------------------------->
-program
-  .command("layout")
-  .description("adds a new layout")
-  .option("-n, --name <name>", "layout name")
-  .option("-p, --path <path>", "layouts directory path", "src/app/layouts")
-  .option("-v, --verbose", "output extra info")
-  .option("-y, --silent", "disable interactive input prompts")
-  .action((options) => {
-    let prompt$;
-
-    if (!!options.silent) {
-      prompt$ = Promise.resolve({});
-    } else {
-      prompt$ = inquirer.prompt([{
-        type: 'input',
-        name: 'name',
-        message: 'What name would you like to use for the new layout?',
-        default: typeof options.name === 'string' ? options.name : null
-      }, {
-        type: 'input',
-        name: 'path',
-        message: 'What directory path would you like this layout to be created?',
-        default: options.path
-      }]);
-    }
-
-    prompt$.then((answers) => {
-      Object.keys(answers).forEach((key) => {
-        if (answers[key]) {
-          options[key] = answers[key];
+[
+  { item: 'layout', path: 'src/app/layouts', klass: CommandLayout },
+  { item: 'component', path: 'src/app/components', klass: CommandComponent },
+  { item: 'datasource', path: 'src/app/data-sources', klass: CommandDatasource },
+  { item: 'eventhandler', path: 'src/app/event-handlers', klass: CommandEventhandler },
+].forEach(({ item, path, klass }) => {
+  program
+    .command(item)
+    .description(`adds a new ${item}`)
+    .option("-n, --name <name>", `${item} name`)
+    .option("-p, --path <path>", `${item} parent folder`, path)
+    .option("-v, --verbose", "output extra info")
+    .option("-y, --silent", "disable interactive input prompts")
+    .action((options) => {
+      let prompt$;
+  
+      if (!!options.silent) {
+        prompt$ = Promise.resolve({});
+      } else {
+        prompt$ = inquirer.prompt([{
+          type: 'input',
+          name: 'name',
+          message: `What name would you like to use for the new ${item}?`,
+          default: typeof options.name === 'string' ? options.name : null
+        }, {
+          type: 'input',
+          name: 'path',
+          message: `What directory path would you like this ${item} to be created?`,
+          default: options.path
+        }]);
+      }
+  
+      prompt$.then((answers) => {
+        Object.keys(answers).forEach((key) => {
+          if (answers[key]) {
+            options[key] = answers[key];
+          }
+        });
+  
+        new klass(options.name, options);
+      })
+      .catch((error) => {
+        if (error.isTtyError) {
+          new klass(options.name, options);
+        } else {
+          console.error(error);
+          helpers.error(`Command "${item}" prompt error`);
         }
       });
-
-      new CommandLayout(options.name, options);
-    })
-    .catch((error) => {
-      if (error.isTtyError) {
-        new CommandLayout(options.name, options);
-      } else {
-        console.error(error);
-        helpers.error('Command "layout" prompt error');
-      }
     });
-  });
-
-// COMPONENT
-// ---------------------------------------------------------->
-program
-  .command("component")
-  .description("adds a new component")
-  .option("-n, --name <name>", "component name")
-  .option("-p, --path <path>", "components directory path", "src/app/components")
-  .option("-v, --verbose", "output extra info")
-  .option("-y, --silent", "disable interactive input prompts")
-  .action((options) => {
-    let prompt$;
-
-    if (!!options.silent) {
-      prompt$ = Promise.resolve({});
-    } else {
-      prompt$ = inquirer.prompt([{
-        type: 'input',
-        name: 'name',
-        message: 'What name would you like to use for the new component?',
-        default: typeof options.name === 'string' ? options.name : null
-      }, {
-        type: 'input',
-        name: 'path',
-        message: 'What directory path would you like this component to be created?',
-        default: options.path
-      }]);
-    }
-
-    prompt$.then((answers) => {
-      Object.keys(answers).forEach((key) => {
-        if (answers[key]) {
-          options[key] = answers[key];
-        }
-      });
-
-      new CommandComponent(options.name, options);
-    })
-    .catch((error) => {
-      if (error.isTtyError) {
-        new CommandComponent(options.name, options);
-      } else {
-        console.error(error);
-        helpers.error('Command "component" prompt error');
-      }
-    });
-  });
+});
 
 // TRANSLATION EXTRACT
 // ---------------------------------------------------------->
