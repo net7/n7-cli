@@ -28,7 +28,18 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "allowedCommonJsDependencies": [
+              "apexcharts/dist/apexcharts.common.js",
+              "dayjs",
+              "latte-carousel",
+              "leaflet.markercluster",
+              "leaflet",
+              "lodash",
+              "moment",
+              "openseadragon",
+              "slugify"
+            ]
           },
           "configurations": {
             "production": {
@@ -191,6 +202,9 @@
             "arianna": {
               "browserTarget": "baseappprefix:build:arianna"
             },
+            "base": {
+              "browserTarget": "baseappprefix:build:base"
+            },
             "dataviz": {
               "browserTarget": "baseappprefix:build:dataviz"
             },
@@ -231,6 +245,5 @@
         }
       }
     }
-  },
-  "defaultProject": "baseappprefix"
+  }
 }

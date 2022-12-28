@@ -55,7 +55,9 @@ class CommandComponent {
         return this.loadAngularJson();
       })
       .then((angularJson) => {
-        this.appPrefix = angularJson.defaultProject;
+        const projectKeys = Object.keys(angularJson.projects);
+        const firstProject = angularJson.projects[projectKeys[0]];
+        this.appPrefix = firstProject.prefix;
         if(typeof this.appPrefix !== 'string'){
           helpers.error(`app prefix wrong value ${this.appPrefix}`);
         }
