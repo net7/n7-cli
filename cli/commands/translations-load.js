@@ -1,6 +1,6 @@
 
 const fs = require('fs-extra');
-const helpers = require('./helpers');
+const helpers = require('../utils/helpers');
 
 class CommandTranslationsLoad {
   constructor(langCode, options) {

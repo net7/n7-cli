@@ -1,7 +1,7 @@
 
 const fs = require('fs-extra');
 const ts = require('typescript');
-const helpers = require('./helpers');
+const helpers = require('../utils/helpers');
 
 class CommandTranslationsExtract {
   constructor(sourceCode, targetCode, options) {

@@ -2,7 +2,7 @@
 const fs = require('fs-extra');
 const ts = require('typescript');
 const glob = require('glob');
-const helpers = require('./helpers');
+const helpers = require('../utils/helpers');
 
 class CommandTranslationsSearch {
   constructor(folder, targetFile, options) {

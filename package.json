@@ -23,6 +23,7 @@
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "inquirer": "^8.1.5",
+    "lodash": "^4.17.21",
     "replace-in-file": "^5.0.2",
     "typescript": "^3.9.7"
   },

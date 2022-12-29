@@ -2,7 +2,7 @@ const { Octokit } = require('@octokit/rest');
 const inquirer = require('inquirer');
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
-const helpers = require("./commands/helpers");
+const helpers = require("./utils/helpers");
 const { version } = require('../package.json');
 
 const octokit = new Octokit();

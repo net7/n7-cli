@@ -2,7 +2,8 @@
 
 const program = require("commander");
 const inquirer = require('inquirer');
-const helpers = require('./commands/helpers');
+const helpers = require('./utils/helpers');
+const config = require('./utils/config');
 const CommandNew = require("./commands/new");
 const CommandLayout = require("./commands/layout");
 const CommandComponent = require("./commands/component");
@@ -84,7 +85,15 @@ program
   { item: 'component', path: 'src/app/components', klass: CommandComponent },
   { item: 'datasource', path: 'src/app/data-sources', klass: CommandDatasource },
   { item: 'eventhandler', path: 'src/app/event-handlers', klass: CommandEventhandler },
-].forEach(({ item, path, klass }) => {
+]
+.map(({ item, path, klass }) => (
+  { 
+    item, 
+    klass, 
+    path: config.get(`${item}.path`, path), // config check
+  }
+))
+.forEach(({ item, path, klass }) => {
   program
     .command(item)
     .description(`adds a new ${item}`)

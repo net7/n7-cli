@@ -2,7 +2,8 @@
 const fs = require('fs-extra');
 const path = require('path');
 const replace = require('replace-in-file');
-const helpers = require('./helpers');
+const helpers = require('../utils/helpers');
+const config = require('../utils/config');
 
 const ANGULAR_JSON_PATH = './angular.json';
 const filesToCopy = [
@@ -58,9 +59,7 @@ class CommandLayout {
         return this.loadAngularJson();
       })
       .then((angularJson) => {
-        const projectKeys = Object.keys(angularJson.projects);
-        const firstProject = angularJson.projects[projectKeys[0]];
-        this.appPrefix = firstProject.prefix;
+        this.appPrefix = this.getPrefix(angularJson);
         if(typeof this.appPrefix !== 'string'){
           helpers.error(`app prefix wrong value ${this.appPrefix}`);
         }
@@ -177,6 +176,15 @@ class CommandLayout {
     if(this.verbose){
       helpers.info(msg);
     }
+  }
+
+  getPrefix(angularJson) {
+    const projectKeys = Object.keys(angularJson.projects);
+    const { prefix } = angularJson.projects[projectKeys[0]];
+    return (
+      config.get('layout.prefix') 
+      || config.get('prefix', prefix)
+    );
   }
 }
 

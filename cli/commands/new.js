@@ -1,7 +1,7 @@
-const fs = require("fs-extra");
-const path = require("path");
-const replace = require("replace-in-file");
-const helpers = require("./helpers");
+const fs = require('fs-extra');
+const path = require('path');
+const replace = require('replace-in-file');
+const helpers = require('../utils/helpers');
 
 const prefixRegexPattern = /^[a-z]*$/g;
 const reservedPrefixes = ["n7", "aw", "dv", "mr"];

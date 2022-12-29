@@ -2,7 +2,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const replace = require('replace-in-file');
-const helpers = require('./helpers');
+const helpers = require('../utils/helpers');
 
 const filesToCopy = [
   'base.ds.ts'
