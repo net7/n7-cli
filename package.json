@@ -1,6 +1,6 @@
 {
   "name": "n7-cli",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Un'interfaccia da riga di comando per n7-framework",
   "main": "n7-cli.js",
   "scripts": {
