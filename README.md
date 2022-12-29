@@ -175,3 +175,29 @@ to create a new muruca serverless project:
 4) `npm run sls-conf`
 
 5) `npm start`
+
+## .n7clirc.js (optional config file)
+
+You can specify an optional configuration to override n7-cli defaults, adding `.n7clirc.js` file to the root directory of the project. An example file with full options:
+
+```
+// <root-directory>/.n7clirc.js
+
+module.exports = {
+  prefix: '<prefix>', // global prefix option
+  component: {
+    prefix: '<prefix>', // components specific prefix
+    path: '<components-folder-path>' // components path
+  },
+  layout: {
+    prefix: '<prefix>', // layouts specific prefix
+    path: '<layouts-folder-path>' // layouts path
+  },
+  datasource: {
+    path: '<datasources-folder-path>' // datasources path
+  },
+  eventhandler: {
+    path: '<eventhandlers-folder-path>' // eventhandlers path
+  }
+}
+```
