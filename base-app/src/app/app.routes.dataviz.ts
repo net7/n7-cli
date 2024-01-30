@@ -1,22 +1,22 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { Page404LayoutComponent } from "@net7/boilerplate-common";
+import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import {
   DvExampleLayoutComponent,
   DvCardExampleLayoutComponent,
-} from "@net7/boilerplate-dataviz";
+} from '@net7/boilerplate-dataviz';
 
 export const APP_ROUTES: Routes = [
   {
-    path: "",
-    redirectTo: "/home",
-    pathMatch: "full",
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
   },
-  { path: "home", component: DvExampleLayoutComponent },
+  { path: 'home', component: DvExampleLayoutComponent },
   {
-    path: "card-example",
+    path: 'card-example',
     component: DvCardExampleLayoutComponent,
-    data: { configId: "card-example" },
+    data: { configId: 'card-example' },
   },
-  { path: "**", component: Page404LayoutComponent },
+  { path: '**', component: Page404LayoutComponent },
 ];

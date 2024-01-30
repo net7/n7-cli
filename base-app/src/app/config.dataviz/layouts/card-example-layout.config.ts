@@ -11,18 +11,18 @@ import {
   TableItem,
   TextItem,
   MapItem,
-} from "@net7/boilerplate-dataviz";
+} from '@net7/boilerplate-dataviz';
 import {
   ContentPlaceholderComponent,
   ContentPlaceholderData,
   LoaderComponent,
-} from "@net7/components";
+} from '@net7/components';
 
 const getTextItem = (label: string): TextItem => {
   getTextItem.counter += 1;
   return {
     id: `text-${getTextItem.counter}`,
-    type: "text",
+    type: 'text',
     initialData: {
       text: `<i>${label}</i>`,
       payload: `text-${getTextItem.counter} click!`,
@@ -33,42 +33,42 @@ const getTextItem = (label: string): TextItem => {
 getTextItem.counter = 0;
 
 const dataWidgetItem: DataWidgetItem = {
-  id: "item-2",
-  type: "data-widget",
+  id: 'item-2',
+  type: 'data-widget',
   stateComponents: {
     loading: {
       component: LoaderComponent,
     },
   },
   initialData: {
-    icon: "n7-icon-earth",
-    text: "497 <em>Dipendenti</em>",
+    icon: 'n7-icon-earth',
+    text: '497 <em>Dipendenti</em>',
     subtitle: {
-      text: "In Crescita",
-      icon: "n7-icon-caret-up",
-      value: "9%",
-      payload: "view percent tooltip ",
+      text: 'In Crescita',
+      icon: 'n7-icon-caret-up',
+      value: '9%',
+      payload: 'view percent tooltip ',
     },
-    payload: "view earth tooltip",
-    classes: "is-positive",
+    payload: 'view earth tooltip',
+    classes: 'is-positive',
   },
 };
 
 const pieChartItem: ApexPieChartItem = {
-  id: "item-3",
-  type: "apex-pie-chart",
+  id: 'item-3',
+  type: 'apex-pie-chart',
   // status: {
   //   loading: 'n7-loader',
   // },
   initialData: {
     series: [
       {
-        id: "serie-1",
-        name: "Serie 1",
+        id: 'serie-1',
+        name: 'Serie 1',
         data: [44, 55, 13, 43, 22],
       },
     ],
-    categories: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    categories: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
   },
   options: {
     chart: {
@@ -78,21 +78,21 @@ const pieChartItem: ApexPieChartItem = {
 };
 
 const lineChartItem: ApexLineChartItem = {
-  id: "item-4",
-  type: "apex-line-chart",
+  id: 'item-4',
+  type: 'apex-line-chart',
   stateComponents: {
     loading: {
       component: ContentPlaceholderComponent,
       data: {
-        blocks: [{ classes: "placeholder-1" }],
+        blocks: [{ classes: 'placeholder-1' }],
       } as ContentPlaceholderData,
     },
   },
   initialData: {
     series: [
       {
-        id: "serie-desktops",
-        name: "Desktops",
+        id: 'serie-desktops',
+        name: 'Desktops',
         data: [10, 41, 35, 51, 49, 62, 69, 91, 148].map((value) => ({
           value,
           metadata: {
@@ -101,7 +101,7 @@ const lineChartItem: ApexLineChartItem = {
         })),
       },
     ],
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
   },
   options: {
     chart: {
@@ -115,15 +115,15 @@ const lineChartItem: ApexLineChartItem = {
       enabled: false,
     },
     stroke: {
-      curve: "straight",
+      curve: 'straight',
     },
     title: {
-      text: "Product Trends by Month",
-      align: "left",
+      text: 'Product Trends by Month',
+      align: 'left',
     },
     grid: {
       row: {
-        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
     },
@@ -131,32 +131,32 @@ const lineChartItem: ApexLineChartItem = {
 };
 
 const barChartItem: ApexBarChartItem = {
-  id: "item-5",
-  type: "apex-bar-chart",
+  id: 'item-5',
+  type: 'apex-bar-chart',
   initialData: {
     series: [
       {
-        id: "serie-2021",
-        name: "2021",
+        id: 'serie-2021',
+        name: '2021',
         data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
       },
       {
-        id: "serie-2020",
-        name: "2020",
+        id: 'serie-2020',
+        name: '2020',
         data: [300, 530, 418, 370, 240, 680, 390, 100, 200, 1280],
       },
     ],
     categories: [
-      "South Korea",
-      "Canada",
-      "United Kingdom",
-      "Netherlands",
-      "Italy",
-      "France",
-      "Japan",
-      "United States",
-      "China",
-      "Germany",
+      'South Korea',
+      'Canada',
+      'United Kingdom',
+      'Netherlands',
+      'Italy',
+      'France',
+      'Japan',
+      'United States',
+      'China',
+      'Germany',
     ],
   },
   options: {
@@ -177,21 +177,21 @@ const barChartItem: ApexBarChartItem = {
 };
 
 const radialBarChartItem: ApexRadialBarChartItem = {
-  id: "item-6",
-  type: "apex-radialbar-chart",
+  id: 'item-6',
+  type: 'apex-radialbar-chart',
   initialData: {
     series: [
       {
-        id: "serie-avg",
-        name: "Average",
+        id: 'serie-avg',
+        name: 'Average',
         data: [76],
       },
     ],
-    categories: ["Average Results"],
+    categories: ['Average Results'],
   },
   options: {
     track: {
-      background: "#e7e7e7",
+      background: '#e7e7e7',
     },
     plotOptions: {
       radialBar: {
@@ -209,40 +209,40 @@ const radialBarChartItem: ApexRadialBarChartItem = {
 };
 
 const radarBarChartItem: ApexRadarChartItem = {
-  id: "item-7",
-  type: "apex-radar-chart",
+  id: 'item-7',
+  type: 'apex-radar-chart',
   initialData: {
     series: [
       {
-        id: "serie-avg",
-        name: "Punteggio",
+        id: 'serie-avg',
+        name: 'Punteggio',
         data: [67, 40, 35, 54, 49, 60],
       },
     ],
     categories: [
-      "Testo",
-      "Logica",
-      "Matematica",
-      "Fisica",
-      "Chimica",
-      "Biologia",
+      'Testo',
+      'Logica',
+      'Matematica',
+      'Fisica',
+      'Chimica',
+      'Biologia',
     ],
   },
   options: {
     chart: {
-      width: "600",
+      width: '600',
       animations: {
         enabled: true,
       },
     },
     fill: {
       opacity: 0.25,
-      colors: ["#616161"],
+      colors: ['#616161'],
     },
     stroke: {
       show: true,
       width: 2,
-      colors: ["#616161"],
+      colors: ['#616161'],
       dashArray: 0,
     },
     yaxis: {
@@ -253,7 +253,7 @@ const radarBarChartItem: ApexRadarChartItem = {
     },
     markers: {
       size: 5,
-      colors: ["#616161"],
+      colors: ['#616161'],
       hover: {
         size: 10,
       },
@@ -261,9 +261,9 @@ const radarBarChartItem: ApexRadarChartItem = {
     plotOptions: {
       radar: {
         polygons: {
-          strokeColor: "#FFoooo",
+          strokeColor: '#FFoooo',
           fill: {
-            colors: ["#C5E9C9", "#FBEFC9", "#FFD8C7", "#F8CAC3"],
+            colors: ['#C5E9C9', '#FBEFC9', '#FFD8C7', '#F8CAC3'],
           },
         },
       },
@@ -271,25 +271,25 @@ const radarBarChartItem: ApexRadarChartItem = {
     legend: {
       show: true,
       showForSingleSeries: true,
-      position: "right",
-      fontSize: "18px",
-      fontFamily: "Helvetica, Arial",
+      position: 'right',
+      fontSize: '18px',
+      fontFamily: 'Helvetica, Arial',
       fontWeight: 300,
-      horizontalAlign: "center",
+      horizontalAlign: 'center',
       customLegendItems: [
-        "QUARTILE 3-|4",
-        "QUARTILE 2-|3",
-        "QUARTILE 1-|2",
-        "QUARTILE1",
+        'QUARTILE 3-|4',
+        'QUARTILE 2-|3',
+        'QUARTILE 1-|2',
+        'QUARTILE1',
       ],
       offsetX: 20,
       offsetY: 100,
       markers: {
-        fillColors: ["#C5E9C9", "#FBEFC9", "#FFD8C7", "#F8CAC3"],
+        fillColors: ['#C5E9C9', '#FBEFC9', '#FFD8C7', '#F8CAC3'],
         width: 20,
         height: 20,
         strokeWidth: 0,
-        strokeColor: "#fff",
+        strokeColor: '#fff',
         radius: 20,
         offsetX: -5,
         offsetY: 3,
@@ -302,23 +302,23 @@ const radarBarChartItem: ApexRadarChartItem = {
 };
 
 const tableItem: TableItem = {
-  id: "item-8",
-  type: "table",
+  id: 'item-8',
+  type: 'table',
   initialData: {
     head: [
       {
-        cells: ["SEZIONE", "PUNTEGGIO"].map((label) => ({
+        cells: ['SEZIONE', 'PUNTEGGIO'].map((label) => ({
           content: label,
         })),
       },
     ],
     body: [
-      { label: "Biologia", value: 7.5 },
-      { label: "Testo", value: 6.5 },
-      { label: "Fisica", value: 6 },
-      { label: "Chimica", value: 4.5 },
-      { label: "Logica", value: 4 },
-      { label: "Matematica", value: 3 },
+      { label: 'Biologia', value: 7.5 },
+      { label: 'Testo', value: 6.5 },
+      { label: 'Fisica', value: 6 },
+      { label: 'Chimica', value: 4.5 },
+      { label: 'Logica', value: 4 },
+      { label: 'Matematica', value: 3 },
     ].map(({ label, value }) => ({
       cells: [{ content: label }, { content: value }],
     })),
@@ -326,46 +326,46 @@ const tableItem: TableItem = {
 };
 
 const selectItem: SelectItem = {
-  id: "item-9",
-  type: "select",
+  id: 'item-9',
+  type: 'select',
   initialData: {
-    id: "select-punteggio",
-    label: "Punteggio",
+    id: 'select-punteggio',
+    label: 'Punteggio',
     options: [
-      "TOTALE",
-      "BIOLOGIA",
-      "CHIMICA",
-      "FISICA",
-      "INGLESE",
-      "LOGICA",
-      "MATEMATICA",
+      'TOTALE',
+      'BIOLOGIA',
+      'CHIMICA',
+      'FISICA',
+      'INGLESE',
+      'LOGICA',
+      'MATEMATICA',
     ].map((label) => ({ label, value: label })),
-    payload: "punteggio",
+    payload: 'punteggio',
   },
 };
 
 const buttonToggleItem: InnerTitleItem = {
-  id: "item-10",
-  type: "inner-title",
+  id: 'item-10',
+  type: 'inner-title',
   initialData: {
     title: {
       main: {
-        text: "",
+        text: '',
       },
     },
-    tools: "Punteggi Normalizzati",
+    tools: 'Punteggi Normalizzati',
     actions: {
       buttons: [
         {
-          text: "SI",
+          text: 'SI',
           anchor: {
-            payload: "button-yes",
+            payload: 'button-yes',
           },
         },
         {
-          text: "NO",
+          text: 'NO',
           anchor: {
-            payload: "button-no",
+            payload: 'button-no',
           },
         },
       ],
@@ -374,8 +374,8 @@ const buttonToggleItem: InnerTitleItem = {
 };
 
 const mapItem: MapItem = {
-  id: "item-11",
-  type: "map",
+  id: 'item-11',
+  type: 'map',
   initialData: {
     libOptions: {
       maxZoom: 8,
@@ -387,16 +387,16 @@ const mapItem: MapItem = {
     markers: [
       {
         coords: [51.505, -0.09],
-        template: "This is the center of the map",
-        title: "London",
+        template: 'This is the center of the map',
+        title: 'London',
       },
       {
         coords: [51.495, -0.1],
-        template: "Elephant and castle",
+        template: 'Elephant and castle',
       },
       {
         coords: [51.46687084654015, -0.2130156755447388],
-        template: "Putney bridge",
+        template: 'Putney bridge',
       },
     ],
   },
@@ -407,80 +407,80 @@ const config: {
 } = {
   cards: [
     {
-      id: "first-card",
+      id: 'first-card',
       header: {
         sections: [
           {
-            id: "section-01",
+            id: 'section-01',
             stateComponents: {
               loading: {
                 component: ContentPlaceholderComponent,
                 data: {
                   blocks: [
                     {
-                      classes: "first-block",
+                      classes: 'first-block',
                     },
                   ],
                 } as ContentPlaceholderData,
               },
             },
-            items: [getTextItem("Card 1")],
+            items: [getTextItem('Card 1')],
           },
         ],
       },
       content: {
         sections: [
           {
-            id: "section-02",
+            id: 'section-02',
             stateComponents: {
               loading: {
                 component: ContentPlaceholderComponent,
                 data: {
                   blocks: [
                     {
-                      classes: "first-block",
+                      classes: 'first-block',
                     },
                   ],
                 } as ContentPlaceholderData,
               },
             },
-            items: [getTextItem("Data Widget"), dataWidgetItem],
+            items: [getTextItem('Data Widget'), dataWidgetItem],
           },
           {
-            id: "section-03",
-            items: [getTextItem("Line Chart"), lineChartItem],
+            id: 'section-03',
+            items: [getTextItem('Line Chart'), lineChartItem],
           },
           {
-            id: "section-04",
-            items: [getTextItem("Pie Chart"), pieChartItem],
+            id: 'section-04',
+            items: [getTextItem('Pie Chart'), pieChartItem],
           },
           {
-            id: "section-05",
-            items: [getTextItem("Bar Chart"), barChartItem],
+            id: 'section-05',
+            items: [getTextItem('Bar Chart'), barChartItem],
           },
           {
-            id: "section-06",
-            items: [getTextItem("Radial Chart"), radialBarChartItem],
+            id: 'section-06',
+            items: [getTextItem('Radial Chart'), radialBarChartItem],
           },
           {
-            id: "section-07",
-            items: [getTextItem("Radar Chart"), radarBarChartItem],
+            id: 'section-07',
+            items: [getTextItem('Radar Chart'), radarBarChartItem],
           },
           {
-            id: "section-08",
-            items: [getTextItem("Select"), selectItem],
+            id: 'section-08',
+            items: [getTextItem('Select'), selectItem],
           },
           {
-            id: "section-09",
-            items: [getTextItem("Inner title"), buttonToggleItem],
+            id: 'section-09',
+            items: [getTextItem('Inner title'), buttonToggleItem],
           },
           {
-            id: "section-10",
-            items: [getTextItem("Table"), tableItem],
+            id: 'section-10',
+            items: [getTextItem('Table'), tableItem],
           },
           {
-            id: "section-11",
-            items: [getTextItem("Map"), mapItem],
+            id: 'section-11',
+            items: [getTextItem('Map'), mapItem],
           },
         ],
       },

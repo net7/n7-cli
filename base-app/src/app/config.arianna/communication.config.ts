@@ -1,10 +1,10 @@
-import { ConfigCommonCommunication } from "@net7/boilerplate-common";
+import { ConfigCommonCommunication } from '@net7/boilerplate-common';
 
 export default {
-  defaultProvider: "apollo",
+  defaultProvider: 'apollo',
   providers: {
     apollo: {
-      baseUrl: "https://aw-unifi-graphql.netseven.it/",
+      baseUrl: 'https://aw-unifi-graphql.netseven.it/',
     },
   },
 } as ConfigCommonCommunication;

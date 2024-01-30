@@ -1,16 +1,16 @@
-import { ConfigMurucaItineraryLayout } from "@net7/boilerplate-muruca";
+import { ConfigMurucaItineraryLayout } from '@net7/boilerplate-muruca';
 
 const config: ConfigMurucaItineraryLayout = {
-  title: "global#itinerary",
-  bodyClasses: "resource-layout",
+  title: 'global#itinerary',
+  bodyClasses: 'resource-layout',
   sections: [
     {
-      id: "related_res",
-      type: "collection",
+      id: 'related_res',
+      type: 'collection',
       grid: 1,
-      title: "itinerary#related_res_title",
+      title: 'itinerary#related_res_title',
       options: {
-        classes: "mr-item-preview-itinerary",
+        classes: 'mr-item-preview-itinerary',
         itemPreview: {
           limit: null,
           striptags: false,

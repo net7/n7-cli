@@ -1,24 +1,24 @@
-import { ConfigMurucaResourceLayout } from "@net7/boilerplate-muruca";
+import { ConfigMurucaResourceLayout } from '@net7/boilerplate-muruca';
 
 export default {
-  title: "Termini",
-  type: "keywords",
+  title: 'Termini',
+  type: 'keywords',
   sections: {
     top: [],
     content: [
       {
-        id: "header",
-        type: "title",
+        id: 'header',
+        type: 'title',
         grid: null,
       },
       {
-        id: "metadata",
-        type: "metadata",
+        id: 'metadata',
+        type: 'metadata',
         grid: null,
       },
       {
-        id: "collection-keywords",
-        type: "collection",
+        id: 'collection-keywords',
+        type: 'collection',
         grid: 3,
       },
     ],

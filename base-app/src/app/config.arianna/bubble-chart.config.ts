@@ -1,16 +1,16 @@
-import { ConfigAriannaBubbleChart } from "@net7/boilerplate-arianna";
+import { ConfigAriannaBubbleChart } from '@net7/boilerplate-arianna';
 
 export default {
   fontRendering: {
     label: {
       family:
         'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";',
-      weight: "normal",
+      weight: 'normal',
     },
     counter: {
       family:
         'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";',
-      weight: "normal",
+      weight: 'normal',
     },
   },
   bubbleLimit: 50,

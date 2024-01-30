@@ -1,2 +1,2 @@
-export * from "./mock.ds";
-export * from "./dynamic.ds";
+export * from './mock.ds';
+export * from './dynamic.ds';

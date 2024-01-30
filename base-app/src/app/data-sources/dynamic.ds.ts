@@ -1,4 +1,4 @@
-import { DataSource } from "@net7/core";
+import { DataSource } from '@net7/core';
 
 export class DynamicDS extends DataSource {
   protected transform(data) {
@@ -14,16 +14,16 @@ export class DynamicDS extends DataSource {
       text: description,
       metadata: [
         {
-          title: "Stats",
+          title: 'Stats',
           items: [
             {
-              icon: "n7-icon-check-circle",
-              label: "stargazers",
+              icon: 'n7-icon-check-circle',
+              label: 'stargazers',
               value: stargazersCount,
             },
             {
-              icon: "n7-icon-eye",
-              label: "watchers",
+              icon: 'n7-icon-eye',
+              label: 'watchers',
               value: watchersCount,
             },
           ],

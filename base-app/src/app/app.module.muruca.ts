@@ -1,35 +1,35 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule, APP_INITIALIZER } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import {
   RouterModule,
   Router,
   NavigationStart,
   RoutesRecognized,
-} from "@angular/router";
-import { filter, map } from "rxjs/operators";
-import { translate } from "@net7/core";
+} from '@angular/router';
+import { filter, map } from 'rxjs/operators';
+import { translate } from '@net7/core';
 import {
   N7BoilerplateCommonModule,
   LocalConfigService,
   MainStateService,
   ConfigurationService,
   JsonConfigService,
-} from "@net7/boilerplate-common";
+} from '@net7/boilerplate-common';
 import {
   N7BoilerplateMurucaModule,
   MrMenuService,
   MrFooterService,
   MrTranslationsLoaderService,
-} from "@net7/boilerplate-muruca";
-import { APP_ROUTES } from "./app.routes.muruca";
+} from '@net7/boilerplate-muruca';
+import { APP_ROUTES } from './app.routes.muruca';
 
-import { AppComponent } from "./app.component.muruca";
-import configMuruca from "./config.muruca";
-import i18n from "./config.muruca/i18n";
+import { AppComponent } from './app.component.muruca';
+import configMuruca from './config.muruca';
+import i18n from './config.muruca/i18n';
 
-const LANG_CODE = "it_IT";
+const LANG_CODE = 'it_IT';
 
-const JSON_PATH = "./assets/app-config.local.json";
+const JSON_PATH = './assets/app-config.local.json';
 
 // load translations
 translate.init({
@@ -89,7 +89,7 @@ export class AppModule {
       .pipe(filter((event) => event instanceof NavigationStart))
       .subscribe((event: any) => {
         const { url } = event;
-        this.mainState.updateCustom("currentNav", url);
+        this.mainState.updateCustom('currentNav', url);
       });
 
     // body classes
@@ -100,10 +100,10 @@ export class AppModule {
       )
       .subscribe((routeData: any) => {
         const { configId } = routeData || {};
-        let bodyClasses = "";
+        let bodyClasses = '';
         if (configId) {
           const pageConfig = this.config.get(configId) || {};
-          bodyClasses = pageConfig.bodyClasses || "";
+          bodyClasses = pageConfig.bodyClasses || '';
         }
         document.body.className = bodyClasses;
       });

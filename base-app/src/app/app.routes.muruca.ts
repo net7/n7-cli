@@ -1,6 +1,6 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { Page404LayoutComponent } from "@net7/boilerplate-common";
+import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import {
   MrHomeLayoutComponent,
   MrSearchLayoutComponent,
@@ -13,118 +13,118 @@ import {
   MrTimelineLayoutComponent,
   MrMapLayoutComponent,
   // DynamicPathGuard,
-} from "@net7/boilerplate-muruca";
+} from '@net7/boilerplate-muruca';
 
-const NOT_FOUND_PATH = "page-404";
+const NOT_FOUND_PATH = 'page-404';
 
 export const APP_ROUTES: Routes = [
   {
-    path: "home",
-    redirectTo: "",
-    pathMatch: "full",
+    path: 'home',
+    redirectTo: '',
+    pathMatch: 'full',
   },
-  { path: "", component: MrHomeLayoutComponent, data: { configId: "home" } },
+  { path: '', component: MrHomeLayoutComponent, data: { configId: 'home' } },
   {
-    path: "opere",
+    path: 'opere',
     component: MrSearchLayoutComponent,
-    data: { configId: "search-works" },
+    data: { configId: 'search-works' },
   },
   {
-    path: "atti",
+    path: 'atti',
     component: MrSearchLayoutComponent,
-    data: { configId: "search-acts" },
+    data: { configId: 'search-acts' },
   },
   {
-    path: "biblioteca",
+    path: 'biblioteca',
     component: MrSearchLayoutComponent,
-    data: { configId: "search-books" },
+    data: { configId: 'search-books' },
   },
-  { path: "work/:id/:slug", redirectTo: "opera/:id/:slug" },
+  { path: 'work/:id/:slug', redirectTo: 'opera/:id/:slug' },
   {
-    path: "libro/:id/:slug",
+    path: 'libro/:id/:slug',
     component: MrResourceLayoutComponent,
-    data: { configId: "resource-book" },
+    data: { configId: 'resource-book' },
   },
   {
-    path: "opera/:id/:slug",
+    path: 'opera/:id/:slug',
     component: MrResourceLayoutComponent,
-    data: { configId: "resource-work" },
+    data: { configId: 'resource-work' },
   },
   {
-    path: "toponym/:id/:slug",
+    path: 'toponym/:id/:slug',
     component: MrResourceLayoutComponent,
-    data: { configId: "resource-toponym" },
+    data: { configId: 'resource-toponym' },
   },
   {
-    path: "keyword/:id/:slug",
+    path: 'keyword/:id/:slug',
     component: MrResourceLayoutComponent,
-    data: { configId: "resource-keyword" },
+    data: { configId: 'resource-keyword' },
   },
   {
-    path: "testimone/:id/:slug",
+    path: 'testimone/:id/:slug',
     component: MrResourceLayoutComponent,
-    data: { configId: "resource-witness" },
+    data: { configId: 'resource-witness' },
   },
   {
-    path: "testimoni",
+    path: 'testimoni',
     component: MrSearchLayoutComponent,
-    data: { configId: "search-witnesses" },
+    data: { configId: 'search-witnesses' },
   },
   {
-    path: "timeline/:id/:slug",
+    path: 'timeline/:id/:slug',
     component: MrTimelineLayoutComponent,
-    data: { configId: "timeline" },
+    data: { configId: 'timeline' },
   },
   {
-    path: "timeline/:id",
+    path: 'timeline/:id',
     component: MrTimelineLayoutComponent,
-    data: { configId: "timeline" },
+    data: { configId: 'timeline' },
   },
-  { path: "timeline", redirectTo: "timeline/" },
+  { path: 'timeline', redirectTo: 'timeline/' },
   {
-    path: "map/:id/:slug",
+    path: 'map/:id/:slug',
     component: MrMapLayoutComponent,
-    data: { configId: "map" },
+    data: { configId: 'map' },
   },
   {
-    path: "map/:id",
+    path: 'map/:id',
     component: MrMapLayoutComponent,
-    data: { configId: "map" },
+    data: { configId: 'map' },
   },
-  { path: "map", redirectTo: "map/" },
+  { path: 'map', redirectTo: 'map/' },
   {
-    path: "posts",
+    path: 'posts',
     component: MrPostsLayoutComponent,
-    data: { configId: "posts" },
+    data: { configId: 'posts' },
   },
-  { path: "post/:slug", component: MrStaticLayoutComponent },
+  { path: 'post/:slug', component: MrStaticLayoutComponent },
   {
-    path: "advanced-search",
+    path: 'advanced-search',
     component: MrAdvancedSearchLayoutComponent,
-    data: { configId: "advanced-search" },
+    data: { configId: 'advanced-search' },
   },
   {
-    path: "advanced-search-full",
+    path: 'advanced-search-full',
     component: MrAdvancedSearchLayoutComponent,
-    data: { configId: "advanced-search-full" },
+    data: { configId: 'advanced-search-full' },
   },
   {
-    path: "advanced-results",
+    path: 'advanced-results',
     component: MrAdvancedResultsLayoutComponent,
-    data: { configId: "advanced-results" },
+    data: { configId: 'advanced-results' },
   },
   {
-    path: "itinerary/:id/:slug",
+    path: 'itinerary/:id/:slug',
     component: MrItineraryLayoutComponent,
-    data: { configId: "itinerary" },
+    data: { configId: 'itinerary' },
   },
   {
     path: NOT_FOUND_PATH,
     component: Page404LayoutComponent,
-    data: { id: "page-404" },
+    data: { id: 'page-404' },
   },
   {
-    path: "**",
+    path: '**',
     component: MrStaticLayoutComponent,
     canActivate: [],
     data: {

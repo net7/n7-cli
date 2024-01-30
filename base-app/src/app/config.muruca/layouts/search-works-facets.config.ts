@@ -2,28 +2,28 @@ import {
   MrSearchConfig,
   MrSearchFacetsConfig,
   MrSearchLayoutInput,
-} from "@net7/boilerplate-muruca";
+} from '@net7/boilerplate-muruca';
 
 const facets = {
   sections: [
     {
-      id: "section-query",
+      id: 'section-query',
       inputs: [
         {
-          id: "query",
-          type: "text",
+          id: 'query',
+          type: 'text',
           queryParam: true,
           delay: 500,
           schema: {
-            valueType: "string",
+            valueType: 'string',
           },
           data: {
-            id: "query",
-            placeholder: "search#placeholder_query",
-            icon: "n7-icon-search",
-            inputPayload: "search-input",
-            enterPayload: "search-enter",
-            iconPayload: "search-icon",
+            id: 'query',
+            placeholder: 'search#placeholder_query',
+            icon: 'n7-icon-search',
+            inputPayload: 'search-input',
+            enterPayload: 'search-enter',
+            iconPayload: 'search-icon',
           },
         },
       ],
@@ -181,22 +181,22 @@ const facets = {
     //   }],
     // },
     {
-      id: "section-genres",
+      id: 'section-genres',
       header: {
-        id: "header-genres",
+        id: 'header-genres',
         data: {
-          text: "search#header_genres",
+          text: 'search#header_genres',
           additionalText: null,
         },
       },
       inputs: [
         {
-          id: "genres",
-          type: "link",
+          id: 'genres',
+          type: 'link',
           limit: 50,
           queryParam: true,
           schema: {
-            valueType: "string",
+            valueType: 'string',
             multiple: true,
           },
           data: {
@@ -206,22 +206,22 @@ const facets = {
       ],
     },
     {
-      id: "section-languages",
+      id: 'section-languages',
       header: {
-        id: "header-languages",
+        id: 'header-languages',
         data: {
-          text: "search#header_language",
+          text: 'search#header_language',
           additionalText: null,
         },
       },
       inputs: [
         {
-          id: "languages",
-          type: "link",
+          id: 'languages',
+          type: 'link',
           limit: 50,
           queryParam: true,
           schema: {
-            valueType: "string",
+            valueType: 'string',
             multiple: true,
           },
           data: {
@@ -254,26 +254,26 @@ const facets = {
     //   }],
     // }
   ],
-  classes: "facets-wrapper",
+  classes: 'facets-wrapper',
 } as MrSearchFacetsConfig;
 
-const layoutInputs = ["page", "limit", "sort"].map((id) => ({
+const layoutInputs = ['page', 'limit', 'sort'].map((id) => ({
   id,
   queryParam: true,
   schema: {
-    valueType: id === "sort" ? "string" : "number",
+    valueType: id === 'sort' ? 'string' : 'number',
   },
 })) as MrSearchLayoutInput[];
 
 const request = {
   results: {
-    id: "search",
+    id: 'search',
     delay: 500,
   },
   facets: {
-    id: "facets",
+    id: 'facets',
   },
-  provider: "rest",
+  provider: 'rest',
   delay: 500,
 };
 

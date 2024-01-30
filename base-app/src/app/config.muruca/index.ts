@@ -1,11 +1,11 @@
-import layouts from "./layouts";
-import communicationConfig from "./communication.config";
-import headerConfig from "./header.config";
-import footerConfig from "./footer.config";
-import labelsConfig from "./labels.config";
+import layouts from './layouts';
+import communicationConfig from './communication.config';
+import headerConfig from './header.config';
+import footerConfig from './footer.config';
+import labelsConfig from './labels.config';
 
 export default {
-  name: "BASEAPPNAME",
+  name: 'BASEAPPNAME',
   communication: communicationConfig,
   header: headerConfig,
   footer: footerConfig,

@@ -1,14 +1,14 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {
   AbstractLayout,
   CommunicationService,
   ConfigurationService,
-} from "@net7/boilerplate-common";
-import { BaseLayoutConfig as config } from "./base-layout.config";
+} from '@net7/boilerplate-common';
+import { BaseLayoutConfig as config } from './base-layout.config';
 
 @Component({
-  selector: "appprefix-base-layout",
-  templateUrl: "./base-layout.html",
+  selector: 'appprefix-base-layout',
+  templateUrl: './base-layout.html',
 })
 export class BaseLayoutComponent
   extends AbstractLayout

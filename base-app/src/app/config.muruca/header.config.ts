@@ -1,10 +1,10 @@
-import { ConfigCommonHeader } from "@net7/boilerplate-common";
+import { ConfigCommonHeader } from '@net7/boilerplate-common';
 
 export default {
   logo: {
-    title: "Petrarca Online",
+    title: 'Petrarca Online',
     anchor: {
-      href: "/",
+      href: '/',
     },
   },
   nav: {

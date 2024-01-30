@@ -1,5 +1,5 @@
-import { EventHandler } from "@net7/core";
-import { BaseDS } from "../data-sources";
+import { EventHandler } from '@net7/core';
+import { BaseDS } from '../data-sources';
 
 export class BaseEH extends EventHandler {
   dataSource: BaseDS;
@@ -7,7 +7,7 @@ export class BaseEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       console.warn(
-        "TODO: update or remove innerEvents$ listener",
+        'TODO: update or remove innerEvents$ listener',
         type,
         payload,
       );
@@ -19,7 +19,7 @@ export class BaseEH extends EventHandler {
 
     this.outerEvents$.subscribe(({ type, payload }) => {
       console.warn(
-        "TODO: update or remove outerEvents$ listener",
+        'TODO: update or remove outerEvents$ listener',
         type,
         payload,
       );

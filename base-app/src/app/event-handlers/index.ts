@@ -1,1 +1,1 @@
-export * from "./dynamic.eh";
+export * from './dynamic.eh';

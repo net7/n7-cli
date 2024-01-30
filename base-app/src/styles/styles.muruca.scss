@@ -7,113 +7,113 @@
 // ------------------------------------ //
 // #TIPPY
 // ------------------------------------ //
-@import "../../node_modules/tippy.js/dist/tippy.css";
-@import "../../node_modules/tippy.js/themes/light-border.css";
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import '../../node_modules/tippy.js/themes/light-border.css';
 
 // ------------------------------------ //
 // #N7-ICON-FONT
 // ------------------------------------ //
-@import "../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css";
+@import '../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css';
 
 // ------------------------------------ //
 // #MR COLOR SCHEME
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/color_scheme";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/color_scheme';
 
 // ------------------------------------ //
 // #N7 COMPONENTS VARIABLES
 // ------------------------------------ //
-@import "../../node_modules/@net7/components/src/lib/styles/generic/variables";
+@import '../../node_modules/@net7/components/src/lib/styles/generic/variables';
 
 // ------------------------------------ //
 // #MR VARIABLES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/variables";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/variables';
 
 // ------------------------------------ //
 // #PROJECT VARIABLES
 // ------------------------------------ //
-@import "generic/muruca-variables";
+@import 'generic/muruca-variables';
 
 // ------------------------------------ //
 // #MR MIXINS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/mixins";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/mixins';
 
 // ------------------------------------ //
 // #N7 COMPONENTS STYLES
 // ------------------------------------ //
-@import "../../node_modules/@net7/components/src/lib/styles/imports";
+@import '../../node_modules/@net7/components/src/lib/styles/imports';
 
 // ------------------------------------ //
 // #COMMON COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/components/facets-wrapper";
+@import '../../node_modules/@net7/boilerplate-common/src/lib/styles/common/components/facets-wrapper';
 
 // ------------------------------------ //
 // #MR ATOMS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/atoms/button";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/atoms/button';
 
 // ------------------------------------ //
 // #MR COMPONENTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/active-filters";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/advanced-result";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/breadcrumbs";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/carousel";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/content-block";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/facet-header";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/facets";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/footer";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/form-wrapper-accordion";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/form";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/gallery";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/header";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/hero";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/inner-title";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/item-preview";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/items-preview";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/map";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/modal";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/read-more";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/resource-modal";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/search-page-description";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/tag";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/text-viewer";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/timeline";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/wp-content";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/active-filters';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/advanced-result';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/breadcrumbs';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/carousel';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/content-block';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/facet-header';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/facets';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/footer';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/form-wrapper-accordion';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/form';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/gallery';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/header';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/hero';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/inner-title';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/item-preview';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/items-preview';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/map';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/modal';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/read-more';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/resource-modal';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/search-page-description';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/tag';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/text-viewer';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/timeline';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/wp-content';
 
 // ------------------------------------ //
 // #PROJECT COMPONENTS
 // ------------------------------------ //
-@import "components/carousel";
+@import 'components/carousel';
 
 // ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/layouts/main-layout";
+@import '../../node_modules/@net7/boilerplate-common/src/lib/styles/common/layouts/main-layout';
 
 // ------------------------------------ //
 // #MR LAYOUTS
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/advanced-results";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/advanced-search";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/home";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/itinerary";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/layout";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/map";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/resource";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/search";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/static";
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/timeline";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/advanced-results';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/advanced-search';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/home';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/itinerary';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/layout';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/map';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/resource';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/search';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/static';
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/timeline';
 
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/utilities/_utilities";
+@import '../../node_modules/@net7/boilerplate-common/src/lib/styles/common/utilities/_utilities';
 
 // ------------------------------------ //
 // #MR UTILITIES
 // ------------------------------------ //
-@import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/utilities/_utilities";
+@import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/utilities/_utilities';
