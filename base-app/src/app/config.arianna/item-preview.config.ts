@@ -1,40 +1,40 @@
-import { ConfigAriannaItemPreview } from '@net7/boilerplate-arianna';
+import { ConfigAriannaItemPreview } from "@net7/boilerplate-arianna";
 
 export default {
-  image: 'image',
+  image: "image",
   title: {
-    data: 'item.label',
-    maxLength: 80
+    data: "item.label",
+    maxLength: 80,
   },
   metadata: {
     info: {
       selection: [
         {
-          key: 'definizione_tipologia'
+          key: "definizione_tipologia",
         },
         {
-          key: 'estremo_remoto'
+          key: "estremo_remoto",
         },
         {
-          key: 'estremo_recente'
-        }
+          key: "estremo_recente",
+        },
       ],
-      data: 'item.fields',
-      value: 'value',
-      label: 'key',
-      customLabel: ''
+      data: "item.fields",
+      value: "value",
+      label: "key",
+      customLabel: "",
     },
     toe: {
-      data: 'relatedTypesOfEntity',
-      value: 'count',
-      icon: 'type'
+      data: "relatedTypesOfEntity",
+      value: "count",
+      icon: "type",
     },
     breadcrumbs: {
-      data: 'breadcrumbs',
-      label: 'label',
-      payload: 'link'
-    }
+      data: "breadcrumbs",
+      label: "label",
+      payload: "link",
+    },
   },
-  payload: 'item.id',
-  paginationLimit: 5
+  payload: "item.id",
+  paginationLimit: 5,
 } as ConfigAriannaItemPreview;

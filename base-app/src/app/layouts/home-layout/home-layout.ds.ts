@@ -1,4 +1,4 @@
-import { LayoutDataSource } from '@net7/core';
+import { LayoutDataSource } from "@net7/core";
 
 export class HomeLayoutDS extends LayoutDataSource {
   private communication: any;
@@ -10,9 +10,8 @@ export class HomeLayoutDS extends LayoutDataSource {
   }
 
   _dummyRequest() {
-    this.communication.request$('getRepos')
-      .subscribe((response) => {
-        this.one('dynamic').update(response);
-      });
+    this.communication.request$("getRepos").subscribe((response) => {
+      this.one("dynamic").update(response);
+    });
   }
 }

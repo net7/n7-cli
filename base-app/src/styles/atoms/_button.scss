@@ -11,7 +11,7 @@
     // display: inline-block;
     // width: auto !important;
     // height: $button-normal-height;
-    padding: 0 $space*2;
+    padding: 0 $space * 2;
     // margin: 0;
     // border: $button-border-width solid $color-button-border;
     // border-radius: $button-border-radius;
@@ -37,8 +37,10 @@
     }
 
     /* Disabled */
-    &.is-disabled, &.is-disabled:hover,
-    &.is-disabled:active, &.is-disabled:active:hover {
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:active,
+    &.is-disabled:active:hover {
         // color: $color-button-text-disabled;
         // border-color: $color-button-border;
         // background-color: $color-button-bg-disabled;
@@ -47,7 +49,10 @@
     }
 
     /* Active */
-    &.is-active, &:active, &.is-active:hover, &:active:hover {
+    &.is-active,
+    &:active,
+    &.is-active:hover,
+    &:active:hover {
         // color: $color-button-text-hover;
         // border-color: $color-button-text-hover;
         // background-color: $color-button-bg;
@@ -57,7 +62,6 @@
     &.is-loading {
     }
 }
-
 
 /* ------------------------------------ *\
    #LIGHT-BUTTON
@@ -81,8 +85,10 @@
     }
 
     /* Disabled */
-    &.is-disabled, &.is-disabled:hover,
-    &.is-disabled:active, &.is-disabled:active:hover {
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:active,
+    &.is-disabled:active:hover {
         // color: $color-button-light-text-disabled;
         // background-color: transparent;
         // border: 0;
@@ -91,7 +97,10 @@
     }
 
     /* Active */
-    &.is-active, &:active, &.is-active:hover, &:active:hover {
+    &.is-active,
+    &:active,
+    &.is-active:hover,
+    &:active:hover {
         // color: $color-button-light-text-active;
         // background-color: transparent;
         // border: 0;
@@ -101,7 +110,6 @@
     &.is-loading {
     }
 }
-
 
 /* ------------------------------------ *\
    #CALL-TO-ACTION-BUTTON
@@ -118,10 +126,14 @@
     }
 
     /* Disabled */
-    &.is-disabled, &.is-disabled:hover,
-    &.is-disabled:active, &.is-disabled:active:hover,
-    &:disabled, &:disabled:hover,
-    &:disabled:active, &:disabled:active:hover {
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:active,
+    &.is-disabled:active:hover,
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active,
+    &:disabled:active:hover {
         background-color: $color-button-cta-bg-disabled;
         border-color: $color-button-cta-border;
         color: $color-button-cta-text-disabled;
@@ -129,7 +141,10 @@
     }
 
     /* Active */
-    &.is-active, &:active, &.is-active:hover, &:active:hover {
+    &.is-active,
+    &:active,
+    &.is-active:hover,
+    &:active:hover {
         // background-color: $color-button-cta-bg-active;
         // border-color: $color-button-cta-border;
         // color: $color-button-cta-text;
@@ -139,7 +154,6 @@
     &.is-loading {
     }
 }
-
 
 /* ------------------------------------ *\
    #SIZES

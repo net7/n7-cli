@@ -1,9 +1,9 @@
-import { ConfigAriannaTimelineLayout } from '@net7/boilerplate-arianna';
+import { ConfigAriannaTimelineLayout } from "@net7/boilerplate-arianna";
 
 const config: ConfigAriannaTimelineLayout = {
   timeline: {
-    disableEndDates: true
-  }
+    disableEndDates: true,
+  },
 };
 
 export default config;

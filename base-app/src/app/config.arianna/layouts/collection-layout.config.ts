@@ -1,23 +1,23 @@
-import { ConfigAriannaCollectionLayout } from '@net7/boilerplate-arianna';
+import { ConfigAriannaCollectionLayout } from "@net7/boilerplate-arianna";
 
 export default {
   header: {
     maxLength: 100,
-    char: '…',
+    char: "…",
   },
   description: {
     // maxLength: 20,
-    char: '…',
+    char: "…",
   },
-  watermark: 'assets/a4v-collection-watermark.png',
+  watermark: "assets/a4v-collection-watermark.png",
   item: {
     title: {
       maxLength: 80,
-      char: '…'
+      char: "…",
     },
     description: {
       maxLength: 100,
-      char: '…'
-    }
-  }
+      char: "…",
+    },
+  },
 } as ConfigAriannaCollectionLayout;

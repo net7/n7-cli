@@ -3,73 +3,61 @@
 // ------------------------------------ //
 @import "src/styles/generic/arianna-color-scheme";
 
-
 // ------------------------------------ //
 // #TIPPY
 // ------------------------------------ //
-@import '../../node_modules/tippy.js/dist/tippy.css';
-@import '../../node_modules/tippy.js/themes/light-border.css';
-
+@import "../../node_modules/tippy.js/dist/tippy.css";
+@import "../../node_modules/tippy.js/themes/light-border.css";
 
 // ------------------------------------ //
 // #N7-ICON-FONT
 // ------------------------------------ //
 @import "../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css";
 
-
 // ------------------------------------ //
 // #N7 COLOR SCHEME
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/generic/color_scheme";
-
 
 // ------------------------------------ //
 // #AW COLOR SCHEME
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/generic/color_scheme";
 
-
 // ------------------------------------ //
 // #N7 COMPONENTS VARIABLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/generic/variables";
-
 
 // ------------------------------------ //
 // #AW VARIABLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/generic/variables";
 
-
 // ------------------------------------ //
 // #PROJECT VARIABLES
 // ------------------------------------ //
 @import "src/styles/generic/arianna-variables";
-
 
 // ------------------------------------ //
 // #AW MIXINS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/generic/mixins";
 
-
 // ------------------------------------ //
 // #N7 COMPONENTS STYLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/imports";
-
 
 // ------------------------------------ //
 // #COMMON COMPONENTS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/components/facets-wrapper";
 
-
 // ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/layouts/main-layout";
-
 
 // ------------------------------------ //
 // #ARIANNA COMPONENTS
@@ -91,7 +79,6 @@
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/tippy-tooltip";
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/components/tree";
 
-
 // ------------------------------------ //
 // #ARIANNA WEB LAYOUTS
 // ------------------------------------ //
@@ -102,18 +89,15 @@
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/scheda-layout";
 @import "../../node_modules/@net7/boilerplate-arianna/src/lib/styles/arianna/layouts/search-layout";
 
-
 // ------------------------------------ //
 // #PROJECT LAYOUTS
 // ------------------------------------ //
 @import "src/styles/layouts/arianna-home-layout";
 
-
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/utilities/_utilities";
-
 
 // ------------------------------------ //
 // #ARIANNA UTILITIES

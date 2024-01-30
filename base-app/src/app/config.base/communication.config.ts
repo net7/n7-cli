@@ -1,13 +1,13 @@
-import { ConfigCommonCommunication } from '@net7/boilerplate-common';
+import { ConfigCommonCommunication } from "@net7/boilerplate-common";
 
 export default {
-  defaultProvider: 'rest',
+  defaultProvider: "rest",
   providers: {
     rest: {
-      type: 'rest',
-      baseUrl: 'https://api.github.com/',
+      type: "rest",
+      baseUrl: "https://api.github.com/",
       config: {
-        getRepos: 'orgs/octokit/repos',
+        getRepos: "orgs/octokit/repos",
       },
     },
   },

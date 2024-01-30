@@ -1,58 +1,58 @@
-import { ConfigMurucaResourceLayout } from '@net7/boilerplate-muruca';
+import { ConfigMurucaResourceLayout } from "@net7/boilerplate-muruca";
 
 export default {
-  title: 'Materiali e Strumenti',
-  type: 'tools',
+  title: "Materiali e Strumenti",
+  type: "tools",
   sections: {
     top: [
       {
-        id: 'breadcrumbs',
-        type: 'breadcrumbs',
+        id: "breadcrumbs",
+        type: "breadcrumbs",
         options: {
           base: [
             {
-              title: 'global#home',
-              link: '/',
+              title: "global#home",
+              link: "/",
             },
             {
-              title: 'global#maps',
-              link: '/maps',
+              title: "global#maps",
+              link: "/maps",
             },
           ],
         },
       },
       {
-        id: 'header',
-        type: 'title',
+        id: "header",
+        type: "title",
       },
     ],
     content: [
       {
-        id: 'metadata-description',
-        type: 'metadata',
+        id: "metadata-description",
+        type: "metadata",
         grid: null,
         options: {
           hideLabels: true,
         },
       },
       {
-        id: 'metadata',
-        type: 'metadata',
+        id: "metadata",
+        type: "metadata",
         // title: 'Metadati',
         grid: null,
       },
       {
-        id: 'metadata-size',
-        type: 'metadata',
+        id: "metadata-size",
+        type: "metadata",
         grid: null,
       },
       {
-        id: 'collection-bibliography',
-        type: 'collection',
+        id: "collection-bibliography",
+        type: "collection",
         grid: 1,
-        title: 'Bibliografia',
+        title: "Bibliografia",
         options: {
-          classes: 'mr-item-preview-bibliography',
+          classes: "mr-item-preview-bibliography",
           itemPreview: {
             limit: 9999,
             striptags: false,
@@ -60,13 +60,13 @@ export default {
         },
       },
       {
-        id: 'collection-works',
-        type: 'collection',
+        id: "collection-works",
+        type: "collection",
         grid: 3,
       },
       {
-        id: 'collection-continents',
-        type: 'collection',
+        id: "collection-continents",
+        type: "collection",
         grid: 3,
       },
     ],

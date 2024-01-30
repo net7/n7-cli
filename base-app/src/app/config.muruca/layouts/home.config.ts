@@ -1,17 +1,17 @@
-import { ConfigMurucaHomeLayout } from '@net7/boilerplate-muruca';
+import { ConfigMurucaHomeLayout } from "@net7/boilerplate-muruca";
 
 export default {
-  title: 'Home',
-  bodyClasses: 'has-transparent-header',
+  title: "Home",
+  bodyClasses: "has-transparent-header",
   sections: [
     {
-      id: 'slider-main',
-      type: 'slider',
+      id: "slider-main",
+      type: "slider",
       grid: null,
       options: {
-        classes: 'n7-slider-main',
-        background: true
-      }
+        classes: "n7-slider-main",
+        background: true,
+      },
     },
     // {
     //   id: 'hero-main',
@@ -53,12 +53,12 @@ export default {
     //   }
     // },
     {
-      id: 'collection-news',
-      type: 'collection',
+      id: "collection-news",
+      type: "collection",
       grid: 4,
       options: {
-        classes: 'is-vertical'
-      }
+        classes: "is-vertical",
+      },
     },
-  ]
+  ],
 } as ConfigMurucaHomeLayout;

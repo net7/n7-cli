@@ -62,9 +62,16 @@
 
     &__slide-title {
         font-size: $font-size-xxxl;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
-        h1, h2, h3, h4, h5, h6, p, a {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a {
             color: $color-text-inverse !important;
             font-size: $font-size-l;
         }
@@ -76,9 +83,15 @@
     }
 
     &__slide-text {
-        h1, h2, h3, h4, h5, p, a {
-            text-shadow: 0 2px 10px rgba(0,0,0,0.25);
-            color: $color-text-inverse !important
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p,
+        a {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+            color: $color-text-inverse !important;
         }
 
         em {
@@ -98,7 +111,7 @@
             font-style: normal;
             font-weight: $font-weight-normal;
             line-height: 1.5;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 
             em {
                 font-size: inherit;
@@ -114,7 +127,7 @@
             font-style: normal;
             font-weight: $font-weight-normal;
             line-height: 1.4;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 
             em {
                 font-size: $font-size-l;
@@ -126,11 +139,11 @@
 
     &__slide-text {
         h5 {
-            margin-bottom: $space*2;
+            margin-bottom: $space * 2;
             font-size: $font-size-s;
             // font-style: italic;
             font-weight: $font-weight-normal;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
         }
     }
 
@@ -138,15 +151,15 @@
     &__slide-text {
         h6 {
             position: absolute;
-            bottom: $space*2;
+            bottom: $space * 2;
             right: $space;
             max-width: 200px;
             text-align: right;
-            margin-top: $space*2;
+            margin-top: $space * 2;
             padding: $space;
-            background-color: rgba(0,0,0,0.75);
+            background-color: rgba(0, 0, 0, 0.75);
             border-radius: $border-radius;
-            text-shadow: 0 0 10px rgba(0,0,0,0.4);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             font-size: $font-size-xxs;
             font-style: normal;
             font-weight: $font-weight-normal;
@@ -166,7 +179,6 @@
     }
 }
 
-
 /* ------------------------------------ *\
    #SLIDE-WITH-IMAGE
 \* ------------------------------------ */
@@ -180,12 +192,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(0, 0, 0, 0);
             z-index: 1;
         }
     }
 }
-
 
 /* ------------------------------------ *\
    #MEDIA-QUERIES

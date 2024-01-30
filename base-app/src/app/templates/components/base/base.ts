@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 export type BaseData = {
   // TODO: update type
   classes?: string;
-}
+};
 
 @Component({
-  selector: 'appprefix-base',
-  templateUrl: './base.html'
+  selector: "appprefix-base",
+  templateUrl: "./base.html",
 })
 export class BaseComponent {
   @Input() data: BaseData;

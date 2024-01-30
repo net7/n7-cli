@@ -1,35 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule, APP_INITIALIZER } from "@angular/core";
 import {
   RouterModule,
   Router,
   NavigationStart,
   RoutesRecognized,
-} from '@angular/router';
-import { filter, map } from 'rxjs/operators';
-import { translate } from '@net7/core';
+} from "@angular/router";
+import { filter, map } from "rxjs/operators";
+import { translate } from "@net7/core";
 import {
   N7BoilerplateCommonModule,
   LocalConfigService,
   MainStateService,
   ConfigurationService,
   JsonConfigService,
-} from '@net7/boilerplate-common';
+} from "@net7/boilerplate-common";
 import {
   N7BoilerplateMurucaModule,
   MrMenuService,
   MrFooterService,
   MrTranslationsLoaderService,
-} from '@net7/boilerplate-muruca';
-import { APP_ROUTES } from './app.routes.muruca';
+} from "@net7/boilerplate-muruca";
+import { APP_ROUTES } from "./app.routes.muruca";
 
-import { AppComponent } from './app.component.muruca';
-import configMuruca from './config.muruca';
-import i18n from './config.muruca/i18n';
+import { AppComponent } from "./app.component.muruca";
+import configMuruca from "./config.muruca";
+import i18n from "./config.muruca/i18n";
 
-const LANG_CODE = 'it_IT';
+const LANG_CODE = "it_IT";
 
-const JSON_PATH = './assets/app-config.local.json';
+const JSON_PATH = "./assets/app-config.local.json";
 
 // load translations
 translate.init({
@@ -45,59 +45,65 @@ translate.init({
     N7BoilerplateCommonModule.forRoot({}),
     N7BoilerplateMurucaModule,
   ],
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: (
-      localConfigService: LocalConfigService,
-      jsonConfigService: JsonConfigService,
-      menuService: MrMenuService,
-      footerService: MrFooterService,
-      translationsLoader: MrTranslationsLoaderService
-    ) => () => (
-      localConfigService.load(configMuruca)
-        .then(() => jsonConfigService.load(JSON_PATH))
-        .then(() => Promise.all([
-          menuService.load(),
-          footerService.load(),
-          translationsLoader.load(LANG_CODE)
-        ]))
-    ),
-    deps: [
-      LocalConfigService,
-      JsonConfigService,
-      MrMenuService,
-      MrFooterService,
-      MrTranslationsLoaderService
-    ],
-    multi: true
-  }],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory:
+        (
+          localConfigService: LocalConfigService,
+          jsonConfigService: JsonConfigService,
+          menuService: MrMenuService,
+          footerService: MrFooterService,
+          translationsLoader: MrTranslationsLoaderService,
+        ) =>
+        () =>
+          localConfigService
+            .load(configMuruca)
+            .then(() => jsonConfigService.load(JSON_PATH))
+            .then(() =>
+              Promise.all([
+                menuService.load(),
+                footerService.load(),
+                translationsLoader.load(LANG_CODE),
+              ]),
+            ),
+      deps: [
+        LocalConfigService,
+        JsonConfigService,
+        MrMenuService,
+        MrFooterService,
+        MrTranslationsLoaderService,
+      ],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(
     private router: Router,
     private mainState: MainStateService,
-    private config: ConfigurationService
+    private config: ConfigurationService,
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationStart))
       .subscribe((event: any) => {
         const { url } = event;
-        this.mainState.updateCustom('currentNav', url);
+        this.mainState.updateCustom("currentNav", url);
       });
 
     // body classes
     this.router.events
       .pipe(
         filter((event) => event instanceof RoutesRecognized),
-        map((event: RoutesRecognized) => event.state.root.firstChild.data)
+        map((event: RoutesRecognized) => event.state.root.firstChild.data),
       )
       .subscribe((routeData: any) => {
         const { configId } = routeData || {};
-        let bodyClasses = '';
+        let bodyClasses = "";
         if (configId) {
           const pageConfig = this.config.get(configId) || {};
-          bodyClasses = pageConfig.bodyClasses || '';
+          bodyClasses = pageConfig.bodyClasses || "";
         }
         document.body.className = bodyClasses;
       });

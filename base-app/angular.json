@@ -76,10 +76,7 @@
                   "with": "src/app/app.module.base.ts"
                 }
               ],
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
+              "assets": ["src/favicon.ico", "src/assets"],
               "styles": [
                 "./node_modules/flatpickr/dist/flatpickr.min.css",
                 "./node_modules/leaflet/dist/leaflet.css",
@@ -101,10 +98,7 @@
                   "with": "src/app/app.module.dataviz.ts"
                 }
               ],
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
+              "assets": ["src/favicon.ico", "src/assets"],
               "styles": [
                 "./node_modules/flatpickr/dist/flatpickr.min.css",
                 "./node_modules/leaflet/dist/leaflet.css",

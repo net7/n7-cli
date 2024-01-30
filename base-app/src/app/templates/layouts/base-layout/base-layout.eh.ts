@@ -1,5 +1,5 @@
-import { EventHandler } from '@net7/core';
-import { BaseLayoutDS } from './base-layout.ds';
+import { EventHandler } from "@net7/core";
+import { BaseLayoutDS } from "./base-layout.ds";
 
 export class BaseLayoutEH extends EventHandler {
   dataSource: BaseLayoutDS;
@@ -7,7 +7,7 @@ export class BaseLayoutEH extends EventHandler {
   public listen() {
     this.innerEvents$.subscribe(({ type, payload }) => {
       switch (type) {
-        case 'appprefix-base-layout.init':
+        case "appprefix-base-layout.init":
           this.dataSource.onInit(payload);
           break;
         default:

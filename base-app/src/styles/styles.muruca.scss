@@ -10,60 +10,50 @@
 @import "../../node_modules/tippy.js/dist/tippy.css";
 @import "../../node_modules/tippy.js/themes/light-border.css";
 
-
 // ------------------------------------ //
 // #N7-ICON-FONT
 // ------------------------------------ //
 @import "../../node_modules/@n7-frontend/icon-font/Font/n7-icon/style.css";
-
 
 // ------------------------------------ //
 // #MR COLOR SCHEME
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/color_scheme";
 
-
 // ------------------------------------ //
 // #N7 COMPONENTS VARIABLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/generic/variables";
-
 
 // ------------------------------------ //
 // #MR VARIABLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/variables";
 
-
 // ------------------------------------ //
 // #PROJECT VARIABLES
 // ------------------------------------ //
 @import "generic/muruca-variables";
-
 
 // ------------------------------------ //
 // #MR MIXINS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/generic/mixins";
 
-
 // ------------------------------------ //
 // #N7 COMPONENTS STYLES
 // ------------------------------------ //
 @import "../../node_modules/@net7/components/src/lib/styles/imports";
-
 
 // ------------------------------------ //
 // #COMMON COMPONENTS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/components/facets-wrapper";
 
-
 // ------------------------------------ //
 // #MR ATOMS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/atoms/button";
-
 
 // ------------------------------------ //
 // #MR COMPONENTS
@@ -94,18 +84,15 @@
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/timeline";
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/components/wp-content";
 
-
 // ------------------------------------ //
 // #PROJECT COMPONENTS
 // ------------------------------------ //
 @import "components/carousel";
 
-
 // ------------------------------------ //
 // #COMMON LAYOUTS
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/layouts/main-layout";
-
 
 // ------------------------------------ //
 // #MR LAYOUTS
@@ -121,12 +108,10 @@
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/static";
 @import "../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/timeline";
 
-
 // ------------------------------------ //
 // #COMMON UTILITIES
 // ------------------------------------ //
 @import "../../node_modules/@net7/boilerplate-common/src/lib/styles/common/utilities/_utilities";
-
 
 // ------------------------------------ //
 // #MR UTILITIES
