@@ -190,27 +190,27 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "baseappprefix:build"
+            "buildTarget": "baseappprefix:build"
           },
           "configurations": {
             "arianna": {
-              "browserTarget": "baseappprefix:build:arianna"
+              "buildTarget": "baseappprefix:build:arianna"
             },
             "base": {
-              "browserTarget": "baseappprefix:build:base"
+              "buildTarget": "baseappprefix:build:base"
             },
             "dataviz": {
-              "browserTarget": "baseappprefix:build:dataviz"
+              "buildTarget": "baseappprefix:build:dataviz"
             },
             "muruca": {
-              "browserTarget": "baseappprefix:build:muruca"
+              "buildTarget": "baseappprefix:build:muruca"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "baseappprefix:build"
+            "buildTarget": "baseappprefix:build"
           }
         },
         "test": {
