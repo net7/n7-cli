@@ -1,32 +1,20 @@
 module.exports = {
   defaultSeverity: 'warning',
+  extends: 'stylelint-config-standard-scss',
   rules: {
-    'color-hex-case': 'lower',
-    'color-hex-length': 'long',
-    'color-named': 'never',
-    'font-weight-notation': 'numeric',
-
-    'block-no-empty': null,
-    'block-closing-brace-newline-after': 'always',
-    'block-closing-brace-newline-before': 'always',
-    'block-opening-brace-newline-after': 'always',
-    'block-opening-brace-space-before': 'always',
-
-    'color-no-invalid-hex': true,
-    'declaration-colon-space-after': 'always',
-    'declaration-block-semicolon-newline-after': 'always',
-    indentation: [
-      4,
+    'selector-class-pattern': [
+      '[a-zA-Z][a-zA-Z0-9-]+(__[a-zA-Z0-9-])*',
       {
-        except: ['value'],
+        message: 'The css class does not match the allowed pattern.',
+        resolveNestedSelectors: true,
       },
     ],
-    'max-empty-lines': 2,
-    'unit-whitelist': ['rem', 'em', '%', 'px', 's', 'deg', 'dpi', 'vh', 'fr'],
+    'color-named': 'never',
+    'font-weight-notation': 'numeric',
+    'color-no-invalid-hex': true,
     'max-nesting-depth': 6,
-    'no-extra-semicolons': true,
-    'selector-attribute-brackets-space-inside': 'never',
-    'selector-attribute-operator-space-after': 'never',
+    'no-descending-specificity': null,
+    'scss/comment-no-empty': null,
     'declaration-block-no-duplicate-properties': [
       true,
       {

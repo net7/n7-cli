@@ -10,11 +10,13 @@
 $page-max-width: 1350px;
 $page-min-width: 960px;
 
+
 // ------------------------------------ //
 // #GRIDS
 // ------------------------------------ //
 // $grid-gutter-h: $space*3;
 // $grid-gutter-v: $space*2;
+
 
 // //////////////////////////////////// //
 //            ATTENTION PLEASE          //
@@ -23,21 +25,25 @@ $page-min-width: 960px;
 // just to see which ones are available to be
 // overwritten and must be removed if not used
 
+
 // ------------------------------------ //
 // #Z-INDEX
 // ------------------------------------ //
 // $z-index-base: 1000;
 // $z-index-modal:         $z-index-base + 10;
 
+
 // ------------------------------------ //
 // #SPACING-UNIT
 // ------------------------------------ //
 // $space: 8px;
 
+
 // ------------------------------------ //
 // #FONTS
 // ------------------------------------ //
 // @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900&display=swap');
+
 
 // ------------------------------------ //
 // TYPOGRAPHY
@@ -57,6 +63,7 @@ $page-min-width: 960px;
 // $font-weight-normal: 400;
 // $font-weight-bold: 700;
 // $font-weight-black: 900;
+
 
 // ------------------------------------ //
 // COLORS
@@ -81,11 +88,8 @@ $page-min-width: 960px;
 // $color-background-medium: $color-gray-01;
 // $color-background-dark: $color-gray-03;
 $color-background-layout: $color-background-base;
-$gradient-item-preview-list: linear-gradient(
-180deg,
-rgba(255, 255, 255, 0) 0%,
-$color-background-layout 100%
-);
+$gradient-item-preview-list: linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, $color-background-layout 100%);
+
 
 // ------------------------------------ //
 // #MEDIA-QUERIES-BREAKPOINT
@@ -96,11 +100,13 @@ $color-background-layout 100%
 // $breakpoint-smartphone-landscape: 480px;
 // $breakpoint-smartphone-portrait: 400px;
 
+
 // ------------------------------------ //
 // #BORDER-RADIUS
 // ------------------------------------ //
 // $border-radius: 5px;
 // $border-radius-hard: 8px;
+
 
 // ------------------------------------ //
 // #BUTTONS
@@ -142,6 +148,7 @@ $color-background-layout 100%
 // $color-button-light-text-disabled: $color-text-light;
 // $color-button-light-text-active: $color-text-link-hover;
 
+
 // ------------------------------------ //
 // #FORMS
 // ------------------------------------ //
@@ -150,10 +157,12 @@ $color-background-layout 100%
 // $form-border-radius: $border-radius;
 // $form-dropdown-height: 30px;
 
+
 // ------------------------------------ //
 // #TRANSITIONS
 // ------------------------------------ //
 // $transition-durations: 0.2s;
+
 
 // ------------------------------------ //
 // #HEADER
@@ -171,6 +180,7 @@ $color-background-layout 100%
 // $header-breakpoint-mobile: 0px;
 // $header-breakpoint-mobile-small: 600px;
 
+
 // ------------------------------------ //
 // #LOADER
 // ------------------------------------ //
@@ -179,24 +189,29 @@ $color-background-layout 100%
 // $loader-color-front: $color-main;
 // $loader-color-back: rgba($color-main, .3);
 
+
 // ------------------------------------ //
 // #TABLE
 // ------------------------------------ //
 // $table-border-color: $color-border-normal;
 // $table-border-size: 1px;
+
 /* Header */
 // $table-header-font-size: $font-size-xs;
 // $table-header-text-color: $color-text;
 // $table-header-bg: $color-background-light-blue;
+
 /* Contents */
 // $table-font-size: $font-size-s;
 // $table-text-color: $color-text;
 // $table-bg-odd: $color-background-base;
 // $table-bg-even: $color-background-medium;
+
 /* Footer */
 // $table-footer-font-size: $font-size-s;
 // $table-footer-text-color: $color-text-light;
 // $table-footer-bg: $color-background-medium;
+
 
 // ------------------------------------ //
 // #FACET
@@ -204,12 +219,14 @@ $color-background-layout 100%
 // $n7-facet-search-input-height: 32px;
 // $n7-facet-search-input-border-radius: $border-radius;
 
+
 // ------------------------------------ //
 // #TAG
 // ------------------------------------ //
 // $n7-tag-icon-size: 16px;
 // $n7-tag-icon-font-size: 8px;
 // $n7-tag-icon-background: #ffffff;
+
 
 // ------------------------------------ //
 // #SIDEBAR-HEADER
@@ -222,15 +239,18 @@ $color-background-layout 100%
 // $sidebar-right-background-color: $color-text-link;
 // $sidebar-right-text-color: $color-text-inverse;
 
+
 // ------------------------------------ //
 // #ITEM-PREVIEW
 // ------------------------------------ //
 // $item-preview-image-size: 85px;
 
+
 // ------------------------------------ //
 // #TIPPY-COMPONENT
 // ------------------------------------ //
 // $tippy-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+
 
 // ------------------------------------ //
 // #BUBBLE-CHART
@@ -238,6 +258,7 @@ $color-background-layout 100%
 // $bubble-popover-title-font-weight: $font-weight-bold;
 // $bubble-results-height: 555px;
 // $bubble-results-count-font-weight: $font-weight-bold;
+
 
 // ------------------------------------ //
 // #FACET-HEADER

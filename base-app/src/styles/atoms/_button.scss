@@ -12,6 +12,7 @@
     // width: auto !important;
     // height: $button-normal-height;
     padding: 0 $space * 2;
+
     // margin: 0;
     // border: $button-border-width solid $color-button-border;
     // border-radius: $button-border-radius;
@@ -60,12 +61,41 @@
 
     /* With loader inside */
     &.is-loading {
+        // ...
+    }
+
+    /* Sizes */
+    &.n7-btn-s {
+        // height: $button-small-height;
+        // padding: 0 $space/2;
+        // line-height: $button-small-height - $button-border-width;
+        // font-size: $font-size-xs;
+    }
+
+    &.n7-btn-l {
+        // height: $button-large-height;
+        // padding: 0 $space*3;
+        // line-height: $button-large-height - $button-border-width;
+        font-size: $font-size-m;
+    }
+
+    &.n7-btn-xl {
+        // height: $button-large-height;
+        // padding: 0 $space*3;
+        // line-height: $button-large-height - $button-border-width;
+        font-size: $font-size-l;
+    }
+
+    /* Full width */
+    &.n7-btn-full {
+        // width: 100%;
     }
 }
 
 /* ------------------------------------ *\
    #LIGHT-BUTTON
 \* ------------------------------------ */
+
 /* No background button */
 .n7-btn-light {
     // padding: 0 4px;
@@ -108,6 +138,7 @@
 
     /* With loader inside */
     &.is-loading {
+        // ...
     }
 }
 
@@ -152,37 +183,6 @@
 
     /* With loader inside */
     &.is-loading {
-    }
-}
-
-/* ------------------------------------ *\
-   #SIZES
-\* ------------------------------------ */
-.n7-btn {
-    /* Sizes */
-    &.n7-btn-s {
-        // height: $button-small-height;
-        // padding: 0 $space/2;
-        // line-height: $button-small-height - $button-border-width;
-        // font-size: $font-size-xs;
-    }
-
-    &.n7-btn-l {
-        // height: $button-large-height;
-        // padding: 0 $space*3;
-        // line-height: $button-large-height - $button-border-width;
-        font-size: $font-size-m;
-    }
-
-    &.n7-btn-xl {
-        // height: $button-large-height;
-        // padding: 0 $space*3;
-        font-size: $font-size-l;
-        // line-height: $button-large-height - $button-border-width;
-    }
-
-    /* Full width */
-    &.n7-btn-full {
-        // width: 100%;
+        // ...
     }
 }
