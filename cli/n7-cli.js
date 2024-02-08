@@ -13,6 +13,7 @@ const CommandTranslationsExtract = require("./commands/translations-extract");
 const CommandTranslationsLoad = require("./commands/translations-load");
 const CommandTranslationsSearch = require("./commands/translations-search");
 const CommandSls = require("./commands/sls");
+const CommandMdw = require("./commands/mdw");
 const { version } = require("../package.json");
 const updateCheck = require("./update-check");
 
@@ -326,6 +327,51 @@ program
       });
     }
   );
+
+
+
+// MDW
+// ---------------------------------------------------------->
+program
+    .command("mdw")
+    .description("creates a new muruca middleware project")
+    .option("-n, --name <name>", "project name")
+    .option("-v, --verbose", "output extra info")
+    .option("-y, --silent", "disable interactive input prompts")
+    .action(
+        (options) => {
+            let prompt$;
+
+            if (!!options.silent) {
+                prompt$ = Promise.resolve({});
+            } else {
+                prompt$ = inquirer.prompt([{
+                    type: 'input',
+                    name: 'name',
+                    message: 'What name would you like to use for the new middleware workspace and project?',
+                    default: typeof options.name === 'string' ? options.name : null
+                }]);
+            }
+
+            prompt$.then((answers) => {
+                Object.keys(answers).forEach((key) => {
+                    if (answers[key]) {
+                        options[key] = answers[key];
+                    }
+                });
+
+                new CommandMdw(options.name, !!options.verbose);
+            })
+                .catch((error) => {
+                    if (error.isTtyError) {
+                        new CommandMdw(options.name, !!options.verbose);
+                    } else {
+                        console.error(error);
+                        helpers.error('Command "mdw" prompt error');
+                    }
+                });
+        }
+    );
 
 
 // check version
