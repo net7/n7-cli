@@ -1,18 +1,18 @@
 //PARSERS
-import { BaseslsnameHomeParser } from './baseslsname-home';
-import { BaseslsnameSearchParser } from './baseslsname-search';
-import { BaseslsnameResourceParser } from "./baseslsname-resources";
+import { BasemdwnameHomeParser } from './basemdwname-home';
+import { BasemdwnameSearchParser } from './basemdwname-search';
+import { BasemdwnameResourceParser } from "./basemdwname-resources";
 import {
     MenuParser,
     FooterParser,
     StaticPageParser,
     TranslationParser
-} from '@n7-frontend/serverless';
+} from '@n7-frontend/express';
 
 export default {
-    home: BaseslsnameHomeParser,
-    search: BaseslsnameSearchParser,
-    resource: BaseslsnameResourceParser,
+    home: BasemdwnameHomeParser,
+    search: BasemdwnameSearchParser,
+    resource: BasemdwnameResourceParser,
     menu: MenuParser,
     footer: FooterParser,
     static: StaticPageParser,
