@@ -3,16 +3,20 @@ import { Routes } from '@angular/router';
 import { Page404LayoutComponent } from '@net7/boilerplate-common';
 import {
   DvExampleLayoutComponent,
-  DvCardExampleLayoutComponent
+  DvCardExampleLayoutComponent,
 } from '@net7/boilerplate-dataviz';
 
 export const APP_ROUTES: Routes = [
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   { path: 'home', component: DvExampleLayoutComponent },
-  { path: 'card-example', component: DvCardExampleLayoutComponent, data: { configId: 'card-example' } },
-  { path: '**', component: Page404LayoutComponent }
+  {
+    path: 'card-example',
+    component: DvCardExampleLayoutComponent,
+    data: { configId: 'card-example' },
+  },
+  { path: '**', component: Page404LayoutComponent },
 ];

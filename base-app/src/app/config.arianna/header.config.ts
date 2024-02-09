@@ -4,8 +4,8 @@ export default {
   logo: {
     image: '/assets/a4v-header-logo.png',
     anchor: {
-      href: '/'
-    }
+      href: '/',
+    },
   },
   nav: {
     items: [
@@ -13,80 +13,80 @@ export default {
         text: 'Home',
         icon: 'n7-icon-home',
         anchor: {
-          href: '/'
+          href: '/',
         },
         _meta: {
-          id: 'home'
-        }
+          id: 'home',
+        },
       },
       {
         text: 'Patrimonio',
         anchor: {
-          href: 'patrimonio'
+          href: 'patrimonio',
         },
         icon: 'n7-icon-tree-icon',
         _meta: {
-          id: 'patrimonio'
-        }
+          id: 'patrimonio',
+        },
       },
       {
         text: 'Galleria',
         anchor: {
-          href: 'galleria'
+          href: 'galleria',
         },
         icon: 'n7-icon-th',
         _meta: {
-          id: 'galleria'
-        }
+          id: 'galleria',
+        },
       },
       {
         text: 'Mappa',
         anchor: {
-          href: 'mappa'
+          href: 'mappa',
         },
         icon: 'n7-icon-map1',
         _meta: {
-          id: 'mappa'
-        }
+          id: 'mappa',
+        },
       },
       {
         text: 'Timeline',
         anchor: {
-          href: 'timeline'
+          href: 'timeline',
         },
         icon: 'n7-icon-calendar-alt',
         _meta: {
-          id: 'timeline'
-        }
+          id: 'timeline',
+        },
       },
       {
         text: 'Collezione',
         anchor: {
-          href: 'collection/44'
+          href: 'collection/44',
         },
         icon: 'n7-icon-th',
         _meta: {
-          id: 'collection'
-        }
+          id: 'collection',
+        },
       },
       {
         text: 'Ricerca',
         anchor: {
-          href: 'ricerca'
+          href: 'ricerca',
         },
         icon: 'n7-icon-search',
         _meta: {
-          id: 'ricerca'
-        }
-      }
-    ]
+          id: 'ricerca',
+        },
+      },
+    ],
   },
   menuToggle: {
     open: {
-      payload: 'mobile-open'
+      payload: 'mobile-open',
     },
     close: {
-      payload: 'mobile-close'
-    }
-  }
+      payload: 'mobile-close',
+    },
+  },
 } as ConfigCommonHeader;

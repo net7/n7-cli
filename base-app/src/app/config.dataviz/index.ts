@@ -8,5 +8,5 @@ export default {
   communication: communicationConfig,
   header: headerConfig,
   footer: footerConfig,
-  ...layouts
+  ...layouts,
 };

@@ -10,8 +10,8 @@ export default {
       grid: null,
       options: {
         classes: 'n7-slider-main',
-        background: true
-      }
+        background: true,
+      },
     },
     // {
     //   id: 'hero-main',
@@ -57,8 +57,8 @@ export default {
       type: 'collection',
       grid: 4,
       options: {
-        classes: 'is-vertical'
-      }
+        classes: 'is-vertical',
+      },
     },
-  ]
+  ],
 } as ConfigMurucaHomeLayout;

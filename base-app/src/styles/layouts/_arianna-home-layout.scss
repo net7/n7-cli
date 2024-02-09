@@ -11,7 +11,8 @@
     .n7-hero {
         height: auto;
         padding: $space * 5 0;
-        // background-color: #eae8e6; // $color-gray-03;
+
+        // background-color: #eae8e6;background-colorbackground-color // $color-gray-03;
     }
 
     .n7-hero__text-wrapper {
@@ -20,17 +21,20 @@
 
     .n7-hero__title {
         font-size: $font-size-xl;
-        // color: $color-text;
+
+        // color: $color-text;colorcolor
     }
 
     .n7-hero__text {
         font-size: $font-size-m;
-        // color: $color-text;
+
+        // color: $color-text;colorcolor
 
         p {
             margin-bottom: $space;
             font-size: $font-size-m;
-            // color: $color-text;
+
+            // color: $color-text;colorcolor
 
             a {
                 color: $color-text-inverse;
@@ -53,7 +57,7 @@
         }
     }
 
-    .n7-hero.has-background-image:after {
-        // display:none;
+    .n7-hero.has-background-image::after {
+        // display:none;displaydisplay
     }
 }

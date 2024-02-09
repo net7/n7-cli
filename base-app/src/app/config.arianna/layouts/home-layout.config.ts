@@ -5,11 +5,11 @@ export default {
     title: 'Storia dell’Italia repubblicana',
     text: 'Consulta il patrimonio completo del Centro documentazione Archivio Flamigni',
     button: {
-      text: 'CERCA'
+      text: 'CERCA',
     },
     backgroundImage: '/assets/a4v-home-hero1-bg.jpg',
     input: {
-      placeholder: 'Cerca in Archivio Flamigni'
+      placeholder: 'Cerca in Archivio Flamigni',
     },
     fallback: 'Nessun risultato, prova a <br> cambiare la ricerca.',
     classes: '_has-carousel',
@@ -21,13 +21,14 @@ export default {
     button: {
       text: 'NAVIGA IL PATRIMONIO',
       anchor: {
-        href: '/patrimonio'
-      }
-    }
+        href: '/patrimonio',
+      },
+    },
   },
   'outer-links': {},
   'results-limit': 10,
   'max-item-length': 50,
   'autocomplete-fallback': 'Nessun risultato, prova a\ncambiare la ricerca.',
-  'linked-objects-fallback': 'Non sono stati trovati oggetti culturali collegati alle entità selezionate. Prova a cambiare le entità selezionate o resetta la ricerca.'
+  'linked-objects-fallback':
+    'Non sono stati trovati oggetti culturali collegati alle entità selezionate. Prova a cambiare le entità selezionate o resetta la ricerca.',
 } as ConfigAriannaHomeLayout;

@@ -12,5 +12,5 @@ export const BaseLayoutConfig = {
   layoutEH: BaseLayoutEH,
   widgetsDataSources: DS,
   widgetsEventHandlers: EH,
-  layoutOptions: {}
+  layoutOptions: {},
 };

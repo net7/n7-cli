@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable camelcase */
 import homeConfig from './home.config';
 import searchWorksConfig from './search-works.config';
 import searchBooksConfig from './search-books.config';

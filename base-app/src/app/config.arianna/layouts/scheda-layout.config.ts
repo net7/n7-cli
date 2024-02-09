@@ -2,17 +2,18 @@ import { ConfigAriannaSchedaLayout } from '@net7/boilerplate-arianna';
 
 export default {
   'empty-html': '<span>Non sono disponibili informazioni.<span>',
-  'empty-label': "<h2>Benvenuto nel patrimonio dell’Archivio Flamigni</h2><p>Il Centro documentazione conserva l’archivio di Sergio Flamigni e i fondi archivistici di Emilia Lotti, dirigente nazionale dell'Unione donne in Italia e del Pci; di Piera Amendola, responsabile dell’archivio della Commissione P2; di Aldo Moro, il cui versamento completa e arricchisce il patrimonio archivistico del politico conservato presso l’Archivio centrale dello Stato; di Angelo La Bella, partigiano, dirigente del Pci, studioso della strage di Portella della Ginestra. Nel 2017 il Centro ha acquisito il fondo dello storico Giuseppe De Lutiis, specializzato nella storia del terrorismo e dei servizi segreti. L’Archivio Flamigni cura anche il fondo archivistico di Giuseppe Zupo, difensore di parte civile nel processo per gli omicidi Reina, Mattarella, La Torre-Di Salvo e del giornalista RAI Alberto Mentasti, di proprietà dell’Istituto di studi giuridici Arturo Carlo Jemolo.</p><p>L’Istituto inoltre conserva il proprio patrimonio documentario prodotto nel corso dei progetti di tutela e di ricerca relativi alla documentazione su fatti di terrorismo, mafia, criminalità organizzata.</p>",
+  'empty-label':
+    "<h2>Benvenuto nel patrimonio dell’Archivio Flamigni</h2><p>Il Centro documentazione conserva l’archivio di Sergio Flamigni e i fondi archivistici di Emilia Lotti, dirigente nazionale dell'Unione donne in Italia e del Pci; di Piera Amendola, responsabile dell’archivio della Commissione P2; di Aldo Moro, il cui versamento completa e arricchisce il patrimonio archivistico del politico conservato presso l’Archivio centrale dello Stato; di Angelo La Bella, partigiano, dirigente del Pci, studioso della strage di Portella della Ginestra. Nel 2017 il Centro ha acquisito il fondo dello storico Giuseppe De Lutiis, specializzato nella storia del terrorismo e dei servizi segreti. L’Archivio Flamigni cura anche il fondo archivistico di Giuseppe Zupo, difensore di parte civile nel processo per gli omicidi Reina, Mattarella, La Torre-Di Salvo e del giornalista RAI Alberto Mentasti, di proprietà dell’Istituto di studi giuridici Arturo Carlo Jemolo.</p><p>L’Istituto inoltre conserva il proprio patrimonio documentario prodotto nel corso dei progetti di tutela e di ricerca relativi alla documentazione su fatti di terrorismo, mafia, criminalità organizzata.</p>",
   'external-url-text': 'Visualizza',
   'related-entities': {
-    title: 'Entità collegate'
+    title: 'Entità collegate',
   },
   'related-items': {
     title: 'Oggetti culturali simili',
-    'max-related-items': 6
+    'max-related-items': 6,
   },
   metadata: {
-    title: 'Informazioni'
+    title: 'Informazioni',
   },
   tree: {
     lite: false,
@@ -21,15 +22,15 @@ export default {
     'icon-image': 'n7-icon-image',
     'icon-map': [
       {
-        'oc-type-foo': 'n7-icon-building'
+        'oc-type-foo': 'n7-icon-building',
       },
       {
-        'oc-type-bar': 'n7-icon-biography'
-      }
-    ]
+        'oc-type-bar': 'n7-icon-biography',
+      },
+    ],
   },
   'image-viewer': {
-    'context-menu': false
+    'context-menu': false,
   },
   'pdf-viewer': {
     libOptions: {
@@ -49,7 +50,7 @@ export default {
       // showScrollingButton: false,
       // showSpreadButton: false,
       // showPropertiesButton: false
-    }
+    },
   },
   'metadata-to-show': {
     'aggregazione-logica': [
@@ -91,7 +92,7 @@ export default {
       'corredoRicerca',
       'corredoRicerca.tipologia',
       'corredoRicerca.riferimento',
-      'corredoRicerca.descrizione'
+      'corredoRicerca.descrizione',
     ],
     'oggetto-culturale': [],
     UASC: [
@@ -139,7 +140,7 @@ export default {
       'corredoRicerca',
       'corredoRicerca.tipologia',
       'corredoRicerca.riferimento',
-      'corredoRicerca.descrizione'
+      'corredoRicerca.descrizione',
     ],
     UA: [
       'estremo_remoto',
@@ -196,7 +197,7 @@ export default {
       'corredoRicerca',
       'corredoRicerca.tipologia',
       'corredoRicerca.riferimento',
-      'corredoRicerca.descrizione'
-    ]
-  }
+      'corredoRicerca.descrizione',
+    ],
+  },
 } as ConfigAriannaSchedaLayout;

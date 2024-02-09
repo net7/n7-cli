@@ -12,18 +12,18 @@ export default {
           alttext: 'Logo 1',
           anchor: {
             href: 'http://www.google.it/',
-            target: '_blank'
-          }
+            target: '_blank',
+          },
         },
         {
           url: '/assets/a4v-footer-logo-2.png',
           alttext: 'Logo 2',
           anchor: {
             href: 'http://www.google.it/',
-            target: '_blank'
-          }
-        }
-      ]
+            target: '_blank',
+          },
+        },
+      ],
     },
     {
       title: 'Privacy e info',
@@ -33,27 +33,27 @@ export default {
           classes: 'link-class',
           anchor: {
             href: 'https://www.google.it',
-            target: '_blank'
-          }
+            target: '_blank',
+          },
         },
         {
           text: 'Cooklie policy',
           anchor: {
             href: 'https://www.google.it',
-            target: '_blank'
-          }
+            target: '_blank',
+          },
         },
         {
           text: 'Termini e condizioni',
           anchor: {
             href: 'https://www.google.it',
-            target: '_blank'
-          }
-        }
-      ]
+            target: '_blank',
+          },
+        },
+      ],
     },
     {
-      text: "Arianna4View is powered by Hyperborea.<br><a href='https://www.hyperborea.com/' target='_blank'>www.hyperborea.com</a>"
-    }
-  ]
+      text: "Arianna4View is powered by Hyperborea.<br><a href='https://www.hyperborea.com/' target='_blank'>www.hyperborea.com</a>",
+    },
+  ],
 } as ConfigCommonFooter;

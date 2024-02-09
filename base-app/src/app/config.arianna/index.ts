@@ -22,10 +22,10 @@ export default {
     schedaBasePath: '/patrimonio/',
     entitaBasePath: '/entita/',
     searchBasePath: '/ricerca/',
-    galleryBasePath: '/galleria/'
+    galleryBasePath: '/galleria/',
   },
   'features-enabled': {
     bubblechart: true,
-    carousel: false
+    carousel: false,
   },
 };

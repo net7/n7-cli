@@ -15,5 +15,5 @@ export default {
   'entita-layout': entitaLayoutConfig,
   'map-layout': mapLayoutConfig,
   'collection-layout': collectionLayoutConfig,
-  'timeline-layout': timelineLayoutConfig
+  'timeline-layout': timelineLayoutConfig,
 };

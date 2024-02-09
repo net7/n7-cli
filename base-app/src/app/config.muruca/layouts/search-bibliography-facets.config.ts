@@ -1,4 +1,8 @@
-import { MrSearchConfig, MrSearchFacetsConfig, MrSearchLayoutInput } from '@net7/boilerplate-muruca';
+import {
+  MrSearchConfig,
+  MrSearchFacetsConfig,
+  MrSearchLayoutInput,
+} from '@net7/boilerplate-muruca';
 
 const facets = {
   sections: [
@@ -42,7 +46,7 @@ const facets = {
             icon: 'n7-icon-search',
             inputPayload: 'search-input',
             enterPayload: 'search-enter',
-            iconPayload: 'search-icon'
+            iconPayload: 'search-icon',
           },
         },
       ],

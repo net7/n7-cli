@@ -9,19 +9,22 @@ export default {
         id: 'breadcrumbs',
         type: 'breadcrumbs',
         options: {
-          base: [{
-            title: 'global#home',
-            link: '/'
-          }, {
-            title: 'global#maps',
-            link: '/maps'
-          }]
-        }
+          base: [
+            {
+              title: 'global#home',
+              link: '/',
+            },
+            {
+              title: 'global#maps',
+              link: '/maps',
+            },
+          ],
+        },
       },
       {
         id: 'header',
-        type: 'title'
-      }
+        type: 'title',
+      },
     ],
     content: [
       {
@@ -29,19 +32,19 @@ export default {
         type: 'metadata',
         grid: null,
         options: {
-          hideLabels: true
-        }
+          hideLabels: true,
+        },
       },
       {
         id: 'metadata',
         type: 'metadata',
         // title: 'Metadati',
-        grid: null
+        grid: null,
       },
       {
         id: 'metadata-size',
         type: 'metadata',
-        grid: null
+        grid: null,
       },
       {
         id: 'collection-bibliography',
@@ -52,20 +55,20 @@ export default {
           classes: 'mr-item-preview-bibliography',
           itemPreview: {
             limit: 9999,
-            striptags: false
-          }
-        }
+            striptags: false,
+          },
+        },
       },
       {
         id: 'collection-works',
         type: 'collection',
-        grid: 3
+        grid: 3,
       },
       {
         id: 'collection-continents',
         type: 'collection',
-        grid: 3
-      }
-    ]
-  }
+        grid: 3,
+      },
+    ],
+  },
 } as ConfigMurucaResourceLayout;
