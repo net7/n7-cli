@@ -1,6 +1,6 @@
-import { HomeParser } from '@n7-frontend/serverless';
+import { HomeParser } from '@n7-frontend/express';
 
-export class BaseslsnameHomeParser extends HomeParser {
+export class BasemdwnameHomeParser extends HomeParser {
   protected parseSliderItems(data: any, block: string) {
     if (/slider-main/.test(block)) {
       return data.map((d: any) => ({

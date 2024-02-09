@@ -3,9 +3,9 @@ import {
   SearchResultsItemData,
   Input,
   SearchOptions,
-} from '@n7-frontend/serverless';
+} from '@n7-frontend/express';
 
-export class BaseslsnameSearchParser extends SearchParser {
+export class BasemdwnameSearchParser extends SearchParser {
   protected parseResultsItems({
     data,
     options,

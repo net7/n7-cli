@@ -1,9 +1,9 @@
-import Parser, { Input } from '@n7-frontend/serverless/dist/interfaces/parser';
+import Parser, { Input } from '@n7-frontend/express/dist/interfaces/parser';
 import {
   ParsedData
-} from '@n7-frontend/serverless/dist/interfaces/parser-data/resource';
+} from '@n7-frontend/express/dist/interfaces/parser-data/resource';
 
-export class BaseslsnameResourceParser implements Parser {
+export class BasemdwnameResourceParser implements Parser {
   parse({ data, options }: Input) {
     if (!('type' in options)) {
       return;
