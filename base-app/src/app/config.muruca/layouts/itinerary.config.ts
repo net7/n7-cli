@@ -13,9 +13,9 @@ const config: ConfigMurucaItineraryLayout = {
         classes: 'mr-item-preview-itinerary',
         itemPreview: {
           limit: null,
-          striptags: false
-        }
-      }
+          striptags: false,
+        },
+      },
     },
     // {
     //   id: 'gallery1',
@@ -42,7 +42,7 @@ const config: ConfigMurucaItineraryLayout = {
     //   type: 'collection',
     //   grid: 3
     // }
-  ]
+  ],
 };
 
 export default config;

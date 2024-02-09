@@ -7,9 +7,9 @@
 // ------------------------------------ //
 // TYPOGRAPHY
 // ------------------------------------ //
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap';
 
-$font-family-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-main: "Helvetica Neue", helvetica, arial, sans-serif;
 $font-family-headings: 'EB Garamond', serif;
 
 // ------------------------------------ //
@@ -185,15 +185,18 @@ $footer-breakpoint-mobile: 700px;
 // ------------------------------------ //
 // $table-border-color: $color-border-normal;
 // $table-border-size: 1px;
+
 /* Header */
 // $table-header-font-size: $font-size-xs;
 // $table-header-text-color: $color-text;
 // $table-header-bg: $color-background-light-blue;
+
 /* Contents */
 // $table-font-size: $font-size-s;
 // $table-text-color: $color-text;
 // $table-bg-odd: $color-background-base;
 // $table-bg-even: $color-background-medium;
+
 /* Footer */
 // $table-footer-font-size: $font-size-s;
 // $table-footer-text-color: $color-text-light;

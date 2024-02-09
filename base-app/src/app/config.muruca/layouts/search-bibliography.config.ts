@@ -17,39 +17,35 @@ export default {
         value: '_score',
         label: 'search#sort_score',
         selected: false,
-        disabled: true
+        disabled: true,
       },
       {
         value: 'sort_ASC',
         label: 'search#sort_asc',
-        selected: true
+        selected: true,
       },
       {
         value: 'sort_DESC',
         label: 'search#sort_desc',
-        selected: false
-      }
-    ]
+        selected: false,
+      },
+    ],
   },
   pagination: {
     limit: 5,
-    options: [
-      12,
-      24,
-      48
-    ]
+    options: [12, 24, 48],
   },
   itemPreview: {
     classes: 'mr-item-preview-bibliography',
     limit: 9999,
-    striptags: false
+    striptags: false,
   },
   fallback: {
     text: 'search#fallback_text',
-    button: 'search#fallback_button'
+    button: 'search#fallback_button',
   },
   ko: {
     text: 'search#ko_text',
-    button: 'search#ko_button'
-  }
+    button: 'search#ko_button',
+  },
 } as ConfigMurucaSearchLayout;

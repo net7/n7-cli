@@ -7,29 +7,31 @@ export class DynamicDS extends DataSource {
       name,
       description,
       stargazers_count: stargazersCount,
-      watchers_count: watchersCount
+      watchers_count: watchersCount,
     } = randomItem;
     return {
       title: name,
       text: description,
-      metadata: [{
-        title: 'Stats',
-        items: [
-          {
-            icon: 'n7-icon-check-circle',
-            label: 'stargazers',
-            value: stargazersCount
-          },
-          {
-            icon: 'n7-icon-eye',
-            label: 'watchers',
-            value: watchersCount
-          },
-        ]
-      }],
+      metadata: [
+        {
+          title: 'Stats',
+          items: [
+            {
+              icon: 'n7-icon-check-circle',
+              label: 'stargazers',
+              value: stargazersCount,
+            },
+            {
+              icon: 'n7-icon-eye',
+              label: 'watchers',
+              value: watchersCount,
+            },
+          ],
+        },
+      ],
       anchor: {
-        payload: randomItem
-      }
+        payload: randomItem,
+      },
     };
   }
 }

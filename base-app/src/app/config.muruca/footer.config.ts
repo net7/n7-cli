@@ -10,17 +10,17 @@ export default {
           url: 'https://via.placeholder.com/80',
           alttext: 'Logo 1',
           anchor: {
-            href: 'https://www.google.it'
-          }
+            href: 'https://www.google.it',
+          },
         },
         {
           url: 'https://via.placeholder.com/80',
           alttext: 'Logo 2',
           anchor: {
-            href: 'https://www.google.it'
-          }
-        }
-      ]
+            href: 'https://www.google.it',
+          },
+        },
+      ],
     },
     {
       title: 'Privacy e info',
@@ -29,29 +29,29 @@ export default {
           text: 'Info su BASEAPPNAME',
           classes: 'link-class',
           anchor: {
-            href: 'https://www.google.it'
-          }
+            href: 'https://www.google.it',
+          },
         },
         {
           text: 'Privacy policy',
           classes: 'link-class',
           anchor: {
-            href: 'https://www.google.it'
-          }
+            href: 'https://www.google.it',
+          },
         },
         {
           text: 'Cooklie policy',
           anchor: {
-            href: 'https://www.google.it'
-          }
+            href: 'https://www.google.it',
+          },
         },
         {
           text: 'Termini e condizioni',
           anchor: {
-            href: 'https://www.google.it'
-          }
-        }
-      ]
+            href: 'https://www.google.it',
+          },
+        },
+      ],
     },
     {
       classes: 'n7-footer__muruca-promo',
@@ -61,17 +61,17 @@ export default {
           url: '/assets/logo-muruca-footer.png',
           alttext: 'Muruca digital library platform',
           anchor: {
-            href: 'https://www.muruca.org'
-          }
+            href: 'https://www.muruca.org',
+          },
         },
         {
           url: '/assets/logo-net7.png',
           alttext: 'Net7 Pisa',
           anchor: {
-            href: 'https://www.netseven.it'
-          }
-        }
-      ]
-    }
-  ]
+            href: 'https://www.netseven.it',
+          },
+        },
+      ],
+    },
+  ],
 } as ConfigCommonFooter;

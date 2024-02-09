@@ -1,14 +1,15 @@
 <div>
-    <pre>&lt;n7-nav&gt;</pre>
-    <n7-nav [data]="(lb.widgets['mock'].ds.out$ | async)?.nav"></n7-nav>
-    <hr />
+  <pre>&lt;n7-nav&gt;</pre>
+  <n7-nav [data]="(lb.widgets['mock'].ds.out$ | async)?.nav"></n7-nav>
+  <hr />
 
-    <pre>&lt;n7-chart&gt;</pre>
-    <n7-chart [data]="(lb.widgets['mock'].ds.out$ | async)?.lineChart"></n7-chart>
-    <hr />
+  <pre>&lt;n7-chart&gt;</pre>
+  <n7-chart [data]="(lb.widgets['mock'].ds.out$ | async)?.lineChart"></n7-chart>
+  <hr />
 
-    <pre>&lt;n7-item-preview&gt; (dynamic)</pre>
-    <n7-item-preview 
+  <pre>&lt;n7-item-preview&gt; (dynamic)</pre>
+  <n7-item-preview
     [data]="lb.widgets['dynamic'].ds.out$ | async"
-    [emit]="lb.widgets['dynamic'].emit"></n7-item-preview>
+    [emit]="lb.widgets['dynamic'].emit"
+  ></n7-item-preview>
 </div>

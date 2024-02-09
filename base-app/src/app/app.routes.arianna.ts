@@ -28,9 +28,9 @@ export const APP_ROUTES: Routes = [
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
 
   // page404
-  { path: '**', component: Page404LayoutComponent }
+  { path: '**', component: Page404LayoutComponent },
 ];

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <mr-resource-modal></mr-resource-modal>
     </main-layout>
   `,
-  styleUrls: []
+  styleUrls: [],
 })
 export class AppComponent {
   public useRouter = true;

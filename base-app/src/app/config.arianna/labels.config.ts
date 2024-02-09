@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable camelcase */
 
 import { ConfigCommonLabels } from '@net7/boilerplate-common';
 
@@ -125,28 +125,40 @@ export default {
 
   'aggregazione-logica.soggettoProduttore': 'Soggetto produttore',
   'aggregazione-logica.soggettoConservatore': 'Soggetto conservatore',
-  'aggregazione-logica.soggettoConservatore.soggettoConservatoreAttuale': 'Soggetto conservatore',
-  'aggregazione-logica.soggettoConservatore.tipoResponsabilita': 'Tipo responsabilità',
-  'aggregazione-logica.soggettoConservatore.parteConservata': 'Parte conservata',
-  'aggregazione-logica.soggettoConservatore.causeAcquisizione': 'Storia della custodia',
+  'aggregazione-logica.soggettoConservatore.soggettoConservatoreAttuale':
+    'Soggetto conservatore',
+  'aggregazione-logica.soggettoConservatore.tipoResponsabilita':
+    'Tipo responsabilità',
+  'aggregazione-logica.soggettoConservatore.parteConservata':
+    'Parte conservata',
+  'aggregazione-logica.soggettoConservatore.causeAcquisizione':
+    'Storia della custodia',
 
-  'aggregazione-logica.conservazione.soggettoConservatore': 'Soggetto conservatore',
-  'aggregazione-logica.conservazione.soggettoConservatoreAttuale': 'Soggetto conservatore',
-  'aggregazione-logica.conservazione.tipoResponsabilita': 'Tipo di responsabilità',
+  'aggregazione-logica.conservazione.soggettoConservatore':
+    'Soggetto conservatore',
+  'aggregazione-logica.conservazione.soggettoConservatoreAttuale':
+    'Soggetto conservatore',
+  'aggregazione-logica.conservazione.tipoResponsabilita':
+    'Tipo di responsabilità',
   'aggregazione-logica.conservazione.parteConservata': 'Parte conservata',
-  'aggregazione-logica.conservazione.causeAcquisizione': 'Storia della custodia',
+  'aggregazione-logica.conservazione.causeAcquisizione':
+    'Storia della custodia',
   'aggregazione-logica.descrizione_interna': 'Descrizione',
   'aggregazione-logica.storia_ordinamenti': 'Storia degli ordinamenti',
   'aggregazione-logica.altra_documentazione': 'Materiali correlati',
   'aggregazione-logica.descrizione_esterna': 'Descrizione esterna',
-  'aggregazione-logica.storiaUbicazioni.storiaUbicazioni': 'Storia delle ubicazioni',
-  'aggregazione-logica.condizioni_consultazione_modalita': 'Modalità di consultazione',
-  'aggregazione-logica.condizioni_consultazione_tempi': 'Tempi per la consultazione',
+  'aggregazione-logica.storiaUbicazioni.storiaUbicazioni':
+    'Storia delle ubicazioni',
+  'aggregazione-logica.condizioni_consultazione_modalita':
+    'Modalità di consultazione',
+  'aggregazione-logica.condizioni_consultazione_tempi':
+    'Tempi per la consultazione',
   'aggregazione-logica.corredoRicerca': 'Strumento di corredo e ricerca',
   'aggregazione-logica.corredoRicerca.tipologia': 'Tipologia',
   'aggregazione-logica.corredoRicerca.riferimento': 'Riferimento',
   'aggregazione-logica.corredoRicerca.descrizione': 'Descrizione',
-  'aggregazione-logica.statoAttualeConservazione.statoConservazione': 'Stato di conservazione',
+  'aggregazione-logica.statoAttualeConservazione.statoConservazione':
+    'Stato di conservazione',
 
   'OGGETTO CULTURALE': '---',
   'oggetto-culturale.estremo_remoto': 'Estremo remoto',
@@ -189,13 +201,17 @@ export default {
   'oggetto-culturale.descrizioneEsterna.trascrizione': 'Trascrizione',
   'oggetto-culturale.descrizione_interna_tipologia': 'Tipologia documentaria',
   'oggetto-culturale.descrizione_interna_trascrizione': 'Trascrizione',
-  'oggetto-culturale.documentazioneTestuale': 'Presenza di documentazione testuale',
+  'oggetto-culturale.documentazioneTestuale':
+    'Presenza di documentazione testuale',
   'oggetto-culturale.documentazioneTestuale.tipologia': 'Tipologia',
   'oggetto-culturale.documentazioneTestuale.lingua': 'Lingua',
-  'oggetto-culturale.documentazioneGrafica': 'Presenza di documentazione grafica',
+  'oggetto-culturale.documentazioneGrafica':
+    'Presenza di documentazione grafica',
   'oggetto-culturale.documentazioneGrafica.tipologia': 'Tipologia',
-  'oggetto-culturale.documentazioneGrafica.tecnicaEsecutiva': 'Tecnica esecutiva',
-  'oggetto-culturale.documentazioneCopia': 'Presenza di documentazione in copia',
+  'oggetto-culturale.documentazioneGrafica.tecnicaEsecutiva':
+    'Tecnica esecutiva',
+  'oggetto-culturale.documentazioneCopia':
+    'Presenza di documentazione in copia',
   'oggetto-culturale.documentazioneCopia.tipologia': 'Tipologia',
   'oggetto-culturale.documentazioneCopia.epoca': 'Epoca',
   'oggetto-culturale.strumentoCorredoInterno': 'Strumenti di corredo interni',
@@ -218,13 +234,16 @@ export default {
   'oggetto-culturale.unitaPrelievo': 'Unità di prelievo',
   'oggetto-culturale.consistenzaOC': 'Consistenza',
   'oggetto-culturale.entitaRelazionata': 'Entità Relazionata',
-  'oggetto-culturale.tipologiaRappresentazione': 'Tipologia di rappresentazione',
+  'oggetto-culturale.tipologiaRappresentazione':
+    'Tipologia di rappresentazione',
   'oggetto-culturale.stampa': 'Rappresentazione a stampa',
   'oggetto-culturale.stadioRedazione': 'Stadio di redazione',
   'oggetto-culturale.procedimentoGrafico': 'Procedimento grafico',
   'oggetto-culturale.mediazioniGrafiche': 'Mediazioni grafiche',
-  'oggetto-culturale.dimensioniRaffigurazioneAltezza': 'Dimensioni raffigurazione - altezza (mm)',
-  'oggetto-culturale.dimensioniRaffigurazioneLarghezza': 'Dimensioni raffigurazione - larghezza (mm)',
+  'oggetto-culturale.dimensioniRaffigurazioneAltezza':
+    'Dimensioni raffigurazione - altezza (mm)',
+  'oggetto-culturale.dimensioniRaffigurazioneLarghezza':
+    'Dimensioni raffigurazione - larghezza (mm)',
   'oggetto-culturale.lingua': 'Lingua della raffigurazione',
   'oggetto-culturale.scalaNumerica': 'Scala numerica',
   'oggetto-culturale.proiezione': 'Proiezione',
@@ -300,5 +319,5 @@ export default {
   'persona.qualifica.qualifica': 'Qualifica',
   'persona.qualifica.tipologia': 'Tipologia',
 
-  FINE: '---'
+  FINE: '---',
 } as ConfigCommonLabels;

@@ -4,18 +4,19 @@ import { HomeLayoutConfig as config } from './home-layout.config';
 
 @Component({
   selector: 'baseappprefix-home-layout',
-  templateUrl: './home-layout.html'
+  templateUrl: './home-layout.html',
 })
-export class HomeLayoutComponent extends AbstractLayout implements OnInit, OnDestroy {
-  constructor(
-    private communication: CommunicationService
-  ) {
+export class HomeLayoutComponent
+  extends AbstractLayout
+  implements OnInit, OnDestroy
+{
+  constructor(private communication: CommunicationService) {
     super(config);
   }
 
   protected initPayload() {
     return {
-      communication: this.communication
+      communication: this.communication,
     };
   }
 

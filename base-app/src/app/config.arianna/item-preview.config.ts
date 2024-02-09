@@ -4,37 +4,37 @@ export default {
   image: 'image',
   title: {
     data: 'item.label',
-    maxLength: 80
+    maxLength: 80,
   },
   metadata: {
     info: {
       selection: [
         {
-          key: 'definizione_tipologia'
+          key: 'definizione_tipologia',
         },
         {
-          key: 'estremo_remoto'
+          key: 'estremo_remoto',
         },
         {
-          key: 'estremo_recente'
-        }
+          key: 'estremo_recente',
+        },
       ],
       data: 'item.fields',
       value: 'value',
       label: 'key',
-      customLabel: ''
+      customLabel: '',
     },
     toe: {
       data: 'relatedTypesOfEntity',
       value: 'count',
-      icon: 'type'
+      icon: 'type',
     },
     breadcrumbs: {
       data: 'breadcrumbs',
       label: 'label',
-      payload: 'link'
-    }
+      payload: 'link',
+    },
   },
   payload: 'item.id',
-  paginationLimit: 5
+  paginationLimit: 5,
 } as ConfigAriannaItemPreview;

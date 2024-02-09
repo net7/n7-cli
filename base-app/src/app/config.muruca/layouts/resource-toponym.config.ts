@@ -9,18 +9,18 @@ export default {
       {
         id: 'header',
         type: 'title',
-        grid: null
+        grid: null,
       },
       {
         id: 'metadata',
         type: 'metadata',
-        grid: null
+        grid: null,
       },
       {
         id: 'collection-toponyms',
         type: 'collection',
-        grid: 3
-      }
-    ]
-  }
+        grid: 3,
+      },
+    ],
+  },
 } as ConfigMurucaResourceLayout;

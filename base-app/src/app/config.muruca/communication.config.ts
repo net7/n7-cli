@@ -9,8 +9,8 @@ export default {
       config: {
         sections: 'sections',
         search: 'posts',
-        links: 'todos'
-      }
+        links: 'todos',
+      },
     },
     'rest-local': {
       type: 'rest',
@@ -28,8 +28,8 @@ export default {
         footer: 'get_footer',
         timeline: 'get_timeline/time-events',
         timelineDescription: 'get_search_description/timeline',
-        itinerary: 'get_itinerary/'
-      }
-    }
-  }
+        itinerary: 'get_itinerary/',
+      },
+    },
+  },
 } as ConfigCommonCommunication;

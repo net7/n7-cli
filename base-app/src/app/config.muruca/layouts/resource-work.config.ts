@@ -9,31 +9,31 @@ export default {
       {
         id: 'header',
         type: 'title',
-        grid: null
-      }
+        grid: null,
+      },
     ],
     content: [
       {
         id: 'text-viewer',
-        type: 'text-viewer'
+        type: 'text-viewer',
       },
       {
         id: 'metadata',
         type: 'metadata',
-        title: 'resource#metadata'
+        title: 'resource#metadata',
       },
       {
         id: 'collection-witnesses',
         type: 'collection',
         grid: 3,
-        title: 'Testimoni collegati'
+        title: 'Testimoni collegati',
       },
       {
         id: 'collection-taxonomies',
         type: 'collection',
         grid: 3,
-        title: 'Tassonomie collegate'
-      }
-    ]
-  }
+        title: 'Tassonomie collegate',
+      },
+    ],
+  },
 } as ConfigMurucaResourceLayout;

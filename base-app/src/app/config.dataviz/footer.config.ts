@@ -5,8 +5,7 @@ export default {
     {
       classes: 'col-class',
       title: 'BASEAPPNAME footer',
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit elit nunc, at porta ex accumsan id. Fusce quis lobortis sem, non ornare tellus.',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit elit nunc, at porta ex accumsan id. Fusce quis lobortis sem, non ornare tellus.',
       images: [
         {
           url: 'https://via.placeholder.com/80',
