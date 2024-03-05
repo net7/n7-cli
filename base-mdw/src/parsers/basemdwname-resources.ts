@@ -1,7 +1,7 @@
 import {
   ParsedData,
-} from '@n7-frontend/express/dist/interfaces/parser-data/resource';
-import { ResourceParser } from '@n7-frontend/express/dist/parsers/resource';
+} from '@n7-frontend/n7-muruca-middleware/dist/interfaces/parser-data/resource';
+import { ResourceParser } from '@n7-frontend/n7-muruca-middleware/dist/parsers/resource';
 
 export class BasemdwnameResourceParser extends ResourceParser {
   parse({ data, options }: any) {

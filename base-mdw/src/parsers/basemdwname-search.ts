@@ -3,7 +3,7 @@ import {
   SearchResultsItemData,
   Input,
   SearchOptions,
-} from '@n7-frontend/express';
+} from '@n7-frontend/n7-muruca-middleware';
 
 export class BasemdwnameSearchParser extends SearchParser {
   protected parseResultsItems({

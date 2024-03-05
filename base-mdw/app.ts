@@ -2,7 +2,7 @@ import {
   neffRouter,
   initController,
   setCustomHandler,
-} from '@n7-frontend/express';
+} from '@n7-frontend/n7-muruca-middleware';
 import parsers from './src/parsers';
 import configurations from './src/configurations';
 require('dotenv').config();

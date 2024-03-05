@@ -7,7 +7,7 @@ import {
     FooterParser,
     StaticPageParser,
     TranslationParser
-} from '@n7-frontend/express';
+} from '@n7-frontend/n7-muruca-middleware';
 
 export default {
     home: BasemdwnameHomeParser,
