@@ -1,4 +1,4 @@
-import { Controller } from '@n7-frontend/express';
+import { Controller } from '@n7-frontend/n7-muruca-middleware';
 import parsers from './parsers';
 import configurations from './configurations';
 require('dotenv').config();

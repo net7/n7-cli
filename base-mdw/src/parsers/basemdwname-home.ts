@@ -1,4 +1,4 @@
-import { HomeParser } from '@n7-frontend/express';
+import { HomeParser } from '@n7-frontend/n7-muruca-middleware';
 
 export class BasemdwnameHomeParser extends HomeParser {
   protected parseSliderItems(data: any, block: string) {
