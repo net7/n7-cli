@@ -19,12 +19,12 @@ export default {
         disabled: true,
       },
       {
-        value: 'sort_ASC',
+        value: 'title_ASC',
         label: 'search#sort_asc',
         selected: true,
       },
       {
-        value: 'sort_DESC',
+        value: 'title_DESC',
         label: 'search#sort_desc',
         selected: false,
       },

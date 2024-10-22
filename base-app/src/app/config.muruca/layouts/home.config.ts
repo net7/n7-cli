@@ -5,22 +5,31 @@ export default {
   bodyClasses: 'has-transparent-header',
   sections: [
     {
-      id: 'slider-main',
-      type: 'slider',
+      id: 'hero-main',
+      type: 'hero',
       grid: null,
       options: {
-        classes: 'n7-slider-main',
+        classes: 'n7-hero-main',
+        background: true
+      }
+    },
+    {
+      id: 'content-main',
+      type: 'hero',
+      grid: null,
+      options: {
+        classes: 'n7-hero-works',
         background: true,
       },
     },
     // {
-    //   id: 'hero-main',
-    //   type: 'hero',
+    //   id: 'slider-main',
+    //   type: 'slider',
     //   grid: null,
     //   options: {
-    //     classes: 'n7-hero-main',
-    //     background: true
-    //   }
+    //     classes: 'n7-slider-main',
+    //     background: true,
+    //   },
     // },
     // {
     //   id: 'collection-works',
@@ -52,13 +61,13 @@ export default {
     //     classes: 'is-overlay'
     //   }
     // },
-    {
-      id: 'collection-news',
-      type: 'collection',
-      grid: 4,
-      options: {
-        classes: 'is-vertical',
-      },
-    },
+    // {
+    //   id: 'collection-news',
+    //   type: 'collection',
+    //   grid: 4,
+    //   options: {
+    //     classes: 'is-vertical',
+    //   },
+    // },
   ],
 } as ConfigMurucaHomeLayout;

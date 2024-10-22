@@ -30,6 +30,7 @@ export default {
   'search#sort_score': 'Ordine per pertinenza',
   'search#sort_asc': 'Ordine alfabetico (A→Z)',
   'search#sort_desc': 'Ordine alfabetico (Z→A)',
+  'search#resultsamount': 'Risultati per pagina',
   'search#fallback_text':
     'La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante.',
   'search#fallback_button': 'Resetta la ricerca',

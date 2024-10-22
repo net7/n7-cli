@@ -1,14 +1,18 @@
-export default {
+import { ConfigSearch } from "@n7-frontend/n7-muruca-middleware"
+
+const searchConfig: ConfigSearch = {
+
 	/** WORK **/
 	"work": {
 		"base_query": {
 			"field": "record-type",
 			"value": "work"
     },
-    "sort": [
-      "sort_title.keyword",
-      "slug.keyword"
-    ],
+		sort: {
+			title: {
+				field: "title.sort"
+			}
+		},
 		"lang": {
 			"query": {
 				"type": "selection",
@@ -71,44 +75,58 @@ export default {
 			}
 		}
 	},
+
 	/** BIBLIOGRAPHY **/
-	"bibliography": {
-		"base_query": {
-			"field": "record-type",
-			"value": "bibliography"
-		},
-		"lang": {
-			"query": {
-				"type": "selection",
-				"field": "language"
-			}
-		},
-		"facets-aggs": {
-			"type": "obj",
-			"aggregations": {}
-		},
-		"filters": {
-			"query": {
-				"type": "fulltext",
-				"field": [
-					"description"
-				],
-				"addStar": true
-			},
-			"auth_query": {
-				"type": "fulltext",
-				"field": [
-					"title"
-				],
-				"addStar": true
-			}
-		}
-	},
+	// "bibliography": {
+	// 	"base_query": {
+	// 		"field": "record-type",
+	// 		"value": "bibliography"
+	// 	},
+	// 	"lang": {
+	// 		"query": {
+	// 			"type": "selection",
+	// 			"field": "language"
+	// 		}
+	// 	},
+	// 	"facets-aggs": {
+	// 		"type": "obj",
+	// 		"aggregations": {}
+	// 	},
+	// 	"filters": {
+	// 		"query": {
+	// 			"type": "fulltext",
+	// 			"field": [
+	// 				"description"
+	// 			],
+	// 			"addStar": true
+	// 		},
+	// 		"auth_query": {
+	// 			"type": "fulltext",
+	// 			"field": [
+	// 				"title"
+	// 			],
+	// 			"addStar": true
+	// 		}
+	// 	}
+	// },
+
 	/** RESULTS FORMATTER **/
 	"results": [
 		{
 			"label": "title",
 			"field": "title"
+		},
+		{
+			"label": "slug",
+			"field": "slug"
+		},
+		{
+			"label": "routeId",
+			"field": "record-type"
+		},
+		{
+			"label": "id",
+			"field": "id"
 		},
 		{
 			"label": "text",
@@ -123,14 +141,8 @@ export default {
 		{
 			"label": "image",
 			"field": "image"
-		},
-		{
-			"label": "id",
-			"filed": "id"
-		},
-		{
-			"label":"link",
-			"field": ["id", "slug"]
 		}
 	]
 }
+
+export default searchConfig;

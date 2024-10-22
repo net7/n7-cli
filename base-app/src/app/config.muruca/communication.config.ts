@@ -14,8 +14,9 @@ export default {
     },
     'rest-local': {
       type: 'rest',
-      baseUrl: 'http://petrarca-sls.netseven.it/',
-      // baseUrl: 'http://localhost:3126/',
+      baseUrl: 'https://sls.petrarcaonline.it/',
+      // baseUrl: 'https://demosls.muruca.cloud/'
+      // baseUrl: 'http://localhost:3000/',
       config: {
         home: 'get_home',
         menu: 'get_menu',
@@ -29,6 +30,8 @@ export default {
         timeline: 'get_timeline/time-events',
         timelineDescription: 'get_search_description/timeline',
         itinerary: 'get_itinerary/',
+        translation: 'get_translation/',
+        xmlSearch: 'search_text_hl/'
       },
     },
   },
