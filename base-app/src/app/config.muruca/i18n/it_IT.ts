@@ -6,6 +6,7 @@ export default {
   'global#layout_error_title': 'Spiacenti, si è verificato un errore',
   'global#layout_error_description':
     "Prova a ricaricare la pagina tra qualche istante e se il problema persiste contatta l'amministratore della piattaforma.",
+  'global#facet_empty_text': 'Nessun elemento disponibile',
   'readmore#label': 'Mostra tutto',
   'search#works_total': '<strong>{ total }</strong> Opere',
   'search#works_total_1': '<strong>{ total }</strong> Opera',
