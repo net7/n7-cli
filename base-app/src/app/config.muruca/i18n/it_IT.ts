@@ -67,4 +67,6 @@ export default {
   'search#tools_total_1': '<strong>{ total }</strong> materiale e strumento',
   'search#tools_total_0': 'Nessun materiale e strumento',
   'search#title_tools': 'Materiali e strumenti',
+  'readmore#more': 'Leggi tutto',
+  'readmore#less': 'Leggi meno',
 };
