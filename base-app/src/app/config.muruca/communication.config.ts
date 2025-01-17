@@ -24,6 +24,8 @@ export default {
         post: 'get_static_post/',
         search: 'search/results',
         searchDescription: 'get_search_description/',
+        advancedSearch: 'advanced_search',
+        advancedSearchOptions: 'advanced_search_options',
         facets: 'search/facets',
         resource: 'get_resource',
         footer: 'get_footer',
@@ -31,7 +33,7 @@ export default {
         timelineDescription: 'get_search_description/timeline',
         itinerary: 'get_itinerary/',
         translation: 'get_translation/',
-        xmlSearch: 'search_text_hl/'
+        xmlSearch: 'search_text_hl/',
       },
     },
   },
