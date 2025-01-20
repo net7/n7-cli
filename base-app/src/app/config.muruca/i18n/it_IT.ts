@@ -70,4 +70,13 @@ export default {
   'search#title_tools': 'Materiali e strumenti',
   'readmore#more': 'Leggi tutto',
   'readmore#less': 'Leggi meno',
+  // Advanced search
+  'advancedsearch#submit': 'Cerca',
+  'advancedsearch#reset': 'Pulisci i campi',
+  'advancedsearch#works_total': '<strong>{ total }</strong> risultati',
+  'advancedsearch#works_total_1': '<strong>{ total }</strong> risultato',
+  'advancedsearch#works_total_0': 'Nessun risultato',
+  'search#results_number': 'Risultati per pagina',
+  'advancedsearch#fulltext_text': 'Cerca nel portale (in tutti i campi)',
+  'advancedsearch#label_title': 'Titolo',
 };
