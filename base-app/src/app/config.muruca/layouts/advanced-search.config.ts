@@ -114,7 +114,7 @@ export default {
             },
           },
           {
-            id: 'query-status',
+            id: 'query-element-presence',
             type: 'checkbox',
             label: '',
             info: '',
@@ -122,16 +122,16 @@ export default {
               value: [],
             },
             data: {
-              id: 'query-section-presence',
+              id: 'query-element-presence',
               checkboxes: [
                 {
                   label: 'advancedsearch#checkbox_intro',
-                  payload: 'conclusion',
+                  payload: 'intro',
                   checked: true,
                 },
                 {
                   label: 'advancedsearch#checkbox_content',
-                  payload: 'conclusion',
+                  payload: 'content',
                   checked: true,
                 },
                 {

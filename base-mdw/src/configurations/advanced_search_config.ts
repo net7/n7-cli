@@ -33,8 +33,8 @@ const advancedSearchConfig =  {
       },
       // Campo con dynamic option (resource-type_field)
       'work_author': {
-        type: 'fulltext',
-        field: 'author.key',    
+        type: 'term_value',
+        field: 'author.key.keyword',    
       },
       // Ricerca su più fields
       'query-place': {
@@ -42,7 +42,7 @@ const advancedSearchConfig =  {
         field: ['place', 'location.key'],
       },
       // Ricerca su una sola delle risorse specificate
-      'query-section-presence': {
+      'query-element-presence': {
         type: 'fulltext',
         field: 'section',
         baseQuery: {
@@ -87,9 +87,11 @@ const advancedSearchConfig =  {
     ],
     dynamic_options: {
       fields: [
+        // value: eseguire la ricerca su un campo diverso
         {
           key: 'author',
-          content_type: 'work'
+          content_type: 'work',
+          value: 'name'
         },
       ]
     }
