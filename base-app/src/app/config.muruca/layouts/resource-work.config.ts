@@ -16,6 +16,9 @@ export default {
       {
         id: 'text-viewer',
         type: 'text-viewer',
+        options: {
+          searchId: 'xml_text',
+        },
       },
       {
         id: 'metadata',

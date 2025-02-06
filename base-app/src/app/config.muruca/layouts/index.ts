@@ -17,6 +17,8 @@ import resourceBiographyConfig from './resource-biography.config';
 import resourceModalBibliography_witConfig from './resource-modal-bibliography_wit.config';
 import resourceToolConfig from './resource-tool.config';
 import itineraryConfig from './itinerary.config';
+import advancedSearchConfig from './advanced-search.config';
+import advancedResultsConfig from './advanced-results.config';
 
 export default {
   home: homeConfig,
@@ -37,4 +39,6 @@ export default {
   'resource-keyword': resourceKeywordConfig,
   'search-bibliografia': searchBibliografia,
   'resource-modal-bibliography_wit': resourceModalBibliography_witConfig,
+  'advanced-search': advancedSearchConfig,
+  'advanced-results': advancedResultsConfig,
 };

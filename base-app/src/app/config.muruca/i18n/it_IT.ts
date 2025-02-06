@@ -6,6 +6,8 @@ export default {
   'global#layout_error_title': 'Spiacenti, si è verificato un errore',
   'global#layout_error_description':
     "Prova a ricaricare la pagina tra qualche istante e se il problema persiste contatta l'amministratore della piattaforma.",
+  'global#facet_empty_text': 'Nessun elemento disponibile',
+  'global#facet_loading_text': 'Loading...',
   'readmore#label': 'Mostra tutto',
   'search#works_total': '<strong>{ total }</strong> Opere',
   'search#works_total_1': '<strong>{ total }</strong> Opera',
@@ -30,6 +32,7 @@ export default {
   'search#sort_score': 'Ordine per pertinenza',
   'search#sort_asc': 'Ordine alfabetico (A→Z)',
   'search#sort_desc': 'Ordine alfabetico (Z→A)',
+  'search#resultsamount': 'Risultati per pagina',
   'search#fallback_text':
     'La tua ricerca non ha dato risultati. Prova a cambiare i parametri oppure a resettare la ricerca cliccando sul pulsante sottostante.',
   'search#fallback_button': 'Resetta la ricerca',
@@ -65,4 +68,15 @@ export default {
   'search#tools_total_1': '<strong>{ total }</strong> materiale e strumento',
   'search#tools_total_0': 'Nessun materiale e strumento',
   'search#title_tools': 'Materiali e strumenti',
+  'readmore#more': 'Leggi tutto',
+  'readmore#less': 'Leggi meno',
+  // Advanced search
+  'advancedsearch#submit': 'Cerca',
+  'advancedsearch#reset': 'Pulisci i campi',
+  'advancedsearch#works_total': '<strong>{ total }</strong> risultati',
+  'advancedsearch#works_total_1': '<strong>{ total }</strong> risultato',
+  'advancedsearch#works_total_0': 'Nessun risultato',
+  'search#results_number': 'Risultati per pagina',
+  'advancedsearch#fulltext_text': 'Cerca nel portale (in tutti i campi)',
+  'advancedsearch#label_title': 'Titolo',
 };

@@ -1,6 +1,4 @@
-import {
-  ParsedData,
-} from '@n7-frontend/n7-muruca-middleware/dist/interfaces/parser-data/resource';
+import { ParsedData } from '@n7-frontend/n7-muruca-middleware';
 import { ResourceParser } from '@n7-frontend/n7-muruca-middleware/dist/parsers/resource';
 
 export class BasemdwnameResourceParser extends ResourceParser {

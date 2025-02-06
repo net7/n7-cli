@@ -20,6 +20,7 @@ const customConfig = {
   searchIndex: process.env.SEARCH_INDEX,
   elasticUri: process.env.ELASTIC_URI,
   defaultLang: process.env.DEFAULT_LANG,
+  advancedSearchParametersPath: process.env.ADVANCED_SEARCH_PARAMETERS_PATH,
 }
 
 // initialize the default controller
