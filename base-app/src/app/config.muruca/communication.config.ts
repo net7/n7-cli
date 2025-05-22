@@ -15,7 +15,6 @@ export default {
     'rest-local': {
       type: 'rest',
       baseUrl: 'https://sls.petrarcaonline.it/',
-      // baseUrl: 'https://demosls.muruca.cloud/'
       // baseUrl: 'http://localhost:3000/',
       config: {
         home: 'get_home',

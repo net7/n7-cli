@@ -46,7 +46,7 @@ export default {
     ],
   },
   pagination: {
-    selectLabel: 'search#results_number',
+    selectLabel: 'advancedsearch#results_number',
     limit: 5,
     options: [12, 24, 48],
   },
