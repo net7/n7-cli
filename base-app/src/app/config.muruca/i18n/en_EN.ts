@@ -1,0 +1,90 @@
+export default {
+  // GLOBAL VVV
+  'global#home': 'Home',
+  'global#maps': 'Maps',
+  'global#works': 'Works',
+  'global#date_human': 'Do MMMM YYYY',
+  'global#layout_error_title': 'Sorry, an error occurred',
+  'global#layout_error_description': 'Try reloading the page in a few moments and if the problem persists contact the platform administrator.',
+  'global#facet_empty_text': 'No results available',
+  'global#facet_loading_text': 'Loading...',
+
+  // READMORE VVV
+  'readmore#label': 'Show all',
+  'readmore#more': 'Read more',
+  'readmore#less': 'Close',
+
+  // SEARCH VVV
+  // Page title
+  'search#title_bibliographies': 'Bibliography',
+  'search#title_biographies': 'Ancient lifes',
+  'search#title_iconographies': 'Iconography',
+  'search#title_tools': 'Materials and Tools',
+  // Total results
+  'search#works_total': '<strong>{ total }</strong> Works',
+  'search#works_total_1': '<strong>{ total }</strong> Work',
+  'search#works_total_0': 'No Work found',
+  'search#books_total': '<strong>{ total }</strong> Books',
+  'search#books_total_1': '<strong>{ total }</strong> Book',
+  'search#books_total_0': 'No Book found',
+  'search#witnesses_total': '<strong>{ total }</strong> Witnesses',
+  'search#witnesses_total_1': '<strong>{ total }</strong> Witness',
+  'search#witnesses_total_0': 'No Witness found',
+  'search#bibliographies_total': '<strong>{ total }</strong> bibliographical references',
+  'search#bibliographies_total_1': '<strong>{ total }</strong> bibliographical reference',
+  'search#bibliographies_total_0': 'No bibliographical reference found',
+  'search#biographies_total': '<strong>{ total }</strong> ancient lifes',
+  'search#biographies_total_1': '<strong>{ total }</strong> ancient life',
+  'search#biographies_total_0': 'No ancient life found',
+  'search#iconographies_total': '<strong>{ total }</strong> iconographies',
+  'search#iconographies_total_1': '<strong>{ total }</strong> iconography',
+  'search#iconographies_total_0': 'No iconography found',
+  'search#tools_total': '<strong>{ total }</strong> materials and tools',
+  'search#tools_total_1': '<strong>{ total }</strong> materials and tools',
+  'search#tools_total_0': 'No material and tool found',
+  // Facets
+  'search#facets_title': 'Filter results',
+  'search#placeholder_query': 'Search in titles',
+  'search#placeholder_query-content': 'Search the works contained',
+  'search#placeholder_authors': 'Search an author',
+  'search#header_authors': 'Authors',
+  'search#header_keywords': 'Keywords',
+  'search#header_works': 'Works',
+  'search#header_libraries': 'Library',
+  'search#header_cities': 'Cities',
+  'search#header_dates': 'Dates',
+  'search#header_genres': 'Genre',
+  'search#header_language': 'Language',
+  // Order
+  'search#sort_title': 'Sort',
+  'search#sort_score': 'Sort for relevance',
+  'search#sort_asc': 'Alphabetical order (A→Z)',
+  'search#sort_desc': 'Alphabetical order (Z→A)',
+  // Results
+  'search#filters_title': 'Active filters:',
+  'search#fallback_text': 'Your search returned no matches. Try changing the parameters or resetting the search by clicking on the button below.',
+  'search#ko_text': 'Oops, we encountered an error in your search. Try changing the parameters or resetting the search by clicking on the button below.',
+  'search#fallback_button': 'Clear search',
+  'search#ko_button': 'Clear search',
+  'search#resultsamount': 'Results per page',
+  // Description
+  'search#description_button': 'Info',
+  'search#description_link': 'Close',
+
+  // RESOURCE VVV
+  'resource#authors': 'By',
+  'resource#date': 'Published on',
+  'resource#time_to_read': 'Time to read',
+  'resource#metadata': 'Metadati',
+  'resource#metadata_size': 'Size',
+  
+  // ADVANCED SEARCH
+  'advancedsearch#submit': 'Search',
+  'advancedsearch#reset': 'Clear fields',
+  'advancedsearch#results_total': '<strong>{ total }</strong> results',
+  'advancedsearch#results_total_1': '<strong>{ total }</strong> result',
+  'advancedsearch#results_total_0': 'No result found',
+  'advancedsearch#results_number': 'Results per page',
+  'advancedsearch#fulltext_text': 'Search the portal (all fields)',
+  'advancedsearch#label_title': 'Title',
+};
