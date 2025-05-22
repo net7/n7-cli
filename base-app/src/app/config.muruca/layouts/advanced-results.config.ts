@@ -2,7 +2,7 @@ export default {
   searchId: 'advanced_search',
   title: 'Risultati',
   resourcePath: '/work',
-  totalResultsText: 'advancedsearch#works_total',
+  totalResultsText: 'advancedsearch#results_total',
   grid: 1,
   filters: {
     // title: 'advancedsearch#filters_title',

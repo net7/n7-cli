@@ -5,8 +5,7 @@ export default {
   'global#works': 'Opere',
   'global#date_human': 'Do MMMM YYYY',
   'global#layout_error_title': 'Spiacenti, si è verificato un errore',
-  'global#layout_error_description':
-    "Prova a ricaricare la pagina tra qualche istante e se il problema persiste contatta l'amministratore della piattaforma.",
+  'global#layout_error_description': "Prova a ricaricare la pagina tra qualche istante e se il problema persiste contatta l'amministratore della piattaforma.",
   'global#facet_empty_text': 'Nessun elemento disponibile',
   'global#facet_loading_text': 'Loading...',
 
@@ -19,7 +18,7 @@ export default {
   // Page title
   'search#title_bibliographies': 'Bibliografia',
   'search#title_biographies': 'Vite antiche',
-  'search#title_iconographies': 'Vite antiche',
+  'search#title_iconographies': 'Iconografia',
   'search#title_tools': 'Materiali e strumenti',
   // Total results
   'search#works_total': '<strong>{ total }</strong> Opere',
@@ -82,9 +81,9 @@ export default {
   // ADVANCED SEARCH
   'advancedsearch#submit': 'Cerca',
   'advancedsearch#reset': 'Pulisci i campi',
-  'advancedsearch#works_total': '<strong>{ total }</strong> risultati',
-  'advancedsearch#works_total_1': '<strong>{ total }</strong> risultato',
-  'advancedsearch#works_total_0': 'Nessun risultato',
+  'advancedsearch#results_total': '<strong>{ total }</strong> risultati',
+  'advancedsearch#results_total_1': '<strong>{ total }</strong> risultato',
+  'advancedsearch#results_total_0': 'Nessun risultato',
   'advancedsearch#results_number': 'Risultati per pagina',
   'advancedsearch#fulltext_text': 'Cerca nel portale (in tutti i campi)',
   'advancedsearch#label_title': 'Titolo',
