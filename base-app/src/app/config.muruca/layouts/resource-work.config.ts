@@ -32,10 +32,17 @@ export default {
         title: 'Testimoni collegati',
       },
       {
-        id: 'collection-taxonomies',
+        id: 'collection-bibliography',
         type: 'collection',
-        grid: 3,
-        title: 'Tassonomie collegate',
+        grid: 1,
+        title: 'Bibliografia',
+        options: {
+          classes: 'mr-item-preview-bibliography',
+          itemPreview: {
+            limit: 9999,
+            striptags: false,
+          },
+        },
       },
     ],
   },
