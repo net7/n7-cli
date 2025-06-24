@@ -88,6 +88,7 @@
 // #PROJECT COMPONENTS
 // ------------------------------------ //
 @import 'components/carousel';
+@import 'components/header';
 
 // ------------------------------------ //
 // #COMMON LAYOUTS
@@ -107,6 +108,11 @@
 @import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/search';
 @import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/static';
 @import '../../node_modules/@net7/boilerplate-muruca/src/lib/styles/muruca/layouts/timeline';
+
+// ------------------------------------ //
+// #PROJECT LAYOUTS
+// ------------------------------------ //
+@import 'layouts/home';
 
 // ------------------------------------ //
 // #COMMON UTILITIES
