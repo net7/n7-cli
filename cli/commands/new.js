@@ -248,6 +248,8 @@ class CommandNew {
       files.push(file);
     });
 
+    console.warn(files);
+
     // info...
     this.printInfo(
       [
