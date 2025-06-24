@@ -12,6 +12,21 @@ export default {
             "description"
         ]
     },
+    "breadcrumbs": {
+        "type": "breadcrumb",
+        "fields": [
+          "breadcrumbs"
+        ]
+    },
+    "tab-bar": {
+        "type": "tabs",
+        "tabs": [
+            {
+                "id": 'tab_id',
+                'fields': ['check_field']
+            },
+        ],
+    },
     "metadata": {
         "type": "metadata",
         "fields": [
@@ -20,7 +35,7 @@ export default {
         ]
     },
 
-    "collection-witness": {
+    "collection": {
         "type": "collection",
         "fields": [
             "witnesses",
@@ -33,12 +48,9 @@ export default {
             "bibliography"
         ]
     },
-    
-    "breadcrumbs": {
-        "type": "breadcrumb",
-        "fields": [
-          "breadcrumbs"
-        ]
-    }
-    
+
+     "text-viewer": {
+        "type": "text-viewer",
+        "field": "transcription"
+    },
 }

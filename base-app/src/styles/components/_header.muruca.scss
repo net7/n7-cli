@@ -1,0 +1,55 @@
+/* ------------------------------------ *\
+   #HEADER
+\* ------------------------------------ */
+
+// Cosa NON fare da queste impostazioni:
+// - Colore header (_muruca-variables.scss --> $header-bg-color)
+// - Colore link subnav item (_muruca-variables.scss --> $color-text-link)
+
+.n7-header {
+  
+  // LOGO & TITLE
+  &__logo-title {
+    // Logo
+    .n7-header__title-subtitle {
+      // background-position: center;
+      // background-size: 100%;
+    }
+  }
+
+  // MENU
+  &__nav-list {
+    .n7-header__nav-item {
+      
+      // Navigation item
+      .n7-header__nav-link {
+        // color: #ffffff;
+      }
+      .n7-header__nav-link:hover .n7-header__nav-label {
+        // color: #c8c1c1;
+      }
+
+      // Arrow
+      .n7-header__nav-link:after {
+        // color: #ffffff;
+      }
+      .n7-header__nav-link:hover:after {
+        // color: #c8c1c1;
+      }
+    }
+  }
+
+  // MENU MOBILE
+  // Burgen icon
+  .n7-header &__mobile-menu-icon {
+    // color: #ffffff;
+    // opacity: 1;
+  }
+  .n7-header &__mobile-menu-icon:hover {
+    // color: #c8c1c1;
+  }
+  // Close icon
+  .n7-header__mobile-menu-close:hover {
+    // color: #c8c1c1;
+  }
+}
