@@ -14,10 +14,6 @@ const filesToReplace = [
     ext: "scss",
   },
   {
-    path: "src/styles/components/_header",
-    ext: "scss",
-  },
-  {
     path: "src/app/app.routes",
     ext: "ts",
   },
