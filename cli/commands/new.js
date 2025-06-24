@@ -220,11 +220,11 @@ class CommandNew {
       ].join("\n")
     );
 
-    console.warn('FILES:', files);
-
     return Promise.all(
-      files.map(({ src, dest }) =>
-        fs.copy(`${this.targetPath}/${src}`, `${this.targetPath}/${dest}`)
+      files.map(({ src, dest }) => {
+        console.warn(src, dest);
+        fs.copy(`${this.targetPath}/${src}`, `${this.targetPath}/${dest}`);
+      }
       )
     ).catch((err) => {
       console.log("replace files fail", err);
