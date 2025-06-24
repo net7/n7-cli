@@ -220,6 +220,8 @@ class CommandNew {
       ].join("\n")
     );
 
+    console.warn('FILES:', files);
+
     return Promise.all(
       files.map(({ src, dest }) =>
         fs.copy(`${this.targetPath}/${src}`, `${this.targetPath}/${dest}`)
