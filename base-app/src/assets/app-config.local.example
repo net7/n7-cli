@@ -1,0 +1,9 @@
+{
+  "communication": {
+    "providers": {
+      "rest-local": {
+        "baseUrl": "http://localhost:3000/"
+      }
+    }
+  }
+}
