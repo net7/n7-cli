@@ -10,6 +10,7 @@ import {
   MrStaticLayoutComponent,
   MrResourceLayoutComponent,
   MrTimelineLayoutComponent,
+  MrNetworkLayoutComponent,
   MrAdvancedSearchLayoutComponent,
   MrAdvancedResultsLayoutComponent,
   MrItineraryLayoutComponent,
@@ -23,6 +24,9 @@ type RouteConfig = {
   };
   data?: any;
   isRedirect?: boolean;
+  redirectTo?: {
+    [locale: string]: string;
+  };
 };
 
 const NOT_FOUND_PATH = 'page-404';
@@ -41,10 +45,22 @@ const config: {
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-work' },
   },
-  text: {
-    paths: { it: 'testo/:id/:slug', en: 'en/text/:id/:slug' },
+
+  // RESOURCE TAB
+  resName: {
+    isRedirect: true,
+    paths: { it: 'resName/:id/:slug', en: 'en/resName/:id/:slug' },
+    redirectTo: { it: 'resName/:id/:slug/introduction', en: 'en/resName/:id/:slug/introduction' },
+  },
+  introduction: {
+    paths: { it: 'resName/:id/:slug/introduction', en: 'en/resName/:id/:slug/introduction' },
     component: MrResourceLayoutComponent,
-    data: { configId: 'resource-text' },
+    data: { configId: 'resource-resName-localization' },
+  },
+  description: {
+    paths: { it: 'resName/:id/:slug/description', en: 'en/resName/:id/:slug/description' },
+    component: MrResourceLayoutComponent,
+    data: { configId: 'resource-resName-description' },
   },
 
   // TESTIMONI
@@ -57,6 +73,13 @@ const config: {
     paths: { it: 'testimone/:id/:slug', en: 'en/witness/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-witness' },
+  },
+
+  // TESTO
+  text: {
+    paths: { it: 'testo/:id/:slug', en: 'en/text/:id/:slug' },
+    component: MrResourceLayoutComponent,
+    data: { configId: 'resource-text' },
   },
 
   // BIBLIOTECA
@@ -114,7 +137,7 @@ const config: {
     data: { configId: 'resource-tools' },
   },
 
-  // CRONOLOGIA
+  // TIMELINE
   timeline: {
     paths: { it: 'timeline', en: 'en/timeline' },
     component: MrTimelineLayoutComponent,
@@ -130,6 +153,13 @@ const config: {
     component: MrTimelineLayoutComponent,
     data: { configId: 'timeline' },
   },
+
+  // NETWORK
+  network: {
+    component: MrNetworkLayoutComponent,
+    paths: { it: 'network', en: 'en/network' },
+    data: { configId: 'network' }
+  }, 
 
   // PERCORSI
   itinerary: {
@@ -150,39 +180,36 @@ const config: {
     data: { configId: 'advanced-results' },
   },
 
-  // HOME
-  home: {
-    component: MrHomeLayoutComponent,
-    paths: { it: '', en: 'en/' },
-    data: { configId: 'home' },
-  },
-  homeRedirect: { paths: { en: 'en' }, isRedirect: true },
-
-  // PAGE 404
-  page404: {
-    paths: { it: NOT_FOUND_PATH, en: `en/${NOT_FOUND_PATH}` },
-    component: Page404LayoutComponent,
-    data: { id: 'page-404' },
-  },
-
   // PAGINA STATICA
   page: {
     component: MrStaticLayoutComponent,
-    paths: {
-      it: ':slug',
-      en: 'en/:slug',
-    },
+    paths: { it: ':slug', en: 'en/:slug' },
     data: { configId: 'page' },
   },
 
   // POST
   post: {
     component: MrStaticLayoutComponent,
-    paths: {
-      it: 'post/:slug',
-      en: 'en/post/:slug',
-    },
+    paths: { it: 'post/:slug', en: 'en/post/:slug' },
     data: { configId: 'post' },
+  },
+
+  // HOME
+  home: {
+    component: MrHomeLayoutComponent,
+    paths: { it: '', en: 'en/' },
+    data: { configId: 'home' },
+  },
+  homeRedirect: { 
+    paths: { en: 'en' }, 
+    isRedirect: true 
+  },
+
+  // PAGE 404
+  page404: {
+    paths: { it: NOT_FOUND_PATH, en: `en/${NOT_FOUND_PATH}` },
+    component: Page404LayoutComponent,
+    data: { id: 'page-404' },
   },
 };
 
@@ -198,20 +225,24 @@ const APP_ROUTES: any = [
  * Generate angular routes from config
  */
 Object.keys(config).forEach((routeId) => {
-  const { component, data, paths, isRedirect } = config[routeId];
+  const { component, data, paths, isRedirect, redirectTo } = config[routeId];
   Object.entries(paths).forEach(([locale, path]) => {
-    // path to component
-    if (component) {
-      APP_ROUTES.push({
-        path,
-        component,
-        data: { ...data, routeId, locale },
-        canActivate: [LocaleDependenciesGuard],
+    if (!isRedirect) {
+      // path to component
+      if (component) {
+        APP_ROUTES.push({
+          path,
+          component,
+          data: { ...data, routeId, locale },
+          canActivate: [LocaleDependenciesGuard],
+        });
+      }
+    } else {
+      APP_ROUTES.push({ 
+        path, 
+        redirectTo: redirectTo ? redirectTo[locale] : `${path}/`,
+        data: { ...data, routeId, locale }, 
       });
-    }
-    // catch route
-    if (isRedirect) {
-      APP_ROUTES.push({ path, redirectTo: `${path}/` });
     }
   });
 });

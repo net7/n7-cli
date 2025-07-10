@@ -6,15 +6,21 @@ import {
     MenuParser,
     FooterParser,
     StaticPageParser,
-    TranslationParser
+    TranslationParser,
+    SearchDescriptionParser,
+    TimelineParser,
+    NetworkParser,
 } from '@n7-frontend/n7-muruca-middleware';
 
 export default {
     home: BasemdwnameHomeParser,
     search: BasemdwnameSearchParser,
     resource: BasemdwnameResourceParser,
+    searchDescription: SearchDescriptionParser,
     menu: MenuParser,
     footer: FooterParser,
     static: StaticPageParser,
-    translation: TranslationParser
+    translation: TranslationParser,
+    timeline: TimelineParser,
+    network: NetworkParser,
 }

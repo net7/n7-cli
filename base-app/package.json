@@ -11,7 +11,8 @@
     "docker:build": "cd build_scripts/ && sh build.sh",
     "docker:serve": "cd build_scripts/ && sh serve.sh",
     "stylelint": "stylelint \"src/styles/**/*.scss\"; exit 0",
-    "stylelint:watch": "onchange \"src/styles/**/*.scss\" -- npm run stylelint"
+    "stylelint:watch": "onchange \"src/styles/**/*.scss\" -- npm run stylelint",
+    "update:framework": "npm update @net7/components @net7/boilerplate-common @net7/boilerplate-muruca @net7/core @n7-frontend/icon-font"
   },
   "private": true,
   "dependencies": {

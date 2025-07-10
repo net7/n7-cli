@@ -21,6 +21,7 @@ const customConfig = {
   elasticUri: process.env.ELASTIC_URI,
   defaultLang: process.env.DEFAULT_LANG,
   advancedSearchParametersPath: process.env.ADVANCED_SEARCH_PARAMETERS_PATH,
+  teiPublisherUri: process.env.TEIPUBLISHER_URI
 }
 
 // initialize the default controller
