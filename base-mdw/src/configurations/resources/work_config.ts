@@ -12,6 +12,12 @@ export default {
             "description"
         ]
     },
+    "editor_metadata": {
+        "type": "metadata",
+        "fields": [
+            "editor",
+        ]
+    }, 
     "breadcrumbs": {
         "type": "breadcrumb",
         "fields": [
@@ -34,21 +40,18 @@ export default {
             "editor_source",
         ]
     },
-
     "collection": {
         "type": "collection",
         "fields": [
             "witnesses",
         ]
     },
-
     "collection-bibliography": {
         "type": "bibliography",
         "fields": [
             "bibliography"
         ]
     },
-
      "text-viewer": {
         "type": "text-viewer",
         "field": "transcription"

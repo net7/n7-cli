@@ -14,7 +14,8 @@ export default {
     },
     'rest-local': {
       type: 'rest',
-      baseUrl: 'https://sls.petrarcaonline.it/',
+      baseUrl: 'https://mdw.[nomeProg].muruca.cloud/',
+      // baseUrl: 'https://sls.petrarcaonline.it/',
       // baseUrl: 'http://localhost:3000/',
       config: {
         home: 'get_home',
@@ -29,6 +30,7 @@ export default {
         resource: 'get_resource',
         footer: 'get_footer',
         timeline: 'get_timeline/time-events',
+        network: 'get_network',
         timelineDescription: 'get_search_description/timeline',
         itinerary: 'get_itinerary/',
         translation: 'get_translation/',
