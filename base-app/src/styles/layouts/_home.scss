@@ -56,34 +56,38 @@
       }
 
       /* --- CARDS (alternative style) --- */
-      // .n7-item-preview__content {
-      //   justify-content: flex-end;
-      //   // height: 300px;  // increase img space --> in ".mr-layout__collection" add "padding-bottom: 60px";
-      //   overflow: hidden;
-      //   border: 5px solid #ffffff;
-      //   border-radius: 13px;
-      //   padding: 0;
-      //   .n7-item-preview__title-text {
-      //     width: 100%;
-      //     padding: 20px 20px 15px 20px;
-      //     background-color: $color-adalgisa-red;
-      //     // background-color: rgba(0, 0, 0, 0.7);  // another version -->  reduce border radius to 5px in ".n7-item-preview__content" and ".n7-item-preview__image", comment border in ".n7-item-preview__content"
-      //     .n7-item-preview__title {
-      //       // font-weight: 500;
+      // .n7-item-preview__inner {
+      //   // height: 150px;
+      //   transition: all 0.2s;
+      //   .n7-item-preview__content {
+      //     justify-content: flex-end;
+      //     // height: 300px;  // increase img space --> in ".mr-layout__collection" add "padding-bottom: 60px";
+      //     overflow: hidden;
+      //     border: 5px solid #ffffff;
+      //     border-radius: 13px;
+      //     padding: 0;
+      //     .n7-item-preview__title-text {
+      //       width: 100%;
+      //       padding: 20px 20px 15px 20px;
+      //       background-color: $color-adalgisa-red;
+      //       // background-color: rgba(0, 0, 0, 0.7);  // another version -->  reduce border radius to 5px in ".n7-item-preview__content" and ".n7-item-preview__image", comment border in ".n7-item-preview__content"
+      //       .n7-item-preview__title {
+      //         // font-weight: 500;
+      //       }
+      //       .n7-item-preview__text p {
+      //         color: #707578;
+      //       }
       //     }
       //   }
-      // }
-      // // Img
-      // .n7-item-preview__image {
-      //   border-radius: 14px;
-      // }
-      // .n7-item-preview__image::after {
-      //   background-color: transparent;
+      //   // Img
+      //   .n7-item-preview__image {
+      //     border-radius: 14px;
+      //   }
+      //   .n7-item-preview__image::after {
+      //     background-color: transparent;
+      //   }
       // }
       // // Hover effect
-      // .n7-item-preview__inner {
-      //   transition: all 0.2s;
-      // }
       // .n7-item-preview__inner:hover {
       //   transform: translateY(-10px);
       //   filter: drop-shadow(0 4px 8px rgb(0 0 0 / 15%));

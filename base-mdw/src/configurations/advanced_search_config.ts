@@ -98,5 +98,4 @@ const advancedSearchConfig =  {
   },
 };
 
-
 export default advancedSearchConfig;
