@@ -63,7 +63,7 @@ export default {
     button: 'search#fallback_button',
     payload: {
       action: 'redirect',
-      url: '/ricerca-avanzata',
+      url: '/advanced-search',
     },
   },
   ko: {

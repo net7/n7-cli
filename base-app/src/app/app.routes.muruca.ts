@@ -36,12 +36,12 @@ const config: {
 
   // OPERE
   opere: {
-    paths: { it: 'opere', en: 'en/works' },
+    paths: { it: 'works', en: 'en/works' },
     component: MrSearchLayoutComponent,
     data: { configId: 'search-works' },
   },
   work: {
-    paths: { it: 'opera/:id/:slug', en: 'en/work/:id/:slug' },
+    paths: { it: 'work/:id/:slug', en: 'en/work/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-work' },
   },
@@ -65,38 +65,45 @@ const config: {
 
   // TESTIMONI
   testimoni: {
-    paths: { it: 'testimoni', en: 'en/witnesses' },
+    paths: { it: 'witnesses', en: 'en/witnesses' },
     component: MrSearchLayoutComponent,
     data: { configId: 'search-witnesses' },
   },
   witness: {
-    paths: { it: 'testimone/:id/:slug', en: 'en/witness/:id/:slug' },
+    paths: { it: 'witness/:id/:slug', en: 'en/witness/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-witness' },
   },
 
   // TESTO
   text: {
-    paths: { it: 'testo/:id/:slug', en: 'en/text/:id/:slug' },
+    paths: { it: 'text/:id/:slug', en: 'en/text/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-text' },
   },
 
+  // POST
+  post: {
+    component: MrStaticLayoutComponent,
+    paths: { it: 'post/:slug', en: 'en/post/:slug' },
+    data: { configId: 'post' },
+  },
+
   // BIBLIOTECA
   biblioteca: {
-    paths: { it: 'biblioteca', en: 'en/library' },
+    paths: { it: 'library', en: 'en/library' },
     component: MrSearchLayoutComponent,
     data: { configId: 'search-books' },
   },  
   book: {
-    paths: { it: 'libro/:id/:slug', en: 'en/book/:id/:slug' },
+    paths: { it: 'book/:id/:slug', en: 'en/book/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-book' },
   },
 
   // BIBLIOGRAFIA
-  bibliografia: {
-    paths: { it: 'bibliografia', en: 'en/bibliography' },
+  bibliography: {
+    paths: { it: 'bibliography', en: 'en/bibliography' },
     component: MrSearchLayoutComponent,
     data: { configId: 'search-bibliografia' },
   }, 
@@ -108,31 +115,31 @@ const config: {
     data: { configId: 'search-biographies' },
   },
   biography: {
-    paths: { it: 'biografia/:id/:slug', en: 'en/biography/:id/:slug' },
+    paths: { it: 'biography/:id/:slug', en: 'en/biography/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-biography' },
   },
 
   // ICONOGRAFIA
   iconografia: {
-    paths: { it: 'iconografia', en: 'en/iconography' },
+    paths: { it: 'iconography', en: 'en/iconography' },
     component: MrSearchLayoutComponent,
     data: { configId: 'search-iconographies' },
   },
   iconography: {
-    paths: { it: 'iconografia/:id/:slug', en: 'en/iconography/:id/:slug' },
+    paths: { it: 'iconography/:id/:slug', en: 'en/iconography/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-iconography' },
   },
 
   // MATERIALI E STRUMENTI
   search_tools: {
-    paths: { it: 'materiali_strumenti', en: 'en/tools' },
+    paths: { it: 'tools', en: 'en/tools' },
     component: MrSearchLayoutComponent,
     data: { configId: 'search-tools' },
   },
   tools: {
-    paths: { it: 'strumenti/:id/:slug', en: 'en/tools/:id/:slug' },
+    paths: { it: 'tools/:id/:slug', en: 'en/tools/:id/:slug' },
     component: MrResourceLayoutComponent,
     data: { configId: 'resource-tools' },
   },
@@ -163,14 +170,14 @@ const config: {
 
   // PERCORSI
   itinerary: {
-    paths: { it: 'percorsi/:id/:slug', en: 'en/itinerary/:id/:slug' },
+    paths: { it: 'itinerary/:id/:slug', en: 'en/itinerary/:id/:slug' },
     component: MrItineraryLayoutComponent,
     data: { configId: 'itinerary' },
   },
 
   // RICERCA AVANZATA
   search: {
-    paths: { it: 'ricerca-avanzata', en: 'en/research' },
+    paths: { it: 'advanced-search', en: 'en/advanced-search' },
     component: MrAdvancedSearchLayoutComponent,
     data: { configId: 'advanced-search' },
   },
@@ -185,13 +192,6 @@ const config: {
     component: MrStaticLayoutComponent,
     paths: { it: ':slug', en: 'en/:slug' },
     data: { configId: 'page' },
-  },
-
-  // POST
-  post: {
-    component: MrStaticLayoutComponent,
-    paths: { it: 'post/:slug', en: 'en/post/:slug' },
-    data: { configId: 'post' },
   },
 
   // HOME

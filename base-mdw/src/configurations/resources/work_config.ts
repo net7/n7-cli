@@ -56,4 +56,11 @@ export default {
         "type": "text-viewer",
         "field": "transcription"
     },
+    "image-viewer-iiif": {
+        "type" : "image-viewer-iiif",
+        "excludePDF": true,
+        "fields": [
+            "riproduzione_iiif"
+        ]
+    },
 }

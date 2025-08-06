@@ -46,6 +46,45 @@ const searchConfig: ConfigSearch = {
 		}
 	},
 
+	/** BIBLIOGRAPHY **/
+	"bibliography": {
+		"base_query": {
+			"field": "record-type",
+			"value": "bibliography"
+		},
+		sort: {
+			title: {
+				field: "title.sort"
+			}
+		},
+		"lang": {
+			"query": {
+				"type": "selection",
+				"field": "language"
+			}
+		},
+		"facets-aggs": {
+			"type": "obj",
+			"aggregations": {}
+		},
+		"filters": {
+			"query": {
+				"type": "fulltext",
+				"field": [
+					"description"
+				],
+				"addStar": true
+			},
+			"auth_query": {
+				"type": "fulltext",
+				"field": [
+					"title"
+				],
+				"addStar": true
+			}
+		}
+	},
+
 	/** RESULTS FORMATTER **/
 	"results": [
 		{
@@ -66,12 +105,12 @@ const searchConfig: ConfigSearch = {
 		},
 		{
 			"label": "text",
-			"field":  "description",
+			"field":  "",
 			"max-char": 100	
 		},
 		{
 			"label": "metadata",
-			"field": ["author", "type"],
+			"field": [],
 			"max-char": 100
 		},
 		{
