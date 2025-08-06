@@ -7,12 +7,12 @@ import searchBibliografia from './search-bibliography.config';
 import searchIconographiesConfig from './search-iconographies.config';
 import searchToolsConfig from './search-tools.config';
 import searchBiographiesConfig from './search-biographies.config';
-//Resource
+// Resource
 import resourceWorkConfig from './resource-work.config';
 import resourceBookConfig from './resource-book.config';
 import resourceWitnessConfig from './resource-witness.config';
 import resourceToponymConfig from './resource-toponym.config';
-import resourceModalBibliography_witConfig from './resource-modal-bibliography_wit.config';
+import resourceModalBibliographyConfig from './resource-modal-bibliography.config';
 import resourceIconographyConfig from './resource-iconography.config';
 import resourceBiographyConfig from './resource-biography.config';
 import resourceToolConfig from './resource-tool.config';
@@ -44,7 +44,7 @@ export default {
   'resource-book': resourceBookConfig,
   'resource-witness': resourceWitnessConfig,
   'resource-toponym': resourceToponymConfig,
-  'resource-modal-bibliography_wit': resourceModalBibliography_witConfig,
+  'resource-modal-bibliography': resourceModalBibliographyConfig,
   'resource-iconography': resourceIconographyConfig,
   'resource-biography': resourceBiographyConfig,
   'resource-tool': resourceToolConfig,

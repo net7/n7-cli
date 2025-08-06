@@ -2,7 +2,7 @@ import { ConfigMurucaSearchLayout } from '@net7/boilerplate-muruca';
 import searchWitnessesFacetsConfig from './search-witnesses-facets.config';
 
 export default {
-  title: 'Testimoni',
+  title: 'search#title_witnesses',
   searchId: 'witness',
   searchConfig: searchWitnessesFacetsConfig,
   facetsTitle: 'search#facets_title',

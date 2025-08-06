@@ -16,6 +16,8 @@ export default {
 
   // SEARCH
   // Page title
+  'search#title_works': 'Opere',
+  'search#title_witnesses': 'Testimoni',
   'search#title_bibliographies': 'Bibliografia',
   'search#title_biographies': 'Vite antiche',
   'search#title_iconographies': 'Iconografia',
@@ -73,10 +75,13 @@ export default {
 
   // RESOURCE
   'resource#authors': 'di',
+  'resource#author': 'di',
   'resource#date': 'pubblicato il',
   'resource#time_to_read': 'lettura di',
   'resource#metadata': 'Metadati',
   'resource#metadata_size': 'Dimensioni',
+  'resource#collection_witness': 'Testimoni collegati',
+  'resource#bibliography': 'Bibliografia',
   
   // ADVANCED SEARCH
   'advancedsearch#submit': 'Cerca',
@@ -87,4 +92,7 @@ export default {
   'advancedsearch#results_number': 'Risultati per pagina',
   'advancedsearch#fulltext_text': 'Cerca nel portale (in tutti i campi)',
   'advancedsearch#label_title': 'Titolo',
+
+  // ITINERARY
+  'itinerary#related_res_title': 'Related itineraries',
 };

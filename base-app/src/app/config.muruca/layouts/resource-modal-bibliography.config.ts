@@ -11,6 +11,11 @@ export default {
     ],
     content: [
       {
+        id: 'metadata',
+        type: 'metadata',
+        title: '',
+      },
+      {
         id: 'collection-witnesses',
         type: 'collection',
         grid: 3,

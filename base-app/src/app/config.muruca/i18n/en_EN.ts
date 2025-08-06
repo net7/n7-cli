@@ -1,5 +1,5 @@
 export default {
-  // GLOBAL VVV
+  // GLOBAL
   'global#home': 'Home',
   'global#maps': 'Maps',
   'global#works': 'Works',
@@ -9,13 +9,15 @@ export default {
   'global#facet_empty_text': 'No results available',
   'global#facet_loading_text': 'Loading...',
 
-  // READMORE VVV
+  // READMORE
   'readmore#label': 'Show all',
   'readmore#more': 'Read more',
   'readmore#less': 'Close',
 
-  // SEARCH VVV
+  // SEARCH
   // Page title
+  'search#title_works': 'Works',
+  'search#title_witnesses': 'Witnesses',
   'search#title_bibliographies': 'Bibliography',
   'search#title_biographies': 'Ancient lifes',
   'search#title_iconographies': 'Iconography',
@@ -71,12 +73,15 @@ export default {
   'search#description_button': 'Info',
   'search#description_link': 'Close',
 
-  // RESOURCE VVV
+  // RESOURCE
   'resource#authors': 'By',
+  'resource#author': 'By',
   'resource#date': 'Published on',
   'resource#time_to_read': 'Time to read',
   'resource#metadata': 'Metadati',
   'resource#metadata_size': 'Size',
+  'resource#collection_witness': 'Related witnesses',
+  'resource#bibliography': 'Bibliography',
   
   // ADVANCED SEARCH
   'advancedsearch#submit': 'Search',
@@ -87,4 +92,7 @@ export default {
   'advancedsearch#results_number': 'Results per page',
   'advancedsearch#fulltext_text': 'Search the portal (all fields)',
   'advancedsearch#label_title': 'Title',
+
+  // ITINERARY
+  'itinerary#related_res_title': 'Related itineraries',
 };

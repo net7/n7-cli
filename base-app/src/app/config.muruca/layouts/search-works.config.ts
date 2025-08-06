@@ -2,13 +2,14 @@ import { ConfigMurucaSearchLayout } from '@net7/boilerplate-muruca';
 import searchWorksFacetsConfig from './search-works-facets.config';
 
 export default {
-  title: 'Opere',
+  title: 'search#title_works',
   searchId: 'work',
   searchConfig: searchWorksFacetsConfig,
   resourcePath: '/work',
   facetsTitle: 'search#facets_title',
   totalResultsText: 'search#works_total',
   filtersTitle: 'search#filters_title',
+  grid: 1,
   sort: {
     label: 'search#sort_title',
     options: [

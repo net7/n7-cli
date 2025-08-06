@@ -9,7 +9,6 @@ export default {
       {
         id: 'header',
         type: 'title',
-        grid: null,
       },
       {
         id: 'editor_metadata',
@@ -33,13 +32,13 @@ export default {
         id: 'collection-witnesses',
         type: 'collection',
         grid: 3,
-        title: 'Testimoni collegati',
+        title: 'resource#collection_witness',
       },
       {
         id: 'collection-bibliography',
         type: 'collection',
         grid: 1,
-        title: 'Bibliografia',
+        title: 'resource#bibliography',
         options: {
           classes: 'mr-item-preview-bibliography',
           itemPreview: {
@@ -47,6 +46,29 @@ export default {
             striptags: false,
           },
         },
+      },
+      {
+        id: 'image-viewer-iiif',
+        type: 'viewer-iiif',
+        title: 'resource#image-viewer-iiif',
+        options: {
+          libOptions: {
+            window: {
+              sideBarOpenByDefault: false,
+              allowClose: false,
+              allowMaximize: true,
+              defaultSideBarPanel: 'info',
+              views: [
+                { key: 'single' },
+                { key: 'gallery' },
+              ],
+              workspaceControlPanel: {
+                enabled: false,
+              },
+            },
+            id: 'mirador-container',
+          },
+        }
       },
     ],
   },
