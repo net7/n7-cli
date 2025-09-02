@@ -38,7 +38,7 @@ export class BasemdwnameResourceParser extends ResourceParser {
 
   // FILTERS
   // filterMetadataItem(field: string, metadataItem: OutputMetadataItem, recordType: string, data: any): OutputMetadataItem {
-  //   if (/label/.test(field)) {
+  //   if (/^label$/.test(field)) {
   //     metadataItem = {
   //       label: field.replace(/_/g, " "),
   //       value: data[field].title
