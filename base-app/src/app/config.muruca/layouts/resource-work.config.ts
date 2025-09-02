@@ -70,6 +70,11 @@ export default {
           },
         }
       },
+      {
+        id: 'image-viewer',
+        type: 'viewer',
+        grid: 3,
+      },
     ],
   },
 } as ConfigMurucaResourceLayout;

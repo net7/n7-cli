@@ -50,6 +50,12 @@ const advancedSearchConfig =  {
           value: 'witness'
         },
       },
+      // Ricerca se il campo è vuoto o meno (nel FE inviare true o false)
+      // Aggiungere .keyword se è un campo testuale
+      'query-manuscrito-consta': {
+        type: 'term_exists',
+        field: 'manuscripts',
+      },
     },
     show_highlights: true,
     results: [

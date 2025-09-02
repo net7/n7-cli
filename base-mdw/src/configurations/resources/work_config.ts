@@ -63,4 +63,10 @@ export default {
             "riproduzione_iiif"
         ]
     },
+    "image-viewer": {
+        "type": "image-viewer",
+        "fields": [
+            "images"
+        ]
+    }
 }
