@@ -1,0 +1,43 @@
+/* ------------------------------------ *\
+   # FOOTER MURUCA
+\* ------------------------------------ */
+
+// ! Template utilizzabile solo per progetti Muruca !
+
+.n7-footer {
+  &__content {
+
+    // COLUMN IMG
+    .n7-footer__column:nth-child(1) {
+        // flex: 3;
+
+        .n7-footer__column-images {
+
+            // First img
+            img:nth-child(1) {
+                // max-height: 50px; // usare se la prima img è molto lunga (es: mix con Canvas di Unione Europea + MIUR + Italiadomani...)
+            }
+
+            // All img
+            a {
+                // margin-right: 30px;
+
+                img {
+                    // max-width: 100%;
+                    // margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    // COLUMN MENU
+    .n7-footer__column:nth-child(2) {
+
+    }
+
+    // COLUMN MURUCA PROMO
+    .n7-footer__column:nth-child(3) {
+
+    }
+  }
+}
