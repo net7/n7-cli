@@ -1,6 +1,6 @@
 export default {
   searchId: 'advanced_search',
-  title: 'Risultati',
+  title: 'advancedsearch#results_title',
   resourcePath: '/work',
   totalResultsText: 'advancedsearch#results_total',
   grid: 1,

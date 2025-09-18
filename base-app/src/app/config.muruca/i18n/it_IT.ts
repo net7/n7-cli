@@ -71,7 +71,7 @@ export default {
   'search#resultsamount': 'Risultati per pagina',
   // Description
   'search#description_button': 'Info',
-  'search#description_link': 'Ok, ho capito',
+  'search#description_link': 'Chiudi',
 
   // RESOURCE
   'resource#authors': 'di',
@@ -84,6 +84,8 @@ export default {
   'resource#bibliography': 'Bibliografia',
   
   // ADVANCED SEARCH
+  'advancedsearch#title': 'Ricerca avanzata',
+  'advancedsearch#results_title': 'Risultati',
   'advancedsearch#submit': 'Cerca',
   'advancedsearch#reset': 'Pulisci i campi',
   'advancedsearch#results_total': '<strong>{ total }</strong> risultati',

@@ -84,6 +84,8 @@ export default {
   'resource#bibliography': 'Bibliography',
   
   // ADVANCED SEARCH
+  'advancedsearch#title': 'Advanced search',
+  'advancedsearch#results_title': 'Results',
   'advancedsearch#submit': 'Search',
   'advancedsearch#reset': 'Clear fields',
   'advancedsearch#results_total': '<strong>{ total }</strong> results',

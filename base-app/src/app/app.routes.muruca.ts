@@ -182,7 +182,7 @@ const config: {
     data: { configId: 'advanced-search' },
   },
   search_results: {
-    paths: { it: 'risultati', en: 'en/results' },
+    paths: { it: 'results', en: 'en/results' },
     component: MrAdvancedResultsLayoutComponent,
     data: { configId: 'advanced-results' },
   },
