@@ -10,6 +10,7 @@ const filesToReplace = [
   'src/parsers/basemdwname-home.ts',
   'src/parsers/basemdwname-resources.ts',
   'src/parsers/basemdwname-search.ts',
+  'src/parsers/basemdwname-advancedSearch.ts',
 ];
 const placeholdersToReplace = {
   pointer: ['name', 'nameUppercase', 'nameCamelcase'],
@@ -20,6 +21,7 @@ const placeholdersToReplace = {
     'src/parsers/basemdwname-home.ts',
     'src/parsers/basemdwname-resources.ts',
     'src/parsers/basemdwname-search.ts',
+    'src/parsers/basemdwname-advancedSearch.ts',
     'src/parsers/index.ts',
   ]
 };

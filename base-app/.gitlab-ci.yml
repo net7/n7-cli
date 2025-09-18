@@ -1,0 +1,18 @@
+deploy-stage:
+  image: alpine:latest
+  before_script:
+    - apk add --update openssh
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    # - echo -e '#!/bin/sh\necho -n "$SSH_PASSPHRASE"' > ~/.ssh/.print_ssh_password
+    - echo "$SSH_PRIVATE_KEY" > /tmp/private_key
+    - chmod 700 /tmp/private_key
+  variables:
+    DISPLAY: '1'
+  script:
+    # - chmod +x ~/.ssh/.print_ssh_password
+    - eval $(ssh-agent -s)
+    - ssh-add /tmp/private_key
+    - ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ${SERVER_ADDRESS} "cd ${PROJECT_PATH} && git pull && cd build_scripts && sh build.sh && exit"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"

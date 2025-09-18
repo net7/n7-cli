@@ -1,8 +1,8 @@
 import { ConfigMurucaAdvancedSearchLayout } from '@net7/boilerplate-muruca';
 
 export default {
-  title: 'Ricerca avanzata',
-  resultsUrl: { it: '/risultati' },
+  title: 'advancedsearch#title',
+  resultsUrl: { it: '/results' },
   hasDynamicOptions: true,
   formConfig: {
     submitButton: {

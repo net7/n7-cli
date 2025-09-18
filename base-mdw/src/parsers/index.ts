@@ -2,6 +2,7 @@
 import { BasemdwnameHomeParser } from './basemdwname-home';
 import { BasemdwnameSearchParser } from './basemdwname-search';
 import { BasemdwnameResourceParser } from "./basemdwname-resources";
+import { BasemdwnameAdvancedSearchParser } from './basemdwname-advancedSearch';
 import {
     MenuParser,
     FooterParser,
@@ -16,6 +17,7 @@ export default {
     home: BasemdwnameHomeParser,
     search: BasemdwnameSearchParser,
     resource: BasemdwnameResourceParser,
+    advancedSearch: BasemdwnameAdvancedSearchParser,
     searchDescription: SearchDescriptionParser,
     menu: MenuParser,
     footer: FooterParser,

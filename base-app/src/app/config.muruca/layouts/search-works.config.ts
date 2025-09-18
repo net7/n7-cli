@@ -10,6 +10,12 @@ export default {
   totalResultsText: 'search#works_total',
   filtersTitle: 'search#filters_title',
   grid: 1,
+  // advancedResults: true,
+  // description: {
+  //   id: 'work',
+  //   buttonText: 'search#description_button',
+  //   linkText: 'search#description_link',
+  // },
   sort: {
     label: 'search#sort_title',
     options: [
