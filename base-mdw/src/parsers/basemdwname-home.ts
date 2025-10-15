@@ -18,12 +18,20 @@ export class BasemdwnameHomeParser extends HomeParser {
     }
   }
   protected parseCollectionItems(data: any, block: string) {
-    if (/collection-works/.test(block)) {
-      return data.items.map((d: any) => ({
-        title: d.item[0].title,
-        text: d.item[0].description,
-        link: `/work/${d.item[0].id}/${d.item[0].slug}`
-      }))
-    }
-  }
+    return data.items.map((d: any) => ({
+      title: d.title,
+      text: d.text,
+      link: d.item,
+      image: d.image
+    }))
+  } 
+  // protected parseCollectionItems(data: any, block: string) {
+  //   if (/collection-works/.test(block)) {
+  //     return data.items.map((d: any) => ({
+  //       title: d.item[0].title,
+  //       text: d.item[0].description,
+  //       link: `/work/${d.item[0].id}/${d.item[0].slug}`
+  //     }))
+  //   }
+  // }
 }
