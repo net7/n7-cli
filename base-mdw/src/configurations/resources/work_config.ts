@@ -46,13 +46,19 @@ export default {
             "witnesses",
         ]
     },
+    "collection-digital-edition": {
+      "type": "collection-digital-edition",
+      "fields": [
+          "transcription"
+      ]
+    },
     "collection-bibliography": {
         "type": "bibliography",
         "fields": [
             "bibliography"
         ]
     },
-     "text-viewer": {
+    "text-viewer": {
         "type": "text-viewer",
         "field": "transcription"
     },
@@ -68,5 +74,11 @@ export default {
         "fields": [
             "images"
         ]
-    }
+    },
+    'embedded-content-maps': {
+      "type": 'embedded-content',
+      "fields": [
+        "coordinates",
+      ],
+    },
 }
