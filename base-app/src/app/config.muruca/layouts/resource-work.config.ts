@@ -35,6 +35,11 @@ export default {
         title: 'resource#collection_witness',
       },
       {
+        id: 'collection-digital-edition',
+        type: 'collection',
+        grid: 1,
+      },
+      {
         id: 'collection-bibliography',
         type: 'collection',
         grid: 1,
@@ -74,6 +79,10 @@ export default {
         id: 'image-viewer',
         type: 'viewer',
         grid: 3,
+      },
+      {
+        id: 'embedded-content-iframe',
+        type: 'embedded-content',
       },
     ],
   },
