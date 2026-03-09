@@ -22,10 +22,25 @@ const searchConfig: ConfigSearch = {
 		"facets-aggs": {
 			"type": "obj",
 			"aggregations": {
+				// Non nested
 				"authors": {
 					"nested": false,
-					"search":"taxonomies.author.key.keyword",
-					"title":"taxonomies.author.name.keyword"
+					"search":"author.key.keyword",
+					"title":"author.name.keyword"
+				},
+				// Ricerca nella select
+				"places": {
+					"nested": false,
+					"innerFilterField": ["place.name"],
+					"search":"place.key.keyword",
+					"title":"place.name.keyword"
+				},
+				// Nested
+				"alt_titles": {
+					"nested": true,
+					"nestedFields": ["alt_titles"],
+					"search":"alt_titles.slug.keyword",
+					"title":"alt_titles.title.keyword"
 				},
 			}
 		},
@@ -40,7 +55,7 @@ const searchConfig: ConfigSearch = {
 			},
 			"authors": {
 				"type": "multivalue",
-				"field": "taxonomies.author.key.keyword",
+				"field": "author.key.keyword",
 				"operator": "AND"
 			},
 		}
