@@ -6,6 +6,7 @@ import {
 
 const facets = {
   sections: [
+    // Ricerca testuale
     {
       id: 'section-query',
       inputs: [
@@ -28,6 +29,7 @@ const facets = {
         },
       ],
     },
+    // Ricerca con select
     {
       id: 'section-authors',
       header: {
@@ -37,19 +39,64 @@ const facets = {
           additionalText: null
         }
       },
-      inputs: [{
-        id: 'authors',
-        type: 'link',
-        limit: 50,
-        queryParam: true,
-        schema: {
-          valueType: 'string',
-          multiple: true
-        },
-        data: {
-          links: []
+      inputs: [
+        {
+          id: 'authors',
+          type: 'link',
+          limit: 50,
+          queryParam: true,
+          schema: {
+            valueType: 'string',
+            multiple: true
+          },
+          data: {
+            links: []
+          }
         }
-      }]
+      ]
+    },
+    // Testuale + select
+    {
+      id: 'section-places',
+      header: {
+        id: 'header-places',
+        data: {
+          text: 'search#header_places',
+          additionalText: null
+        }
+      },
+      inputs: [
+        {
+          type: 'text',
+          id: 'query-places',
+          target: 'places',
+          delay: 500,
+          schema: {
+            valueType: 'string',
+          },
+          data: {
+            id: 'query-places',
+            placeholder: 'search#placeholder_places',
+            icon: 'n7-icon-search',
+            inputPayload: 'search-input',
+            enterPayload: 'search-enter',
+            iconPayload: 'search-icon',
+          },
+        },
+        {
+          id: 'places',
+          type: 'link',
+          limit: 50,
+          queryParam: true,
+          schema: {
+            valueType: 'string',
+            multiple: true
+          },
+          data: {
+            links: []
+          }
+        }
+      ]
     }
   ],
   classes: 'facets-wrapper',

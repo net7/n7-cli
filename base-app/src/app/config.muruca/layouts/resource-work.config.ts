@@ -7,6 +7,22 @@ export default {
   sections: {
     top: [
       {
+        id: 'breadcrumbs',
+        type: 'breadcrumbs',
+        options: {
+          base: [
+            {
+              title: 'global#home',
+              link: '/',
+            },
+            {
+              title: 'global#section',
+              link: '/section',
+            },
+          ],
+        },
+      },
+      {
         id: 'header',
         type: 'title',
       },

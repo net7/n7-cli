@@ -15,7 +15,6 @@ export default {
     'rest-local': {
       type: 'rest',
       baseUrl: 'https://mdw.[nomeProg].muruca.cloud/',
-      // baseUrl: 'https://sls.petrarcaonline.it/',
       // baseUrl: 'http://localhost:3000/',
       config: {
         home: 'get_home',
