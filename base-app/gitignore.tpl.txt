@@ -52,3 +52,6 @@ Thumbs.db
 # local
 src/assets/app-config.local.json
 src/assets/app-config.local.example
+
+# Claude Code
+CLAUDE.md
