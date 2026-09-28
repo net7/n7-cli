@@ -1,40 +1,40 @@
-/* eslint-disable @typescript-eslint/camelcase */
-import homeConfig from './home.config';
+/* eslint-disable camelcase */
+// Search
 import searchWorksConfig from './search-works.config';
-import searchBooksConfig from './search-books.config';
-import searchWitnessesConfig from './search-witnesses.config';
 import searchBibliografia from './search-bibliography.config';
-import searchIconographiesConfig from './search-iconographies.config';
-import searchToolsConfig from './search-tools.config';
-import searchBiographiesConfig from './search-biographies.config';
-import resourceBookConfig from './resource-book.config';
-import resourceToponymConfig from './resource-toponym.config';
-import resourceIconographyConfig from './resource-iconography.config';
-import resourceKeywordConfig from './resource-keyword.config';
+// Resource
 import resourceWorkConfig from './resource-work.config';
-import resourceWitnessConfig from './resource-witness.config';
-import resourceBiographyConfig from './resource-biography.config';
-import resourceModalBibliography_witConfig from './resource-modal-bibliography_wit.config';
-import resourceToolConfig from './resource-tool.config';
+import resourceModalBibliographyConfig from './resource-modal-bibliography.config';
+// Resource - Tabs
+import tabsConfig from './tabs.config';
+import resourceResNameIntroductionConfig from './resource-tab/resource-resName-introduction.config';
+import resourceResNameDescriptionConfig from './resource-tab/resource-resName-description.config';
+// Advanced search
+import advancedSearchConfig from './advanced-search.config';
+import advancedResultsConfig from './advanced-results.config';
+// Others
+import homeConfig from './home.config';
 import itineraryConfig from './itinerary.config';
+import timelineConfig from './timeline.config';
+import networkConfig from './network.config';
 
 export default {
+  // Search
+  'search-works': searchWorksConfig,
+  'search-bibliografia': searchBibliografia,
+  // Resource
+  'resource-work': resourceWorkConfig,
+  'resource-modal-bibliography': resourceModalBibliographyConfig,
+  // Resource-tab
+  tabs: tabsConfig,
+  'resource-resName-introduction': resourceResNameIntroductionConfig,
+  'resource-resName-description': resourceResNameDescriptionConfig,
+  // Advanced search
+  'advanced-search': advancedSearchConfig,
+  'advanced-results': advancedResultsConfig,
+  // Others
   home: homeConfig,
   itinerary: itineraryConfig,
-  'search-works': searchWorksConfig,
-  'search-books': searchBooksConfig,
-  'search-witnesses': searchWitnessesConfig,
-  'resource-biography': resourceBiographyConfig,
-  'resource-tool': resourceToolConfig,
-  'search-tools': searchToolsConfig,
-  'search-biographies': searchBiographiesConfig,
-  'resource-iconography': resourceIconographyConfig,
-  'search-iconographies': searchIconographiesConfig,
-  'resource-witness': resourceWitnessConfig,
-  'resource-work': resourceWorkConfig,
-  'resource-book': resourceBookConfig,
-  'resource-toponym': resourceToponymConfig,
-  'resource-keyword': resourceKeywordConfig,
-  'search-bibliografia': searchBibliografia,
-  'resource-modal-bibliography_wit': resourceModalBibliography_witConfig,
+  timeline: timelineConfig,
+  network : networkConfig
 };

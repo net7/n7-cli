@@ -5,13 +5,10 @@ import * as EH from '../../event-handlers';
 
 export const HomeLayoutConfig = {
   layoutId: 'baseappprefix-home-layout',
-  widgets: [
-    { id: 'mock', hasStaticData: true },
-    { id: 'dynamic' },
-  ],
+  widgets: [{ id: 'mock', hasStaticData: true }, { id: 'dynamic' }],
   layoutDS: HomeLayoutDS,
   layoutEH: HomeLayoutEH,
   widgetsDataSources: DS,
   widgetsEventHandlers: EH,
-  layoutOptions: {}
+  layoutOptions: {},
 };

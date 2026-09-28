@@ -13,11 +13,11 @@ export default {
   item: {
     title: {
       maxLength: 80,
-      char: '…'
+      char: '…',
     },
     description: {
       maxLength: 100,
-      char: '…'
-    }
-  }
+      char: '…',
+    },
+  },
 } as ConfigAriannaCollectionLayout;

@@ -2,11 +2,8 @@ import { ConfigAriannaEntitaLayout } from '@net7/boilerplate-arianna';
 
 export default {
   overview: {
-    informazioni: [
-      'data_istituzione',
-      'denominazione_autorita'
-    ],
-    smallChartSize: 3
+    informazioni: ['data_istituzione', 'denominazione_autorita'],
+    smallChartSize: 3,
   },
   fallback: 'Non sono disponibili informazioni per questa entità.',
   entitiesQuerySize: 30,
@@ -56,6 +53,6 @@ export default {
     'DESCRIZIONE',
     'descrizione',
     'ENTITA-ORGANIZZAZIONE-3',
-    'struttura_funzioni'
-  ]
+    'struttura_funzioni',
+  ],
 } as ConfigAriannaEntitaLayout;

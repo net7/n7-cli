@@ -10,5 +10,5 @@ export default {
   header: headerConfig,
   footer: footerConfig,
   labels: labelsConfig,
-  ...layouts
+  ...layouts,
 };

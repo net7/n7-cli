@@ -26,18 +26,22 @@ const JSON_PATH = './assets/app-config.local.json';
     N7BoilerplateDatavizModule,
     DvComponentsLibModule,
   ],
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: (
-      localConfigService: LocalConfigService,
-      jsonConfigService: JsonConfigService
-    ) => () => (
-      localConfigService.load(configDataviz)
-        .then(() => jsonConfigService.load(JSON_PATH))
-    ),
-    deps: [LocalConfigService, JsonConfigService],
-    multi: true
-  }],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory:
+        (
+          localConfigService: LocalConfigService,
+          jsonConfigService: JsonConfigService,
+        ) =>
+        () =>
+          localConfigService
+            .load(configDataviz)
+            .then(() => jsonConfigService.load(JSON_PATH)),
+      deps: [LocalConfigService, JsonConfigService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

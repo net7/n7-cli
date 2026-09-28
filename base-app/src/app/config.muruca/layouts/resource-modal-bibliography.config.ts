@@ -1,26 +1,26 @@
 import { ConfigMurucaResourceLayout } from '@net7/boilerplate-muruca';
 
 export default {
-  title: 'Termini',
-  type: 'keywords',
+  type: 'bibliography_wit',
   sections: {
-    top: [],
-    content: [
+    top: [
       {
         id: 'header',
         type: 'title',
-        grid: null
       },
+    ],
+    content: [
       {
         id: 'metadata',
         type: 'metadata',
-        grid: null
+        title: '',
       },
       {
-        id: 'collection-keywords',
+        id: 'collection-witnesses',
         type: 'collection',
-        grid: 3
-      }
-    ]
-  }
+        grid: 3,
+        title: 'resource#collection_witnesses',
+      },
+    ],
+  },
 } as ConfigMurucaResourceLayout;

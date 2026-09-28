@@ -7,15 +7,15 @@ const config: ConfigMurucaItineraryLayout = {
     {
       id: 'related_res',
       type: 'collection',
-      grid: 1,
+      grid: 3,
       title: 'itinerary#related_res_title',
       options: {
-        classes: 'mr-item-preview-itinerary',
+        classes: 'mr-item-preview-itinerary is-overlay',
         itemPreview: {
           limit: null,
-          striptags: false
-        }
-      }
+          striptags: false,
+        },
+      },
     },
     // {
     //   id: 'gallery1',
@@ -42,7 +42,7 @@ const config: ConfigMurucaItineraryLayout = {
     //   type: 'collection',
     //   grid: 3
     // }
-  ]
+  ],
 };
 
 export default config;

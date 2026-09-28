@@ -1,6 +1,6 @@
 {
   "name": "baseappname",
-  "version": "1.0.0",
+  "version": "4.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,36 +11,38 @@
     "docker:build": "cd build_scripts/ && sh build.sh",
     "docker:serve": "cd build_scripts/ && sh serve.sh",
     "stylelint": "stylelint \"src/styles/**/*.scss\"; exit 0",
-    "stylelint:watch": "onchange \"src/styles/**/*.scss\" -- npm run stylelint"
+    "stylelint:watch": "onchange \"src/styles/**/*.scss\" -- npm run stylelint",
+    "update:framework": "npm update @net7/components @net7/boilerplate-common @net7/boilerplate-muruca @net7/core @n7-frontend/icon-font"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^14.2.12",
-    "@angular/common": "^14.2.12",
-    "@angular/compiler": "^14.2.12",
-    "@angular/core": "^14.2.12",
-    "@angular/forms": "^14.2.12",
-    "@angular/platform-browser": "^14.2.12",
-    "@angular/platform-browser-dynamic": "^14.2.12",
-    "@angular/router": "^14.2.12",
-    "@net7/boilerplate-common": "^4.0.0",
-    "@net7/boilerplate-arianna": "^4.0.0",
-    "@net7/boilerplate-muruca": "^4.0.0",
-    "@net7/boilerplate-dataviz": "^4.0.0",
+    "@angular/animations": "^17.1.2",
+    "@angular/common": "^17.1.2",
+    "@angular/compiler": "^17.1.2",
+    "@angular/core": "^17.1.2",
+    "@angular/forms": "^17.1.2",
+    "@angular/platform-browser": "^17.1.2",
+    "@angular/platform-browser-dynamic": "^17.1.2",
+    "@angular/router": "^17.1.2",
+    "@n7-frontend/icon-font": "https://github.com/net7/n7-icon-font.git#v1.2.0",
+    "@net7/boilerplate-arianna": "^5.0.0",
+    "@net7/boilerplate-common": "^5.0.0",
+    "@net7/boilerplate-dataviz": "^5.0.0",
+    "@net7/boilerplate-muruca": "^5.0.0",
     "@net7/components": "^4.0.0",
     "@net7/core": "^4.0.0",
-    "@n7-frontend/icon-font": "https://github.com/net7/n7-icon-font.git#v1.2.0",
     "leaflet": "^1.6.0",
     "leaflet.markercluster": "^1.4.1",
     "rxjs": "6.5.5",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.14.3",
+    "mirador": "4.0.0-alpha.10"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.10",
-    "@angular/cli": "^14.2.10",
-    "@angular/compiler-cli": "^14.2.12",
-    "@angular/language-service": "^14.2.12",
+    "@angular-devkit/build-angular": "^17.1.2",
+    "@angular/cli": "^17.1.2",
+    "@angular/compiler-cli": "^17.1.2",
+    "@angular/language-service": "^17.1.2",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -49,6 +51,7 @@
     "codelyzer": "^6.0.0",
     "eslint": "^7.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.20.1",
     "husky": "^4.2.3",
     "jasmine-core": "^3.6.0",
@@ -61,13 +64,15 @@
     "lint-staged": "^10.0.8",
     "moment": "^2.26.0",
     "onchange": "^6.1.0",
+    "prettier": "3.2.4",
     "protractor": "~7.0.0",
-    "stylelint": "^11.1.1",
+    "stylelint": "^16.2.0",
     "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.8.4",
-    "vis-timeline": "~7.3.6"
+    "typescript": "^5.3.3",
+    "vis-timeline": "^7.0.0"
   },
   "husky": {
     "hooks": {
@@ -79,7 +84,7 @@
       "eslint --fix"
     ],
     "*.scss": [
-      "stylelint --syntax scss --fix"
+      "stylelint --fix"
     ]
   }
 }

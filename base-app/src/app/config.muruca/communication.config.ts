@@ -9,13 +9,13 @@ export default {
       config: {
         sections: 'sections',
         search: 'posts',
-        links: 'todos'
-      }
+        links: 'todos',
+      },
     },
     'rest-local': {
       type: 'rest',
-      baseUrl: 'http://petrarca-sls.netseven.it/',
-      // baseUrl: 'http://localhost:3126/',
+      baseUrl: 'https://mdw.[nomeProg].muruca.cloud/',
+      // baseUrl: 'http://localhost:3000/',
       config: {
         home: 'get_home',
         menu: 'get_menu',
@@ -23,13 +23,18 @@ export default {
         post: 'get_static_post/',
         search: 'search/results',
         searchDescription: 'get_search_description/',
+        advancedSearch: 'advanced_search',
+        advancedSearchOptions: 'advanced_search_options',
         facets: 'search/facets',
         resource: 'get_resource',
         footer: 'get_footer',
         timeline: 'get_timeline/time-events',
+        network: 'get_network',
         timelineDescription: 'get_search_description/timeline',
-        itinerary: 'get_itinerary/'
-      }
-    }
-  }
+        itinerary: 'get_itinerary/',
+        translation: 'get_translation/',
+        xmlSearch: 'search_text_hl/',
+      },
+    },
+  },
 } as ConfigCommonCommunication;

@@ -47,7 +47,11 @@ testem.log
 Thumbs.db
 
 # custom
-/package-lock.json
+# /package-lock.json
 
 # local
 src/assets/app-config.local.json
+src/assets/app-config.local.example
+
+# Claude Code
+CLAUDE.md

@@ -10,9 +10,8 @@ export class HomeLayoutDS extends LayoutDataSource {
   }
 
   _dummyRequest() {
-    this.communication.request$('getRepos')
-      .subscribe((response) => {
-        this.one('dynamic').update(response);
-      });
+    this.communication.request$('getRepos').subscribe((response) => {
+      this.one('dynamic').update(response);
+    });
   }
 }

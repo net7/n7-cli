@@ -88,7 +88,7 @@ $page-min-width: 960px;
 // $color-background-medium: $color-gray-01;
 // $color-background-dark: $color-gray-03;
 $color-background-layout: $color-background-base;
-$gradient-item-preview-list: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $color-background-layout 100%);
+$gradient-item-preview-list: linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, $color-background-layout 100%);
 
 
 // ------------------------------------ //
@@ -195,15 +195,18 @@ $gradient-item-preview-list: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, 
 // ------------------------------------ //
 // $table-border-color: $color-border-normal;
 // $table-border-size: 1px;
+
 /* Header */
 // $table-header-font-size: $font-size-xs;
 // $table-header-text-color: $color-text;
 // $table-header-bg: $color-background-light-blue;
+
 /* Contents */
 // $table-font-size: $font-size-s;
 // $table-text-color: $color-text;
 // $table-bg-odd: $color-background-base;
 // $table-bg-even: $color-background-medium;
+
 /* Footer */
 // $table-footer-font-size: $font-size-s;
 // $table-footer-text-color: $color-text-light;

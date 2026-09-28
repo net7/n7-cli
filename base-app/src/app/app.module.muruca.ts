@@ -45,39 +45,45 @@ translate.init({
     N7BoilerplateCommonModule.forRoot({}),
     N7BoilerplateMurucaModule,
   ],
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: (
-      localConfigService: LocalConfigService,
-      jsonConfigService: JsonConfigService,
-      menuService: MrMenuService,
-      footerService: MrFooterService,
-      translationsLoader: MrTranslationsLoaderService
-    ) => () => (
-      localConfigService.load(configMuruca)
-        .then(() => jsonConfigService.load(JSON_PATH))
-        .then(() => Promise.all([
-          menuService.load(),
-          footerService.load(),
-          translationsLoader.load(LANG_CODE)
-        ]))
-    ),
-    deps: [
-      LocalConfigService,
-      JsonConfigService,
-      MrMenuService,
-      MrFooterService,
-      MrTranslationsLoaderService
-    ],
-    multi: true
-  }],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory:
+        (
+          localConfigService: LocalConfigService,
+          jsonConfigService: JsonConfigService,
+          menuService: MrMenuService,
+          footerService: MrFooterService,
+          translationsLoader: MrTranslationsLoaderService,
+        ) =>
+        () =>
+          localConfigService
+            .load(configMuruca)
+            .then(() => jsonConfigService.load(JSON_PATH))
+            .then(() =>
+              Promise.all([
+                menuService.load(),
+                footerService.load(),
+                translationsLoader.load(LANG_CODE),
+              ]),
+            ),
+      deps: [
+        LocalConfigService,
+        JsonConfigService,
+        MrMenuService,
+        MrFooterService,
+        MrTranslationsLoaderService,
+      ],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(
     private router: Router,
     private mainState: MainStateService,
-    private config: ConfigurationService
+    private config: ConfigurationService,
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationStart))
@@ -90,7 +96,7 @@ export class AppModule {
     this.router.events
       .pipe(
         filter((event) => event instanceof RoutesRecognized),
-        map((event: RoutesRecognized) => event.state.root.firstChild.data)
+        map((event: RoutesRecognized) => event.state.root.firstChild.data),
       )
       .subscribe((routeData: any) => {
         const { configId } = routeData || {};

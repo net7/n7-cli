@@ -1,4 +1,7 @@
-import { CommunicationService, ConfigurationService } from '@net7/boilerplate-common';
+import {
+  CommunicationService,
+  ConfigurationService,
+} from '@net7/boilerplate-common';
 import { LayoutDataSource } from '@net7/core';
 
 export class BaseLayoutDS extends LayoutDataSource {

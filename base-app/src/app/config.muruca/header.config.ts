@@ -4,10 +4,10 @@ export default {
   logo: {
     title: 'Petrarca Online',
     anchor: {
-      href: '/'
-    }
+      href: '/',
+    },
   },
   nav: {
-    items: []
-  }
+    items: [],
+  },
 } as ConfigCommonHeader;

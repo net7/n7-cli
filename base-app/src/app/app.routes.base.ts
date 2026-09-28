@@ -7,8 +7,8 @@ export const APP_ROUTES: Routes = [
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   { path: 'home', component: HomeLayoutComponent },
-  { path: '**', component: Page404LayoutComponent }
+  { path: '**', component: Page404LayoutComponent },
 ];

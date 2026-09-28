@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <router-outlet></router-outlet>
     </main-layout>
   `,
-  styleUrls: []
+  styleUrls: [],
 })
 export class AppComponent {
   public useRouter = true;
